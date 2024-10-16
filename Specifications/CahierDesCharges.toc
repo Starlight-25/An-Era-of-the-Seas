@@ -1,0 +1,77 @@
+\contentsline {section}{\numberline {1}Origine et nature du projet}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Origin}{4}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Information du jeu}{4}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Début et histoire du personnage principal}{4}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}Objectifs du joueur}{4}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}Fonctionnalités du jeu}{4}{subsubsection.1.2.3}%
+\contentsline {paragraph}{Quêtes principale}{5}{section*.4}%
+\contentsline {paragraph}{Quêtes secondaires}{5}{section*.5}%
+\contentsline {paragraph}{Système de navigation immersive}{5}{section*.6}%
+\contentsline {paragraph}{Entretien et améliorations du bateau/navire}{5}{section*.7}%
+\contentsline {paragraph}{Membre d’équipage}{5}{section*.8}%
+\contentsline {paragraph}{Armes}{5}{section*.9}%
+\contentsline {paragraph}{Stigmata (Améliorations du joueur)}{6}{section*.10}%
+\contentsline {paragraph}{Coffre aux trésors}{6}{section*.11}%
+\contentsline {paragraph}{Villes}{6}{section*.12}%
+\contentsline {paragraph}{Combat (PvE)}{6}{section*.13}%
+\contentsline {paragraph}{Multijoueur}{7}{section*.14}%
+\contentsline {paragraph}{Pèche}{7}{section*.15}%
+\contentsline {subsection}{\numberline {1.3}Outils}{7}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Outils de gestion d’équipe}{7}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}Outils de développement du jeu}{7}{subsubsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.4}Budget}{8}{subsection.1.4}%
+\contentsline {subsubsection}{\numberline {1.4.1}Tableau}{8}{subsubsection.1.4.1}%
+\contentsline {subsubsection}{\numberline {1.4.2}Détails}{8}{subsubsection.1.4.2}%
+\contentsline {paragraph}{Salaire de l'équipe}{8}{section*.16}%
+\contentsline {paragraph}{Local}{9}{section*.17}%
+\contentsline {paragraph}{Electricité}{9}{section*.18}%
+\contentsline {paragraph}{Eau}{9}{section*.19}%
+\contentsline {paragraph}{Chauffage}{9}{section*.20}%
+\contentsline {paragraph}{Repas}{9}{section*.21}%
+\contentsline {paragraph}{IDE (Rider)}{9}{section*.22}%
+\contentsline {paragraph}{Transport}{9}{section*.23}%
+\contentsline {paragraph}{Crédits}{9}{section*.24}%
+\contentsline {section}{\numberline {2}Objet d’étude}{11}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Intérêts et objectifs}{11}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Bénéfices commun}{11}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Bénéfices individuels}{11}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Etat de l'art}{13}{section.3}%
+\contentsline {subsection}{\numberline {3.1}\textit {Sid Meier’s Pirates}}{13}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Point forts}{13}{subsubsection.3.1.1}%
+\contentsline {paragraph}{Cadre historique et immersion}{13}{section*.25}%
+\contentsline {paragraph}{Choix et liberté du joueur}{13}{section*.26}%
+\contentsline {paragraph}{Possibilité de rejouer}{13}{section*.27}%
+\contentsline {subsubsection}{\numberline {3.1.2}Fonctionnalités}{13}{subsubsection.3.1.2}%
+\contentsline {paragraph}{Factions et diplomatie}{13}{section*.28}%
+\contentsline {paragraph}{Combat d’épée et duels}{13}{section*.29}%
+\contentsline {paragraph}{Romance et réputation}{14}{section*.30}%
+\contentsline {paragraph}{Quêtes secondaire et Histoire personnel}{14}{section*.31}%
+\contentsline {subsection}{\numberline {3.2}\textit {Pirates of the Burning Sea}}{14}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Points forts}{14}{subsubsection.3.2.1}%
+\contentsline {paragraph}{Combat naval}{14}{section*.32}%
+\contentsline {paragraph}{Vie de pirate}{14}{section*.33}%
+\contentsline {subsubsection}{\numberline {3.2.2}Fonctionnalités}{14}{subsubsection.3.2.2}%
+\contentsline {paragraph}{Conquêtes de ports et contrôle de territoires}{14}{section*.34}%
+\contentsline {paragraph}{Guildes et alliances}{15}{section*.35}%
+\contentsline {subsection}{\numberline {3.3}\textit {Sea of Thieves}}{15}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Points forts}{15}{subsubsection.3.3.1}%
+\contentsline {paragraph}{Gameplay social et coopératif}{15}{section*.36}%
+\contentsline {paragraph}{Contenu évolutif et élargi}{15}{section*.37}%
+\contentsline {paragraph}{Liberté}{15}{section*.38}%
+\contentsline {subsubsection}{\numberline {3.3.2}Fonctionnalités}{15}{subsubsection.3.3.2}%
+\contentsline {paragraph}{World Events}{15}{section*.39}%
+\contentsline {paragraph}{Environnement interactif}{15}{section*.40}%
+\contentsline {paragraph}{Accent sur le choix des joueurs}{16}{section*.41}%
+\contentsline {section}{\numberline {4}Entreprise}{17}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Dream Chasers}{17}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Spécificités}{17}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Domaine d’activités}{17}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}A propos du jeu et de l’entreprise}{18}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Equipe}{19}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Jérôme}{19}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Achref}{19}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Ethan}{19}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Joseph}{19}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Matteo}{19}{subsection.5.5}%
+\contentsline {section}{\numberline {6}Distribution des taches}{20}{section.6}%
+\contentsline {section}{\numberline {7}Avancement et planification }{21}{section.7}%

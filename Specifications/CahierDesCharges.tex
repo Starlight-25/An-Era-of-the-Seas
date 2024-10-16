@@ -1,6 +1,9 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{amsmath}
 
 \title{Cahier des Charges \\ \textit{An Era of the Seas}}
 \author{Dream Chasers}
@@ -126,7 +129,7 @@ Une mécanique utile et amusante grâce à laquelle le joueur peut obtenir des p
 \subsection{Outils}
 \subsubsection{Outils de gestion d’équipe}\hfill
 
-Pour pouvoir communiquer différents aspects du développement du jeu entre les membres de l’équipe, il est crucial de disposer d’un outil dédié à cet effet. Ainsi, un serveur Discord est particulièrement utile. Cela permet à l'équipe de communiquer facilement et les discussions peuvent être organisées en différents canaux en fonction des sujets de développement spécifiques.
+Pour pouvoir communiquer différents aspects du développement du jeu entre les membres de l’équipe, il est crucial de disposer d’un outil dédié à cet effet. Ainsi, un serveur Discord est particulièrement utile. Cela permet à l'équipe de communiquer facilement et les discussions peuvent être organisées en différents canaux en fonction des sujets de développement spécifiques
 \\
 
 De plus, la gestion des tâches est essentielle pour maintenir le projet sur la bonne voie et suivre chaque avancement. Une liste de choses à faire peut être très utile dans ce domaine. Il peut fournir un aperçu clair des tâches à effectuer. Microsoft To Do est une excellente solution pour cela. Les tâches peuvent être attribuées à un membre de l'équipe et la date d'échéance peut être définie pour une tâche. Cela permet au membre de l'équipe d'être conscient de ce qui doit être fait, des délais et de maintenir sa productivité.
@@ -147,9 +150,133 @@ Pour stocker les données du joueur, les données sont stockées en ligne sur Fi
 
 
 
-\subsubsection{Budget}
 
 
+\subsection{Budget}
+\subsubsection{Tableau}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|r|}
+        \hline
+        \textbf{Dépenses} & \textbf{Couts}\\ 
+        \hline
+        Salaire de l'équipe & 300 000€\\ 
+        \hline
+        Local (75m²) & 27 000€\\ 
+        \hline
+        Electricité & 4 665,17€\\
+        \hline
+        Eau & 24,67€\\
+        \hline
+        Chauffage & 1 408,96€\\
+        \hline
+        Repas & 15 000€\\
+        \hline
+        IDE (Rider) & 1 445€\\
+        \hline
+        Transport & 1 910€\\
+        \hline
+        Agents d'entretien & 1 000€\\
+        \hline
+        Assurance & 360€\\
+        \hline
+        Electricité & 4 665,17€\\
+        \hline
+        Total (Sans crédits) & 357 478,97€\\
+        \hline
+        Crédits (Interest rates) & 42 891,14€\\
+        \hline
+        \textbf{Total} & \textbf{400 370,11€}\\
+        \hline
+    \end{tabular}
+\end{table}
+
+
+
+\subsubsection{Détails}
+\paragraph{Salaire de l'équipe}\hfill
+
+Développeur de jeux vidéos : 60 000€ par an
+
+Total : $60\,000\,\text{€} \times 5 = 300\,000\,\text{€}$
+
+\paragraph{Local}\hfill
+
+Prix du m² à Paris : 30€/m² par mois
+
+Total : $30\,\text{€} \times 75\,\text{m²} 12\,\text{mois} = 27 000\,\text{€}$
+
+\paragraph{Electricité}\hfill
+
+Ordinateurs : 800W
+
+Ecrans (2 par membres de l'équipe) : $2 \times 200\,\text{W} = 400\,\text{W}$
+
+Autre : 350W
+
+Consomation totale par heure : $(800 + 400) \times 5 + 350 = 6\,350\,\text{kWh}$
+
+Comsommation totale : $6\,350\,\text{kWh} \times 8\,\text{h} * 365 = 18\,542\,\text{kWh}$
+
+prix d'un kWh : 0,2516€/kWh 
+
+Total : $18\,542\,\text{kWh} \times 0,2516\,\text{€/kWh} = 4\,665,17\,\text{€}$
+
+\paragraph{Eau}\hfill
+
+Consommation journalière : 15L
+
+Prix de l'eau à Paris : 4.5€/1m\textsuperscript{3}
+
+Total : $(15 \times 10^{-3}) \times 365 \times 4,5\,\text{€/m\textsuperscript{3}} = 24,64\,\text{€}$
+
+\paragraph{Chauffage}\hfill
+
+Consommation : 80kWh/m² par an
+
+Consommation totale : $80\,\text{kWh/m²} \times 70\,\text{m²} = 5\,600\,\text{kWh}$
+
+Total : $5\,600\,\text{kWh} \times 0,2516\,\text{€/kWh} = 1,\,408,96\,\text{€}$
+
+\paragraph{Repas}\hfill
+
+Prix d'un repas : 15€
+
+Total : $15\,\text{€} \times 5 \times 200\,\text{jours} = 15\,000\,\text{€}$
+
+\paragraph{IDE (Rider)}\hfill
+
+Cout de l'abonnement : 289€ par an
+
+Total : $382\,\text{€} \times 5 = 1\,910\,\text{€}$
+
+\paragraph{Transport}\hfill
+
+Cout de l'abonnement Navigo : 382€ par an
+
+Total : $382\,\text{€} \times 5 = 1\,910\,\text{€}$
+
+\paragraph{Crédits}\hfill
+
+Taux d'intérêts : 3.9\%
+
+Calculs du montant :
+\[
+A = \frac{P \cdot r}{1 - (1 + r)^{-n}}
+\]
+
+où :
+
+\begin{itemize}
+    \item \(A\) : le montant des paiements annuels
+    \item \(P\) : le montant du prêt, \(P = 357\,478.97\,\text{€}\)
+    \item \(r\) : le taux d'intérêt annuel divisé par le nombre de paiements, \(r = 3.9\% = 0.039\)
+    \item \(n\) : le nombre total de paiements, \(n = 5 \, \text{ans}\)
+\end{itemize}
+
+Couts total avec les taux d'intérêts : $A \times n = 400\,370,11\,\text{€}$
+
+Couts total de l'intérêt : $400\,370,11\,\text{€} - P = 42\,891,14\,\text{€}$
 
 
 
@@ -194,7 +321,7 @@ Dans un projet commun, chaque membre doit porter des responsabilités. Ils sont 
 
 Participer à un projet de groupe nécessite une bonne gestion du temps. Cela signifie apprendre l’équilibre entre le travail personnel et les besoins du groupe. Les membres doivent planifier et prioriser leurs tâches, en veillant à contribuer à l’avancement du projet.\\
 
-Enfin, travailler en groupe sur un projet de jeu permet aux membres d'acquérir des compétences techniques en communication. Les membres doivent expliquer clairement les idées, les solutions et le code complexes aux autres, en s'assurant que tout le monde comprend. Cette capacité à communiquer des détails techniques de manière accessible est une compétence très utile qui sera très souvent utilisée.\\
+Enfin, travailler en groupe sur un projet de jeu permet aux membres d'acquérir des compétences techniques en communication. Les membres doivent expliquer clairement les idées, les solutions et le code complexes aux autres, en s'assurant que tout le monde comprend. Cette capacité à communiquer des détails techniques de manière accessible est une compétence très utile qui sera très souvent utilisée.
 
 
 
@@ -378,6 +505,8 @@ Toujours proche des villes dès son plus jeune âge, il aspire à comprendre à 
 
 \subsection{Achref}\hfill
 
+Passionné de la culture geek depuis son enfance, son personnage s'est façonné en jouant à des jeux vidéo et en regardant plusieurs animés. En plus de cela, son expérience dans le vaste monde de la programmation l'a conduit dans le monde du développement de jeux, en mettant l'accent sur les jeux basés sur une histoire et les jeux de rôle.
+
 
 
 
@@ -409,6 +538,33 @@ Toujours proche des villes dès son plus jeune âge, il aspire à comprendre à 
 
 \newpage
 \section{Distribution des taches}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|c|}
+        \hline
+        \textbf{Taches} & \textbf{Jérôme} & \textbf{Achref} & \textbf{Ethan} & \textbf{Joseph} & \textbf{Matteo}\\
+        \hline
+        Menu principal & R &  &  &  & S \\
+        \hline
+        Map design & & & R & & S \\
+        \hline
+        Design de l'eau & & & R & & S\\
+        \hline
+        Simulation de la météo & & & R & &\\
+        \hline
+        Système de localisation (carte, bousole...) & & S & & R &\\
+        \hline
+        Mouvements (bateau, joueur...) & & & S & R &\\
+        \hline
+        UI du joueur & R & & & & S\\
+        \hline
+        Statistiques des objets & R & & & & S\\
+        \hline
+        Améliorations des objets & R & & & & S\\
+        \hline
+
+    \end{tabular}
+\end{table}
 
 
 
