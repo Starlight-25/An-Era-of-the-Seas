@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{fancyhdr}
+\usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{booktabs}
 \usepackage{array}
@@ -8,12 +9,27 @@
 \usepackage{xcolor}
 \usepackage{longtable}
 \usepackage[a4paper, margin=1in]{geometry}
+\usepackage{caption}
+
+
+
+
+
+
+
 
 
 
 \pagestyle{fancy}
 \fancyhead[L]{Cahier des Charges : \textit{An Era of the Seas}}
 \fancyfoot[L]{De Dream Chasers}
+\fancyfoot[C]{%
+    \begin{minipage}{1.5cm}  % Ajuster la largeur selon tes besoins
+        \centering
+        \includegraphics[width=1cm]{logo.png}  % Insérer l'image
+    \end{minipage}
+}
+\fancyfoot[R]{\thepage}
 
 \renewcommand{\footrulewidth}{0.1pt}
 \renewcommand{\sectionmark}[1]{}
@@ -24,9 +40,42 @@
 \definecolor{pastelblue}{HTML}{097CA5}
 
 
-\title{Cahier des Charges \\ \textit{An Era of the Seas}}
-\author{Dream Chasers}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\title{\textbf{Cahier des Charges} \\ \textbf{\textit{An Era of the Seas}}}
+\author{%
+    \begin{minipage}[c]{\textwidth}
+        \centering
+        \textbf{Dream Chasers} \\[0em]
+        \includegraphics[width=5cm]{logo.png}
+    \end{minipage}
+}
 \date{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \begin{document}
 
@@ -181,45 +230,44 @@ Pour stocker les données du joueur, les données sont stockées en ligne sur Fi
 
 
 
+\newpage
 \subsection{Budget}
 \subsubsection{Tableau}
-\begin{table}[h]
-    \centering
-    \begin{tabular}{|>{\columncolor{lightgray}}l|r|}
-        \hline
-        \rowcolor{lightgray}
-        \textbf{Dépenses} & \textbf{Couts}\\ 
-        \hline
-        Salaire de l'équipe & 300 000€\\ 
-        \hline
-        Local (75m²) & 27 000€\\ 
-        \hline
-        Electricité & 4 665,17€\\
-        \hline
-        Eau & 24,67€\\
-        \hline
-        Chauffage & 1 408,96€\\
-        \hline
-        Repas & 15 000€\\
-        \hline
-        IDE (Rider) & 1 445€\\
-        \hline
-        Transport & 1 910€\\
-        \hline
-        Agents d'entretien & 1 000€\\
-        \hline
-        Assurance & 360€\\
-        \hline
-        Electricité & 4 665,17€\\
-        \hline
-        Total (Sans crédits) & 357 478,97€\\
-        \hline
-        Crédits (Interest rates) & 42 891,14€\\
-        \hline
-        \textbf{Total} & \textbf{400 370,11€}\\
-        \hline
-    \end{tabular}
-\end{table}
+\begin{longtable}{|>{\columncolor{lightgray}}l|r|}
+    \hline
+    \rowcolor{lightgray}
+    \textbf{Dépenses} & \textbf{Couts}\\ 
+    \hline
+    Salaire de l'équipe & 300 000€\\ 
+    \hline
+    Local (75m²) & 27 000€\\ 
+    \hline
+    Electricité & 4 665,17€\\
+    \hline
+    Eau & 24,67€\\
+    \hline
+    Chauffage & 1 408,96€\\
+    \hline
+    Repas & 15 000€\\
+    \hline
+    IDE (Rider) & 1 445€\\
+    \hline
+    Transport & 1 910€\\
+    \hline
+    Agents d'entretien & 1 000€\\
+    \hline
+    Assurance & 360€\\
+    \hline
+    Electricité & 4 665,17€\\
+    \hline
+    Total (Sans crédits) & 357 478,97€\\
+    \hline
+    Crédits (Interest rates) & 42 891,14€\\
+    \hline
+    \textbf{Total} & \textbf{400 370,11€}\\
+    \hline
+\end{longtable}
+
 
 
 
@@ -580,6 +628,7 @@ Depuis son enfance jusqu’à aujourd’hui, Ethan a toujours cherché à compre
 
 \subsection{Matteo}\hfill
 
+Issu d’une famille artistique et passionné d’informatique, Matteo a su conjuguer ses intérêts créatifs avec des outils techniques lors de précédents projets. Enfant de la côte Adriatique, et passionné de dessin, il a cultivé son trait en s’inspirant des mouvements de l’eau, et développé son ouïe et sa capacité à utiliser des logiciels de musique assistée par ordinateur. Il est donc responsable de la création de l’identité graphique et sonore du jeu.
 
 
 
@@ -909,7 +958,12 @@ Depuis son enfance jusqu’à aujourd’hui, Ethan a toujours cherché à compre
 
 
 
-
+\begin{figure}[h] % 'h' pour positionner l'image ici (here)
+    \caption*{\textbf{Diagramme de GANTT}} % Ajouter un titre sous l'image
+    \centering % Centrer l'image
+    \includegraphics[width=0.5\textwidth]{logo.png} % Insérer l'image
+    \label{fig:mon_image} % Étiquette pour référence
+\end{figure}
 
 
 
