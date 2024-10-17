@@ -1,9 +1,12 @@
 \documentclass{article}
-\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
 \usepackage{hyperref}
 \usepackage{booktabs}
 \usepackage{array}
 \usepackage{amsmath}
+\usepackage[table]{xcolor}
+\usepackage{xcolor}
+\usepackage{longtable}
 
 \title{Cahier des Charges \\ \textit{An Era of the Seas}}
 \author{Dream Chasers}
@@ -22,11 +25,21 @@
 
 
 
+
+
+
+
+
 \newpage
 \section*{Introduction}
 
 \subsection*{Sommaire}
 \tableofcontents
+
+
+
+
+
 
 
 
@@ -156,8 +169,9 @@ Pour stocker les données du joueur, les données sont stockées en ligne sur Fi
 \subsubsection{Tableau}
 \begin{table}[h]
     \centering
-    \begin{tabular}{|l|r|}
+    \begin{tabular}{|>{\columncolor{lightgray}}l|r|}
         \hline
+        \rowcolor{lightgray}
         \textbf{Dépenses} & \textbf{Couts}\\ 
         \hline
         Salaire de l'équipe & 300 000€\\ 
@@ -285,6 +299,12 @@ Couts total de l'intérêt : $400\,370,11\,\text{€} - P = 42\,891,14\,\text{�
 
 
 
+
+
+
+
+
+
 \newpage
 \section{Objet d’étude}
 \subsection{Intérêts et objectifs}\hfill
@@ -322,6 +342,11 @@ Dans un projet commun, chaque membre doit porter des responsabilités. Ils sont 
 Participer à un projet de groupe nécessite une bonne gestion du temps. Cela signifie apprendre l’équilibre entre le travail personnel et les besoins du groupe. Les membres doivent planifier et prioriser leurs tâches, en veillant à contribuer à l’avancement du projet.\\
 
 Enfin, travailler en groupe sur un projet de jeu permet aux membres d'acquérir des compétences techniques en communication. Les membres doivent expliquer clairement les idées, les solutions et le code complexes aux autres, en s'assurant que tout le monde comprend. Cette capacité à communiquer des détails techniques de manière accessible est une compétence très utile qui sera très souvent utilisée.
+
+
+
+
+
 
 
 
@@ -443,6 +468,11 @@ Le jeu met l'accent sur un gameplay émergent, où les interactions des joueurs 
 
 
 
+
+
+
+
+
 \newpage
 \section{Entreprise}
 \subsection{Dream Chasers}\hfill
@@ -490,6 +520,11 @@ Chez Dreams Chasers, il y a un véritable engagement à répondre aux préoccupa
 
 
 
+
+
+
+
+
 \newpage
 \section{Equipe}\hfill
 
@@ -512,6 +547,8 @@ Passionné de la culture geek depuis son enfance, son personnage s'est façonné
 
 
 \subsection{Ethan}\hfill
+
+Depuis son enfance jusqu’à aujourd’hui, Ethan a toujours cherché à comprendre comment fonctionnait le monde qui l’entourait et comment quelqu’un pouvait interagir avec lui. La création d'un environnement avec sa propre physique, sa logique, était une parfaite opportunité pour développer sa compréhension. Il supervisera l'environnement du jeu tel que la simulation de l'eau, la météo, la physique.
 
 
 
@@ -536,35 +573,82 @@ Passionné de la culture geek depuis son enfance, son personnage s'est façonné
 
 
 
+
+
+
+
+
 \newpage
 \section{Distribution des taches}
 \begin{table}[h]
     \centering
-    \begin{tabular}{|l|c|c|c|c|c|}
+    \begin{tabular}{|>{\columncolor{lightgray}}l|c|c|c|c|c|}
         \hline
+        \rowcolor{lightgray}
         \textbf{Taches} & \textbf{Jérôme} & \textbf{Achref} & \textbf{Ethan} & \textbf{Joseph} & \textbf{Matteo}\\
         \hline
-        Menu principal & R &  &  &  & S \\
+        Menu principal & \cellcolor{blue}R &  &  &  & \cellcolor{cyan}S \\
         \hline
-        Map design & & & R & & S \\
+        Map design & & & \cellcolor{blue}R & & \cellcolor{cyan}S \\
         \hline
-        Design de l'eau & & & R & & S\\
+        Simulation de l'eau & & & \cellcolor{blue}R & \cellcolor{cyan}S &\\
         \hline
-        Simulation de la météo & & & R & &\\
+        Simulation de la météo & & & \cellcolor{blue}R & \cellcolor{cyan}S &\\
         \hline
-        Système de localisation (carte, bousole...) & & S & & R &\\
+        Système de localisation (carte, bousole...) & & \cellcolor{cyan}S & & \cellcolor{blue}R &\\
         \hline
-        Mouvements (bateau, joueur...) & & & S & R &\\
+        Mouvements (bateau, joueur...) & & & \cellcolor{cyan}S & \cellcolor{blue}R &\\
         \hline
-        UI du joueur & R & & & & S\\
+        Mouvements IA (ennemis, NPC) & & \cellcolor{blue}R & & &\\
         \hline
-        Statistiques des objets & R & & & & S\\
+        UI du joueur & \cellcolor{blue}R & & & & \cellcolor{cyan}S\\
         \hline
-        Améliorations des objets & R & & & & S\\
+        Statistiques des objets & \cellcolor{blue}R & & & & \cellcolor{cyan}S\\
         \hline
-
+        Améliorations des objets & \cellcolor{blue}R & & & & \cellcolor{cyan}S\\
+        \hline
+        Objet vendu par les marchand & \cellcolor{blue}R & & & &\\
+        \hline
+        Système de pêche & & \cellcolor{cyan}S & & \cellcolor{blue}R &\\
+        \hline
+        Système de faim & \cellcolor{cyan}S & & & \cellcolor{blue}R &\\
+        \hline
+        Histoire(Lore) \& Quêtes & & & & \cellcolor{cyan}S & \cellcolor{blue}R\\
+        \hline
+        SFX & \cellcolor{cyan}S & & & & \cellcolor{blue}R\\
+        \hline
+        Musiques & \cellcolor{blue}R & & & & \cellcolor{cyan}S\\
+        \hline
+        Design des entités & & & \cellcolor{cyan}S & & \cellcolor{blue}R\\
+        \hline
+        Animations des entités & & & \cellcolor{blue}R & \cellcolor{cyan}S &\\
+        \hline
+        Multijoueur & & \cellcolor{blue}R & & \cellcolor{cyan}S &\\
+        \hline
+        Site Web & & \cellcolor{blue}R & & \cellcolor{cyan}S &\\
+        \hline
+        Identité graphique du jeu/entreprise & \cellcolor{cyan}S & & & & \cellcolor{blue}R\\
+        \hline
+        Système de comte du joueur & \cellcolor{blue}R & & & &\\
+        \hline
+        Optimisation du code & \cellcolor{blue}R & \cellcolor{cyan}S & \cellcolor{cyan}S & \cellcolor{cyan}S & \cellcolor{cyan}S\\
+        \hline
+        Correction de la langue & \cellcolor{blue}R & & & \cellcolor{cyan}S &\\
+        \hline
+        Testes & \cellcolor{blue}R & \cellcolor{blue}R & \cellcolor{blue}R & \cellcolor{blue}R & \cellcolor{blue}R\\
+        \hline
     \end{tabular}
 \end{table}
+
+\begin{itemize}
+    \item \textcolor{blue}{R : Responsable}
+    \item \textcolor{cyan}{S : Supléant}
+\end{itemize}
+
+
+
+
+
 
 
 
@@ -576,7 +660,245 @@ Passionné de la culture geek depuis son enfance, son personnage s'est façonné
 
 
 \newpage
-\section{Avancement et planification }
+\section{Avancement et planification}
+\begin{longtable}{|>{\columncolor{lightgray}}l|l|c|c|c|}
+    \hline
+    \rowcolor{lightgray}
+    \textbf{Date limite} & \textbf{Taches} & \textbf{Progrès} & \textbf{Responsable} & \textbf{Supléant}\\
+    \hline
+    21/10/2024 & Identité graphique & 100\% & Matteo & Jérôme\\
+    \hline
+    27/10/2024 & Statistiques des objets & 25\% & Jérôme & Matteo\\
+    \hline
+    \multicolumn{5}{|c|}{\cellcolor{lightgray}\textbf{Examens B1 (28-31/10/2024)}}\\
+    \hline
+    03/11/2024 & Carte & 80\% & Jérôme & Matteo\\
+    \hline
+    10/11/2024 & Simulation de l'eau & 50\% & Ethan & Matteo\\
+    \hline
+    10/11/2024 & Statistiques des objets & 50\% & Jérôme & Matteo\\
+    \hline
+    10/11/2024 & Améliorations des objets & 25\% & Jérôme & Matteo\\
+    \hline
+    10/11/2024 & Site Web & 80\% & Achref & Joseph\\
+    \hline
+    17/11/2024 & Menu pricipal & 40\% & Jérôme & Matteo\\
+    \hline
+    24/11/2024 & Menu pricipal & 80\% & Jérôme & Matteo\\
+    \hline
+    24/11/2024 & Système de localisation & 80\% & Joseph & Achref\\
+    \hline
+    01/12/2024 & Mouvenments du joueur & 50\% & Joseph & Ethan\\
+    \hline
+    08/12/2024 & UI du joueur & 25\% & Jérôme & Matteo\\
+    \hline
+    24/11/2024 & Système de localisation & 100\% & Joseph & Achref\\
+    \hline
+    22/12/2024 & UI du joueur & 50\% & Jérôme & Matteo\\
+    \hline
+    22/12/2024 & Mouvenments du joueur & 80\% & Joseph & Ethan\\
+    \hline
+    22/12/2024 & SFX & 20\% & Matteo & Jérôme\\
+    \hline
+    29/12/2024 & Animations des entités & 10\% & Ethan & Joseph\\
+    \hline
+    22/12/2024 & UI du joueur & 80\% & Jérôme & Matteo\\
+    \hline
+    28/12/2024 & Deplacement des entités/IA & 20\% & Achref &\\
+    \hline
+    29/12/2025 & Carte & 100\% & Ethan & Matteo\\
+    \hline
+    29/12/2024 & Mouvements du bateau & 50\% & Joseph & Ethan\\
+    \hline
+    05/01/2025 & Design des entités & 25\% & Matteo & Ethan\\
+    \hline
+    05/01/2025 & Mouvements du bateau & 80\% & Joseph & Ethan\\
+    \hline
+    05/01/2025 & Simulation de la météo & 50\% & Ethan & Joseph\\
+    \hline
+    05/01/2025 & Simulation de l'eau & 80\% & Ethan & Joseph\\
+    \hline
+    \multicolumn{5}{|c|}{\cellcolor{lightgray}\textbf{Examens B2 (6-10/01/2025)}}\\
+    \hline
+    12/01/2025 & Lore & 40\% & Matteo & Joseph\\
+    \hline
+    12/01/2025 & Quête principal & 40\% & Matteo & Joseph\\
+    \hline
+    \multicolumn{5}{|c|}{\cellcolor{lightgray}\textbf{Première Soutenance technique (13-17/01/2025)}} \\
+    \hline
+    12/01/2025 & Site Web & 100\% & Accent & Joseph\\
+    \hline
+    19/01/2025 & UI du joueur & 100\% & Jérôme & Matteo\\
+    \hline
+    19/01/2025 & Améliorations des objets & 50\% & Jérôme & Matteo\\
+    \hline
+    19/01/2025 & Objets vendu par les marchand & 50\% & Jérôme & Matteo\\
+    \hline
+    26/01/2025 & Statistiques des objets & 100\% & Jérôme & Matteo\\
+    \hline
+    02/02/2025 & Améliorations des objets & 100\% & Jérôme & Matteo\\
+    \hline
+    02/02/2025 & Objets vendu par les marchand & 100\% & Jérôme & Matteo\\
+    \hline
+    02/02/2025 & SFX & 40\% & Matteo & Jérôme\\
+    \hline
+    02/02/2025 & Déplacements des entités/IA & 50\% & Achref &\\
+    \hline
+    02/02/2025 & Design des entités & 50\% & Matteo & Ethan\\
+    \hline
+    02/02/2025 & Quête principale & 75\% & Matteo & Joseph\\
+    \hline
+    09/02/2025 & Simulation de la météo & 100\% & Ethan & Joseph\\
+    \hline
+    16/02/2025 & Animations des entités & 50\% & Ethan & Joseph\\
+    \hline
+    04/05/2025 & Quêtes secondaires & 50\% & Matteo & Joseph\\
+    \hline
+    23/02/2025 & Système de comptes & 100\% & Jérôme &\\
+    \hline
+    02/03/2025 & Déplacements des entités/IA & 80\% & Achref &\\
+    \hline
+    02/03/2025 & Design des entités & 80\% & Matteo & Ethan\\
+    \hline
+    02/03/2025 & SFX & 60\% & Matteo & Jérôme\\
+    \hline
+    \multicolumn{5}{|c|}{\cellcolor{lightgray}\textbf{Examens B3 (03-07/03/2025)}}\\
+    \hline
+    10/03/2025 & Quête principale & 100\% & Matteo & Joseph\\
+    \hline
+    10/03/2025 & Lore & 80\% & Matteo & Joseph\\
+    \hline
+    \multicolumn{5}{|c|}{\cellcolor{lightgray}\textbf{Deuxième Soutenance technique (10-14/03/2025)}} \\
+    \hline
+    30/03/2025 & Système de pêche & 100\% & Joseph & Achref\\
+    \hline
+    30/03/2025 & Système de faim & 100\% & Joseph & Jérôme\\
+    \hline
+    20/04/2025 & Déplacements des entités/IA & 100\% & Achref &\\
+    \hline
+    04/05/2025 & Animations des entités & 100\% & Ethan & Joseph\\
+    \hline
+    04/05/2025 & Quêtes secondaires & 100\% & Matteo & Joseph\\
+    \hline
+    25/05/2025 & Lore & 100\% & Matteo & Joseph\\
+    \hline
+    \multicolumn{5}{|c|}{\cellcolor{lightgray}\textbf{dernière Soutenance technique (26-30/05/2025)}}\\
+    \hline
+\end{longtable}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{Cahier des charges techniques}
+\begin{itemize}
+    \item Nom du groupe : Dream Chasers
+    \item Nom du projet : \textit{An Era of the Seas}
+\end{itemize}
+
+
+
+
+
+\begin{longtable}{|l|l|l|c|}
+    \caption*{\textbf{Noms des membres}}\\
+    \hline
+    \rowcolor{lightgray}
+    Nom & Prénoms & Login & Classe\\
+    \hline
+    Ben Abdallah & Achref & achref.ben-abdallah & A1\\
+    \hline
+    Bollot & Matteo & matteo.bollot & A1\\
+    \hline
+    Bruno & Ethan & ethan.bruno & A1\\
+    \hline
+    Devin & Joseph & joseph.devin & A1\\
+    \hline
+    Lin & Jérôme & jerome.lin & A1\\
+    \hline
+\end{longtable}
+
+
+
+
+
+\begin{longtable}{|c|c|c|c|c|}
+    \caption*{\textbf{Type de jeu}}\\
+    \hline
+    Action/Aventure & Battle Royale & Beat them all & Combat & Simulation\\
+    \hline
+    FPS & MMORPG & MOBA & Party Games & Survival Horror\\
+    \hline
+    Plateforme & Puzzles & Reflexion & Rogue Like & TPS\\
+    \hline
+    RPG & RTS & Sandbox & Shoot them up & Course\\
+    \hline
+    Autre : & \multicolumn{4}{|c|}{}\\
+    \hline
+\end{longtable}
+
+
+
+
+
+\begin{longtable}{|l|l|l|l|l|}
+    \caption*{\textbf{Caractéristiques}}\\
+    \hline
+    \multicolumn{5}{|c|}{\cellcolor{lightgray}\textbf{Caractéristiques générales du jeu}}\\
+    \hline
+    IA & Errer & Attaquer & S'échapper & "Path Finder"\\
+    \hline
+    Multijoueur & Coopé & Battle (2-4) & \multicolumn{2}{|l|}{Massif}\\
+    \hline
+    Réseau & P2P & Lan & \multicolumn{2}{|l|}{Online}\\
+    \hline
+    \multicolumn{5}{|c|}{\cellcolor{lightgray}\textbf{Caractéristiques graphiques}}\\
+    \hline
+    Dimension & 2D & 3D & Autres : &\\
+    \hline
+    Particularités & Stéreoscopie & AR & \multicolumn{2}{|l|}{VR}\\
+    \hline
+    Graphiques & Perso & Custom & \multicolumn{2}{|l|}{Existant}\\
+    \hline
+    Précisions : & \multicolumn{4}{|c|}{}\\
+    \hline
+    \multicolumn{5}{|c|}{\cellcolor{lightgray}\textbf{Caractéristiques sonores}}\\
+    \hline
+    Musique & Perso & Custom & \multicolumn{2}{|l|}{Existant}\\
+    \hline
+    FX & Perso & Custom & \multicolumn{2}{|l|}{Existant}\\
+    \hline
+    Précisions : & \multicolumn{4}{|c|}{}\\
+    \hline
+    \multicolumn{5}{|c|}{\cellcolor{lightgray}\textbf{Autres caractéristiques}}\\
+    \hline
+    Site Web & Perso & Custom & \multicolumn{2}{|l|}{Préfabriqué}\\
+    \hline
+\end{longtable}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \end{document}
