@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/marionnette/School/Projects/An Era of the Seas/Assembly-CSharp.csproj": {}
+    "/home/marionnette/School/Projects/An-Era-of-the-Seas/An Era of the Seas/Assembly-CSharp.csproj": {}
   },
   "projects": {
-    "/home/marionnette/School/Projects/An Era of the Seas/Assembly-CSharp.csproj": {
+    "/home/marionnette/School/Projects/An-Era-of-the-Seas/An Era of the Seas/Assembly-CSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/marionnette/School/Projects/An Era of the Seas/Assembly-CSharp.csproj",
+        "projectUniqueName": "/home/marionnette/School/Projects/An-Era-of-the-Seas/An Era of the Seas/Assembly-CSharp.csproj",
         "projectName": "Assembly-CSharp",
-        "projectPath": "/home/marionnette/School/Projects/An Era of the Seas/Assembly-CSharp.csproj",
+        "projectPath": "/home/marionnette/School/Projects/An-Era-of-the-Seas/An Era of the Seas/Assembly-CSharp.csproj",
         "packagesPath": "/home/marionnette/.nuget/packages/",
-        "outputPath": "/home/marionnette/School/Projects/An Era of the Seas/Temp/obj/Debug/Assembly-CSharp/",
+        "outputPath": "/home/marionnette/School/Projects/An-Era-of-the-Seas/An Era of the Seas/Temp/obj/Debug/Assembly-CSharp/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/marionnette/.nuget/NuGet/NuGet.Config"
