@@ -39,11 +39,41 @@
     * Eclipse 
 * Guns
   * Common
+    * Flintlock Pistol
+    * Smuggler's Blunderbuss
   * Rare
+    * Mariner's Revolver
+    * Corsair's Flintlock
   * Epic
+    * Tempest Pistol
+    * Vortex Cannon
+    * Ghost Ship Musket
+    * Comet's Fury
   * Legendary
+    * Hellfire Revolver
+    * Heavenly Shard
 # Crew members
 * Common
+  * Explorer
+  * Navigator
+  * Quartermaster
+  * Gunner
+  * Boatswain  
 * Rare
+  * Explorer
+  * Navigator
+  * Quartermaster
+  * Gunner
+  * Boatswain
 * Epic
+  * Explorer
+  * Navigator
+  * Quartermaster
+  * Gunner
+  * Boatswain
 * Legendary
+  * Explorer
+  * Navigator
+  * Quartermaster
+  * Gunner
+  * Boatswain
