@@ -6,3 +6,4 @@ test/
 *.fdb_latexmk
 *.out
 *.toc
+/.idea
