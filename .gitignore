@@ -1,9 +1,64 @@
-test/
-*.aux
+# Fichiers générés par Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# Paramètres utilisateur de Unity
+UserSettings/
+
+# Fichiers spécifiques à Unity
+*.pidb
+*.suo
+*.user
+*.userprefs
+*.unityproj
+*.booproj
+*.svd
+
+# Fichiers Mono auto-générés
+*.csproj
+*.unityproj
+*.sln
+*.sln.*
+*.suo
+
+# Fichiers d'exportation Visual Studio Code
+.vscode/
+.vscode/settings.json
+
+# Fichiers pour macOS
+.DS_Store
+._*
+
+# Fichiers de sauvegarde (Unity et autres)
+*.bak
+*.backup
+*.tmp
+*.temp
+
+# Fichiers de configuration OS
+Thumbs.db
+Desktop.ini
+
+# Paramètres du package manager Unity
+Packages/com.unity.package-manager/
+
+# Paramètres de JetBrains Rider
+.idea/
+*.idea/
+
+# Fichiers de builds externes (si tu utilises Android, iOS, WebGL, etc.)
+*.apk
+*.ipa
+*.aab
+*.unitypackage
+
+# Fichiers de logs Unity
 *.log
-*.gz
-*.fls
-*.fdb_latexmk
-*.out
-*.toc
-/.idea
+
+# Autres fichiers cachés spécifiques
+.*/**
