@@ -77,3 +77,9 @@
   * Quartermaster
   * Gunner
   * Boatswain
+# Materials
+* Coin
+* Pure Water Drop
+* Wood
+* Steal
+* Gem
