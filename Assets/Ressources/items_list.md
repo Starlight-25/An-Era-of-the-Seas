@@ -56,25 +56,21 @@
 * Common
   * Explorer
   * Navigator
-  * Quartermaster
   * Gunner
   * Boatswain  
 * Rare
   * Explorer
   * Navigator
-  * Quartermaster
   * Gunner
   * Boatswain
 * Epic
   * Explorer
   * Navigator
-  * Quartermaster
   * Gunner
   * Boatswain
 * Legendary
   * Explorer
   * Navigator
-  * Quartermaster
   * Gunner
   * Boatswain
 # Materials
