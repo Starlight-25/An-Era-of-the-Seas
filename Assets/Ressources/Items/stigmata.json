@@ -1,3 +1,98 @@
 {
-
+  "Common": {
+    "Faint Mark": {
+      "Max Level": 25,
+      "Price": {
+        "Coins": 50,
+        "PWD": 10
+      },
+      "Stats" : ["ATK", "Crit Rate", "Crit DMG"]
+    },
+    "Glimmering Scar": {
+      "Max Level": 25,
+      "Price": {
+        "Coins": 50,
+        "PWD": 10
+      },
+      "Stats" : ["HP", "DEF"]
+    }
+  },
+  "Rare": {
+    "Knight Spirit": {      
+      "Max Level": 50,
+      "Price": {
+        "Coins": 500,
+        "PWD": 100
+      },
+      "Stats" : ["ATK"]
+    },
+    "Arcane Corruption": {
+      "Max Level": 50,
+      "Price": {
+        "Coins": 500,
+        "PWD": 100
+      },
+      "Stats" : ["HP", "DEF"]
+    },
+    "Golden Destiny": {
+      "Max Level": 50,
+      "Price": {
+        "Coins": 500,
+        "PWD": 100
+      },
+      "Stats" : ["Crit Rate", "Crit DMG"]
+    }
+  },
+  "Epic": {
+    "Elysian Sigil": {
+      "Max Level": 75,
+      "Price": {
+        "Coins": 5000,
+        "PWD": 1000
+      },
+      "Stats": ["HP", "DEF"]
+    },
+    "Poenix Feather": {
+      "Max Level": 75,
+      "Price": {
+        "Coins": 5000,
+        "PWD": 1000
+      },
+      "Stats": ["HP", "DEF"]
+    },
+    "Celestial Crown": {
+      "Max Level": 75,
+      "Price": {
+        "Coins": 5000,
+        "PWD": 1000
+      },
+      "Stats": ["ATK", "Crit Rate", "Crit DMG"]
+    },
+    "Signet of Infinity": {
+      "Max Level": 75,
+      "Price": {
+        "Coins": 5000,
+        "PWD": 1000
+      },
+      "Stats": ["ATK", "Crit Rate", "Crit DMG"]
+    }
+  },
+  "Legendary": {
+    "Licht des Himmels": {
+      "Max Level": 75,
+      "Price": {
+        "Coins": 5000,
+        "PWD": 1000
+      },
+      "Stats": ["HP", "DEF"]
+    },
+    "Ruler of Death": {
+      "Max Level": 75,
+      "Price": {
+        "Coins": 5000,
+        "PWD": 1000
+      },
+      "Stats": ["ATK", "Crit Rate", "Crit DMG"]
+    }
+  }
 }

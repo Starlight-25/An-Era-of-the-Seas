@@ -53,22 +53,12 @@
     * Hellfire Revolver
     * Heavenly Shard
 # Crew members
-* Common
-  * Explorer
-  * Navigator
-  * Gunner
-  * Boatswain  
-* Rare
-  * Explorer
-  * Navigator
-  * Gunner
-  * Boatswain
-* Epic
-  * Explorer
-  * Navigator
-  * Gunner
-  * Boatswain
-* Legendary
+* Rarity
+  * Common
+  * Rare
+  * Epic
+  * Legendary
+* Type
   * Explorer
   * Navigator
   * Gunner

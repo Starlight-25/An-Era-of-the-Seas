@@ -1,3 +1,122 @@
 {
-
+  "Swords": {
+    "Common":{
+      "Rusty Sword": {
+        "Max Level": 25,
+        "Price": 100,
+        "Stats": ["ATK", "Crit Rate"]
+      },
+      "Iron Blade": {
+        "Max Level": 25,
+        "Price": 100,
+        "Stats": ["ATK", "Crit DMG"]
+      }
+    },
+    "Rare": {
+      "Cinder Blade": {
+        "Max Level": 50,
+        "Price": 1000,
+        "Stats": ["ATK", "Crit Rate"]
+      },
+      "Water Edge": {
+        "Max Level": 50,
+        "Price": 1000,
+        "Stats": ["ATK", "Crit DMG"]
+      }
+    },
+    "Epic": {
+      "Dragon Claw": {
+        "Max Level": 75,
+        "Price": 10000,
+        "Stats": ["Crit Rate", "Crit DMG"]
+      },
+      "Vortex Blade": {
+        "Max Level": 75,
+        "Price": 10000,
+        "Stats": ["ATK", "Crit Rate"]
+      },
+      "Shadow Sword": {
+        "Max Level": 75,
+        "Price": 10000,
+        "Stats": ["ATK", "Crit DMG"]
+      },
+      "Emberstrike": {
+        "Max Level": 75,
+        "Price": 10000,
+        "Stats": ["ATK", "Crit Rate", "Crit DNG"]
+      }
+    },
+    "Legendary": {
+      "Excalibur": {
+        "Max Level": 100,
+        "Price": 75000,
+        "Stats": ["ATK", "Crit Rate", "Crit DNG"]
+      },
+      "Eclipse": {
+        "Max Level": 100,
+        "Price": 75000,
+        "Stats": ["ATK", "Crit Rate", "Crit DNG"]
+      }
+    }
+  },
+  "Guns": {
+    "Common": {
+      "Flintlock Pistol": {
+        "Max Level": 25,
+        "Price": 100,
+        "Stats": ["ATK", "Crit Rate"]
+      },
+      "Smuggler's Blunderbuss": {
+        "Max Level": 25,
+        "Price": 100,
+        "Stats": ["ATK", "Crit DNG"]
+      }
+    },
+    "Rare": {
+      "Mariner's Revolver": {
+        "Max Level": 50,
+        "Price": 1000,
+        "Stats": ["ATK", "Crit Rate"]
+      },
+      "Corsair's Flintlock": {
+        "Max Level": 50,
+        "Price": 1000,
+        "Stats": ["ATK", "Crit DNG"]
+      }
+    },
+    "Epic": {
+      "Tempest Pistol": {
+        "Max Level": 75,
+        "Price": 10000,
+        "Stats": ["Crit Rate", "Crit DNG"]
+      },
+      "Vortex Cannon": {
+        "Max Level": 75,
+        "Price": 10000,
+        "Stats": ["ATK", "Crit Rate"]
+      },
+      "Ghost Ship Musket": {
+        "Max Level": 75,
+        "Price": 10000,
+        "Stats": ["ATK", "Crit DNG"]
+      },
+      "Comet's Fury": {
+        "Max Level": 75,
+        "Price": 10000,
+        "Stats": ["ATK", "Crit Rate", "Crit DNG"]
+      }
+    },
+    "Legendary": {
+      "Heavenly Shard": {
+        "Max Level": 100,
+        "Price": 75000,
+        "Stats": ["ATK", "Crit Rate", "Crit DNG"]
+      },
+      "Eclipse": {
+        "Max Level": 100,
+        "Price": 75000,
+        "Stats": ["ATK", "Crit Rate", "Crit DNG"]
+      }
+    }
+  }
 }
