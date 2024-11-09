@@ -29,7 +29,7 @@
       }
     }
   },
-  "Items": {
+  "Stigma": {
     "Faint Mark": {
       "Rarity": "Common",
       "Stats" : ["ATK", "Crit Rate", "Crit DMG"]

@@ -17,7 +17,7 @@
       "Price": 75000
     }
   },
-  "Crew Members": {
+  "Crew": {
     "Boatswain": {
       "Stats" : ["HP", "DEF"]
     },
