@@ -6,3 +6,16 @@
 /An[[:space:]]Era[[:space:]]of[[:space:]]the[[:space:]]Seas/Library/PackageCache/com.unity.burst@1.8.18/.Runtime/libburst-llvm-16.so filter=lfs diff=lfs merge=lfs -text
 /An[[:space:]]Era[[:space:]]of[[:space:]]the[[:space:]]Seas/Library/PackageCache/com.unity.sysroot.linux-x86_64@2.0.9/data~/payload.tar.7z filter=lfs diff=lfs merge=lfs -text
 /An[[:space:]]Era[[:space:]]of[[:space:]]the[[:space:]]Seas/Library/PackageCache/com.unity.toolchain.linux-x86_64@2.0.9/data~/payload.tar.7z filter=lfs diff=lfs merge=lfs -text
+.git/lfs/objects/fb/ae/fbae2ec79a5808e48eba68f6e3f2ac80b60b690b7a24df49f7548f4f726e2647 filter=lfs diff=lfs merge=lfs -text
+.git/lfs/objects/dc/c2/dcc28dbed5ac3076590e86f2cb15f1a5f2a06de9baa51b22dcb1dbfc5a268653 filter=lfs diff=lfs merge=lfs -text
+.git/objects/pack/pack-b5591e1778869ad89157f20d3741bebbad1f7f5a.pack filter=lfs diff=lfs merge=lfs -text
+An[[:space:]]Era[[:space:]]of[[:space:]]the[[:space:]]Seas/Library/PackageCache/com.unity.burst@1.8.18/.Runtime/libburst-llvm-16.dylib filter=lfs diff=lfs merge=lfs -text
+An[[:space:]]Era[[:space:]]of[[:space:]]the[[:space:]]Seas/Library/PackageCache/com.unity.toolchain.linux-x86_64@2.0.9/data~/payload.tar.7z filter=lfs diff=lfs merge=lfs -text
+/Library/PackageCache/com.unity.burst@1.8.18/.Runtime/burst-llvm-16-arm64.dll filter=lfs diff=lfs merge=lfs -text
+/Library/PackageCache/com.unity.burst@1.8.18/.Runtime/burst-llvm-16.dll filter=lfs diff=lfs merge=lfs -text
+/Library/PackageCache/com.unity.burst@1.8.18/.Runtime/hostmac/dsymutil filter=lfs diff=lfs merge=lfs -text
+/Library/PackageCache/com.unity.burst@1.8.18/.Runtime/libburst-llvm-10.dylib filter=lfs diff=lfs merge=lfs -text
+/Library/PackageCache/com.unity.burst@1.8.18/.Runtime/libburst-llvm-16.dylib filter=lfs diff=lfs merge=lfs -text
+/Library/PackageCache/com.unity.burst@1.8.18/.Runtime/libburst-llvm-16.so filter=lfs diff=lfs merge=lfs -text
+/Library/PackageCache/com.unity.sysroot.linux-x86_64@2.0.9/data~/payload.tar.7z filter=lfs diff=lfs merge=lfs -text
+/Library/PackageCache/com.unity.toolchain.linux-x86_64@2.0.9/data~/payload.tar.7z filter=lfs diff=lfs merge=lfs -text
