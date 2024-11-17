@@ -1,11 +1,3 @@
-test/
-*.aux
-*.log
-*.gz
-*.fls
-*.fdb_latexmk
-*.out
-*.toc
 # Fichiers générés par Unity
 [Ll]ibrary/
 [Tt]emp/
