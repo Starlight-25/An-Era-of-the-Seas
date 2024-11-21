@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
+    public GameObject MainMenuCanvas;
+    public GameObject CreditsCanvas;
     public void SoloButton()
     {
         Debug.Log("Solo Mode");
@@ -18,7 +20,8 @@ public class MainMenuManager : MonoBehaviour
     public void CreditsButton()
     {
         Debug.Log("Credits scene");
-        //SceneManager.LoadScene("Solo mode");
+        MainMenuCanvas.SetActive(false); 
+        CreditsCanvas.SetActive(true);
     }
     
     public void QuitButton()
