@@ -11,21 +11,18 @@ public class SettingsMenuManager : MonoBehaviour
 
     public void ReturnInGameButton()
     {
-        Debug.Log("Player UI");
         SettingsCanvas.SetActive(false);
         PlayerUICanvas.SetActive(true);
     }
 
     public void CharacterButton()
     {
-        Debug.Log("Character Menu");
         SettingsCanvas.SetActive(false);
         CharacterCanvas.SetActive(true);
     }
     
     public void BackpackButton()
     {
-        Debug.Log("Backpack Menu");
         SettingsCanvas.SetActive(false);
         BackpackCanvas.SetActive(true);
     }

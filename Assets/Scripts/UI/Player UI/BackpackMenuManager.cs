@@ -1,14 +1,13 @@
 using UnityEngine;
 
-public class CharacterMenuManager : MonoBehaviour
+public class BackpackMenuManager : MonoBehaviour
 {
     public GameObject PlayerUICanvas;
-    public GameObject CharacterCanvas;
+    public GameObject BackpackCanvas;
 
     public void ReturnInGameButton()
     {
-        Debug.Log("Player UI");
-        CharacterCanvas.SetActive(false);
+        BackpackCanvas.SetActive(false);
         PlayerUICanvas.SetActive(true);
     }
     

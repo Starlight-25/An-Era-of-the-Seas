@@ -10,21 +10,18 @@ public class PlayerUIManager : MonoBehaviour
 
     public void SettingsButton()
     {
-        Debug.Log("Settings Menu");
         PlayerUICanvas.SetActive(false);
         SettingsCanvas.SetActive(true);
     }
 
     public void CharacterButton()
     {
-        Debug.Log("Character Menu");
         PlayerUICanvas.SetActive(false);
         CharacterCanvas.SetActive(true);
     }
 
     public void BackpackButton()
     {
-        Debug.Log("Backpack Menu");
         PlayerUICanvas.SetActive(false);
         BackpackCanvas.SetActive(true);
     }
@@ -39,6 +36,6 @@ public class PlayerUIManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) SettingsButton();
         else if (Input.GetKeyDown(KeyCode.C)) CharacterButton();
         else if (Input.GetKeyDown(KeyCode.B)) BackpackButton();
-        else if (Input.GetMouseButtonDown(0)) AttackButton();
+        //else if (Input.GetMouseButtonDown(0)) AttackButton();
     }
 }
