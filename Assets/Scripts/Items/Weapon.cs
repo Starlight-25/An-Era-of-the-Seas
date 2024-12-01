@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 
@@ -14,10 +16,14 @@ namespace Items
         public List<string> Stats;
     }
     
-    public class WeaponList
+
+    public class SwordList
     {
-        public List<Weapon> Swords;
-        public List<Weapon> Guns;
+        public List<Weapon> Swords = new List<Weapon>();
+    }
+    public class GunList
+    {
+        public List<Weapon> Guns = new List<Weapon>();
     }
     
     
@@ -29,23 +35,26 @@ namespace Items
     
     public class SwordLoader
     {
-        public List<Weapon> LoadSwords()
+        public SwordList LoadSwords()
         {
-            string path = Resources.Load<TextAsset>("Stats/items/weapon.json").text;
-            JObject weaponData = JObject.Parse(File.ReadAllText(path));
-            WeaponList swordList = new WeaponList();
-            foreach (var sword in (JObject)weaponData["Swords"])
+            string path = Resources.Load<TextAsset>("Stats/items/weapon").text;
+            var data = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, Dictionary<string, object>>>>(path);
+            var dataswords = data["Swords"];
+            SwordList swordList = new SwordList();
+            foreach (var sword in dataswords.Keys)
             {
+                var swordData = dataswords[sword];
                 Weapon newSword = new Weapon();
-                newSword.Name = sword.Key;
-                newSword.Rarity = (string)sword.Value["Rarity"];
-                newSword.MaxLevel = (int)weaponData["Rarity"][newSword.Rarity]["Max Level"];
-                newSword.Price = (int)weaponData["Rarity"][newSword.Rarity]["Price"];
-                newSword.Stats = sword.Value["Stats"].ToObject<List<string>>();
+                
+                newSword.Name = sword;
+                newSword.Rarity = (string)swordData["Rarity"];
+                newSword.MaxLevel = Convert.ToInt32(swordData["Max Level"]);
+                newSword.Price = Convert.ToInt32(swordData["Price"]);
+                newSword.Stats = ((JArray)swordData["Stats"]).ToObject<List<string>>();
                 
                 swordList.Swords.Add(newSword);
             }
-            return swordList.Swords;
+            return swordList;
         } 
     }
 
@@ -59,23 +68,26 @@ namespace Items
     
     public class GunLoader
     {
-        public List<Weapon> LoadGuns()
+        public GunList LoadGuns()
         {
-            string path = Resources.Load<TextAsset>("Stats/items/weapon.json").text;
-            JObject weaponData = JObject.Parse(File.ReadAllText(path));
-            WeaponList gunList = new WeaponList();
-            foreach (var gun in (JObject)weaponData["Guns"])
+            string path = Resources.Load<TextAsset>("Stats/items/weapon").text;
+            var data = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, Dictionary<string, object>>>>(path);
+            var dataguns = data["Guns"];
+            GunList gunList = new GunList();
+            foreach (var gun in dataguns.Keys)
             {
+                var gunData = dataguns[gun];
                 Weapon newGun = new Weapon();
-                newGun.Name = gun.Key;
-                newGun.Rarity = (string)gun.Value["Rarity"];
-                newGun.MaxLevel = (int)weaponData["Rarity"][newGun.Rarity]["Max Level"];
-                newGun.Price = (int)weaponData["Rarity"][newGun.Rarity]["Price"];
-                newGun.Stats = gun.Value["Stats"].ToObject<List<string>>();
+                
+                newGun.Name = gun;
+                newGun.Rarity = (string)gunData["Rarity"];
+                newGun.MaxLevel = Convert.ToInt32(gunData["Max Level"]);
+                newGun.Price = Convert.ToInt32(gunData["Price"]);
+                newGun.Stats = ((JArray)gunData["Stats"]).ToObject<List<string>>();
                 
                 gunList.Guns.Add(newGun);
             }
-            return gunList.Guns;
+            return gunList;
         }
     }
 }

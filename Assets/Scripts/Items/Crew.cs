@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 
@@ -16,7 +18,7 @@ namespace Items
 
     public class CrewList
     {
-        public List<Crew> Crews;
+        public List<Crew> Crews = new List<Crew>();
     }
 
 
@@ -30,26 +32,31 @@ namespace Items
     
     public class CrewLoader
     {
-        public List<Crew> LoadCrew()
+        public CrewList LoadCrew()
         {
-            string path = Resources.Load<TextAsset>("Stats/items/crew.json").text;
-            JObject crewData = JObject.Parse(File.ReadAllText(path));
+            string path = Resources.Load<TextAsset>("Stats/items/crew").text;
+            var data = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, Dictionary<string, object>>>>(path);
+            var datararity = data["Rarity"];
+            var datacrew = data["Crew"];
             CrewList crewList = new CrewList();
-            foreach (var crew in (JObject)crewData["Crew"])
+            foreach (var rarity in datararity.Keys)
             {
-                foreach (var rarity in (JObject)crewData["Rarity"])
+                var rarityData = datararity[rarity];
+                foreach (var crew in datacrew.Keys)
                 {
+                    var crewData = datacrew[crew];
                     Crew newCrew = new Crew();
-                    newCrew.Name = crew.Key;
-                    newCrew.Rarity = rarity.Key;
-                    newCrew.MaxLevel = (int)rarity.Value["Max Level"];
-                    newCrew.Price = (int)rarity.Value["Price"];
-                    newCrew.Stats = crew.Value["Stats"].ToObject<List<string>>();
+                    
+                    newCrew.Name = crew;
+                    newCrew.Rarity = rarity;
+                    newCrew.MaxLevel = Convert.ToInt32(rarityData["Max Level"]);
+                    newCrew.Price = Convert.ToInt32(rarityData["Price"]);
+                    newCrew.Stats = ((JArray)crewData["Stats"]).ToObject<List<string>>();
                     
                     crewList.Crews.Add(newCrew);
                 }
             }
-            return crewList.Crews;
+            return crewList;
         }
     }
 }

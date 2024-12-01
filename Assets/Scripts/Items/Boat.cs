@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 
@@ -14,28 +16,30 @@ namespace Items
     }
     
     public class BoatList{
-        public List<Boat> Boats;
+        public List<Boat> Boats = new List<Boat>();
     }
     
     
     
     public class BoatLoader{
-        public List<Boat> LoadBoat()
+        public BoatList LoadBoat()
         {
-            string path = Resources.Load<TextAsset>("Stats/items/boat.json").text;
-            JObject boatData = JObject.Parse(File.ReadAllText(path));
+            string path = Resources.Load<TextAsset>("Stats/items/boat").text;
+            var data = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, object>>>(path);
             BoatList boatList = new BoatList();
-            foreach (var boat in boatData)
+            foreach (var boat in data.Keys)
             {
+                var boatData = data[boat];
                 Boat newBoat = new Boat();
-                newBoat.Name = boat.Key;
-                newBoat.Rarity = (string)boat.Value["Rarity"];
-                newBoat.MaxLevel = (int)boat.Value["Max Level"];
-                newBoat.Price = (int)boat.Value["Price"];
+                
+                newBoat.Name = boat;
+                newBoat.Rarity = (string)boatData["Rarity"];
+                newBoat.MaxLevel = Convert.ToInt32(boatData["Max Level"]);
+                newBoat.Price = Convert.ToInt32(boatData["Price"]);
                 
                 boatList.Boats.Add(newBoat);
             }
-            return boatList.Boats;
+            return boatList;
         }
     }
 }
