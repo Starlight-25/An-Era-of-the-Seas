@@ -1,0 +1,117 @@
+{
+  "Faint Mark": {
+    "Rarity": "Common",
+    "MaxLvl": 25,
+    "PriceCoins": 50,
+    "PricePWD": 10,
+    "Stats": [
+      "ATK",
+      "Crit Rate",
+      "Crit DMG"
+    ]
+  },
+  "Glimmering Scar": {
+    "Rarity": "Common",
+    "MaxLvl": 25,
+    "PriceCoins": 50,
+    "PricePWD": 10,
+    "Stats": [
+      "HP",
+      "DEF"
+    ]
+  },
+  "Knight Spirit": {
+    "Rarity": "Rare",
+    "MaxLvl": 50,
+    "PriceCoins": 500,
+    "PricePWD": 100,
+    "Stats": [
+      "HP",
+      "DEF"
+    ]
+  },
+  "Arcane Corruption": {
+    "Rarity": "Rare",
+    "MaxLvl": 50,
+    "PriceCoins": 500,
+    "PricePWD": 100,
+    "Stats": [
+      "HP",
+      "DEF"
+    ]
+  },
+  "Golden Destiny": {
+    "Rarity": "Rare",
+    "MaxLvl": 50,
+    "PriceCoins": 500,
+    "PricePWD": 100,
+    "Stats": [
+      "ATK",
+      "Crit Rate",
+      "Crit DMG"
+    ]
+  },
+  "Elysian Sigil": {
+    "Rarity": "Epic",
+    "MaxLvl": 75,
+    "PriceCoins": 5000,
+    "PricePWD": 1000,
+    "Stats": [
+      "HP",
+      "DEF"
+    ]
+  },
+  "Poenix Feather": {
+    "Rarity": "Epic",
+    "MaxLvl": 75,
+    "PriceCoins": 5000,
+    "PricePWD": 1000,
+    "Stats": [
+      "HP",
+      "DEF"
+    ]
+  },
+  "Celestial Crown": {
+    "Rarity": "Epic",
+    "MaxLvl": 75,
+    "PriceCoins": 5000,
+    "PricePWD": 1000,
+    "Stats": [
+      "ATK",
+      "Crit Rate",
+      "Crit DMG"
+    ]
+  },
+  "Signet of Infinity": {
+    "Rarity": "Epic",
+    "MaxLvl": 75,
+    "PriceCoins": 5000,
+    "PricePWD": 1000,
+    "Stats": [
+      "ATK",
+      "Crit Rate",
+      "Crit DMG"
+    ]
+  },
+  "Licht des Himmels": {
+    "Rarity": "Legendary",
+    "MaxLvl": 100,
+    "PriceCoins": 50000,
+    "PricePWD": 10000,
+    "Stats": [
+      "HP",
+      "DEF"
+    ]
+  },
+  "Licht des Himmels": {
+    "Rarity": "Legendary",
+    "MaxLvl": 100,
+    "PriceCoins": 50000,
+    "PricePWD": 10000,
+    "Stats": [
+      "ATK",
+      "Crit Rate",
+      "Crit DMG"
+    ]
+  }
+}
