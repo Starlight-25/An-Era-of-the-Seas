@@ -79,7 +79,7 @@ namespace Items
         {
             string path = Resources.Load<TextAsset>("Stats/items/weapon").text;
             var data = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, Dictionary<string, object>>>>(path);
-            var datafirearm = data["Guns"];
+            var datafirearm = data["Firearms"];
             List<Firearm> firearmList = new List<Firearm>();
             
             foreach (var gun in datafirearm.Keys)
