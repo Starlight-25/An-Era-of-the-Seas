@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class AccountMenu : MonoBehaviour
 {
@@ -10,20 +11,30 @@ public class AccountMenu : MonoBehaviour
     public GameObject LoginElements;
     public GameObject RegisterElements;
     private string State;
+    public static event Action<string> OnPseudoChanged; 
 
-    private void OnEnable()
+    private void Start()
     {
         State = "Choice";
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (AccountCanvas.activeInHierarchy && Input.GetKeyDown(KeyCode.Escape))
         {
             ReturnButtonClicked();
         }
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
     public void LoginButtonClicked()
     {
         State = "Login";
@@ -39,7 +50,6 @@ public class AccountMenu : MonoBehaviour
         RegisterButton.SetActive(false);
         RegisterElements.SetActive(true);
     }
-
 
     public void ReturnButtonClicked()
     {
@@ -60,5 +70,18 @@ public class AccountMenu : MonoBehaviour
                 RegisterButton.SetActive(true);
                 break;
         }
+    }
+
+
+
+
+
+
+
+
+
+    private void SendPseudo(string pseudo)
+    {
+        OnPseudoChanged?.Invoke(pseudo);
     }
 }

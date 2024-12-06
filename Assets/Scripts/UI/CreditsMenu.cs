@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class CreditsScrips : MonoBehaviour
@@ -14,7 +13,7 @@ public class CreditsScrips : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (CreditsCanvas.activeInHierarchy && Input.GetKeyDown(KeyCode.Escape))
         {
             ReturnButtonClicked();
         }

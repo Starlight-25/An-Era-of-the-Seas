@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -11,6 +10,46 @@ public class MainMenu : MonoBehaviour
     public GameObject SoloButton;
     public GameObject MultiplayerButton;
 
+    private string Pseudo;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    private void Start()
+    {
+        AccountMenu.OnPseudoChanged += HandlePseudoChanged;
+    }
+
+    private void Update()
+    {
+        if (string.IsNullOrEmpty(Pseudo))
+        {
+            SoloButton.SetActive(false);
+            MultiplayerButton.SetActive(false);
+            StartButton.SetActive(true);
+        }
+        else if (!string.IsNullOrEmpty(Pseudo))
+        {
+            StartButton.SetActive(false);
+            SoloButton.SetActive(true);
+            MultiplayerButton.SetActive(true);
+        }
+    }
+
+
+    
+    
+    
+    
+    
+    
+    
+    
     public void StartButtonClicked()
     {
         MainMenuCanvas.SetActive(false);
@@ -38,5 +77,20 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Quit game");
         Application.Quit();
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    private void HandlePseudoChanged(string pseudo)
+    {
+        Pseudo = pseudo;
+        Debug.Log($"Pseudo : {Pseudo}");
     }
 }
