@@ -1,8 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.IO;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using UnityEngine;
 
 namespace Items
@@ -13,33 +11,33 @@ namespace Items
         public string Rarity;
         public int MaxLevel;
         public int Price;
-    }
-    
-    public class BoatList{
-        public List<Boat> Boats = new List<Boat>();
-    }
-    
-    
-    
-    public class BoatLoader{
-        public BoatList LoadBoat()
+
+        public Boat()
+        {
+            
+        }
+
+        public List<Boat> Load()
         {
             string path = Resources.Load<TextAsset>("Stats/items/boat").text;
             var data = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, object>>>(path);
-            BoatList boatList = new BoatList();
-            foreach (var boat in data.Keys)
+            List<Boat> boatlist = new List<Boat>();
+
+            foreach (var boatDict in data.Keys)
             {
-                var boatData = data[boat];
-                Boat newBoat = new Boat();
+                var boat = data[boatDict];
+                Boat newBoat = new Boat()
+                {
+                    Name = boatDict,
+                    Rarity = (string)boat["Rarity"],
+                    MaxLevel = Convert.ToInt32(boat["Max Level"]),
+                    Price = Convert.ToInt32(boat["Price"])
+                };
                 
-                newBoat.Name = boat;
-                newBoat.Rarity = (string)boatData["Rarity"];
-                newBoat.MaxLevel = Convert.ToInt32(boatData["Max Level"]);
-                newBoat.Price = Convert.ToInt32(boatData["Price"]);
-                
-                boatList.Boats.Add(newBoat);
+                boatlist.Add(newBoat);
             }
-            return boatList;
+
+            return boatlist;
         }
     }
 }

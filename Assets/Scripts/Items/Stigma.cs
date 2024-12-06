@@ -1,6 +1,5 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
@@ -15,35 +14,32 @@ namespace Items
         public int PriceCoin;
         public int PricePWD;
         public List<string> Stats;
-    }
-    
-    public class StigmaList
-    {
-        public List<Stigma> Stigmata = new List<Stigma>();
-    }
-    
-    
-    
-    
-    public class StigmaLoader{
-        public StigmaList LoadStigma()
+
+        public Stigma()
+        {
+            
+        }
+
+        public List<Stigma> Load()
         {
             string path = Resources.Load<TextAsset>("Stats/items/stigma").text;
             var data = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, object>>>(path);
-            StigmaList stigmaList = new StigmaList();
-            foreach (var stigma in data.Keys)
+            List<Stigma> stigmaList = new List<Stigma>();
+            
+            foreach (var stigmaDict in data.Keys)
             {
-                var stigmaData = data[stigma];
-                Stigma newStigma = new Stigma();
+                var stigma = data[stigmaDict];
+                Stigma newStigma = new Stigma()
+                {
+                    Name = stigmaDict,
+                    Rarity = (string)stigma["Rarity"],
+                    MaxLevel = Convert.ToInt32(stigma["MaxLvl"]),
+                    PriceCoin = Convert.ToInt32(stigma["PriceCoins"]),
+                    PricePWD = Convert.ToInt32(stigma["PricePWD"]),
+                    Stats = ((JArray)stigma["Stats"]).ToObject<List<string>>()
+                };
                 
-                newStigma.Name = stigma;
-                newStigma.Rarity = (string)stigmaData["Rarity"];
-                newStigma.MaxLevel = Convert.ToInt32(stigmaData["MaxLvl"]);
-                newStigma.PriceCoin = Convert.ToInt32(stigmaData["PriceCoins"]);
-                newStigma.PricePWD = Convert.ToInt32(stigmaData["PricePWD"]);
-                newStigma.Stats = ((JArray)stigmaData["Stats"]).ToObject<List<string>>();
-                
-                stigmaList.Stigmata.Add(newStigma);
+                stigmaList.Add(newStigma);
             }
 
             return stigmaList;

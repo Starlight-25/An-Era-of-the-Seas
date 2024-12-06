@@ -1,6 +1,5 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
@@ -14,49 +13,42 @@ namespace Items
         public int MaxLevel;
         public int Price;
         public List<string> Stats;
-    }
 
-    public class CrewList
-    {
-        public List<Crew> Crews = new List<Crew>();
-    }
+        public Crew()
+        {
+            
+        }
 
-
-
-
-
-
-
-
-    
-    
-    public class CrewLoader
-    {
-        public CrewList LoadCrew()
+        public List<Crew> Load()
         {
             string path = Resources.Load<TextAsset>("Stats/items/crew").text;
             var data = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, Dictionary<string, object>>>>(path);
             var datararity = data["Rarity"];
             var datacrew = data["Crew"];
-            CrewList crewList = new CrewList();
-            foreach (var rarity in datararity.Keys)
+            List<Crew> crewList = new List<Crew>();
+            
+            foreach (var rarityDict in datararity.Keys)
             {
-                var rarityData = datararity[rarity];
-                foreach (var crew in datacrew.Keys)
+                var rarity = datararity[rarityDict];
+                
+                foreach (var crewDict in datacrew.Keys)
                 {
-                    var crewData = datacrew[crew];
-                    Crew newCrew = new Crew();
+                    var crew = datacrew[crewDict];
+                    Crew newCrew = new Crew()
+                    {
+                        Name = crewDict,
+                        Rarity = rarityDict,
+                        MaxLevel = Convert.ToInt32(rarity["Max Level"]),
+                        Price = Convert.ToInt32(rarity["Price"]),
+                        Stats = ((JArray)crew["Stats"]).ToObject<List<string>>()
+                    };
                     
-                    newCrew.Name = crew;
-                    newCrew.Rarity = rarity;
-                    newCrew.MaxLevel = Convert.ToInt32(rarityData["Max Level"]);
-                    newCrew.Price = Convert.ToInt32(rarityData["Price"]);
-                    newCrew.Stats = ((JArray)crewData["Stats"]).ToObject<List<string>>();
-                    
-                    crewList.Crews.Add(newCrew);
+                    crewList.Add(newCrew);
                 }
             }
+
             return crewList;
         }
+
     }
 }
