@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public class AccountMenu : MonoBehaviour
 {
@@ -11,7 +10,7 @@ public class AccountMenu : MonoBehaviour
     public GameObject LoginElements;
     public GameObject RegisterElements;
     private string State;
-    public static event Action<string> OnPseudoChanged; 
+    public static event Action<string> OnPseudoChanged;
 
     private void Start()
     {
