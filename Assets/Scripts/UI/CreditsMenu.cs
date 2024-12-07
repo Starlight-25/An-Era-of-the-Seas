@@ -13,7 +13,7 @@ public class CreditsScrips : MonoBehaviour
 
     private void Update()
     {
-        if (CreditsCanvas.activeInHierarchy && Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             ReturnButtonClicked();
         }

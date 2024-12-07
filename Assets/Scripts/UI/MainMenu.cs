@@ -1,16 +1,20 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.Windows;
 
 public class MainMenu : MonoBehaviour
 {
     public GameObject MainMenuCanvas;
     public GameObject CreditsCanvas;
-    public GameObject AccountCanvas;
+    public GameObject PseudoCanvas;
     public GameObject StartButton;
     public GameObject SoloButton;
     public GameObject MultiplayerButton;
 
-    private string Pseudo;
+    private string savepath;
+
+
     
     
     
@@ -19,21 +23,22 @@ public class MainMenu : MonoBehaviour
     
     
     
-    
-    private void Start()
+    private void Awake()
     {
-        AccountMenu.OnPseudoChanged += HandlePseudoChanged;
+        savepath = Application.persistentDataPath + "/playerData.json";
+        Debug.Log(savepath);
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        if (string.IsNullOrEmpty(Pseudo))
+        //Debug.Log(File.Exists(savepath));
+        if (!File.Exists(savepath))
         {
             SoloButton.SetActive(false);
             MultiplayerButton.SetActive(false);
             StartButton.SetActive(true);
         }
-        else if (!string.IsNullOrEmpty(Pseudo))
+        else
         {
             StartButton.SetActive(false);
             SoloButton.SetActive(true);
@@ -53,7 +58,7 @@ public class MainMenu : MonoBehaviour
     public void StartButtonClicked()
     {
         MainMenuCanvas.SetActive(false);
-        AccountCanvas.SetActive(true);
+        PseudoCanvas.SetActive(true);
     }
     public void SoloButtonClicked()
     {
@@ -77,20 +82,5 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Quit game");
         Application.Quit();
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    private void HandlePseudoChanged(string pseudo)
-    {
-        Pseudo = pseudo;
-        Debug.Log($"Pseudo : {Pseudo}");
     }
 }

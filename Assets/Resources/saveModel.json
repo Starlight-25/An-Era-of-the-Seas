@@ -1,0 +1,48 @@
+{
+    "Pseudo": null,
+    "Level": null,
+    "Location": [
+        null,
+        null,
+        null
+    ],
+    "Inventory": {
+        "Equiped": {
+            "Weapon": {
+                "Sword": null,
+                "Firearm": null
+            },
+            "Stigmata": [
+                null,
+                null
+            ],
+            "Boat": null,
+            "Crew Members": {
+                "Explorer": [],
+                "Navigator": [],
+                "Gunner": [],
+                "Boatswain": []
+            }
+        },
+        "Backpack": {
+            "Materials": {
+                "Coins": null,
+                "Pure Water Drop": null,
+                "Wood": null,
+                "Steal": null
+            },
+            "Weapon": {
+                "Sword": [],
+                "Firearm": []
+            },
+            "Stigmata": [],
+            "Boats": [],
+            "Crew Members": {
+                "Explorer": [],
+                "Navigator": [],
+                "Gunner": [],
+                "Boatswain": []
+            }
+        }
+    }
+}
