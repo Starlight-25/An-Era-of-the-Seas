@@ -9,6 +9,8 @@ using UnityEngine.Windows;
 using Directory = System.IO.Directory;
 using File = UnityEngine.Windows.File;
 using Input = UnityEngine.Input;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 public class PseudoMenu : MonoBehaviour
 {
@@ -41,11 +43,17 @@ public class PseudoMenu : MonoBehaviour
         }
         string savepath = Application.persistentDataPath + "/playerData.json";
         string modelcontent = Resources.Load<TextAsset>("saveModel").text;
-        
-        StreamWriter sw = new StreamWriter(savepath);
-        sw.Write(modelcontent);
-        sw.Close();
+        System.IO.File.WriteAllText(savepath, modelcontent);
+
+        InitPseudo(savepath, pseudoinput);
         
         ReturnButtonClicked();
+    }
+
+    private void InitPseudo(string savepath, string pseudo)
+    {
+        JObject jsonData = JObject.Parse(System.IO.File.ReadAllText(savepath));
+        jsonData["Pseudo"] = pseudo;
+        System.IO.File.WriteAllText(savepath, jsonData.ToString());
     }
 }
