@@ -12,11 +12,6 @@ namespace Items
         public int MaxLevel;
         public int Price;
 
-        public Boat()
-        {
-            
-        }
-
         public List<Boat> Load()
         {
             string path = Resources.Load<TextAsset>("Stats/items/boat").text;

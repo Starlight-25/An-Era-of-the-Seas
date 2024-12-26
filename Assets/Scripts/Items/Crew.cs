@@ -14,11 +14,6 @@ namespace Items
         public int Price;
         public List<string> Stats;
 
-        public Crew()
-        {
-            
-        }
-
         public List<Crew> Load()
         {
             string path = Resources.Load<TextAsset>("Stats/items/crew").text;

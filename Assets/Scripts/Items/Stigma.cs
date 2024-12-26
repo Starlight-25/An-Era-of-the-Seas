@@ -15,11 +15,6 @@ namespace Items
         public int PricePWD;
         public List<string> Stats;
 
-        public Stigma()
-        {
-            
-        }
-
         public List<Stigma> Load()
         {
             string path = Resources.Load<TextAsset>("Stats/items/stigma").text;
