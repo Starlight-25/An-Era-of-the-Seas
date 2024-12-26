@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using JetBrains.Annotations;
+using JetBrains.Annotations;using UnityEngine;
 
 public class PlayerData
 {
@@ -13,32 +13,11 @@ public class PlayerData
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 public class Inventory
 {
     public Equipped Equipped;
     public Backpack Backpack;
 }
-
-
-
-
-
-
 
 
 
@@ -138,11 +117,6 @@ public class Boatswain
     public string Rarity;
     public int Level;
 }
-
-
-
-
-
 
 
 
