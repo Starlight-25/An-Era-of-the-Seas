@@ -1,5 +1,7 @@
 using System;
+using System.IO;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerUIManager : MonoBehaviour
 {
@@ -31,6 +33,12 @@ public class PlayerUIManager : MonoBehaviour
         Debug.Log("Attack");
     }
 
+    public Text LevelText;
+    
+    public void LoadPlayerData()
+    {
+        string savePath = Path.Combine(Application.persistentDataPath, "playerData.json");
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) SettingsButton();
