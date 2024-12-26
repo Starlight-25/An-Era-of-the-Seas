@@ -7,7 +7,7 @@
         null
     ],
     "Inventory": {
-        "Equiped": {
+        "Equipped": {
             "Weapon": {
                 "Sword": null,
                 "Firearm": null
@@ -17,7 +17,7 @@
                 null
             ],
             "Boat": null,
-            "Crew Members": {
+            "Crew Member": {
                 "Explorer": [],
                 "Navigator": [],
                 "Gunner": [],
@@ -26,22 +26,22 @@
         },
         "Backpack": {
             "Materials": {
-                "Coins": null,
-                "Pure Water Drop": null,
-                "Wood": null,
-                "Steal": null
+                "Coins": 0,
+                "Pure Water Drop": 0,
+                "Wood": 0,
+                "Steal": 0
             },
-            "Weapon": {
-                "Sword": [],
-                "Firearm": []
+            "Weapons": {
+                "Swords": [],
+                "Firearms": []
             },
             "Stigmata": [],
             "Boats": [],
             "Crew Members": {
-                "Explorer": [],
-                "Navigator": [],
-                "Gunner": [],
-                "Boatswain": []
+                "Explorers": [],
+                "Navigators": [],
+                "Gunners": [],
+                "Boatswains": []
             }
         }
     }
