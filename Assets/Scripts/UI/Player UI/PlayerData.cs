@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
+using JetBrains.Annotations;
 
 public class PlayerData
 {
     public string Pseudo;
     public int Level;
-    public (int x, int y, int z) Location;
+    public List<int?> Location;
     public Inventory Inventory;
 }
 
@@ -50,8 +51,8 @@ public class Inventory
 public class Equipped
 {
     public Weapon Weapon;
-    public List<Stigma> Stigmata;
-    public Boat Boat;
+    [ItemCanBeNull] public List<Stigma> Stigmata = new List<Stigma>();
+    [CanBeNull] public Boat Boat;
     public Crew Crew;
 }
 
@@ -61,17 +62,22 @@ public class Equipped
 
 public class Weapon
 {
-    public Sword Sword;
-    public Firearm Firearm;
+    [CanBeNull] public Sword Sword;
+    [CanBeNull] public Firearm Firearm;
 }
 
 public class Sword
 {
-    
+    public string Name;
+    public string Rarity;
+    public int Level;
 }
 
 public class Firearm
 {
+    public string Name;
+    public string Rarity;
+    public int Level;
     
 }
 
@@ -81,7 +87,9 @@ public class Firearm
 
 public class Stigma
 {
-    
+    public string Name;
+    public string Rarity;
+    public int Level;
 }
 
 
@@ -90,7 +98,9 @@ public class Stigma
 
 public class Boat
 {
-
+    public string Name;
+    public string Rarity;
+    public int Level;
 }
 
 
@@ -99,30 +109,34 @@ public class Boat
 
 public class Crew
 {
-    public List<Explorer> Explorer;
-    public List<Navigator> Navigator;
-    public List<Gunner> Gunner;
-    public List<Boatswain> Boatswain;
+    [ItemCanBeNull] public List<Explorer> Explorer = new List<Explorer>();
+    [ItemCanBeNull] public List<Navigator> Navigator = new List<Navigator>();
+    [ItemCanBeNull] public List<Gunner> Gunner = new List<Gunner>();
+    [ItemCanBeNull] public List<Boatswain> Boatswain = new List<Boatswain>();
 }
 
 public class Explorer
 {
-    
+    public string Rarity;
+    public int Level;
 }
 
 public class Navigator
 {
-    
+    public string Rarity;
+    public int Level;
 }
 
 public class Gunner
 {
-    
+    public string Rarity;
+    public int Level;
 }
 
 public class Boatswain
-{
-    
+{    
+    public string Rarity;
+    public int Level;
 }
 
 
@@ -143,8 +157,8 @@ public class Backpack
 {
     public Materials Materials;
     public Weapons Weapons;
-    public List<Stigma> Stigmata;
-    public List<Boat> Boats;
+    [ItemCanBeNull] public List<Stigma> Stigmata = new List<Stigma>();
+    [ItemCanBeNull] public List<Boat> Boats = new List<Boat>();
     public Crew Crew;
 }
 
@@ -157,13 +171,13 @@ public class Materials
     public int PureWaterDrop;
     public int Wood;
     public int Steal;
-}
+}   
 
 
 
 
 public class Weapons
 {
-    public List<Sword> Swords;
-    public List<Firearm> Firearms;
+    [ItemCanBeNull] public List<Sword> Swords = new List<Sword>();
+    [ItemCanBeNull] public List<Firearm> Firearms = new List<Firearm>();
 }
