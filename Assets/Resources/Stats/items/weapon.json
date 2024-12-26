@@ -1,0 +1,192 @@
+{
+  "Swords": {
+    "Rusty Sword": {
+      "Rarity": "Common",
+      "Max Level": 25,
+      "Price": 100,
+      "Stats": [
+        "ATK",
+        "Crit Rate"
+      ]
+    },
+    "Iron Blade": {
+      "Rarity": "Common",
+      "Max Level": 25,
+      "Price": 100,
+      "Stats": [
+        "ATK",
+        "Crit DMG"
+      ]
+    },
+    "Cinder Blade": {
+      "Rarity": "Rare",
+      "Max Level": 500,
+      "Price": 1000,
+      "Stats": [
+        "ATK",
+        "Crit Rate"
+      ]
+    },
+    "Water Edge": {
+      "Rarity": "Rare",
+      "Max Level": 500,
+      "Price": 1000,
+      "Stats": [
+        "ATK",
+        "Crit DMG"
+      ]
+    },
+    "Dragon Claw": {
+      "Rarity": "Epic",
+      "Max Level": 75,
+      "Price": 10000,
+      "Stats": [
+        "Crit Rate",
+        "Crit DMG"
+      ]
+    },
+    "Vortex Blade": {
+      "Rarity": "Epic",
+      "Max Level": 75,
+      "Price": 10000,
+      "Stats": [
+        "ATK",
+        "Crit Rate"
+      ]
+    },
+    "Shadow Sword": {
+      "Rarity": "Epic",
+      "Max Level": 75,
+      "Price": 10000,
+      "Stats": [
+        "ATK",
+        "Crit DMG"
+      ]
+    },
+    "Emberstrike": {
+      "Rarity": "Epic",
+      "Max Level": 75,
+      "Price": 10000,
+      "Stats": [
+        "ATK",
+        "Crit Rate",
+        "Crit DNG"
+      ]
+    },
+    "Excalibur": {
+      "Rarity": "Legendary",
+      "Max Level": 100,
+      "Price": 75000,
+      "Stats": [
+        "ATK",
+        "Crit Rate",
+        "Crit DNG"
+      ]
+    },
+    "Eclipse": {
+      "Rarity": "Legendary",
+      "Max Level": 100,
+      "Price": 75000,
+      "Stats": [
+        "ATK",
+        "Crit Rate",
+        "Crit DNG"
+      ]
+    }
+  },
+  "Firearms": {
+    "Flintlock Pistol": {
+      "Rarity": "Common",
+      "Max Level": 25,
+      "Price": 100,
+      "Stats": [
+        "ATK",
+        "Crit Rate"
+      ]
+    },
+    "Smuggler's Blunderbuss": {
+      "Rarity": "Common",
+      "Max Level": 25,
+      "Price": 100,
+      "Stats": [
+        "ATK",
+        "Crit DNG"
+      ]
+    },
+    "Mariner's Revolver": {
+      "Rarity": "Rare",
+      "Max Level": 500,
+      "Price": 1000,
+      "Stats": [
+        "ATK",
+        "Crit Rate"
+      ]
+    },
+    "Corsair's Flintlock": {
+      "Rarity": "Rare",
+      "Max Level": 500,
+      "Price": 1000,
+      "Stats": [
+        "ATK",
+        "Crit DNG"
+      ]
+    },
+    "Tempest Pistol": {
+      "Rarity": "Epic",
+      "Max Level": 75,
+      "Price": 10000,
+      "Stats": [
+        "Crit Rate",
+        "Crit DNG"
+      ]
+    },
+    "Vortex Cannon": {
+      "Rarity": "Epic",
+      "Max Level": 75,
+      "Price": 10000,
+      "Stats": [
+        "ATK",
+        "Crit Rate"
+      ]
+    },
+    "Ghost Ship Musket": {
+      "Rarity": "Epic",
+      "Max Level": 75,
+      "Price": 10000,
+      "Stats": [
+        "ATK",
+        "Crit DNG"
+      ]
+    },
+    "Comet's Fury": {
+      "Rarity": "Epic",
+      "Max Level": 75,
+      "Price": 10000,
+      "Stats": [
+        "ATK",
+        "Crit Rate",
+        "Crit DNG"
+      ]
+    },
+    "Heavenly Shard": {
+      "Rarity": "Legendary",
+      "Max Level": 100,
+      "Price": 75000,
+      "Stats": [
+        "ATK",
+        "Crit Rate",
+        "Crit DNG"
+      ]
+    },
+    "Eclipse": {
+      "Rarity": "Legendary",
+      "Max Level": 100,
+      "Price": 75000,
+      "Stats": [
+        "ATK",
+        "Crit Rate",
+        "Crit DNG"
+      ]
+    }
+  }
+}
