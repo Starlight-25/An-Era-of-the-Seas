@@ -17,7 +17,7 @@
                 null
             ],
             "Boat": null,
-            "Crew Member": {
+            "Crew": {
                 "Explorer": [],
                 "Navigator": [],
                 "Gunner": [],
@@ -27,7 +27,7 @@
         "Backpack": {
             "Materials": {
                 "Coins": 0,
-                "Pure Water Drop": 0,
+                "PureWaterDrop": 0,
                 "Wood": 0,
                 "Steal": 0
             },
@@ -37,11 +37,11 @@
             },
             "Stigmata": [],
             "Boats": [],
-            "Crew Members": {
-                "Explorers": [],
-                "Navigators": [],
-                "Gunners": [],
-                "Boatswains": []
+            "Crew": {
+                "Explorer": [],
+                "Navigator": [],
+                "Gunner": [],
+                "Boatswain": []
             }
         }
     }
