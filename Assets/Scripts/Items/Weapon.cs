@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
@@ -7,7 +6,7 @@ using UnityEngine;
 
 namespace Items
 {
-    public class Weapon1
+    public class Weapon
     {
         public string Name;
         public string Rarity;
@@ -30,7 +29,7 @@ namespace Items
     
     
     
-    public class Sword : Weapon1
+    public class Sword : Weapon
     {
         public List<Sword> Load()
         {
@@ -73,7 +72,7 @@ namespace Items
 
 
 
-    public class Firearm : Weapon1
+    public class Firearm : Weapon
     {
         public List<Firearm> Load()
         {
