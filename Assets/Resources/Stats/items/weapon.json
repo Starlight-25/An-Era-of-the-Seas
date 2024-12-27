@@ -6,7 +6,7 @@
       "Price": 100,
       "Stats": [
         "ATK",
-        "Crit Rate"
+        "CritRate"
       ]
     },
     "Iron Blade": {
@@ -15,7 +15,7 @@
       "Price": 100,
       "Stats": [
         "ATK",
-        "Crit DMG"
+        "CritDMG"
       ]
     },
     "Cinder Blade": {
@@ -24,7 +24,7 @@
       "Price": 1000,
       "Stats": [
         "ATK",
-        "Crit Rate"
+        "CritRate"
       ]
     },
     "Water Edge": {
@@ -33,7 +33,7 @@
       "Price": 1000,
       "Stats": [
         "ATK",
-        "Crit DMG"
+        "CritDMG"
       ]
     },
     "Dragon Claw": {
@@ -41,8 +41,8 @@
       "Max Level": 75,
       "Price": 10000,
       "Stats": [
-        "Crit Rate",
-        "Crit DMG"
+        "CritRate",
+        "CritDMG"
       ]
     },
     "Vortex Blade": {
@@ -51,7 +51,7 @@
       "Price": 10000,
       "Stats": [
         "ATK",
-        "Crit Rate"
+        "CritRate"
       ]
     },
     "Shadow Sword": {
@@ -60,7 +60,7 @@
       "Price": 10000,
       "Stats": [
         "ATK",
-        "Crit DMG"
+        "CritDMG"
       ]
     },
     "Emberstrike": {
@@ -69,8 +69,8 @@
       "Price": 10000,
       "Stats": [
         "ATK",
-        "Crit Rate",
-        "Crit DNG"
+        "CritRate",
+        "CritDMG"
       ]
     },
     "Excalibur": {
@@ -79,8 +79,8 @@
       "Price": 75000,
       "Stats": [
         "ATK",
-        "Crit Rate",
-        "Crit DNG"
+        "CritRate",
+        "CritDMG"
       ]
     },
     "Eclipse": {
@@ -89,8 +89,8 @@
       "Price": 75000,
       "Stats": [
         "ATK",
-        "Crit Rate",
-        "Crit DNG"
+        "CritRate",
+        "CritDMG"
       ]
     }
   },
@@ -101,7 +101,7 @@
       "Price": 100,
       "Stats": [
         "ATK",
-        "Crit Rate"
+        "CritRate"
       ]
     },
     "Smuggler's Blunderbuss": {
@@ -110,7 +110,7 @@
       "Price": 100,
       "Stats": [
         "ATK",
-        "Crit DNG"
+        "CritDMG"
       ]
     },
     "Mariner's Revolver": {
@@ -119,7 +119,7 @@
       "Price": 1000,
       "Stats": [
         "ATK",
-        "Crit Rate"
+        "CritRate"
       ]
     },
     "Corsair's Flintlock": {
@@ -128,7 +128,7 @@
       "Price": 1000,
       "Stats": [
         "ATK",
-        "Crit DNG"
+        "CritDMG"
       ]
     },
     "Tempest Pistol": {
@@ -136,8 +136,8 @@
       "Max Level": 75,
       "Price": 10000,
       "Stats": [
-        "Crit Rate",
-        "Crit DNG"
+        "CritRate",
+        "CritDMG"
       ]
     },
     "Vortex Cannon": {
@@ -146,7 +146,7 @@
       "Price": 10000,
       "Stats": [
         "ATK",
-        "Crit Rate"
+        "CritRate"
       ]
     },
     "Ghost Ship Musket": {
@@ -155,7 +155,7 @@
       "Price": 10000,
       "Stats": [
         "ATK",
-        "Crit DNG"
+        "CritDMG"
       ]
     },
     "Comet's Fury": {
@@ -164,8 +164,8 @@
       "Price": 10000,
       "Stats": [
         "ATK",
-        "Crit Rate",
-        "Crit DNG"
+        "CritRate",
+        "CritDMG"
       ]
     },
     "Heavenly Shard": {
@@ -174,8 +174,8 @@
       "Price": 75000,
       "Stats": [
         "ATK",
-        "Crit Rate",
-        "Crit DNG"
+        "CritRate",
+        "CritDMG"
       ]
     },
     "Eclipse": {
@@ -184,8 +184,8 @@
       "Price": 75000,
       "Stats": [
         "ATK",
-        "Crit Rate",
-        "Crit DNG"
+        "CritRate",
+        "CritDMG"
       ]
     }
   }

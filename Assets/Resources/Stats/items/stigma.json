@@ -6,8 +6,8 @@
     "PricePWD": 10,
     "Stats": [
       "ATK",
-      "Crit Rate",
-      "Crit DMG"
+      "CritRate",
+      "CritDMG"
     ]
   },
   "Glimmering Scar": {
@@ -47,8 +47,8 @@
     "PricePWD": 100,
     "Stats": [
       "ATK",
-      "Crit Rate",
-      "Crit DMG"
+      "CritRate",
+      "CritDMG"
     ]
   },
   "Elysian Sigil": {
@@ -78,8 +78,8 @@
     "PricePWD": 1000,
     "Stats": [
       "ATK",
-      "Crit Rate",
-      "Crit DMG"
+      "CritRate",
+      "CritDMG"
     ]
   },
   "Signet of Infinity": {
@@ -89,8 +89,8 @@
     "PricePWD": 1000,
     "Stats": [
       "ATK",
-      "Crit Rate",
-      "Crit DMG"
+      "CritRate",
+      "CritDMG"
     ]
   },
   "Licht des Himmels": {
@@ -110,8 +110,8 @@
     "PricePWD": 10000,
     "Stats": [
       "ATK",
-      "Crit Rate",
-      "Crit DMG"
+      "CritRate",
+      "CritDMG"
     ]
   }
 }

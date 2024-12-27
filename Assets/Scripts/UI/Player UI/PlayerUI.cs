@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Serialization;
 
 public class PlayerUIManager : MonoBehaviour
 {
@@ -32,7 +33,7 @@ public class PlayerUIManager : MonoBehaviour
         Debug.Log("Attack");
     }
 
-    public DataManager DataManager;
+    public PlayerDataManager playerDataManager;
     public TextMeshProUGUI LevelText;
     
     private void Update()
@@ -41,6 +42,7 @@ public class PlayerUIManager : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.C)) CharacterButton();
         else if (Input.GetKeyDown(KeyCode.B)) BackpackButton();
         //else if (Input.GetMouseButtonDown(0)) AttackButton();
-        LevelText.text = $"Lvl {DataManager.PlayerData.Level}";
+
+        LevelText.text = $"Lvl {playerDataManager.PlayerData.Level}";
     }
 }

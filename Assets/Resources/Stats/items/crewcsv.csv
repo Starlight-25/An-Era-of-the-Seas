@@ -1,4 +1,4 @@
-Level,HP,DEF,ATK,Crit Rate,Crit DMG,Speed,Exploration,Coins,Pure Water Drop
+Level,HP,DEF,ATK,CritRate,CritDMG,Speed,Exploration,Coins,PWD
 1,250,0,5,0,0,0,1,0,0
 2,500,505,10,0,0,0,2,100,20
 3,750,1010,15,0,0,0,3,108,21

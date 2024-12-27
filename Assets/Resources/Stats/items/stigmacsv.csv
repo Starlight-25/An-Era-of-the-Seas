@@ -1,4 +1,4 @@
-Level,HP,DEF,ATK,Crit Rate,Crit DMG,Coins,PWD
+Level,HP,DEF,ATK,CritRate,CritDMG,Coins,PWD
 1,50,25,5,0,0,0,0
 2,100,50,7,0,1,20,2
 3,150,75,10,0,2,21,2

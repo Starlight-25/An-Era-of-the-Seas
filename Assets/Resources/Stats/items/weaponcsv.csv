@@ -1,4 +1,4 @@
-Level,ATK,Crit Rate,Crit DMG,Coins,Pure Water Drop,Steal
+Level,ATK,CritRate,CritDMG,Coins,PWD,Steal
 1,10,0,0,0,0,0
 2,17,0,0,50,2,1
 3,24,0,1,54,2,1

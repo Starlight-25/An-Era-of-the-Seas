@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using UnityEngine;
 
-public class DataManager : MonoBehaviour
+public class PlayerDataManager : MonoBehaviour
 {
     public PlayerData PlayerData;
     public string savePath;
@@ -21,5 +21,6 @@ public class DataManager : MonoBehaviour
     {
         savePath = Path.Combine(Application.persistentDataPath, "playerData.json");
         LoadPlayerData();
+        Debug.Log("PlayerDataManager loaded");
     }
 }
