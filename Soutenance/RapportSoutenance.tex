@@ -268,132 +268,6 @@ Le moteur de jeu utilisé est Unity, comme mentionné précédemment, pour de no
 
 
 
-\newpage
-\subsection{Budget}
-\subsubsection{Tableau}
-\begin{longtable}{|>{\columncolor{lightgray}}l|r|}
-    \hline
-    \rowcolor{lightgray}
-    \textbf{Dépenses} & \textbf{Couts}\\ 
-    \hline
-    Salaire de l'équipe & 300 000€\\ 
-    \hline
-    Local (75m²) & 27 000€\\ 
-    \hline
-    Electricité & 4 665,17€\\
-    \hline
-    Eau & 24,67€\\
-    \hline
-    Chauffage & 1 408,96€\\
-    \hline
-    Repas & 15 000€\\
-    \hline
-    IDE (Rider) & 1 445€\\
-    \hline
-    Transport & 1 910€\\
-    \hline
-    Agents d'entretien & 1 000€\\
-    \hline
-    Assurance & 360€\\
-    \hline
-    Total (Sans crédits) & 352 813,80€\\
-    \hline
-    Crédits (Taux d'intérêt) & 42 891,14€\\
-    \hline
-    \textbf{Total} & \textbf{400 370,11€}\\
-    \hline
-\end{longtable}
-
-
-
-
-\subsubsection{Détails}
-\paragraph{Salaire de l'équipe}\hfill
-
-Développeur de jeux vidéos : 60 000€ par an
-
-Total : $60\,000\,\text{€} \times 5 = 300\,000\,\text{€}$
-
-\paragraph{Local}\hfill
-
-Prix du m² à Paris : 30€/m² par mois
-
-Total : $30\,\text{€} \times 75\,\text{m²} 12\,\text{mois} = 27 000\,\text{€}$
-
-\paragraph{Electricité}\hfill
-
-Ordinateurs : 800W
-
-Ecrans (2 par membres de l'équipe) : $2 \times 200\,\text{W} = 400\,\text{W}$
-
-Autre : 350W
-
-Consomation totale par heure : $(800 + 400) \times 5 + 350 = 6\,350\,\text{kWh}$
-
-Comsommation totale : $6\,350\,\text{kWh} \times 8\,\text{h} * 365 = 18\,542\,\text{kWh}$
-
-prix d'un kWh : 0,2516€/kWh 
-
-Total : $18\,542\,\text{kWh} \times 0,2516\,\text{€/kWh} = 4\,665,17\,\text{€}$
-
-\paragraph{Eau}\hfill
-
-Consommation journalière : 15 L
-
-Prix de l'eau à Paris : 4.5€/1m\textsuperscript{3}
-
-Total : $(15 \times 10^{-3}) \times 365 \times 4,5\,\text{€/m\textsuperscript{3}} = 24,64\,\text{€}$
-
-\paragraph{Chauffage}\hfill
-
-Consommation : 80kWh/m² par an
-
-Consommation totale : $80\,\text{kWh/m²} \times 70\,\text{m²} = 5\,600\,\text{kWh}$
-
-Total : $5\,600\,\text{kWh} \times 0,2516\,\text{€/kWh} = 1,\,408,96\,\text{€}$
-
-\paragraph{Repas}\hfill
-
-Prix d'un repas : 15€
-
-Total : $15\,\text{€} \times 5 \times 200\,\text{jours} = 15\,000\,\text{€}$
-
-\paragraph{IDE (Rider)}\hfill
-
-Cout de l'abonnement : 289€ par an
-
-Total : $382\,\text{€} \times 5 = 1\,910\,\text{€}$
-
-\paragraph{Transport}\hfill
-
-Cout de l'abonnement Navigo : 382€ par an
-
-Total : $382\,\text{€} \times 5 = 1\,910\,\text{€}$
-
-\paragraph{Crédits}\hfill
-
-Taux d'intérêts : 3.9\%
-
-Calculs du montant :
-\[
-A = \frac{P \cdot r}{1 - (1 + r)^{-n}}
-\]
-
-où :
-
-\begin{itemize}
-    \item \(A\) : le montant des paiements annuels
-    \item \(P\) : le montant du prêt, \(P = 352\,813,80\,\text{€}\)
-    \item \(r\) : le taux d'intérêt annuel divisé par le nombre de paiements, \(r = 3.9\% = 0.039\)
-    \item \(n\) : le nombre total de paiements, \(n = 5 \, \text{ans}\)
-\end{itemize}
-
-Couts total avec les taux d'intérêts : $A \times n = 395\,145,21\,\text{€}$
-
-Couts total de l'intérêt : $395\,145,21\,\text{€} - P = 42\,331,41\,\text{€}$
-
-
-
 
 
 
@@ -868,7 +742,88 @@ Depuis son enfance jusqu’à aujourd’hui, Ethan a toujours cherché à compre
 
 \clearpage
 \section{Récit de la réalisation}\hfill
-\subsection{Jérôme}
+\subsection{Jérôme}\hfill
+\subsubsection{Implémentation des objets dans le jeu}\hfill
+
+Le développement du jeu a commencé par une étape cruciale : lister tous les objets du jeu. Ces objets étaient variés : des armes comme des épées et des armes à feu, des stigmata, des bateaux, des membres d’équipage, ainsi que divers matériaux comme des pièces, des gouttes d’eau pure, du bois et de l’acier. Le plus difficile dans cette phase initiale a été de trouver des noms originaux et captivants pour ces objets. Cela m’a demandé un véritable effort d’inspiration, avec de longues recherches sur Internet pour enrichir ma créativité.\\
+
+Une fois cette étape franchie, j’ai entrepris de structurer ces informations dans un fichier JSON. Heureusement, je maîtrisais déjà la manipulation de fichiers JSON, ce qui a rendu cette étape relativement simple et rapide.\\
+
+Ensuite, j’ai dû passer à une tâche plus complexe : concevoir un document Excel pour définir les statistiques de base du joueur en fonction des niveaux, en sachant que le niveau maximum est de 100. Il fallait aussi déterminer les matériaux nécessaires pour améliorer le niveau du joueur. Trouver les formules adéquates s’est avéré être un véritable casse-tête. J’ai exploré des modèles de croissance exponentielle et linéaire, en définissant des statistiques précises pour le niveau 1 et le niveau 100. Malgré mon aisance sur Excel, cette phase a nécessité une recherche approfondie sur Internet, car les formules que je recherchais étaient très spécifiques.\\
+
+Après avoir finalisé les statistiques du joueur, je suis passé à la définition des statistiques pour chaque type d’objet. Armé des formules déjà établies, cette partie s’est révélée plus rapide, bien que répétitive. Néanmoins, j’ai dû, à plusieurs reprises, ajuster les statistiques des niveaux 1 et 100 pour maintenir un équilibre cohérent avec les statistiques du joueur.\\
+
+Une fois toutes les données prêtes, il était temps de les exporter des fichiers Excel (.xlsx) vers des fichiers CSV (.csv). Cette conversion était essentielle pour pouvoir manipuler les données en C\# et les charger dans Unity par la suite.\\
+
+Puis est venue une étape décisive : écrire les scripts pour intégrer les objets du jeu dans Unity. Cela impliquait de manipuler les fichiers JSON et CSV. J’ai découvert et utilisé deux bibliothèques très populaires pour cette tâche : Newtonsoft.Json pour les fichiers JSON et CsvHelper pour les fichiers CSV.\\
+
+Pour bien comprendre comment charger les données, j’ai exploré la documentation de ces bibliothèques et regardé plusieurs vidéos explicatives sur YouTube. Le traitement des fichiers JSON m’a donné du fil à retordre, tandis que celui des fichiers CSV s’est avéré plus intuitif.\\
+
+Une fois les fonctions de chargement prêtes, il me fallait les exécuter dans Unity via des scripts MonoBehaviour. Cette étape a ouvert la porte à de nombreux défis. L’un des problèmes majeurs était de définir une méthode efficace pour communiquer les données entre les scripts. Une fois cette méthode trouvée, un autre obstacle est apparu : les scripts ne se chargeaient pas dans le bon ordre. Pour résoudre ce problème, j’ai dû modifier les paramètres d’exécution des scripts dans le profil du jeu Unity.\\
+
+Une fois les problèmes de chargement des scripts réglés et l’ensemble fonctionnant correctement, il était temps de m’attaquer à une autre étape essentielle : la gestion des données du joueur.\\
+
+Au départ, j’avais envisagé d’utiliser Firebase Realtime Database pour sauvegarder les informations du joueur. Cependant, j’ai rapidement réalisé qu’il était impossible d’intégrer les bibliothèques nécessaires, disponibles sur NuGet, dans un projet Unity. Face à cet obstacle, j’ai décidé de me tourner vers une solution locale : sauvegarder les données du joueur sous forme de fichiers JSON. Cette approche m’avait déjà été suggérée lors de mes recherches sur la gestion des sauvegardes dans Unity.\\
+
+Le fichier JSON devait contenir plusieurs éléments cruciaux : la position du joueur, son niveau et son inventaire. Concernant l’inventaire, j’avais déjà réfléchi à une organisation logique : faire la distinction entre les objets équipés par le joueur et ceux simplement stockés dans son inventaire.\\
+
+Avec cette structure en tête, j’ai commencé à écrire un script permettant de gérer ces données. Il devait charger les informations depuis le fichier JSON et les traduire en un objet C\# exploitable. Une fois les données chargées, il fallait recalculer les statistiques du joueur, en prenant en compte les différents bonus apportés par les stigmata et l’arme qu’il avait équipée.\\
+
+Cette partie s’est avérée plus intuitive que je ne l’imaginais. La majorité des recherches nécessaires avait déjà été effectuée lors des étapes précédentes, et j’avais également écrit les scripts pour charger les données des objets. Il ne me restait plus qu’à exploiter ces données pour ajuster les statistiques du joueur.\\
+
+Ce processus, bien que technique, s’est déroulé de manière fluide. Il était gratifiant de voir le système fonctionner comme prévu et d’observer les statistiques du joueur évoluer dynamiquement en fonction des objets qu’il équipait.\\
+
+Cette étape a marqué une avancée significative dans le développement de mon jeu, me rapprochant encore un peu plus de ma vision finale. Chaque défi surmonté, chaque ligne de code écrite, renforce ma compréhension et mon enthousiasme pour ce projet.\\
+
+
+
+\subsubsection{Menu \& Interface utilisateur}\hfill
+
+Avant de plonger dans Unity, j’ai pris le temps de me documenter. J’ai consulté des guides et regardé plusieurs vidéos sur YouTube pour comprendre comment créer des menus et des interfaces utilisateur dans Unity. À première vue, cela semblait relativement simple, mais je savais qu’il faudrait porter une attention particulière à la manière de présenter les boutons et les éléments de l’UI. Mon objectif était de créer une interface claire et intuitive qui n’entraverait pas l’expérience du joueur.\\
+
+\paragraph{Conception du Menu Principal}\hfill
+
+J’ai commencé par placer les boutons et le fond du menu principal. Trouver un background adapté s’est avéré assez rapide grâce à l’Asset Store de Unity. J’y ai découvert un ensemble d’images qui correspondaient parfaitement au thème maritime de mon jeu.\\
+
+En revanche, trouver des boutons prêts à l’emploi qui me convenaient a été plus compliqué. Ne trouvant rien à mon goût, j’ai décidé de les concevoir moi-même. Ayant une expérience en photomontage, j’ai créé des boutons personnalisés et sélectionné une police en harmonie avec l’esthétique générale du jeu.\\
+
+L’intégration de ces boutons dans Unity a été une étape formatrice. Au départ, je ne comprenais pas comment remplacer les sprites par défaut des boutons Unity. Je tentais simplement de glisser et déposer mes fichiers d’images sur l’espace réservé aux sprites, mais cela ne fonctionnait pas. Après quelques recherches, j’ai découvert qu’il fallait convertir les fichiers d’images en sprites avant de pouvoir les utiliser. Une fois cette étape maîtrisée, j’ai pu appliquer mes créations et donner au menu principal un aspect visuel unique et immersif.\\
+
+\paragraph{Scripts pour la Navigation dans l’UI}\hfill
+
+La prochaine étape consistait à écrire des scripts pour gérer les interactions entre les différents éléments du menu. Je devais permettre à l’utilisateur de changer de canvas ou d’afficher et cacher des GameObjects selon ses actions. Cette partie a été relativement simple grâce à une fonction intégrée dans Unity, et les recherches nécessaires pour comprendre son fonctionnement ont été rapides.\\
+
+\paragraph{Conception du Menu Inventaire}\hfill
+
+Le vrai défi de l’interface utilisateur s’est présenté lors de la création du menu inventaire. Ce menu devait afficher dynamiquement les objets que le joueur possédait, un système bien plus complexe que le menu principal. Heureusement, j’ai trouvé une vidéo qui expliquait exactement ce que je voulais réaliser. En suivant ce tutoriel, j’ai pu comprendre les étapes nécessaires et surmonter les difficultés sans trop de problèmes.\\
+
+
+
+\subsubsection{Organisation}\hfill
+
+Dès le début du projet, j’ai pris l’initiative de me porter volontaire comme chef de projet, motivé par mon sens de l’organisation et ma rigueur. Cette responsabilité m’a permis de structurer les étapes du développement et de guider mon équipe vers l’objectif final.\\
+
+\paragraph{Définition des Tâches et Élaboration d’un Planning}\hfill
+
+La première étape consistait à définir les différentes tâches à accomplir, ce qui s’est avéré relativement simple. Une fois les tâches identifiées, il a fallu les répartir entre les membres de l’équipe et s’accorder sur leur répartition.\\
+
+Le véritable défi a été de créer un planning clair et visuel. Au départ, je me suis contenté d’un tableau conforme aux exigences du cahier des charges, avec les pourcentages des tâches associées. Cependant, cette représentation manquait de lisibilité et n’était pas optimale pour le suivi du projet. J’ai donc opté pour un diagramme de Gantt, beaucoup plus visuel et compréhensible. Grâce à Excel, la création de ce diagramme a été à la fois rapide et efficace, facilitant la communication avec les autres membres de l’équipe.\\
+
+\paragraph{Ajustements Après le Premier Cahier des Charges}\hfill
+
+Après la remise du premier cahier des charges technique, j’ai constaté quelques déséquilibres dans la répartition des tâches. Certains membres exerçaient plus de responsabilités que d’autres. J’ai donc révisé la répartition en apportant des ajustements mineurs et en consultant les autres membres pour valider ces modifications.\\
+
+\paragraph{Problèmes d’Assiduité}\hfill
+
+Un autre défi organisationnel est survenu lorsqu’un des membres de l’équipe n’a pas respecté les délais pour ses tâches. Une semaine avant la soutenance méthodologique, la carte 2D et le logo du jeu n’étaient toujours pas terminés. Face à cette situation, j’ai dû prendre en charge la création de la carte 2D moi-même, tandis que le logo, réalisé par ce membre, est arrivé tardivement.\\
+
+\paragraph{Départ d’un Membre Avant la Soutenance}\hfill
+
+Le problème le plus conséquent s’est produit la veille de la soutenance méthodologique : l’un des membres, Matteo Bollot, a annoncé qu’il quittait l’établissement. Ce départ soudain nous a confrontés à un nouvel obstacle : assurer un temps de parole équitable entre les membres restants lors de la soutenance. Grâce à la réactivité des autres membres, nous avons rapidement trouvé une solution pour réorganiser l’oral, et celui-ci s’est déroulé sans encombre.\\
+
+À la suite du départ de Matteo, l’équipe a été réduite à quatre membres. Après la soutenance, j’ai dû réarranger la répartition des tâches pour répartir équitablement la charge de travail supplémentaire. J’ai pris soin de consulter les autres membres avant de finaliser ces ajustements. Bien que chaque membre ait désormais un peu plus de travail, j’ai décidé de conserver la planification initiale en espérant que chacun respecterait ses engagements.\\
+
+Cette expérience en tant que chef de projet m’a confronté à des défis humains et organisationnels variés, mais elle m’a également permis de renforcer mes compétences en gestion de groupe. Malgré les imprévus, l’équipe reste soudée, et nous continuons à progresser vers la finalisation de notre jeu vidéo.\\
 
 
 
