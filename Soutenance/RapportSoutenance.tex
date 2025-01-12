@@ -857,7 +857,73 @@ This experience as a project manager exposed me to various human and organizatio
 
 
 \newpage
-\subsection{Ethan}
+\subsection{Ethan}\hfill
+
+One of the most important features of this project is the water simulation, which serves as the foundation for realistic water behavior and interactions. Early in development, I focused on creating waves and buoyancy systems that would allow floating objects to interact naturally with the water. 
+
+\subsubsection{Initial Approach: Sine Wave Simulation}\hfill
+
+The starting point for the water simulation was a simple sine wave model. This approach used the WaveManager script to calculate wave heights along the water’s surface. The sine function determined the height of the water at any given point based on the x-coordinate, creating a repeating up-and-down motion across the mesh. The WaterManager script then applied these wave heights to the vertices of the water mesh, dynamically updating the water’s surface in real time.\\
+
+For buoyancy, I implemented the Floater script. This script allowed floating objects, such as boats or debris, to interact with the simulated water. It calculated buoyant forces based on the height of the wave at the object's position and applied upward forces to simulate floating. The objects could rise, fall, and tilt based on the water’s surface height and the forces acting on them.\\
+
+While this approach allowd to the player to see some basic wave motion and buoyancy effects, it appeared to us that the simulation was too simplistic. The sine wave model resulted in water that felt static, repetitive, and unnatural. In larger scenes, such as open oceans or large lakes, the uniformity of the waves made the water look artificial and overly mechanical. This issue became more noticeable when trying to achieve a sense of immersion and realism in the environment.
+
+
+
+\subsubsection{Transition to Gerstner Waves}\hfill
+
+To fix the the lack of realism of the simulation and after stumbling accross an article on CatLikeCoding.com, We decided to change the model that was currently implemented to a better one : Gerstner Waves. Gerstner waves provide a realistic representation of water surfaces by introducing both a displacement to the water vertices. Unlike sine waves, which only move vertices up and down, Gerstner waves simulate the rolling motion of real-world waves, making them appear dynamic and way more lively.\\
+
+\paragraph{Key Concepts of Gerstner Waves}\hfill
+
+Gerstner waves use a mathematical function that takes into account several parameters:
+\begin{itemize}
+    \item Wave Direction: Determines the direction in which the wave travels.
+    \item Wavelength: Controls the distance between wave peaks.
+    \item Steepness: Defines the sharpness of the waves, giving them a more or less pronounced curve.
+    \item Speed: Determines how fast the wave propagates over time.
+\end{itemize}
+
+The formula combines these parameters to calculate the displacement for each vertex on the water mesh. Specifically, it adjusts the horizontal position of vertices along the wave’s direction while simultaneously modifying their vertical height to create the illusion of rolling water.\\
+
+However even after implementing this formula to the Water simulation it appeared that it still had some issues, which were caused by the fact that real life waves are combination of multiple waves. By making multiples Gerstner waves enter in contact, we were left with a much more lively simulation.
+
+
+
+\subsubsection{Implementation Details}
+
+\paragraph{WaveManager}\hfill
+
+The WaveManager script has been modified to include the Gerstner wave formula.\\
+
+The script now calculates both vertical and horizontal displacements for each vertex, incorporating the direction, steepness, wavelength, and speed into the calculations.\\
+
+By layering multiple Gerstner waves traveling in different directions, I was able to create complex, overlapping wave patterns that mimic the chaotic nature of real water.
+
+\paragraph{WaterManager}\hfill
+
+The WaterManager script was updated to apply the new wave calculations to the water mesh.\\
+
+Each vertex's position is adjusted based on the Gerstner wave displacement at its world-space coordinates, creating a dynamic and realistic water surface.
+
+\paragraph{Floater}\hfill
+
+The Floater script was modified to calculate buoyancy forces based on the new Gerstner wave heights.\\
+
+Objects now interact with the water in a more natural manner, rising, falling, and tilting according to the rolling waves beneath them.
+
+
+
+\subsubsection{Results and Improvements}\hfill
+
+The transition to Gerstner waves dramatically improved the quality of the water simulation:
+\begin{itemize}
+    \item Visual Realism: The rolling motion of the water surface made the simulation feel far more natural and immersive.
+    \item Customization: By tweaking the parameters of the Gerstner wave formula, I can easily simulate different water conditions, from calm lakes to rough seas. Which will also help me with the upcoming Climate Simulation.
+\end{itemize}
+
+The layered approach also allows for greater flexibility in creating complex wave patterns. For instance, I can simulate multiple waves traveling in different directions, adding to the sense of realism and unpredictability in the water surface.
 
 
 
