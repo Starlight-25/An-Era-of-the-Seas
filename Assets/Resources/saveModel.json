@@ -1,0 +1,78 @@
+{
+  "Pseudo": null,
+  "Level": 1,
+  "Location": [
+    0,
+    0,
+    0
+  ],
+  "Inventory": {
+    "Equipped": {
+      "Weapon": {
+        "Sword": {
+          "Name": "Rusty Sword",
+          "Rarity": "Common",
+          "Level": 1
+        },
+        "Firearm": {
+          "Name": "Flintlock Pistol",
+          "Rarity": "Common",
+          "Level": 1
+        }
+      },
+      "Stigmata": [
+        null,
+        null
+      ],
+      "Boat": {
+        "Name": "Little Boat",
+        "Rarity": "Common",
+        "Level": 1
+      },
+      "Crew": {
+        "Explorer": [],
+        "Navigator": [],
+        "Gunner": [],
+        "Boatswain": []
+      }
+    },
+    "Backpack": {
+      "Materials": {
+        "Coins": 0,
+        "PureWaterDrop": 0,
+        "Wood": 0,
+        "Steal": 0
+      },
+      "Weapons": {
+        "Swords": [
+          {
+            "Name": "Rusty Sword",
+            "Rarity": "Common",
+            "Level": 1
+          }
+        ],
+        "Firearms": [
+          {
+            "Name": "Flintlock Pistol",
+            "Rarity": "Common",
+            "Level": 1
+          }
+        ]
+      },
+      "Stigmata": [],
+      "Boats": [
+        {
+          "Name": "Little Boat",
+          "Rarity": "Common",
+          "Level": 1
+        }
+      ],
+      "Crew": {
+        "Explorer": [],
+        "Navigator": [],
+        "Gunner": [],
+        "Boatswain": []
+      }
+    }
+  }
+}
