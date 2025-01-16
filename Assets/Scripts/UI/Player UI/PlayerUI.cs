@@ -34,7 +34,10 @@ public class PlayerUIManager : MonoBehaviour
     }
 
     public PlayerDataManager playerDataManager;
+    public PlayerStatsManager PlayerStatsManager;
     public TextMeshProUGUI LevelText;
+    public TextMeshProUGUI HPText;
+    public TextMeshProUGUI DefText;
     
     private void Update()
     {
@@ -44,5 +47,7 @@ public class PlayerUIManager : MonoBehaviour
         //else if (Input.GetMouseButtonDown(0)) AttackButton();
 
         LevelText.text = $"Lvl {playerDataManager.PlayerData.Level}";
+        HPText.text = $"{PlayerStatsManager.PlayerStats.HP}/{PlayerStatsManager.PlayerStats.MaxHP}";
+        DefText.text = $"{PlayerStatsManager.PlayerStats.DEF}/{PlayerStatsManager.PlayerStats.MaxDEF}";
     }
 }
