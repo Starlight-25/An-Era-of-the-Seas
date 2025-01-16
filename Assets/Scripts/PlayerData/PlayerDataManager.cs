@@ -5,12 +5,12 @@ using UnityEngine;
 public class PlayerDataManager : MonoBehaviour
 {
     public PlayerData PlayerData;
-    public string savePath;
+    private string savePath;
     public void LoadPlayerData()
     {
         PlayerData = JsonConvert.DeserializeObject<PlayerData>(System.IO.File.ReadAllText(savePath));
     }
-
+    
     public void SavePlayerData()
     {
         string updateData = JsonUtility.ToJson(PlayerData, true);

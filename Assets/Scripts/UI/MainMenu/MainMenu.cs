@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using UnityEngine.Windows;
 
@@ -62,8 +63,7 @@ public class MainMenu : MonoBehaviour
     }
     public void SoloButtonClicked()
     {
-        Debug.Log("Solo Mode");
-        //SceneManager.LoadScene("Solo mode");
+        SceneManager.LoadScene("PlayerUI");
     }
 
     public void MultiplayerButtonClicked()
