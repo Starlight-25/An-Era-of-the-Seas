@@ -23,7 +23,7 @@ public class ItemDescription : MonoBehaviour
     
     
     
-    public void SetDescription(Item item)
+    public void SetDescriptionItem(Item item)
     {
         ItemDescriptionElements.SetActive(true);
         
@@ -34,6 +34,18 @@ public class ItemDescription : MonoBehaviour
         Rarity.text = item.Rarity;
         
         SetStatsText();
+    }
+
+    public void SetDescriptionMaterial(Material material)
+    {
+        ItemDescriptionElements.SetActive(true);
+
+        Item = null;
+        Icon.sprite = material.Icon;
+        Name.text = material.Name;
+        Level.text = material.Number.ToString();
+        Rarity.text = "";
+        Stats.text = "";
     }
 
 

@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class PlayerUIManager : MonoBehaviour
 {
@@ -37,7 +38,9 @@ public class PlayerUIManager : MonoBehaviour
     public PlayerStatsManager PlayerStatsManager;
     public TextMeshProUGUI LevelText;
     public TextMeshProUGUI HPText;
+    public Slider HPSlider;
     public TextMeshProUGUI DefText;
+    public Slider DEFSlider;
     
     private void Update()
     {
@@ -47,7 +50,11 @@ public class PlayerUIManager : MonoBehaviour
         //else if (Input.GetMouseButtonDown(0)) AttackButton();
 
         LevelText.text = $"Lvl {playerDataManager.PlayerData.Level}";
-        HPText.text = $"{PlayerStatsManager.PlayerStats.HP}/{PlayerStatsManager.PlayerStats.MaxHP}";
-        DefText.text = $"{PlayerStatsManager.PlayerStats.DEF}/{PlayerStatsManager.PlayerStats.MaxDEF}";
+        HPSlider.maxValue = PlayerStatsManager.PlayerStats.MaxHP;
+        HPSlider.value = PlayerStatsManager.PlayerStats.HP;
+        HPText.text = $"{HPSlider.value}/{HPSlider.maxValue}";
+        DEFSlider.maxValue = PlayerStatsManager.PlayerStats.MaxDEF;
+        DEFSlider.value = PlayerStatsManager.PlayerStats.DEF;
+        DefText.text = $"{DEFSlider.value}/{DEFSlider.maxValue}";
     }
 }

@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Icon: {fileID: 329708342183776520}
-  Level: {fileID: 7835266316239937922}
+  Text: {fileID: 7835266316239937922}
 --- !u!1 &2532848462715072059
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,21 +1,25 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class ItemButton : MonoBehaviour
 {
     public Image Icon;
-    public TextMeshProUGUI Level;
-
-    private Item Item;
+    public TextMeshProUGUI Text;
 
 
 
     
-    public void Init(Item item)
+    public void InitItem(Item item)
     {
-        Item = item;
         Icon.sprite = item.Icon;
-        Level.text = "Lvl " + item.Level;
+        Text.text = "Lvl " + item.Level;
+    }
+
+    public void InitMaterial(Material material)
+    {
+        Icon.sprite = material.Icon;
+        Text.text = material.Number.ToString();
     }
 }
