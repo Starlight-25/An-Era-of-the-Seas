@@ -58,14 +58,9 @@ public class InventoryManager : MonoBehaviour
     public void InitWeaponInventory()
     {
         ItemList = new List<Item>();
-        foreach (Sword sword in Backpack.Weapons.Swords)
+        foreach (Weapon weapon in Backpack.Weapons)
         {
-            ItemList.Add(new Item(sword.Name, sword.Rarity, sword.Level, sword, null));
-        }
-
-        foreach (Firearm firearm in Backpack.Weapons.Firearms)
-        {
-            ItemList.Add(new Item(firearm.Name, firearm.Rarity, firearm.Level, firearm, null));
+            ItemList.Add(new Item(weapon.Name, weapon.Rarity, weapon.Level, weapon, null));
         }
         FillInventory();
     }

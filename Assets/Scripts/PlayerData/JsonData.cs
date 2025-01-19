@@ -8,14 +8,12 @@ public class JsonData : MonoBehaviour
 {
     public List<BoatJSON> BoatJSON;
     public List<CrewJSON> CrewJSON;
-    public List<SwordJSON> SwordJSON;
-    public List<FirearmJSON> FirearmJSON;
+    public List<WeaponJSON> WeaponJSON;
     public List<StigmaJSON> StigmaJSON;
 
     private void Awake()
     {
-       SwordJSON = new SwordJSON().Load();
-       FirearmJSON = new FirearmJSON().Load();
+       WeaponJSON = new WeaponJSON().Load();
        BoatJSON = new BoatJSON().Load();
        CrewJSON = new CrewJSON().Load();
        StigmaJSON = new StigmaJSON().Load();
@@ -26,16 +24,11 @@ public class JsonData : MonoBehaviour
     
     
     
-    public SwordJSON GetSword(string Name)
+    public WeaponJSON GetWeapon(string Name)
     {
-        return SwordJSON.First(sword => sword.Name == Name);
+        return WeaponJSON.First(sword => sword.Name == Name);
     }
-
-
-    public FirearmJSON GetFirearm(string Name)
-    {
-        return FirearmJSON.First(firearm => firearm.Name == Name);
-    }
+    
     public StigmaJSON GetStigma(string Name)
     {
         return StigmaJSON.First(stigma => stigma.Name == Name);

@@ -44,21 +44,10 @@ public class ItemDescription : MonoBehaviour
     {
         string text = "";
         List<string> StatList = new List<string>();
-        if (Item.Object is Sword)
+        if (Item.Object is Weapon)
         {
             WeaponCSV StatDataCSV = CsvData.WeaponCSV[Item.Level - 1];
-            StatList = JsonData.GetSword(Item.Name).Stats;
-            foreach (string stat in StatList)
-            {
-                if (stat == "ATK") text += $"ATK: {StatDataCSV.ATK}\n";
-                else if (stat == "CritRate") text += $"Crit Rate: {StatDataCSV.CritRate}\n";
-                else if (stat == "CritDMG") text += $"Crit DMG: {StatDataCSV.CritDMG}\n";
-            }
-        }
-        else if (Item.Object is Firearm)
-        {
-            WeaponCSV StatDataCSV = CsvData.WeaponCSV[Item.Level - 1];
-            StatList = JsonData.GetFirearm(Item.Name).Stats;
+            StatList = JsonData.GetWeapon(Item.Name).Stats;
             foreach (string stat in StatList)
             {
                 if (stat == "ATK") text += $"ATK: {StatDataCSV.ATK}\n";

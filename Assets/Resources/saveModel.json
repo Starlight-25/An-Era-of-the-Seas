@@ -9,16 +9,9 @@
   "Inventory": {
     "Equipped": {
       "Weapon": {
-        "Sword": {
-          "Name": "Rusty Sword",
-          "Rarity": "Common",
-          "Level": 1
-        },
-        "Firearm": {
-          "Name": "Flintlock Pistol",
-          "Rarity": "Common",
-          "Level": 1
-        }
+        "Name": "Rusty Sword",
+        "Rarity": "Common",
+        "Level": 1
       },
       "Stigmata": [
         null,
@@ -43,22 +36,13 @@
         "Wood": 0,
         "Steal": 0
       },
-      "Weapons": {
-        "Swords": [
-          {
-            "Name": "Rusty Sword",
-            "Rarity": "Common",
-            "Level": 1
-          }
-        ],
-        "Firearms": [
-          {
-            "Name": "Flintlock Pistol",
-            "Rarity": "Common",
-            "Level": 1
-          }
-        ]
-      },
+      "Weapons": [
+        {
+          "Name": "Rusty Sword",
+          "Rarity": "Common",
+          "Level": 1
+        }
+      ],
       "Stigmata": [],
       "Boats": [
         {

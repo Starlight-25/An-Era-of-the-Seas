@@ -17,7 +17,6 @@ public class PlayerStats
     public int CritRate { get; set; }
     public int CritDMG { get; set; }
     public int Storage { get; set; }
-    public string CurrentWeapon { get; set; }
 }
 
 public class BoatStats
@@ -61,34 +60,18 @@ public class PlayerStatsManager : MonoBehaviour
         PlayerStats.CritRate = CsvData.PlayerCSV[PlayerStats.Level - 1].CritRate;
         PlayerStats.CritDMG = CsvData.PlayerCSV[PlayerStats.Level - 1].CritDMG;
         PlayerStats.Storage = CsvData.PlayerCSV[PlayerStats.Level - 1].Storage;
-        PlayerStats.CurrentWeapon = "Sword";
     }
 
     private void SetPlayerBonus()
     {
         var weaponCsv = CsvData.WeaponCSV;
-        List<string> stats;
-        if (PlayerStats.CurrentWeapon == "Sword" &&
-            PlayerDataManager.PlayerData.Inventory.Equipped.Weapon.Sword is Sword sword)
+        Weapon weapon = PlayerDataManager.PlayerData.Inventory.Equipped.Weapon;
+        List<string> stats = JsonData.GetWeapon(weapon.Name).Stats;
+        foreach (var stat in stats)
         {
-            stats = JsonData.SwordJSON.SingleOrDefault(e => e.Name == sword.Name).Stats;
-            foreach (var stat in stats)
-            {
-                if (stat == "ATK") PlayerStats.ATK += weaponCsv[sword.Level - 1].ATK;
-                else if (stat == "CritRate") PlayerStats.CritRate += weaponCsv[sword.Level - 1].CritRate;
-                else if (stat == "CritDMG") PlayerStats.CritDMG += weaponCsv[sword.Level - 1].CritDMG;
-            }
-        }
-        else if (PlayerStats.CurrentWeapon == "Firearm" &&
-                 PlayerDataManager.PlayerData.Inventory.Equipped.Weapon.Firearm is Firearm firearm)
-        {
-            stats = JsonData.SwordJSON.SingleOrDefault(e => e.Name == firearm.Name).Stats;
-            foreach (var stat in stats)
-            {
-                if (stat == "ATK") PlayerStats.ATK += weaponCsv[firearm.Level - 1].ATK;
-                else if (stat == "CritRate") PlayerStats.CritRate += weaponCsv[firearm.Level - 1].CritRate;
-                else if (stat == "CritDMG") PlayerStats.CritDMG += weaponCsv[firearm.Level - 1].CritDMG;
-            }
+            if (stat == "ATK") PlayerStats.ATK += weaponCsv[weapon.Level - 1].ATK;
+            else if (stat == "CritRate") PlayerStats.CritRate += weaponCsv[weapon.Level - 1].CritRate;
+            else if (stat == "CritDMG") PlayerStats.CritDMG += weaponCsv[weapon.Level - 1].CritDMG;
         }
 
         var stigmaCsv = CsvData.StigmaCSV;

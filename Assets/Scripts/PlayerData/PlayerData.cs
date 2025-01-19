@@ -41,24 +41,10 @@ public class Equipped
 
 public class Weapon
 {
-    public Sword Sword;
-    public Firearm Firearm;
-}
-
-public class Sword
-{
     public string Name;
     public string Rarity;
     public int Level;
 }
-
-public class Firearm
-{
-    public string Name;
-    public string Rarity;
-    public int Level;
-}
-
 
 
 
@@ -129,7 +115,7 @@ public class Boatswain
 public class Backpack
 {
     public Materials Materials;
-    public Weapons Weapons;
+    public List<Weapon> Weapons = new List<Weapon>();
     [ItemCanBeNull] public List<Stigma> Stigmata = new List<Stigma>();
     public List<Boat> Boats = new List<Boat>();
     public Crew Crew;
@@ -144,13 +130,4 @@ public class Materials
     public int PureWaterDrop;
     public int Wood;
     public int Steal;
-}   
-
-
-
-
-public class Weapons
-{
-    public List<Sword> Swords = new List<Sword>();
-    public List<Firearm> Firearms = new List<Firearm>();
 }
