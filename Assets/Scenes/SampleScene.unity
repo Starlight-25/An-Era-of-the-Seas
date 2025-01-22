@@ -238,7 +238,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &330585545
 Camera:
   m_ObjectHideFlags: 0
@@ -837,7 +837,7 @@ GameObject:
   - component: {fileID: 1191441442}
   - component: {fileID: 1191441441}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Network (Canvas)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -858,6 +858,7 @@ MonoBehaviour:
   hostButton: {fileID: 2066559271}
   clientButton: {fileID: 1059514298}
   serverButton: {fileID: 1599628979}
+  NetworkCanvas: {fileID: 1191441440}
 --- !u!114 &1191441442
 MonoBehaviour:
   m_ObjectHideFlags: 0
