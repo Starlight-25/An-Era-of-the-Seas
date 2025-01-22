@@ -14,9 +14,9 @@ using Newtonsoft.Json.Linq;
 
 public class PseudoMenu : MonoBehaviour
 {
-    public GameObject PseudoCanvas;
-    public GameObject MainMenuCanvas;
-    public TMP_InputField PseudoInputField;
+    [SerializeField] private GameObject PseudoCanvas;
+    [SerializeField] private GameObject MainMenuCanvas;
+    [SerializeField] private TMP_InputField PseudoInputField;
 
 
     private void Update()

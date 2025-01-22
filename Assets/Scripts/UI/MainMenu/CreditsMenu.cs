@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class CreditsScrips : MonoBehaviour
 {
-    public GameObject MainMenuCanvas;
-    public GameObject CreditsCanvas;
+    [SerializeField] private GameObject MainMenuCanvas;
+    [SerializeField] private GameObject CreditsCanvas;
     
     public void ReturnButtonClicked()
     {

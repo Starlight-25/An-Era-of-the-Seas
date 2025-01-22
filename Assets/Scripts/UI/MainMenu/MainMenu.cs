@@ -6,12 +6,13 @@ using UnityEngine.Windows;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject MainMenuCanvas;
-    public GameObject CreditsCanvas;
-    public GameObject PseudoCanvas;
-    public GameObject StartButton;
-    public GameObject SoloButton;
-    public GameObject MultiplayerButton;
+    [SerializeField] private GameObject MainMenuCanvas;
+    [SerializeField] private GameObject CreditsCanvas;
+    [SerializeField] private GameObject PseudoCanvas;
+    [SerializeField] private GameObject StartButton;
+    [SerializeField] private GameObject SoloButton;
+    [SerializeField] private GameObject MultiplayerButton;
+    [SerializeField] private GameObject MultiplayerCanvas;
 
     private string savepath;
 
@@ -68,8 +69,8 @@ public class MainMenu : MonoBehaviour
 
     public void MultiplayerButtonClicked()
     {
-        Debug.Log("Multiplayer mode");
-        //SceneManager.LoadScene("Solo mode");
+        MainMenuCanvas.SetActive(false);
+        MultiplayerCanvas.SetActive(true);
     }
     
     public void CreditsButtonClicked()
