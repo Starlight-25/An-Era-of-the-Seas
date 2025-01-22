@@ -7,10 +7,10 @@ public class CustomNetworkHUD : MonoBehaviour
     [SerializeField] private Button hostButton;
     [SerializeField] private Button clientButton;
     [SerializeField] private Button serverButton;
+    [SerializeField] private GameObject NetworkCanvas;
 
     void Start()
     {
-        // Associer les boutons à leurs actions
         hostButton.onClick.AddListener(StartHost);
         clientButton.onClick.AddListener(StartClient);
         serverButton.onClick.AddListener(StartServer);
@@ -20,6 +20,7 @@ public class CustomNetworkHUD : MonoBehaviour
     {
         Debug.Log("Starting Host...");
         NetworkManager.Singleton.StartHost();
+        NetworkCanvas.SetActive(false);
     }
 
     void StartClient()
