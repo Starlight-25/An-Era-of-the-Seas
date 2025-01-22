@@ -27,11 +27,13 @@ public class CustomNetworkHUD : MonoBehaviour
     {
         Debug.Log("Starting Client...");
         NetworkManager.Singleton.StartClient();
+        NetworkCanvas.SetActive(false);
     }
 
     void StartServer()
     {
         Debug.Log("Starting Server...");
         NetworkManager.Singleton.StartServer();
+        NetworkCanvas.SetActive(false);
     }
 }
