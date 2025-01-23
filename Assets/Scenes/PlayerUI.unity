@@ -3593,6 +3593,7 @@ GameObject:
   - component: {fileID: 505576477}
   - component: {fileID: 505576479}
   - component: {fileID: 505576478}
+  - component: {fileID: 505576480}
   m_Layer: 0
   m_Name: Material owned
   m_TagString: Untagged
@@ -3661,6 +3662,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 505576476}
   m_CullTransparentMesh: 1
+--- !u!114 &505576480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505576476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab594cfbeaea554fa9268b2266a5924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CoinNumber: {fileID: 1240974369}
+  PWDNumber: {fileID: 943633512}
+  WoodNumber: {fileID: 1859163211}
+  StealNumber: {fileID: 939289069}
+  PlayerDataManager: {fileID: 801431148}
 --- !u!1 &507279689
 GameObject:
   m_ObjectHideFlags: 0
