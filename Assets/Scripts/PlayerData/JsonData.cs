@@ -39,8 +39,8 @@ public class JsonData : MonoBehaviour
         return BoatJSON.First(boat => boat.Name == Name);
     }
 
-    public CrewJSON GetCrew(string Name)
+    public CrewJSON GetCrew(string Name, string Rarity)
     {
-        return CrewJSON.First(crew => crew.Name == Name);
+        return CrewJSON.First(crew => crew.Name == Name && crew.Rarity == Rarity);
     }
 }

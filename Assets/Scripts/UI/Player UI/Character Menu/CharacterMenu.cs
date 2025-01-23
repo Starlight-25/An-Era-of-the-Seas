@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -24,9 +25,6 @@ public class CharacterMenu : MonoBehaviour
 
     
     
-    
-    
-    
 
     
     public void ReturnButtonClicked()
@@ -40,6 +38,9 @@ public class CharacterMenu : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape)) ReturnButtonClicked();
     }
 
+    
+    
+    
     
     
     public void PlayerButtonClicked()
@@ -73,6 +74,8 @@ public class CharacterMenu : MonoBehaviour
     }
 
 
+    
+    
 
     public void WeaponButtonClicked()
     {
@@ -108,6 +111,9 @@ public class CharacterMenu : MonoBehaviour
         }
         WeaponStats.text = text;
     }
+    
+    
+    
     
     
     public void StigmataButtonClicked()
@@ -153,7 +159,6 @@ public class CharacterMenu : MonoBehaviour
             }
         }
     }
-    
     
     
     
@@ -207,6 +212,99 @@ public class CharacterMenu : MonoBehaviour
         CrewMembersElements.SetActive(true);
     }
 
+    [SerializeField] private GameObject ItemPrefab;
+    private void InitCrewItems()
+    {
+        Transform ExplorerParent = CrewMembersElements.transform.Find("Explorer");
+        Transform NavigatorParent = CrewMembersElements.transform.Find("Navigator");
+        Transform GunnerParent = CrewMembersElements.transform.Find("Gunner");
+        Transform BoatswainParent = CrewMembersElements.transform.Find("Boatswain");
+
+        int boatLevel = PlayerStatsManager.BoatStats.Level;
+        BoatCSV boatCSV = CsvData.BoatCSV[boatLevel - 1];
+
+        for (int i = 0; i < boatCSV.Explorer; i++)
+        {
+            if (PlayerDataManager.PlayerData.Inventory.Equipped.Crew.Explorer[i] is Explorer explorer)
+            {
+                AddItem(new Item("Explorer", explorer.Rarity, explorer.Level, explorer), ExplorerParent);
+            }
+            else
+            {
+                AddItem(null, ExplorerParent);
+            }
+        }
+        for (int i = 0; i < boatCSV.Navigator; i++)
+        {
+            if (PlayerDataManager.PlayerData.Inventory.Equipped.Crew.Navigator[i] is Navigator navigator)
+            {
+                AddItem(new Item("Navigator", navigator.Rarity, navigator.Level, navigator), NavigatorParent);
+            }
+            else
+            {
+                AddItem(null, NavigatorParent);
+            }
+        }
+        for (int i = 0; i < boatCSV.Gunner; i++)
+        {
+            if (PlayerDataManager.PlayerData.Inventory.Equipped.Crew.Gunner[i] is Gunner gunner)
+            {
+                AddItem(new Item("Gunner", gunner.Rarity, gunner.Level, gunner), GunnerParent);
+            }
+            else
+            {
+                AddItem(null, GunnerParent);
+            }
+        }
+        for (int i = 0; i < boatCSV.Boatswain; i++)
+        {
+            if (PlayerDataManager.PlayerData.Inventory.Equipped.Crew.Boatswain[i] is Boatswain boatswain)
+            {
+                AddItem(new Item("Boatswain", boatswain.Rarity, boatswain.Level, boatswain), BoatswainParent);
+            }
+            else
+            {
+                AddItem(null, BoatswainParent);
+            }
+        }
+    }
+
+    private void AddItem(Item item, Transform ContentParent)
+    {
+        GameObject newItem = Instantiate(ItemPrefab, ContentParent);
+
+        ItemButton itemButton = newItem.GetComponent<ItemButton>();
+        itemButton.InitItem(item);
+        
+        newItem.GetComponent<Button>().onClick.AddListener(() => InitCrewStats(item));
+    }
+
+    private Item CrewItem;
+    private void InitCrewStats(Item item)
+    {
+        CrewItem = item;
+        if (item is not null)
+        {
+            TextMeshProUGUI CrewStats = CrewMembersElements.transform.Find("Stats (Text)").GetComponent<TextMeshProUGUI>();
+            
+            CrewCSV StatDataCSV = CsvData.CrewCSV[item.Level - 1];
+            List<string> StatList = JsonData.GetCrew(item.Name, item.Rarity).Stats;
+            
+            string text = $"{item.Name} | Lvl {item.Level}/{JsonData.GetCrew(item.Name, item.Rarity).MaxLevel}\n";
+            foreach (string stat in StatList)
+            {
+                if (stat == "HP") text += $"HP: {StatDataCSV.HP}\n";
+                else if (stat == "DEF") text += $"DEF: {StatDataCSV.DEF}\n";
+                else if (stat == "ATK") text += $"ATK: {StatDataCSV.ATK}\n";
+                else if (stat == "CritRate") text += $"Crit Rate: {StatDataCSV.CritRate}\n";
+                else if (stat == "CritDMG") text += $"Crit DMG: {StatDataCSV.CritDMG}\n";
+                else if (stat == "Speed") text += $"Speed: {StatDataCSV.Speed}\n";
+                else if (stat == "Exploration") text += $"Exploration: {StatDataCSV.Exploration}\n";
+            }
+            CrewStats.text = text;
+        }
+    }
+
 
 
 
@@ -228,9 +326,9 @@ public class CharacterMenu : MonoBehaviour
             Boat boat = PlayerDataManager.PlayerData.Inventory.Equipped.Boat;
             UpgradeUIScript.Init(CharacterCanvas, new Item(boat.Name, boat.Rarity, boat.Level, boat));
         }
-        else if (CrewMembersElements.activeSelf)
+        else if (CrewMembersElements.activeSelf && CrewItem is not null)
         {
-            
+            UpgradeUIScript.Init(CharacterCanvas, CrewItem);
         }
     }
 

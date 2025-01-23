@@ -97,7 +97,7 @@ public class ItemDescription : MonoBehaviour
                  Item.Object is Boatswain)
         {
             CrewCSV StatDataCSV = CsvData.CrewCSV[Item.Level - 1];
-            StatList = JsonData.GetCrew(Item.Name).Stats;
+            StatList = JsonData.GetCrew(Item.Name, Item.Rarity).Stats;
             foreach (string stat in StatList)
             {
                 if (stat == "HP") text += $"HP: {StatDataCSV.HP}\n";
