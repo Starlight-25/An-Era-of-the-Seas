@@ -36,21 +36,9 @@
         "Wood": 0,
         "Steal": 0
       },
-      "Weapons": [
-        {
-          "Name": "Rusty Sword",
-          "Rarity": "Common",
-          "Level": 1
-        }
-      ],
+      "Weapons": [],
       "Stigmata": [],
-      "Boats": [
-        {
-          "Name": "Little Boat",
-          "Rarity": "Common",
-          "Level": 1
-        }
-      ],
+      "Boats": [],
       "Crew": {
         "Explorer": [],
         "Navigator": [],

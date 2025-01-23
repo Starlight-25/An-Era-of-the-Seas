@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class UpgradeUI : MonoBehaviour
@@ -23,5 +24,10 @@ public class UpgradeUI : MonoBehaviour
     {
         UpgradeCanvas.SetActive(false);
         PreviousCanvas.SetActive(true);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape)) ReturnButtonClicked();
     }
 }

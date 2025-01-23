@@ -1278,7 +1278,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1959144837}
         m_TargetAssemblyTypeName: PseudoMenu, Assembly-CSharp
         m_MethodName: ConfirmButtonClicked
         m_Mode: 1

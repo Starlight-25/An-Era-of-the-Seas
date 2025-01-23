@@ -56,9 +56,11 @@ public class InventoryManager : MonoBehaviour
     
     
     private Backpack Backpack;
+    private Equipped Equipped;
     private void BackpackInit()
     {
         Backpack = PlayerDataManager.PlayerData.Inventory.Backpack;
+        Equipped = PlayerDataManager.PlayerData.Inventory.Equipped;
     }
 
 
@@ -88,6 +90,9 @@ public class InventoryManager : MonoBehaviour
     {
         ItemList = new List<Item>();
         MaterialList = new List<Material>();
+        
+        ItemList.Add(new Item(Equipped.Weapon.Name, Equipped.Weapon.Rarity, Equipped.Weapon.Level, Equipped.Weapon));
+        
         foreach (Weapon weapon in Backpack.Weapons)
         {
             ItemList.Add(new Item(weapon.Name, weapon.Rarity, weapon.Level, weapon));
@@ -103,6 +108,15 @@ public class InventoryManager : MonoBehaviour
     {
         ItemList = new List<Item>();
         MaterialList = new List<Material>();
+        
+        foreach (var stigma in Equipped.Stigmata)
+        {
+            if (stigma != null)
+            {
+                ItemList.Add(new Item(stigma.Name, stigma.Rarity, stigma.Level, stigma));
+            }
+        }
+        
         foreach (Stigma stigma in Backpack.Stigmata)
         {
             ItemList.Add(new Item(stigma.Name, stigma.Rarity, stigma.Level, stigma));
@@ -117,6 +131,9 @@ public class InventoryManager : MonoBehaviour
     {
         ItemList = new List<Item>();
         MaterialList = new List<Material>();
+        
+        ItemList.Add(new Item(Equipped.Boat.Name, Equipped.Boat.Rarity, Equipped.Boat.Level, Equipped.Boat));
+        
         foreach (Boat boat in Backpack.Boats)
         {
             ItemList.Add(new Item(boat.Name, boat.Rarity, boat.Level, boat));
@@ -132,6 +149,24 @@ public class InventoryManager : MonoBehaviour
     {
         ItemList = new List<Item>();
         MaterialList = new List<Material>();
+
+        foreach (Explorer explorer in Equipped.Crew.Explorer)
+        {
+            ItemList.Add(new Item("Explorer", explorer.Rarity, explorer.Level, explorer));
+        }
+        foreach (Navigator navigator in Equipped.Crew.Navigator)
+        {
+            ItemList.Add(new Item("Navigator", navigator.Rarity, navigator.Level, navigator));
+        }
+        foreach (Gunner gunner in Equipped.Crew.Gunner)
+        {
+            ItemList.Add(new Item("Gunner", gunner.Rarity, gunner.Level, gunner));
+        }
+        foreach (Boatswain boatswain in Equipped.Crew.Boatswain)
+        {
+            ItemList.Add(new Item("Boatswain", boatswain.Rarity, boatswain.Level, boatswain));
+        }
+
         foreach (Explorer explorer in Backpack.Crew.Explorer)
         {
             ItemList.Add(new Item("Explorer", explorer.Rarity, explorer.Level, explorer));
@@ -202,7 +237,7 @@ public class InventoryManager : MonoBehaviour
             {
                 AddMaterial(material);
             }
-        }    
+        }
     }
 
     
