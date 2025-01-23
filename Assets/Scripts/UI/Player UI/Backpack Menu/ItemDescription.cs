@@ -23,6 +23,7 @@ public class ItemDescription : MonoBehaviour
     [SerializeField] private GameObject BackpackCanvas;
     [SerializeField] private GameObject UpgradeCanvas;
     [SerializeField] private UpgradeUI UpgradeUIScript;
+    [SerializeField] private GameObject UpgradeButton;
     
     
     
@@ -30,6 +31,7 @@ public class ItemDescription : MonoBehaviour
     public void SetDescriptionItem(Item item)
     {
         ItemDescriptionElements.SetActive(true);
+        UpgradeButton.SetActive(true);
         
         Item = item;
         Icon.sprite = item.Icon;
@@ -43,6 +45,7 @@ public class ItemDescription : MonoBehaviour
     public void SetDescriptionMaterial(Material material)
     {
         ItemDescriptionElements.SetActive(true);
+        UpgradeButton.SetActive(false);
 
         Item = null;
         Icon.sprite = material.Icon;

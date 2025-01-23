@@ -307,6 +307,7 @@ public class CharacterMenu : MonoBehaviour
 
 
 
+    
 
     public void UpgradeButtonClicked()
     {

@@ -4469,7 +4469,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &581916301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4998,8 +4998,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 532592170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5662,7 +5662,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &747566686
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6455,7 +6455,7 @@ RectTransform:
   m_Father: {fileID: 974297512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7049,7 +7049,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UpgradeCanvas: {fileID: 906623915}
-  PlayerDataManager: {fileID: 0}
+  PlayerDataManager: {fileID: 801431148}
+  CsvData: {fileID: 1818418519}
+  JsonData: {fileID: 944703867}
+  PlayerStatsManager: {fileID: 1756016720}
+  upgrade1XButton: {fileID: 409239862}
+  upgrade2XButton: {fileID: 304889299}
+  upgrade5XButton: {fileID: 395106645}
+  upgrade10XButton: {fileID: 208053811}
 --- !u!1 &915834435
 GameObject:
   m_ObjectHideFlags: 0
@@ -8290,6 +8297,7 @@ MonoBehaviour:
   BackpackCanvas: {fileID: 1260501940}
   UpgradeCanvas: {fileID: 906623915}
   UpgradeUIScript: {fileID: 906623920}
+  UpgradeButton: {fileID: 441963097}
 --- !u!1 &1020994914
 GameObject:
   m_ObjectHideFlags: 0
@@ -10282,8 +10290,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 927545245}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -10344,7 +10352,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1306447842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16150,7 +16158,7 @@ RectTransform:
   m_Father: {fileID: 973875656}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

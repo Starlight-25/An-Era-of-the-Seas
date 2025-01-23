@@ -211,7 +211,7 @@ public class InventoryManager : MonoBehaviour
 
         ItemButton itemButton = newItem.GetComponent<ItemButton>();
         itemButton.InitMaterial(material);
-            
+        
         newItem.GetComponent<Button>().onClick.AddListener(() => ItemDescription.SetDescriptionMaterial(material));
     }
     
