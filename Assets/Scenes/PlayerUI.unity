@@ -926,9 +926,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114316896}
+      - m_Target: {fileID: 581916305}
         m_TargetAssemblyTypeName: PlayerUIManager, Assembly-CSharp
-        m_MethodName: AttackButton
+        m_MethodName: AttackButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -976,61 +976,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 106534476}
   m_CullTransparentMesh: 1
---- !u!1 &114316895
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 114316897}
-  - component: {fileID: 114316896}
-  m_Layer: 0
-  m_Name: Player UI Script
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &114316896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114316895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 274a85b71e6ed41489160c831d34deae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerUICanvas: {fileID: 581916300}
-  SettingsCanvas: {fileID: 1208850417}
-  BackpackCanvas: {fileID: 1260501940}
-  CharacterCanvas: {fileID: 1306447841}
-  playerDataManager: {fileID: 801431148}
-  PlayerStatsManager: {fileID: 1756016720}
-  LevelText: {fileID: 375316673}
-  HPText: {fileID: 942644340}
-  HPSlider: {fileID: 1359457504}
-  DefText: {fileID: 534953117}
-  DEFSlider: {fileID: 1366109166}
---- !u!4 &114316897
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114316895}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 141.22209, y: 40.899105, z: 423.43726}
-  m_LocalScale: {x: 1.0155047, y: 1.0155047, z: 1.0155047}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 581916304}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &122066496
 GameObject:
   m_ObjectHideFlags: 0
@@ -1112,7 +1057,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 122066499}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1260501946}
+        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
+        m_MethodName: InitBoatInventory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &122066499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1533,71 +1490,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 208053809}
   m_CullTransparentMesh: 1
---- !u!1 &238514584
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 238514585}
-  - component: {fileID: 238514586}
-  m_Layer: 5
-  m_Name: Character Menu Script
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &238514585
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 238514584}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1306447845}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &238514586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 238514584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92f254fd8b8586941a2996a5c6ad35e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerUICanvas: {fileID: 581916300}
-  CharacterCanvas: {fileID: 1306447841}
-  LevelUPElements: {fileID: 1235286783}
-  StigmataElements: {fileID: 2091593306}
-  BoatElements: {fileID: 44123103}
-  CrewMembersElements: {fileID: 747566685}
-  PlayerStatsManager: {fileID: 1756016720}
-  JsonData: {fileID: 944703867}
-  PlayerStats: {fileID: 2143684415}
-  PlayerLevel: {fileID: 1317634617}
-  PlayerLevelSlider: {fileID: 507279691}
-  BoatStats1: {fileID: 2012781350}
-  BoatStats2: {fileID: 1343297552}
-  BoatLevel: {fileID: 1020994916}
-  BoatLevelSlider: {fileID: 1240406096}
-  Stigma1Stats: {fileID: 430957172}
-  Stigma2Stats: {fileID: 81991475}
 --- !u!1 &254876706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1680,9 +1572,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114316896}
+      - m_Target: {fileID: 581916305}
         m_TargetAssemblyTypeName: PlayerUIManager, Assembly-CSharp
-        m_MethodName: CharacterButton
+        m_MethodName: CharacterButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1730,56 +1622,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 254876706}
   m_CullTransparentMesh: 1
---- !u!1 &263148475
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 263148476}
-  - component: {fileID: 263148477}
-  m_Layer: 5
-  m_Name: Backpack Menu Script
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &263148476
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 263148475}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1260501944}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &263148477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 263148475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26b3b6938dbae5b44b6a840d7ce0e12a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerUICanvas: {fileID: 581916300}
-  BackpackCanvas: {fileID: 1260501940}
 --- !u!1 &267356134
 GameObject:
   m_ObjectHideFlags: 0
@@ -2270,7 +2112,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 865411935}
+      - m_Target: {fileID: 1260501946}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: InitMaterialInventory
         m_Mode: 1
@@ -4029,6 +3871,7 @@ GameObject:
   - component: {fileID: 581916303}
   - component: {fileID: 581916302}
   - component: {fileID: 581916301}
+  - component: {fileID: 581916305}
   m_Layer: 5
   m_Name: Player UI (Canvas)
   m_TagString: Untagged
@@ -4111,7 +3954,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 114316897}
   - {fileID: 174739096}
   - {fileID: 905897337}
   - {fileID: 254876707}
@@ -4124,6 +3966,29 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &581916305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581916300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274a85b71e6ed41489160c831d34deae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerUICanvas: {fileID: 581916300}
+  SettingsCanvas: {fileID: 1208850417}
+  BackpackCanvas: {fileID: 1260501940}
+  CharacterCanvas: {fileID: 1306447841}
+  playerDataManager: {fileID: 801431148}
+  PlayerStatsManager: {fileID: 1756016720}
+  LevelText: {fileID: 375316673}
+  HPText: {fileID: 942644340}
+  HPSlider: {fileID: 1359457504}
+  DefText: {fileID: 534953117}
+  DEFSlider: {fileID: 1366109166}
 --- !u!1 &598640941
 GameObject:
   m_ObjectHideFlags: 0
@@ -4532,9 +4397,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 238514586}
+      - m_Target: {fileID: 1306447846}
         m_TargetAssemblyTypeName: CharacterMenu, Assembly-CSharp
-        m_MethodName: StigmataButton
+        m_MethodName: StigmataButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4665,9 +4530,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 238514586}
+      - m_Target: {fileID: 1306447846}
         m_TargetAssemblyTypeName: CharacterMenu, Assembly-CSharp
-        m_MethodName: BoatButton
+        m_MethodName: BoatButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4833,9 +4698,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 238514586}
-        m_TargetAssemblyTypeName: CharacterMenuManager, Assembly-CSharp
-        m_MethodName: ReturnInGameButton
+      - m_Target: {fileID: 1306447846}
+        m_TargetAssemblyTypeName: CharacterMenu, Assembly-CSharp
+        m_MethodName: ReturnButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5637,9 +5502,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 238514586}
+      - m_Target: {fileID: 1306447846}
         m_TargetAssemblyTypeName: CharacterMenu, Assembly-CSharp
-        m_MethodName: CrewMembersButton
+        m_MethodName: CrewMembersButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5963,7 +5828,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 865411935}
+      - m_Target: {fileID: 1260501946}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: InitWeaponInventory
         m_Mode: 1
@@ -6013,58 +5878,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 825322322}
   m_CullTransparentMesh: 1
---- !u!1 &865411933
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 865411934}
-  - component: {fileID: 865411935}
-  m_Layer: 5
-  m_Name: InventoryManager (Script)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &865411934
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 865411933}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1260501944}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &865411935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 865411933}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25a0250a7b7df7540a0105a1a19bb124, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerDataManager: {fileID: 801431148}
-  ItemPrefab: {fileID: 295516211834932858, guid: 2d7c67a3c2483274abf237c00e3bd30c, type: 3}
-  ContentParent: {fileID: 1508017683}
-  ItemDescription: {fileID: 1005558406}
 --- !u!1 &905897336
 GameObject:
   m_ObjectHideFlags: 0
@@ -6147,9 +5960,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114316896}
+      - m_Target: {fileID: 581916305}
         m_TargetAssemblyTypeName: PlayerUIManager, Assembly-CSharp
-        m_MethodName: SettingsButton
+        m_MethodName: SettingsButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6319,7 +6132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UpgradeCanvas: {fileID: 906623915}
-  PreviousCanvas: {fileID: 0}
+  PlayerDataManager: {fileID: 0}
 --- !u!1 &916120392
 GameObject:
   m_ObjectHideFlags: 0
@@ -6594,7 +6407,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 936991628}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1260501946}
+        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
+        m_MethodName: InitCrewInventory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &936991628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7409,6 +7234,9 @@ MonoBehaviour:
   Stats: {fileID: 1213118818}
   CsvData: {fileID: 1818418519}
   JsonData: {fileID: 944703867}
+  BackpackCanvas: {fileID: 1260501940}
+  UpgradeCanvas: {fileID: 906623915}
+  UpgradeUIScript: {fileID: 906623920}
 --- !u!1 &1020994914
 GameObject:
   m_ObjectHideFlags: 0
@@ -7545,54 +7373,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1020994914}
   m_CullTransparentMesh: 1
---- !u!1 &1036662720
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1036662721}
-  - component: {fileID: 1036662722}
-  m_Layer: 0
-  m_Name: Settings Menu Scripts
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1036662721
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1036662720}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 139.06592, y: 40.27466, z: 416.97223}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1208850421}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1036662722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1036662720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4424cd3b54680e4f9176a9bb9e5bf2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerUICanvas: {fileID: 581916300}
-  SettingsCanvas: {fileID: 1208850417}
-  CharacterCanvas: {fileID: 1306447841}
-  BackpackCanvas: {fileID: 1260501940}
 --- !u!1 &1037364955
 GameObject:
   m_ObjectHideFlags: 0
@@ -8035,9 +7815,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 238514586}
+      - m_Target: {fileID: 1306447846}
         m_TargetAssemblyTypeName: CharacterMenu, Assembly-CSharp
-        m_MethodName: PlayerButton
+        m_MethodName: PlayerButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8344,6 +8124,7 @@ GameObject:
   - component: {fileID: 1208850420}
   - component: {fileID: 1208850419}
   - component: {fileID: 1208850418}
+  - component: {fileID: 1208850422}
   m_Layer: 5
   m_Name: Settings Menu (Canvas)
   m_TagString: Untagged
@@ -8426,7 +8207,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1036662721}
   - {fileID: 1984853773}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8435,6 +8215,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1208850422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208850417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4424cd3b54680e4f9176a9bb9e5bf2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerUICanvas: {fileID: 581916300}
+  SettingsCanvas: {fileID: 1208850417}
+  CharacterCanvas: {fileID: 1306447841}
+  BackpackCanvas: {fileID: 1260501940}
 --- !u!1 &1213118816
 GameObject:
   m_ObjectHideFlags: 0
@@ -8930,6 +8726,8 @@ GameObject:
   - component: {fileID: 1260501943}
   - component: {fileID: 1260501942}
   - component: {fileID: 1260501941}
+  - component: {fileID: 1260501945}
+  - component: {fileID: 1260501946}
   m_Layer: 5
   m_Name: Backpack Menu (Canvas)
   m_TagString: Untagged
@@ -9012,14 +8810,12 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 263148476}
   - {fileID: 1685434171}
   - {fileID: 310950574}
   - {fileID: 825322323}
   - {fileID: 1714344138}
   - {fileID: 122066497}
   - {fileID: 936991626}
-  - {fileID: 865411934}
   - {fileID: 1763536201}
   - {fileID: 1005558405}
   m_Father: {fileID: 0}
@@ -9029,6 +8825,36 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1260501945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260501940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b3b6938dbae5b44b6a840d7ce0e12a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerUICanvas: {fileID: 581916300}
+  BackpackCanvas: {fileID: 1260501940}
+--- !u!114 &1260501946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260501940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a0250a7b7df7540a0105a1a19bb124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerDataManager: {fileID: 801431148}
+  ItemPrefab: {fileID: 295516211834932858, guid: 2d7c67a3c2483274abf237c00e3bd30c, type: 3}
+  ContentParent: {fileID: 1508017683}
+  ItemDescription: {fileID: 1005558406}
 --- !u!1 &1304107869
 GameObject:
   m_ObjectHideFlags: 0
@@ -9116,6 +8942,7 @@ GameObject:
   - component: {fileID: 1306447844}
   - component: {fileID: 1306447843}
   - component: {fileID: 1306447842}
+  - component: {fileID: 1306447846}
   m_Layer: 5
   m_Name: Character Menu (Canvas)
   m_TagString: Untagged
@@ -9198,7 +9025,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 238514585}
   - {fileID: 1101276182}
   - {fileID: 1235286784}
   - {fileID: 663684009}
@@ -9215,6 +9041,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1306447846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306447841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92f254fd8b8586941a2996a5c6ad35e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerUICanvas: {fileID: 581916300}
+  CharacterCanvas: {fileID: 1306447841}
+  UpgradeCanvas: {fileID: 906623915}
+  UpgradeUIScript: {fileID: 906623920}
+  LevelUPElements: {fileID: 1235286783}
+  StigmataElements: {fileID: 2091593306}
+  BoatElements: {fileID: 44123103}
+  CrewMembersElements: {fileID: 747566685}
+  PlayerStatsManager: {fileID: 1756016720}
+  JsonData: {fileID: 944703867}
+  PlayerStats: {fileID: 2143684415}
+  PlayerLevel: {fileID: 1317634617}
+  PlayerLevelSlider: {fileID: 507279691}
+  BoatStats1: {fileID: 2012781350}
+  BoatStats2: {fileID: 1343297552}
+  BoatLevel: {fileID: 1020994916}
+  BoatLevelSlider: {fileID: 1240406096}
+  Stigma1Stats: {fileID: 430957172}
+  Stigma2Stats: {fileID: 81991475}
 --- !u!1 &1317634615
 GameObject:
   m_ObjectHideFlags: 0
@@ -9433,9 +9290,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114316896}
+      - m_Target: {fileID: 581916305}
         m_TargetAssemblyTypeName: PlayerUIManager, Assembly-CSharp
-        m_MethodName: BackpackButton
+        m_MethodName: BackpackButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10890,7 +10747,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 263148477}
+      - m_Target: {fileID: 1260501945}
         m_TargetAssemblyTypeName: BackpackMenuManager, Assembly-CSharp
         m_MethodName: ReturnInGameButton
         m_Mode: 1
@@ -11101,7 +10958,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 865411935}
+      - m_Target: {fileID: 1260501946}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: InitStigmaInventory
         m_Mode: 1
@@ -13054,9 +12911,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1036662722}
+      - m_Target: {fileID: 1208850422}
         m_TargetAssemblyTypeName: SettingsMenuManager, Assembly-CSharp
-        m_MethodName: ReturnInGameButton
+        m_MethodName: ReturnButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

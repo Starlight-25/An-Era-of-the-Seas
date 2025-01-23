@@ -4,10 +4,12 @@ using UnityEngine.UI;
 
 public class CharacterMenu : MonoBehaviour
 {
-    public GameObject PlayerUICanvas;
-    public GameObject CharacterCanvas;
+    [SerializeField] private GameObject PlayerUICanvas;
+    [SerializeField] private GameObject CharacterCanvas;
+    [SerializeField] private GameObject UpgradeCanvas;
+    [SerializeField] private UpgradeUI UpgradeUIScript;
 
-    public void ReturnInGameButton()
+    public void ReturnButtonClicked()
     {
         CharacterCanvas.SetActive(false);
         PlayerUICanvas.SetActive(true);
@@ -15,7 +17,7 @@ public class CharacterMenu : MonoBehaviour
     
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)) ReturnInGameButton();
+        if(Input.GetKeyDown(KeyCode.Escape)) ReturnButtonClicked();
     }
     
     
@@ -27,33 +29,33 @@ public class CharacterMenu : MonoBehaviour
     
     
     
-    public GameObject LevelUPElements;
-    public GameObject StigmataElements;
-    public GameObject BoatElements;
-    public GameObject CrewMembersElements;
+    [SerializeField] private GameObject LevelUPElements;
+    [SerializeField] private GameObject StigmataElements;
+    [SerializeField] private GameObject BoatElements;
+    [SerializeField] private GameObject CrewMembersElements;
 
     
     
     
     
-    public PlayerStatsManager PlayerStatsManager;
-    public JsonData JsonData;
+    [SerializeField] private PlayerStatsManager PlayerStatsManager;
+    [SerializeField] private JsonData JsonData;
     
-    public TextMeshProUGUI PlayerStats;
-    public TextMeshProUGUI PlayerLevel;
-    public Slider PlayerLevelSlider;
-    public TextMeshProUGUI BoatStats1;
-    public TextMeshProUGUI BoatStats2;
-    public TextMeshProUGUI BoatLevel;
-    public Slider BoatLevelSlider;
-    public TextMeshProUGUI Stigma1Stats;
-    public TextMeshProUGUI Stigma2Stats;
+    [SerializeField] private TextMeshProUGUI PlayerStats;
+    [SerializeField] private TextMeshProUGUI PlayerLevel;
+    [SerializeField] private Slider PlayerLevelSlider;
+    [SerializeField] private TextMeshProUGUI BoatStats1;
+    [SerializeField] private TextMeshProUGUI BoatStats2;
+    [SerializeField] private TextMeshProUGUI BoatLevel;
+    [SerializeField] private Slider BoatLevelSlider;
+    [SerializeField] private TextMeshProUGUI Stigma1Stats;
+    [SerializeField] private TextMeshProUGUI Stigma2Stats;
 
     
     
     
     
-    public void PlayerButton()
+    public void PlayerButtonClicked()
     {
         StigmataElements.SetActive(false);
         BoatElements.SetActive(false);
@@ -81,7 +83,7 @@ public class CharacterMenu : MonoBehaviour
     
     
     
-    public void StigmataButton()
+    public void StigmataButtonClicked()
     {
         LevelUPElements.SetActive(false);
         BoatElements.SetActive(false);
@@ -94,7 +96,7 @@ public class CharacterMenu : MonoBehaviour
     
     
     
-    public void BoatButton()
+    public void BoatButtonClicked()
     {
         LevelUPElements.SetActive(false);
         StigmataElements.SetActive(false);
@@ -127,11 +129,21 @@ public class CharacterMenu : MonoBehaviour
     
     
     
-    public void CrewMembersButton()
+    public void CrewMembersButtonClicked()
     {
         LevelUPElements.SetActive(false);
         StigmataElements.SetActive(false);
         BoatElements.SetActive(false);
         CrewMembersElements.SetActive(true);
+    }
+
+
+
+
+    public void UpgradeButtonClicked()
+    {
+        CharacterCanvas.SetActive(false);
+        UpgradeCanvas.SetActive(true);
+        UpgradeUIScript.Init(CharacterCanvas);
     }
 }

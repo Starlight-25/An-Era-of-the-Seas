@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class BackpackMenuManager : MonoBehaviour
 {
-    public GameObject PlayerUICanvas;
-    public GameObject BackpackCanvas;
+    [SerializeField] private GameObject PlayerUICanvas;
+    [SerializeField] private GameObject BackpackCanvas;
 
     public void ReturnInGameButton()
     {

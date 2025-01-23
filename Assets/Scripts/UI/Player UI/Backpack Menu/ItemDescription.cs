@@ -3,22 +3,26 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class ItemDescription : MonoBehaviour
 {
-    public GameObject ItemDescriptionElements;
+    [SerializeField] private GameObject ItemDescriptionElements;
     
-    public Image Icon;
-    public Item Item;
-    public TextMeshProUGUI Name;
-    public TextMeshProUGUI Level;
-    public TextMeshProUGUI Rarity;
-    public TextMeshProUGUI Stats;
+    [SerializeField] private Image Icon;
+    private Item Item;
+    [SerializeField] private TextMeshProUGUI Name;
+    [SerializeField] private TextMeshProUGUI Level;
+    [SerializeField] private TextMeshProUGUI Rarity;
+    [SerializeField] private TextMeshProUGUI Stats;
 
-    public CsvData CsvData;
-    public JsonData JsonData;
-    
+    [SerializeField] private CsvData CsvData;
+    [SerializeField] private JsonData JsonData;
+
+    [SerializeField] private GameObject BackpackCanvas;
+    [SerializeField] private GameObject UpgradeCanvas;
+    [SerializeField] private UpgradeUI UpgradeUIScript;
     
     
     
@@ -107,5 +111,16 @@ public class ItemDescription : MonoBehaviour
         }
 
         Stats.text = text;
+    }
+
+
+
+
+
+    public void UpgradeButtonClicked()
+    {
+        BackpackCanvas.SetActive(false);
+        UpgradeCanvas.SetActive(true);
+        UpgradeUIScript.Init(BackpackCanvas, Item);
     }
 }

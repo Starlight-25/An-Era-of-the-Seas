@@ -4,24 +4,24 @@ using UnityEngine.Serialization;
 
 public class SettingsMenuManager : MonoBehaviour
 {
-    public GameObject PlayerUICanvas;
-    public GameObject SettingsCanvas;
-    public GameObject CharacterCanvas;
-    public GameObject BackpackCanvas;
+    [SerializeField] private GameObject PlayerUICanvas;
+    [SerializeField] private GameObject SettingsCanvas;
+    [SerializeField] private GameObject CharacterCanvas;
+    [SerializeField] private GameObject BackpackCanvas;
 
-    public void ReturnInGameButton()
+    public void ReturnButtonClicked()
     {
         SettingsCanvas.SetActive(false);
         PlayerUICanvas.SetActive(true);
     }
 
-    public void CharacterButton()
+    public void CharacterButtonClicked()
     {
         SettingsCanvas.SetActive(false);
         CharacterCanvas.SetActive(true);
     }
     
-    public void BackpackButton()
+    public void BackpackButtonClicked()
     {
         SettingsCanvas.SetActive(false);
         BackpackCanvas.SetActive(true);
@@ -29,6 +29,6 @@ public class SettingsMenuManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)) ReturnInGameButton();
+        if(Input.GetKeyDown(KeyCode.Escape)) ReturnButtonClicked();
     }
 }

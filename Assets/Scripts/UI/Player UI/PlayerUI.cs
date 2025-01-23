@@ -6,47 +6,47 @@ using UnityEngine.UI;
 
 public class PlayerUIManager : MonoBehaviour
 {
-    public GameObject PlayerUICanvas;
-    public GameObject SettingsCanvas;
-    public GameObject BackpackCanvas;
-    public GameObject CharacterCanvas;
+    [SerializeField] private GameObject PlayerUICanvas;
+    [SerializeField] private GameObject SettingsCanvas;
+    [SerializeField] private GameObject BackpackCanvas;
+    [SerializeField] private GameObject CharacterCanvas;
 
-    public void SettingsButton()
+    public void SettingsButtonClicked()
     {
         PlayerUICanvas.SetActive(false);
         SettingsCanvas.SetActive(true);
     }
 
-    public void CharacterButton()
+    public void CharacterButtonClicked()
     {
         PlayerUICanvas.SetActive(false);
         CharacterCanvas.SetActive(true);
     }
 
-    public void BackpackButton()
+    public void BackpackButtonClicked()
     {
         PlayerUICanvas.SetActive(false);
         BackpackCanvas.SetActive(true);
     }
 
-    public void AttackButton()
+    public void AttackButtonClicked()
     {
         Debug.Log("Attack");
     }
 
-    public PlayerDataManager playerDataManager;
-    public PlayerStatsManager PlayerStatsManager;
-    public TextMeshProUGUI LevelText;
-    public TextMeshProUGUI HPText;
-    public Slider HPSlider;
-    public TextMeshProUGUI DefText;
-    public Slider DEFSlider;
+    [SerializeField] private PlayerDataManager playerDataManager;
+    [SerializeField] private PlayerStatsManager PlayerStatsManager;
+    [SerializeField] private TextMeshProUGUI LevelText;
+    [SerializeField] private TextMeshProUGUI HPText;
+    [SerializeField] private Slider HPSlider;
+    [SerializeField] private TextMeshProUGUI DefText;
+    [SerializeField] private Slider DEFSlider;
     
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) SettingsButton();
-        else if (Input.GetKeyDown(KeyCode.C)) CharacterButton();
-        else if (Input.GetKeyDown(KeyCode.B)) BackpackButton();
+        if (Input.GetKeyDown(KeyCode.Escape)) SettingsButtonClicked();
+        else if (Input.GetKeyDown(KeyCode.C)) CharacterButtonClicked();
+        else if (Input.GetKeyDown(KeyCode.B)) BackpackButtonClicked();
         //else if (Input.GetMouseButtonDown(0)) AttackButton();
 
         LevelText.text = $"Lvl {playerDataManager.PlayerData.Level}";

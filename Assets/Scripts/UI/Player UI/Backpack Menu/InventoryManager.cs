@@ -43,15 +43,15 @@ public class Material
 
 public class InventoryManager : MonoBehaviour
 {
-    public PlayerDataManager PlayerDataManager;
+    [SerializeField] private PlayerDataManager PlayerDataManager;
     
-    public GameObject ItemPrefab;
-    public Transform ContentParent;
+    [SerializeField] private GameObject ItemPrefab;
+    [SerializeField] private Transform ContentParent;
 
     private List<Item> ItemList;
     private List<Material> MaterialList;
 
-    public ItemDescription ItemDescription;
+    [SerializeField] private ItemDescription ItemDescription;
     
     
     

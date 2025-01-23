@@ -3,8 +3,21 @@ using UnityEngine;
 public class UpgradeUI : MonoBehaviour
 {
     [SerializeField] private GameObject UpgradeCanvas;
-    public GameObject PreviousCanvas;
+    private GameObject PreviousCanvas;
+    [SerializeField] private PlayerDataManager PlayerDataManager;
+    private Item Item;
 
+    public void Init(GameObject previousCanvas)
+    {
+        PreviousCanvas = previousCanvas;
+        Item = null;
+    }
+    
+    public void Init(GameObject previousCanvas, Item item)
+    {
+        PreviousCanvas = previousCanvas;
+        Item = item;
+    }
     
     public void ReturnButtonClicked()
     {

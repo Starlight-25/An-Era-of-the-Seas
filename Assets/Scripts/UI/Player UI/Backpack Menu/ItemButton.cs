@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class ItemButton : MonoBehaviour
 {
-    public Image Icon;
-    public TextMeshProUGUI Text;
+    [SerializeField] private Image Icon;
+    [SerializeField] private TextMeshProUGUI Text;
 
 
 
