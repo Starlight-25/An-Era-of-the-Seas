@@ -13,7 +13,7 @@ public class PlayerDataManager : MonoBehaviour
     
     public void SavePlayerData()
     {
-        string updateData = JsonUtility.ToJson(PlayerData, true);
+        string updateData = JsonConvert.SerializeObject(PlayerData, Formatting.Indented);
         System.IO.File.WriteAllText(savePath, updateData);
     }
     

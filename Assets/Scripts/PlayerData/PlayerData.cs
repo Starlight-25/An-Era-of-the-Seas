@@ -79,29 +79,18 @@ public class Crew
     public List<Boatswain> Boatswain = new List<Boatswain>();
 }
 
-public class Explorer
+public class CrewMember
 {
     public string Rarity;
     public int Level;
 }
+public class Explorer : CrewMember { }
 
-public class Navigator
-{
-    public string Rarity;
-    public int Level;
-}
+public class Navigator : CrewMember { }
 
-public class Gunner
-{
-    public string Rarity;
-    public int Level;
-}
+public class Gunner : CrewMember { }
 
-public class Boatswain
-{    
-    public string Rarity;
-    public int Level;
-}
+public class Boatswain : CrewMember { }
 
 
 

@@ -96,8 +96,7 @@ public class ItemDescription : MonoBehaviour
                 else if (stat == "CritDMG") text += $"Crit DMG: {StatDataCSV.CritDMG}\n";
             }
         }
-        else if (Item.Object is Explorer || Item.Object is Navigator || Item.Object is Gunner ||
-                 Item.Object is Boatswain)
+        else if (Item.Object is CrewMember)
         {
             CrewCSV StatDataCSV = CsvData.CrewCSV[Item.Level - 1];
             StatList = JsonData.GetCrew(Item.Name, Item.Rarity).Stats;
