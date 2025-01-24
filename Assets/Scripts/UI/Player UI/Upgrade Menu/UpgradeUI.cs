@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class UpgradeUI : MonoBehaviour
@@ -14,6 +15,8 @@ public class UpgradeUI : MonoBehaviour
     [SerializeField] private JsonData JsonData;
     [SerializeField] private PlayerStatsManager PlayerStatsManager;
     private Item Item;
+
+    [SerializeField] private Transform ItemImage;
     
     [SerializeField] private Button upgrade1XButton;
     [SerializeField] private Button upgrade2XButton;
@@ -63,16 +66,23 @@ public class UpgradeUI : MonoBehaviour
     {
         PreviousCanvas = previousCanvas;
         Item = null;
+        Image RaritySprite = ItemImage.transform.GetChild(0).GetComponent<Image>();
+        Image PlayerSprite = ItemImage.transform.GetChild(1).GetComponent<Image>();
+        RaritySprite.sprite = Resources.Load<Sprite>("UI/Items/Legendary");
+        PlayerSprite.sprite = Resources.Load<Sprite>("UI/Items/Player");
         ItemStats.SetPlayerStats();
         SetNecessaryMaterial();
         SetMaterialText();
-
     }
     
     public void Init(GameObject previousCanvas, Item item)
     {
         PreviousCanvas = previousCanvas;
         Item = item;
+        Image RaritySprite = ItemImage.transform.GetChild(0).GetComponent<Image>();
+        Image ItemSprite = ItemImage.transform.GetChild(1).GetComponent<Image>();
+        RaritySprite.sprite = Item.RaritySprite;
+        ItemSprite.sprite = Item.ItemSprite;
         ItemStats.SetItemStats(Item);
         SetNecessaryMaterial();
         SetMaterialText();
