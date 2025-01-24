@@ -1,4 +1,4 @@
-Level,HP,DEF,ATK,CritRate,CritDMG,Speed,Coins,Wood,Steal,Boatswain,Gunner,Navigator,Explorer
+Level,HP,DEF,ATK,CritRate,CritDMG,Speed,Coins,Wood,Steel,Boatswain,Gunner,Navigator,Explorer
 1,1000,0,50,0,0,0,0,0,0,1,0,1,2
 2,3010,505,84,0,0,0,1000,5,2,1,0,1,2
 3,5020,1010,119,0,1,1,1057,5,2,1,0,1,2

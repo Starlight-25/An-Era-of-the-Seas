@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ItemButton : MonoBehaviour
 {
     [SerializeField] private Image Icon;
+    [SerializeField] private Image Rarity;
     [SerializeField] private TextMeshProUGUI Text;
 
 
@@ -13,13 +14,15 @@ public class ItemButton : MonoBehaviour
     
     public void InitItem(Item item)
     {
-        Icon.sprite = item.Icon;
+        Rarity.sprite = item.RaritySprite;
+        Icon.sprite = item.ItemSprite;
         Text.text = "Lvl " + item.Level;
     }
 
     public void InitMaterial(Material material)
     {
-        Icon.sprite = material.Icon;
+        Rarity.sprite = material.RaritySprite;
+        Icon.sprite = material.MaterialSprite;
         Text.text = material.Number.ToString();
     }
 }

@@ -11,7 +11,9 @@ public class Item
     public string Rarity;
     public int Level;
     public object Object;
-    public Sprite Icon;
+    public Sprite ItemSprite;
+    public Sprite RaritySprite;
+    
 
     public Item(string name, string rarity, int level, object obj)
     {
@@ -19,7 +21,8 @@ public class Item
         Rarity = rarity;
         Level = level;
         Object = obj;
-        Icon = null;
+        ItemSprite = Resources.Load<Sprite>($"UI/Items/{name}");
+        RaritySprite = Resources.Load<Sprite>($"UI/Items/{rarity}");
     }
 }
 
@@ -27,13 +30,15 @@ public class Material
 {
     public string Name;
     public int Number;
-    public Sprite Icon;
+    public Sprite MaterialSprite;
+    public Sprite RaritySprite;
 
     public Material(string name, int number)
     {
         Name = name;
         Number = number;
-        Icon = null;
+        MaterialSprite = Resources.Load<Sprite>($"UI/Items/{name}");
+        RaritySprite = Resources.Load<Sprite>("UI/Items/Rare");
     }
 }
 
@@ -78,7 +83,7 @@ public class InventoryManager : MonoBehaviour
         MaterialList.Add(new Material("Coins", Backpack.Materials.Coins));
         MaterialList.Add(new Material("Pure Water Drop", Backpack.Materials.PureWaterDrop));
         MaterialList.Add(new Material("Wood", Backpack.Materials.Wood));
-        MaterialList.Add(new Material("Steal", Backpack.Materials.Steal));
+        MaterialList.Add(new Material("Steel", Backpack.Materials.Steel));
         FillInventory();
     }
     

@@ -118,5 +118,5 @@ public class Materials
     public int Coins;
     public int PureWaterDrop;
     public int Wood;
-    public int Steal;
+    public int Steel;
 }

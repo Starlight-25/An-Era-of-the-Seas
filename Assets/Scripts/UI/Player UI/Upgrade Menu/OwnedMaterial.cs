@@ -1,13 +1,14 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class OwnedMaterial : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI CoinNumber;
     [SerializeField] private TextMeshProUGUI PWDNumber;
     [SerializeField] private TextMeshProUGUI WoodNumber;
-    [SerializeField] private TextMeshProUGUI StealNumber;
+    [SerializeField] private TextMeshProUGUI SteelNumber;
     public PlayerDataManager PlayerDataManager;
 
 
@@ -29,6 +30,6 @@ public class OwnedMaterial : MonoBehaviour
         CoinNumber.text = Materials.Coins.ToString();
         PWDNumber.text = Materials.PureWaterDrop.ToString();
         WoodNumber.text = Materials.Wood.ToString();
-        StealNumber.text = Materials.Steal.ToString();
+        SteelNumber.text = Materials.Steel.ToString();
     }
 }

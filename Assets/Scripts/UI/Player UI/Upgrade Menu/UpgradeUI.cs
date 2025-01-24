@@ -63,12 +63,20 @@ public class UpgradeUI : MonoBehaviour
     {
         PreviousCanvas = previousCanvas;
         Item = null;
+        ItemStats.SetPlayerStats();
+        SetNecessaryMaterial();
+        SetMaterialText();
+
     }
     
     public void Init(GameObject previousCanvas, Item item)
     {
         PreviousCanvas = previousCanvas;
         Item = item;
+        ItemStats.SetItemStats(Item);
+        SetNecessaryMaterial();
+        SetMaterialText();
+
     }
     
 
@@ -103,7 +111,7 @@ public class UpgradeUI : MonoBehaviour
             for (int i = 0; i < nbLevel; i++)
             {
                 WeaponCSV weaponCsv = CsvData.WeaponCSV[Item.Level + i];
-                (coins, pwd, steal) = (coins + weaponCsv.Coins, pwd + weaponCsv.PWD, steal + weaponCsv.Steal);
+                (coins, pwd, steal) = (coins + weaponCsv.Coins, pwd + weaponCsv.PWD, steal + weaponCsv.Steel);
             }
             UpgradeMaterials[nbLevel].Add(new Tuple<string, int>("Coins", coins));
             UpgradeMaterials[nbLevel].Add(new Tuple<string, int>("PWD", pwd));
@@ -126,7 +134,7 @@ public class UpgradeUI : MonoBehaviour
             for (int i = 0; i < nbLevel; i++)
             {
                 BoatCSV boatCsv = CsvData.BoatCSV[Item.Level + i];
-                (coins, wood, steal) = (coins + boatCsv.Coins, wood + boatCsv.Wood, steal + boatCsv.Steal);
+                (coins, wood, steal) = (coins + boatCsv.Coins, wood + boatCsv.Wood, steal + boatCsv.Steel);
             }
             UpgradeMaterials[nbLevel].Add(new Tuple<string, int>("Coins", coins));
             UpgradeMaterials[nbLevel].Add(new Tuple<string, int>("Wood", wood));
@@ -256,7 +264,7 @@ public class UpgradeUI : MonoBehaviour
             { "Coins", PlayerDataManager.PlayerData.Inventory.Backpack.Materials.Coins },
             { "PWD", PlayerDataManager.PlayerData.Inventory.Backpack.Materials.PureWaterDrop },
             { "Wood", PlayerDataManager.PlayerData.Inventory.Backpack.Materials.Wood },
-            { "Steal", PlayerDataManager.PlayerData.Inventory.Backpack.Materials.Steal }
+            { "Steal", PlayerDataManager.PlayerData.Inventory.Backpack.Materials.Steel }
         };
         foreach ((string material, int num) in UpgradeMaterials[nbLevel])
         {
@@ -269,7 +277,7 @@ public class UpgradeUI : MonoBehaviour
             if (material == "Coins") PlayerDataManager.PlayerData.Inventory.Backpack.Materials.Coins -= num;
             else if (material == "PWD") PlayerDataManager.PlayerData.Inventory.Backpack.Materials.PureWaterDrop -= num;
             else if (material == "Wood") PlayerDataManager.PlayerData.Inventory.Backpack.Materials.Wood -= num;
-            else if (material == "Steal") PlayerDataManager.PlayerData.Inventory.Backpack.Materials.Steal -= num;
+            else if (material == "Steal") PlayerDataManager.PlayerData.Inventory.Backpack.Materials.Steel -= num;
         }
         OwnedMaterial.UpdateNumber();
         return true;

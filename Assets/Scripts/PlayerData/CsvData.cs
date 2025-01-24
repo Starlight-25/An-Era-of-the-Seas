@@ -33,7 +33,7 @@ public class BoatCSV
     public int Speed { get; set; }
     public int Coins { get; set; }
     public int Wood { get; set; }
-    public int Steal { get; set; }
+    public int Steel { get; set; }
     public int Boatswain { get; set; }
     public int Gunner { get; set; }
     public int Navigator { get; set; }
@@ -74,7 +74,7 @@ public class WeaponCSV
     public int CritDMG { get; set; }
     public int Coins { get; set; }
     public int PWD { get; set; }
-    public int Steal { get; set; }
+    public int Steel { get; set; }
 }
 
 

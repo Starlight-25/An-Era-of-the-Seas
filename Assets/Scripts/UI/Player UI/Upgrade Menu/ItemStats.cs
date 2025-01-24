@@ -18,7 +18,7 @@ public class ItemStats : MonoBehaviour
         int Level = PlayerDataManager.PlayerData.Level;
         PlayerCSV playerCsv = CsvData.PlayerCSV[Level - 1];
         string text = $"{PlayerDataManager.PlayerData.Pseudo}\n";
-        text += $"Level: {playerCsv.Level}";
+        text += $"Level: {playerCsv.Level}/100\n";
         text += $"HP: {playerCsv.HP}\n";
         text += $"DEF: {playerCsv.DEF}\n";
         text += $"ATK: {playerCsv.ATK}\n";

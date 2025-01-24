@@ -10,7 +10,8 @@ public class ItemDescription : MonoBehaviour
 {
     [SerializeField] private GameObject ItemDescriptionElements;
     
-    [SerializeField] private Image Icon;
+    [SerializeField] private Image ItemSprite;
+    [SerializeField] private Image RaritySprite;
     private Item Item;
     [SerializeField] private TextMeshProUGUI Name;
     [SerializeField] private TextMeshProUGUI Level;
@@ -34,7 +35,8 @@ public class ItemDescription : MonoBehaviour
         UpgradeButton.SetActive(true);
         
         Item = item;
-        Icon.sprite = item.Icon;
+        RaritySprite.sprite = item.RaritySprite;
+        ItemSprite.sprite = item.ItemSprite;
         Name.text = item.Name;
         Level.text = "Level " + item.Level;
         Rarity.text = item.Rarity;
@@ -48,7 +50,8 @@ public class ItemDescription : MonoBehaviour
         UpgradeButton.SetActive(false);
 
         Item = null;
-        Icon.sprite = material.Icon;
+        RaritySprite.sprite = material.RaritySprite;
+        ItemSprite.sprite = material.MaterialSprite;
         Name.text = material.Name;
         Level.text = material.Number.ToString();
         Rarity.text = "";
