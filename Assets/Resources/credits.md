@@ -4,4 +4,4 @@
 * Coin : https://www.vecteezy.com/vector-art/16962878-gold-coins-icons-tokens-for-game-ui-interface
 * Wood : https://www.freepik.com/free-vector/stump-log-cartoon-piece-wood-broken-oak-linden-maple-cedar_20366568.htm#fromView=search&page=1&position=17&uuid=a4e4e2a8-19cb-4e55-9567-528352b19c98&new_detail=true&query=wood+log%5C
 * Steal : https://media-public.canva.com/9TFWM/MAF-OH9TFWM/1/tl.png
-* 
+* Excalibur sword 3D: https://free3d.com/fr/3d-model/saber-excalibur-81501.html
