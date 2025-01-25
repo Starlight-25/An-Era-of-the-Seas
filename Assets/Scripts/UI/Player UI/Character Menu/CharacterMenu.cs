@@ -1,8 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class CharacterMenu : MonoBehaviour
@@ -22,6 +20,8 @@ public class CharacterMenu : MonoBehaviour
     [SerializeField] private GameObject StigmataElements;
     [SerializeField] private GameObject BoatElements;
     [SerializeField] private GameObject CrewMembersElements;
+
+    [SerializeField] private SwitchHandle SwitchHandle;
 
     
     
@@ -90,10 +90,18 @@ public class CharacterMenu : MonoBehaviour
     private void InitWeaponStats()
     {
         Weapon weapon = PlayerDataManager.PlayerData.Inventory.Equipped.Weapon;
+        Item weaponItem = new Item(weapon.Name, weapon.Rarity, weapon.Level, weapon);
+        Button WeaponButton = WeaponElements.transform.GetChild(0).GetComponent<Button>();
+        Image RaritySprite = WeaponButton.transform.GetChild(0).GetComponent<Image>();
+        Image WeaponSprite = WeaponButton.transform.GetChild(1).GetComponent<Image>();
         Slider WeaponLevelSlider = WeaponElements.transform.Find("Level (Slider)").GetComponent<Slider>();
         TextMeshProUGUI WeaponLevel = WeaponLevelSlider.transform.Find("Level (Text)").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI WeaponStats = WeaponElements.transform.Find("Stats (Text)").transform.GetChild(0)
             .GetComponent<TextMeshProUGUI>();
+        
+        WeaponButton.onClick.AddListener(() => SwitchHandle.InitSwitchMenu(weaponItem, WeaponElements));
+        RaritySprite.sprite = weaponItem.RaritySprite;
+        WeaponSprite.sprite = weaponItem.ItemSprite;
         
         WeaponLevelSlider.maxValue = JsonData.GetWeapon(weapon.Name).MaxLevel;
         WeaponLevelSlider.value = weapon.Level;
@@ -130,15 +138,27 @@ public class CharacterMenu : MonoBehaviour
     {
         for (int i = 0; i < 2; i++)
         {
+            Transform StigmaElements = StigmataElements.transform.GetChild(i);
+            Button StigmaButton = StigmaElements.transform.GetChild(0).GetComponent<Button>();
+            Image RaritySprite = StigmaButton.transform.GetChild(0).GetComponent<Image>();
+            Image StigmaSprite = StigmaButton.transform.GetChild(1).GetComponent<Image>();
+            Slider StigmaLevelSlider = StigmaElements.transform.Find("Level (Slider)").GetComponent<Slider>();
+            TextMeshProUGUI StigmaLevel =
+                StigmaLevelSlider.transform.Find("Level (Text)").GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI StigmaStats = StigmaElements.transform.Find("Stats (Text)").transform.GetChild(0)
+                .GetComponent<TextMeshProUGUI>();
+            
             if (PlayerDataManager.PlayerData.Inventory.Equipped.Stigmata[i] is Stigma stigma)
             {
-                GameObject StigmaElements = StigmataElements.transform.GetChild(i).GetComponent<GameObject>();
-                Slider StigmaLevelSlider = StigmaElements.transform.Find("Level (Slider)").GetComponent<Slider>();
-                TextMeshProUGUI StigmaLevel =
-                    StigmaLevelSlider.transform.Find("Level (Text)").GetComponent<TextMeshProUGUI>();
-                TextMeshProUGUI StigmaStats = StigmaElements.transform.Find("Stats (Text)").transform.GetChild(0)
-                    .GetComponent<TextMeshProUGUI>();
-
+                Item stigmaItem = new Item(stigma.Name, stigma.Rarity, stigma.Level, stigma);
+                
+                StigmaButton.onClick.AddListener(() => SwitchHandle.InitSwitchMenu(stigmaItem, StigmataElements));
+                RaritySprite.sprite = stigmaItem.RaritySprite;
+                StigmaSprite.sprite = stigmaItem.ItemSprite;
+                Color color = StigmaSprite.color;
+                color.a = 1f;
+                StigmaSprite.color = color;
+                
                 StigmaLevelSlider.maxValue = JsonData.GetStigma(stigma.Name).MaxLevel;
                 StigmaLevelSlider.value = stigma.Level;
                 StigmaLevel.text = $"Level {StigmaLevelSlider.value}/{StigmaLevelSlider.maxValue}\n";
@@ -156,6 +176,18 @@ public class CharacterMenu : MonoBehaviour
                     else if (stat == "CritDMG") text += $"Crit DMG: {StatDataCSV.CritDMG}\n";
                 }
                 StigmaStats.text = text;
+            }
+            else
+            {
+                StigmaButton.onClick.AddListener(() => SwitchHandle.InitSwitchMenu("Stigma", StigmataElements));
+                RaritySprite.sprite = Resources.Load<Sprite>("UI/Items/Common");
+                Color color = StigmaSprite.color;
+                color.a = 0f;
+                StigmaSprite.color = color;
+                
+                StigmaLevelSlider.maxValue = 0;
+                StigmaLevelSlider.value = 0;
+                StigmaLevel.text = "Level 0/0";
             }
         }
     }
@@ -176,10 +208,19 @@ public class CharacterMenu : MonoBehaviour
 
     private void InitBoatStats()
     {
+        Boat boat = PlayerDataManager.PlayerData.Inventory.Equipped.Boat;
+        Item boatItem = new Item(boat.Name, boat.Rarity, boat.Level, boat);
+        Button BoatButton = BoatElements.transform.GetChild(0).GetComponent<Button>();
+        Image RaritySprite = BoatButton.transform.GetChild(0).GetComponent<Image>();
+        Image BoatSprite = BoatButton.transform.GetChild(1).GetComponent<Image>();
         Slider BoatLevelSlider = BoatElements.transform.Find("Level (Slider)").GetComponent<Slider>();
         TextMeshProUGUI BoatLevel = BoatLevelSlider.transform.Find("Level (Text)").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI BoatStats1 = BoatElements.transform.Find("Stats (Text)").transform.GetChild(0).GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI BoatStats2 = BoatElements.transform.Find("Stats (Text)").transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+        
+        BoatButton.onClick.AddListener(() => SwitchHandle.InitSwitchMenu(boatItem, BoatElements));
+        RaritySprite.sprite = boatItem.RaritySprite;
+        BoatSprite.sprite = boatItem.ItemSprite;
         
         BoatLevelSlider.maxValue = JsonData.GetBoat(PlayerStatsManager.BoatStats.Name).MaxLevel;
         BoatLevelSlider.value = PlayerStatsManager.BoatStats.Level;
@@ -210,6 +251,7 @@ public class CharacterMenu : MonoBehaviour
         StigmataElements.SetActive(false);
         BoatElements.SetActive(false);
         CrewMembersElements.SetActive(true);
+        InitCrewItems();
     }
 
     [SerializeField] private GameObject ItemPrefab;
@@ -219,73 +261,112 @@ public class CharacterMenu : MonoBehaviour
         Transform NavigatorParent = CrewMembersElements.transform.Find("Navigator");
         Transform GunnerParent = CrewMembersElements.transform.Find("Gunner");
         Transform BoatswainParent = CrewMembersElements.transform.Find("Boatswain");
+        
+        foreach (Transform child in ExplorerParent)
+        {
+            Destroy(child.gameObject);
+        }
+        foreach (Transform child in NavigatorParent)
+        {
+            Destroy(child.gameObject);
+        }
+        foreach (Transform child in GunnerParent)
+        {
+            Destroy(child.gameObject);
+        }
+        foreach (Transform child in BoatswainParent)
+        {
+            Destroy(child.gameObject);
+        }
 
         int boatLevel = PlayerStatsManager.BoatStats.Level;
         BoatCSV boatCSV = CsvData.BoatCSV[boatLevel - 1];
-
         for (int i = 0; i < boatCSV.Explorer; i++)
         {
-            if (PlayerDataManager.PlayerData.Inventory.Equipped.Crew.Explorer[i] is Explorer explorer)
+            if (i < PlayerDataManager.PlayerData.Inventory.Equipped.Crew.Explorer.Count)
             {
-                AddItem(new Item("Explorer", explorer.Rarity, explorer.Level, explorer), ExplorerParent);
+                Explorer explorer = PlayerDataManager.PlayerData.Inventory.Equipped.Crew.Explorer[i];
+                AddItem(new Item("Explorer", explorer.Rarity, explorer.Level, explorer), "Explorer", ExplorerParent);
             }
             else
             {
-                AddItem(null, ExplorerParent);
+                AddItem(null, "Explorer", ExplorerParent);
             }
         }
         for (int i = 0; i < boatCSV.Navigator; i++)
         {
-            if (PlayerDataManager.PlayerData.Inventory.Equipped.Crew.Navigator[i] is Navigator navigator)
+            if (i < PlayerDataManager.PlayerData.Inventory.Equipped.Crew.Navigator.Count)
             {
-                AddItem(new Item("Navigator", navigator.Rarity, navigator.Level, navigator), NavigatorParent);
+                Navigator navigator = PlayerDataManager.PlayerData.Inventory.Equipped.Crew.Navigator[i];
+                AddItem(new Item("Navigator", navigator.Rarity, navigator.Level, navigator), "Explorer", NavigatorParent);
             }
             else
             {
-                AddItem(null, NavigatorParent);
+                AddItem(null, "Explorer", NavigatorParent);
             }
         }
         for (int i = 0; i < boatCSV.Gunner; i++)
         {
-            if (PlayerDataManager.PlayerData.Inventory.Equipped.Crew.Gunner[i] is Gunner gunner)
+            if (i < PlayerDataManager.PlayerData.Inventory.Equipped.Crew.Gunner.Count)
             {
-                AddItem(new Item("Gunner", gunner.Rarity, gunner.Level, gunner), GunnerParent);
+                Gunner gunner = PlayerDataManager.PlayerData.Inventory.Equipped.Crew.Gunner[i];
+                AddItem(new Item("Gunner", gunner.Rarity, gunner.Level, gunner), "Explorer", GunnerParent);
             }
             else
             {
-                AddItem(null, GunnerParent);
+                AddItem(null, "Explorer", GunnerParent);
             }
         }
         for (int i = 0; i < boatCSV.Boatswain; i++)
         {
-            if (PlayerDataManager.PlayerData.Inventory.Equipped.Crew.Boatswain[i] is Boatswain boatswain)
+            if (i < PlayerDataManager.PlayerData.Inventory.Equipped.Crew.Boatswain.Count)
             {
-                AddItem(new Item("Boatswain", boatswain.Rarity, boatswain.Level, boatswain), BoatswainParent);
+                Boatswain boatswain = PlayerDataManager.PlayerData.Inventory.Equipped.Crew.Boatswain[i];
+                AddItem(new Item("Boatswain", boatswain.Rarity, boatswain.Level, boatswain), "Explorer", BoatswainParent);
             }
             else
             {
-                AddItem(null, BoatswainParent);
+                AddItem(null, "Explorer", BoatswainParent);
             }
         }
     }
 
-    private void AddItem(Item item, Transform ContentParent)
+    private void AddItem(Item item, string itemType, Transform ContentParent)
     {
         GameObject newItem = Instantiate(ItemPrefab, ContentParent);
 
         ItemButton itemButton = newItem.GetComponent<ItemButton>();
-        itemButton.InitItem(item);
+        if(item is not null)
+        {
+            itemButton.InitItem(item);
+        }
+        else
+        {
+            itemButton.Init();
+        }
         
         newItem.GetComponent<Button>().onClick.AddListener(() => InitCrewStats(item));
+        
+        Button switchButton = CrewMembersElements.transform.Find("Switch (Button)").GetComponent<Button>();
+        Button unequipButton = CrewMembersElements.transform.Find("Unequip (Button)").GetComponent<Button>();
+        if (item is null)
+        {
+            switchButton.onClick.AddListener(() => SwitchHandle.InitSwitchMenu(itemType, CrewMembersElements));
+        }
+        else
+        {
+            switchButton.onClick.AddListener(() => SwitchHandle.InitSwitchMenu(item, CrewMembersElements));
+            unequipButton.onClick.AddListener(() => UnequipItem(CrewItem, itemType));
+        }
     }
 
     private Item CrewItem;
     private void InitCrewStats(Item item)
     {
         CrewItem = item;
+        TextMeshProUGUI CrewStats = CrewMembersElements.transform.Find("Stats (Text)").GetChild(0).GetComponent<TextMeshProUGUI>();
         if (item is not null)
         {
-            TextMeshProUGUI CrewStats = CrewMembersElements.transform.Find("Stats (Text)").GetComponent<TextMeshProUGUI>();
             
             CrewCSV StatDataCSV = CsvData.CrewCSV[item.Level - 1];
             List<string> StatList = JsonData.GetCrew(item.Name, item.Rarity).Stats;
@@ -303,6 +384,46 @@ public class CharacterMenu : MonoBehaviour
             }
             CrewStats.text = text;
         }
+        else
+        {
+            CrewStats.text = "";
+        }
+    }
+
+    private void UnequipItem(Item item, string itemType)
+    {
+        if (item is null) return;
+        Crew backpackCrew = PlayerDataManager.PlayerData.Inventory.Backpack.Crew;
+        Crew equippedCrew = PlayerDataManager.PlayerData.Inventory.Equipped.Crew;
+
+        switch (itemType)
+        {
+            case "Explorer":
+                equippedCrew.Explorer.Remove((Explorer)item.Object);
+                backpackCrew.Explorer.Add((Explorer)item.Object);
+                backpackCrew.Explorer.Sort((x, y) => x.Level.CompareTo(y.Level));
+                break;
+            case "Navigator":
+                equippedCrew.Navigator.Remove((Navigator)item.Object);
+                backpackCrew.Navigator.Add((Navigator)item.Object);
+                backpackCrew.Navigator.Sort((x, y) => x.Level.CompareTo(y.Level));
+                break;
+            case "Gunner":
+                equippedCrew.Gunner.Remove((Gunner)item.Object);
+                backpackCrew.Gunner.Add((Gunner)item.Object);
+                backpackCrew.Gunner.Sort((x, y) => x.Level.CompareTo(y.Level));
+                break;
+            case "Boatswain":
+                equippedCrew.Boatswain.Remove((Boatswain)item.Object);
+                backpackCrew.Boatswain.Add((Boatswain)item.Object);
+                backpackCrew.Boatswain.Sort((x, y) => x.Level.CompareTo(y.Level));
+                break;
+        }
+        CrewItem = null;
+        InitCrewStats(null);
+        PlayerDataManager.SavePlayerData();
+        PlayerStatsManager.UpdateBoatStats();
+        CrewMembersButtonClicked();
     }
 
 

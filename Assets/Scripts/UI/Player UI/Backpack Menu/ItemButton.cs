@@ -19,6 +19,15 @@ public class ItemButton : MonoBehaviour
         Text.text = "Lvl " + item.Level;
     }
 
+    public void Init()
+    {
+        Rarity.sprite = Resources.Load<Sprite>("UI/Items/Common");
+        Color color = Icon.color;
+        color.a = 0f;
+        Icon.color = color;
+        Text.text = "";
+    }
+
     public void InitMaterial(Material material)
     {
         Rarity.sprite = material.RaritySprite;

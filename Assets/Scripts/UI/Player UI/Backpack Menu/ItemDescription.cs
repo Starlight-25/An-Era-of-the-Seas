@@ -62,7 +62,7 @@ public class ItemDescription : MonoBehaviour
     
     
     
-    private void SetStatsText()
+    public void SetStatsText()
     {
         string text = "";
         List<string> StatList = new List<string>();

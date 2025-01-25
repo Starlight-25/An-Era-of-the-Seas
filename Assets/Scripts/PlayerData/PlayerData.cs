@@ -105,7 +105,7 @@ public class Backpack
 {
     public Materials Materials;
     public List<Weapon> Weapons = new List<Weapon>();
-    [ItemCanBeNull] public List<Stigma> Stigmata = new List<Stigma>();
+    public List<Stigma> Stigmata = new List<Stigma>();
     public List<Boat> Boats = new List<Boat>();
     public Crew Crew;
 }

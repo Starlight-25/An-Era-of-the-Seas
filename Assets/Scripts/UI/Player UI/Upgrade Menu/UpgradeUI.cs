@@ -52,10 +52,36 @@ public class UpgradeUI : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) ReturnButtonClicked();
     }
 
+    // ReSharper disable Unity.PerformanceAnalysis
     public void ReturnButtonClicked()
     {
         UpgradeCanvas.SetActive(false);
         PreviousCanvas.SetActive(true);
+        PreviousCanvasUpdate();
+    }
+
+    private void PreviousCanvasUpdate()
+    {
+        if (PreviousCanvas.name == "Character Menu (Canvas)")
+        {
+            CharacterMenu characterMenu = PreviousCanvas.GetComponent<CharacterMenu>();
+            GameObject PlayerElements = PreviousCanvas.transform.GetChild(1).gameObject;
+            GameObject WeaponElements = PreviousCanvas.transform.GetChild(3).gameObject;
+            GameObject StigmaElements = PreviousCanvas.transform.GetChild(5).gameObject;
+            GameObject BoatElements = PreviousCanvas.transform.GetChild(7).gameObject;
+            GameObject CrewElements = PreviousCanvas.transform.GetChild(9).gameObject;
+
+            if (PlayerElements.activeSelf) characterMenu.PlayerButtonClicked();
+            else if (WeaponElements.activeSelf) characterMenu.WeaponButtonClicked();
+            else if (StigmaElements.activeSelf) characterMenu.StigmataButtonClicked();
+            else if (BoatElements.activeSelf) characterMenu.BoatButtonClicked();
+            else if (CrewElements.activeSelf) characterMenu.CrewMembersButtonClicked();
+        }
+        else if (PreviousCanvas.name == "Backpack Menu (Canvas)")
+        {
+            ItemDescription itemDescription = PreviousCanvas.transform.GetChild(7).GetComponent<ItemDescription>();
+            itemDescription.SetStatsText();
+        }
     }
 
 
