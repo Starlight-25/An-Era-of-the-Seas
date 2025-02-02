@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
-    public float jumpHeight = 2f; // Adjustable too
+    public float jumpHeight = 1f; // Adjustable too
     
     Vector3 velocity;
     bool isGrounded;
