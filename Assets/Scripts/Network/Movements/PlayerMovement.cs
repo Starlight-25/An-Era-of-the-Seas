@@ -12,7 +12,7 @@ public class PlayerMovement : NetworkBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
-    public float jumpHeight = 2f; // Adjustable too
+    public float jumpHeight = 1f; // Adjustable too
 
     private Vector3 velocity;
     private bool isGrounded;
