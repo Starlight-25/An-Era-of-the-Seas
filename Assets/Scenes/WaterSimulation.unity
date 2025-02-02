@@ -1001,6 +1001,21 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f36ad158113db3e990420f00f0da656, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1005889523}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f36ad158113db3e990420f00f0da656, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1005889528}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f36ad158113db3e990420f00f0da656, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1005889527}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f36ad158113db3e990420f00f0da656, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1005889526}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f36ad158113db3e990420f00f0da656, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1005889525}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f36ad158113db3e990420f00f0da656, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1005889524}
   m_SourcePrefab: {fileID: 100100000, guid: 0f36ad158113db3e990420f00f0da656, type: 3}
 --- !u!1 &1005889521 stripped
 GameObject:
@@ -1039,6 +1054,79 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1005889524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005889521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60394807df439104cad54358de4e9a0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerTag: Player
+  Boat: {fileID: 1005889522}
+--- !u!114 &1005889525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005889521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16689198de58383428a0aaf5a9b5da96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Boat: {fileID: 1005889522}
+--- !u!114 &1005889526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005889521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dff90a20bd049ba4a9b6f126bdf1e30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractorSource: {fileID: 0}
+  InteractRange: 3
+  Player: {fileID: 0}
+  PlayerCamera: {fileID: 0}
+  HelmCamera: {fileID: 811132435}
+--- !u!114 &1005889527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005889521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9dc70341be4c0540bed9a28922fded5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractorSource: {fileID: 0}
+  InteractRange: 3
+--- !u!114 &1005889528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005889521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a923e3345e57344ab6f20e71676cf48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BoatBody: {fileID: 1005889523}
+  speed: 0.1
+  helmMovingSpeed: 1000
 --- !u!1 &1113712086
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 12f; // Adjustable
     
     //Gravity
-    public float gravity = -19.62f; // Two times earth gravity because it feels nicer, need to ajust.
+    public float gravity = -9.81f; // Two times earth gravity because it feels nicer, need to ajust.
     
     public Transform groundCheck;
     public float groundDistance = 0.4f;
