@@ -15,7 +15,7 @@ public class BoatMovement : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKey(KeyCode.W) && HelmInteractor.inHelm && !CapstanInteractor.isAnchored)
+        if (!CapstanInteractor.isAnchored)
         {
             MoveBoatForward(speed); 
         }
