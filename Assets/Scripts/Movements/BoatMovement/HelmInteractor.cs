@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,29 +27,22 @@ public class HelmInteractor : MonoBehaviour
                 {
                     if (hit.collider.gameObject.tag == "Helm") // Checks that the object is the helm
                     {
-                        Interact(); 
+                        SwitchCameras(); 
                     }
                 }
             }
             else
             {
-                inHelm = false;
-                SwitchCameras(); // If the player is already in the helm menu, switch back to the player camera and disallow the player to move the boat.
+                SwitchCameras();
             }
         }
     }
     
-    // Interacting with the Helm method.
-    public void Interact()
-    {
-        inHelm = true;
-        SwitchCameras();
-        
-        
-    }
     
-    public void SwitchCameras() // Switch from the player camera to the helm camera, from where he can move the boat.
+    private void SwitchCameras() // Switch from the player camera to the helm camera, from where he can move the boat.
     {
+        inHelm = !inHelm;
+        
         PlayerCamera.enabled = !PlayerCamera.enabled;
         HelmCamera.enabled = !HelmCamera.enabled;
     }

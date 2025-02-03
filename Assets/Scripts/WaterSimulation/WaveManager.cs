@@ -26,7 +26,7 @@ public class WaveManager : MonoBehaviour
         }
         else if (instance != this)
         {
-            Debug.Log("WaveManager instance already exists!");
+            //Debug.Log("WaveManager instance already exists!");
         }
 
         // Precompute wave directions
