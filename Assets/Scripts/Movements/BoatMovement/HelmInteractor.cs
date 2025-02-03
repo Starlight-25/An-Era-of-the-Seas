@@ -15,8 +15,8 @@ public class HelmInteractor : MonoBehaviour
     public Camera HelmCamera;
 
     public static bool inHelm = false; // Anchored by default
-
-    void Update()
+    [SerializeField] private Transform Boat;
+     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -45,7 +45,14 @@ public class HelmInteractor : MonoBehaviour
         
         PlayerCamera.enabled = !PlayerCamera.enabled;
         HelmCamera.enabled = !HelmCamera.enabled;
+        LockPlayerOnBoat();
     }
-    
+
+
+    private void LockPlayerOnBoat()
+    {
+        if (inHelm) Player.transform.SetParent(Boat);
+        else Player.transform.SetParent(null);
+    }
     
 }

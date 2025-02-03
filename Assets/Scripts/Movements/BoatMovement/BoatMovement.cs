@@ -7,15 +7,15 @@ public class BoatMovement : MonoBehaviour
 
     public Rigidbody BoatBody;
     
-    public float speed = 0.1f; // Should change according to wind...
-    public float helmMovingSpeed = 1000f;
+    public float speed = 1f; // Should change according to wind...
+    public float helmMovingSpeed = 10000f;
 
     private Vector3 EulerAngleVelocity = new Vector3(0, 1, 0);
     private float xRotation = 0f;
     
     void Update()
     {
-        if (!CapstanInteractor.isAnchored)
+        if (Input.GetKey(KeyCode.W) && HelmInteractor.inHelm && !CapstanInteractor.isAnchored)
         {
             MoveBoatForward(speed); 
         }

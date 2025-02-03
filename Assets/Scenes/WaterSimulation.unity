@@ -912,16 +912,6 @@ MonoBehaviour:
   floatercount: 5
   waterDrag: 5
   waterAngularDrag: 10
---- !u!4 &862394721 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6575107725544787383, guid: 3418e14bef25e274787406b0f367cf9e, type: 3}
-  m_PrefabInstance: {fileID: 1869673000}
-  m_PrefabAsset: {fileID: 0}
---- !u!20 &862394726 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 1894957617907495330, guid: 3418e14bef25e274787406b0f367cf9e, type: 3}
-  m_PrefabInstance: {fileID: 1869673000}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &899092070
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,8 +1240,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BoatBody: {fileID: 1005889523}
-  speed: 0.1
-  helmMovingSpeed: 1000
+  speed: 1
+  helmMovingSpeed: 10000
 --- !u!1 &1113712086
 GameObject:
   m_ObjectHideFlags: 0
@@ -1822,11 +1812,6 @@ Transform:
   - {fileID: 212061778}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1661326596 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2689627784956013479, guid: 3418e14bef25e274787406b0f367cf9e, type: 3}
-  m_PrefabInstance: {fileID: 1869673000}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1737892153
 GameObject:
   m_ObjectHideFlags: 0
@@ -2070,25 +2055,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6154378646042413160, guid: 3418e14bef25e274787406b0f367cf9e, type: 3}
-      propertyPath: Player
+      propertyPath: Boat
       value: 
-      objectReference: {fileID: 1661326596}
+      objectReference: {fileID: 1005889522}
     - target: {fileID: 6154378646042413160, guid: 3418e14bef25e274787406b0f367cf9e, type: 3}
       propertyPath: HelmCamera
       value: 
       objectReference: {fileID: 100279400}
-    - target: {fileID: 6154378646042413160, guid: 3418e14bef25e274787406b0f367cf9e, type: 3}
-      propertyPath: PlayerCamera
-      value: 
-      objectReference: {fileID: 862394726}
-    - target: {fileID: 6154378646042413160, guid: 3418e14bef25e274787406b0f367cf9e, type: 3}
-      propertyPath: InteractorSource
-      value: 
-      objectReference: {fileID: 862394721}
-    - target: {fileID: 7540003589003144638, guid: 3418e14bef25e274787406b0f367cf9e, type: 3}
-      propertyPath: InteractorSource
-      value: 
-      objectReference: {fileID: 862394721}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

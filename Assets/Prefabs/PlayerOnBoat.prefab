@@ -287,6 +287,7 @@ MonoBehaviour:
   Player: {fileID: 2689627784956013479}
   PlayerCamera: {fileID: 1894957617907495330}
   HelmCamera: {fileID: 0}
+  Boat: {fileID: 0}
 --- !u!114 &7540003589003144638
 MonoBehaviour:
   m_ObjectHideFlags: 0
