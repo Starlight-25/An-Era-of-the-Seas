@@ -1,22 +1,28 @@
+using System;
 using UnityEngine;
 
-public class BackpackMenuManager : MonoBehaviour
+
+public class MapMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject BackpackCanvas;
+    [SerializeField] private GameObject MapCanvas;
     private GameObject PreviousCanvas;
 
     
     public void SetPreviousCanvas(GameObject previousCanvas) => PreviousCanvas = previousCanvas;
     
-    public void ReturnInGameButton()
+    
+    public void ReturnButtonClicked()
     {
-        BackpackCanvas.SetActive(false);
+        MapCanvas.SetActive(false);
         PreviousCanvas.SetActive(true);
         PreviousCanvas = null;
     }
-    
+
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)) ReturnInGameButton();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ReturnButtonClicked();
+        }
     }
 }

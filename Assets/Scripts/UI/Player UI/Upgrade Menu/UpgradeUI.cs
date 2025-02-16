@@ -79,7 +79,7 @@ public class UpgradeUI : MonoBehaviour
         }
         else if (PreviousCanvas.name == "Backpack Menu (Canvas)")
         {
-            ItemDescription itemDescription = PreviousCanvas.transform.GetChild(7).GetComponent<ItemDescription>();
+            ItemDescription itemDescription = PreviousCanvas.transform.GetChild(8).GetComponent<ItemDescription>();
             itemDescription.SetStatsText();
         }
     }

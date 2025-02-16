@@ -23,7 +23,6 @@ public class ItemDescription : MonoBehaviour
 
     [SerializeField] private GameObject BackpackCanvas;
     [SerializeField] private GameObject UpgradeCanvas;
-    [SerializeField] private UpgradeUI UpgradeUIScript;
     [SerializeField] private GameObject UpgradeButton;
     
     
@@ -124,8 +123,8 @@ public class ItemDescription : MonoBehaviour
 
     public void UpgradeButtonClicked()
     {
+        UpgradeCanvas.GetComponent<UpgradeUI>().Init(BackpackCanvas, Item);
         BackpackCanvas.SetActive(false);
         UpgradeCanvas.SetActive(true);
-        UpgradeUIScript.Init(BackpackCanvas, Item);
     }
 }

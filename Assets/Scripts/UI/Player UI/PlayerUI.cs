@@ -1,7 +1,5 @@
-using System;
 using UnityEngine;
 using TMPro;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class PlayerUIManager : MonoBehaviour
@@ -10,6 +8,7 @@ public class PlayerUIManager : MonoBehaviour
     [SerializeField] private GameObject SettingsCanvas;
     [SerializeField] private GameObject BackpackCanvas;
     [SerializeField] private GameObject CharacterCanvas;
+    [SerializeField] private GameObject MapCanvas;
 
     public void SettingsButtonClicked()
     {
@@ -19,14 +18,23 @@ public class PlayerUIManager : MonoBehaviour
 
     public void CharacterButtonClicked()
     {
+        CharacterCanvas.transform.GetComponent<CharacterMenu>().SetPreviousCanvas(PlayerUICanvas);
         PlayerUICanvas.SetActive(false);
         CharacterCanvas.SetActive(true);
     }
 
     public void BackpackButtonClicked()
     {
+        BackpackCanvas.transform.GetComponent<BackpackMenuManager>().SetPreviousCanvas(PlayerUICanvas);
         PlayerUICanvas.SetActive(false);
         BackpackCanvas.SetActive(true);
+    }
+
+    public void MapButtonClicked()
+    {
+        MapCanvas.transform.GetComponent<MapMenu>().SetPreviousCanvas(PlayerUICanvas);
+        PlayerUICanvas.SetActive(false);
+        MapCanvas.SetActive(true);
     }
 
     public void AttackButtonClicked()
@@ -47,6 +55,7 @@ public class PlayerUIManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) SettingsButtonClicked();
         else if (Input.GetKeyDown(KeyCode.C)) CharacterButtonClicked();
         else if (Input.GetKeyDown(KeyCode.B)) BackpackButtonClicked();
+        else if (Input.GetKeyDown(KeyCode.M)) MapButtonClicked();
         //else if (Input.GetMouseButtonDown(0)) AttackButton();
 
         LevelText.text = $"Lvl {playerDataManager.PlayerData.Level}";
