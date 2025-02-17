@@ -5,10 +5,9 @@ using UnityEngine.UI;
 
 public class CharacterMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject PlayerUICanvas;
     [SerializeField] private GameObject CharacterCanvas;
+    private GameObject PreviousCanvas;
     [SerializeField] private GameObject UpgradeCanvas;
-    [SerializeField] private UpgradeUI UpgradeUIScript;
     
     [SerializeField] private PlayerStatsManager PlayerStatsManager;
     [SerializeField] private PlayerDataManager PlayerDataManager;
@@ -23,14 +22,16 @@ public class CharacterMenu : MonoBehaviour
 
     [SerializeField] private SwitchHandle SwitchHandle;
 
-    
-    
 
+
+
+    public void SetPreviousCanvas(GameObject previousCanvas) => PreviousCanvas = previousCanvas;
     
     public void ReturnButtonClicked()
     {
         CharacterCanvas.SetActive(false);
-        PlayerUICanvas.SetActive(true);
+        PreviousCanvas.SetActive(true);
+        PreviousCanvas = null;
     }
     
     private void Update()
@@ -432,8 +433,7 @@ public class CharacterMenu : MonoBehaviour
 
     public void UpgradeButtonClicked()
     {
-        CharacterCanvas.SetActive(false);
-        UpgradeCanvas.SetActive(true);
+        UpgradeUI UpgradeUIScript = UpgradeCanvas.GetComponent<UpgradeUI>();
         if (PlayerElements.activeSelf)
         {
             UpgradeUIScript.Init(CharacterCanvas);
@@ -448,10 +448,15 @@ public class CharacterMenu : MonoBehaviour
             Boat boat = PlayerDataManager.PlayerData.Inventory.Equipped.Boat;
             UpgradeUIScript.Init(CharacterCanvas, new Item(boat.Name, boat.Rarity, boat.Level, boat));
         }
-        else if (CrewMembersElements.activeSelf && CrewItem is not null)
+        else if (CrewMembersElements.activeSelf)
         {
-            UpgradeUIScript.Init(CharacterCanvas, CrewItem);
+            if (CrewItem is not null) UpgradeUIScript.Init(CharacterCanvas, CrewItem);
+            else return;
         }
+        else return;
+        
+        CharacterCanvas.SetActive(false);
+        UpgradeCanvas.SetActive(true);
     }
 
     public void UpgradeStigma1ButtonClicked()
@@ -459,13 +464,13 @@ public class CharacterMenu : MonoBehaviour
         CharacterCanvas.SetActive(false);
         UpgradeCanvas.SetActive(true);
         Stigma stigma = PlayerDataManager.PlayerData.Inventory.Equipped.Stigmata[0];
-        UpgradeUIScript.Init(CharacterCanvas, new Item(stigma.Name, stigma.Rarity, stigma.Level, stigma));
+        UpgradeCanvas.GetComponent<UpgradeUI>().Init(CharacterCanvas, new Item(stigma.Name, stigma.Rarity, stigma.Level, stigma));
     }
     public void UpgradeStigma2ButtonClicked()
     {
         CharacterCanvas.SetActive(false);
         UpgradeCanvas.SetActive(true);
         Stigma stigma = PlayerDataManager.PlayerData.Inventory.Equipped.Stigmata[1];
-        UpgradeUIScript.Init(CharacterCanvas, new Item(stigma.Name, stigma.Rarity, stigma.Level, stigma));
+        UpgradeCanvas.GetComponent<UpgradeUI>().Init(CharacterCanvas, new Item(stigma.Name, stigma.Rarity, stigma.Level, stigma));
     }
 }
