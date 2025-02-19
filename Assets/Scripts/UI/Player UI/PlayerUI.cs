@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -12,12 +13,16 @@ public class PlayerUIManager : MonoBehaviour
 
     public void SettingsButtonClicked()
     {
+        Time.timeScale = 0f;
+        SetCursorState();
         PlayerUICanvas.SetActive(false);
         SettingsCanvas.SetActive(true);
     }
 
     public void CharacterButtonClicked()
     {
+        Time.timeScale = 0f;
+        SetCursorState();
         CharacterCanvas.transform.GetComponent<CharacterMenu>().SetPreviousCanvas(PlayerUICanvas);
         PlayerUICanvas.SetActive(false);
         CharacterCanvas.SetActive(true);
@@ -25,6 +30,8 @@ public class PlayerUIManager : MonoBehaviour
 
     public void BackpackButtonClicked()
     {
+        Time.timeScale = 0f;
+        SetCursorState();
         BackpackCanvas.transform.GetComponent<BackpackMenuManager>().SetPreviousCanvas(PlayerUICanvas);
         PlayerUICanvas.SetActive(false);
         BackpackCanvas.SetActive(true);
@@ -32,6 +39,8 @@ public class PlayerUIManager : MonoBehaviour
 
     public void MapButtonClicked()
     {
+        Time.timeScale = 0f;
+        SetCursorState();
         MapCanvas.transform.GetComponent<MapMenu>().SetPreviousCanvas(PlayerUICanvas);
         PlayerUICanvas.SetActive(false);
         MapCanvas.SetActive(true);
@@ -42,6 +51,20 @@ public class PlayerUIManager : MonoBehaviour
         Debug.Log("Attack");
     }
 
+    private void SetCursorState(bool locked = false)
+    {
+        if (locked)
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
+
     [SerializeField] private PlayerDataManager playerDataManager;
     [SerializeField] private PlayerStatsManager PlayerStatsManager;
     [SerializeField] private TextMeshProUGUI LevelText;
@@ -49,7 +72,14 @@ public class PlayerUIManager : MonoBehaviour
     [SerializeField] private Slider HPSlider;
     [SerializeField] private TextMeshProUGUI DefText;
     [SerializeField] private Slider DEFSlider;
-    
+
+
+    private void OnEnable()
+    {
+        Time.timeScale = 1f;
+        SetCursorState(true);
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) SettingsButtonClicked();
