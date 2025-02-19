@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 94f58c2d310ce418793957a7c1fd3042
+<<<<<<<< HEAD:Assets/Packages/Boat/PolyAngel-Mini Pirates Island/Textures/Ground.png.meta
+guid: 6fd3b6802631b2447a541e58de28c100
+========
+guid: ccc9a153c19263c4e8fd12f031a3b53e
+>>>>>>>> BoatMovementGerstner:Assets/Packages/LowPolyTropicalEnvironment_LITE/Textures/TropicalEnvironmentLite_GodRay_01.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -24,7 +28,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -33,9 +36,15 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<<< HEAD:Assets/Packages/Boat/PolyAngel-Mini Pirates Island/Textures/Ground.png.meta
     filterMode: 1
     aniso: 1
     mipBias: 0
+========
+    filterMode: -1
+    aniso: 2
+    mipBias: -100
+>>>>>>>> BoatMovementGerstner:Assets/Packages/LowPolyTropicalEnvironment_LITE/Textures/TropicalEnvironmentLite_GodRay_01.png.meta
     wrapU: 0
     wrapV: 0
     wrapW: 0
@@ -67,10 +76,15 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
+<<<<<<<< HEAD:Assets/Packages/Boat/PolyAngel-Mini Pirates Island/Textures/Ground.png.meta
     textureFormat: -1
     textureCompression: 1
+========
+    textureFormat: 4
+    textureCompression: 2
+>>>>>>>> BoatMovementGerstner:Assets/Packages/LowPolyTropicalEnvironment_LITE/Textures/TropicalEnvironmentLite_GodRay_01.png.meta
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -79,7 +93,19 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -90,8 +116,13 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+<<<<<<<< HEAD:Assets/Packages/Boat/PolyAngel-Mini Pirates Island/Textures/Ground.png.meta
     buildTarget: Server
     maxTextureSize: 2048
+========
+    buildTarget: Android
+    maxTextureSize: 8192
+>>>>>>>> BoatMovementGerstner:Assets/Packages/LowPolyTropicalEnvironment_LITE/Textures/TropicalEnvironmentLite_GodRay_01.png.meta
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -102,8 +133,13 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+<<<<<<<< HEAD:Assets/Packages/Boat/PolyAngel-Mini Pirates Island/Textures/Ground.png.meta
     buildTarget: WebGL
     maxTextureSize: 2048
+========
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+>>>>>>>> BoatMovementGerstner:Assets/Packages/LowPolyTropicalEnvironment_LITE/Textures/TropicalEnvironmentLite_GodRay_01.png.meta
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -126,7 +162,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

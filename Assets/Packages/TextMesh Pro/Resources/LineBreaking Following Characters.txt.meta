@@ -1,8 +1,14 @@
 fileFormatVersion: 2
-guid: 7789d756397cf0747be47a1daedea4b9
+<<<<<<<< HEAD:Assets/Packages/TextMesh Pro/Resources/LineBreaking Following Characters.txt.meta
+guid: e189ead1218a9d0418fba071691b8b3c
 timeCreated: 1425440388
 licenseType: Store
 TextScriptImporter:
+========
+guid: 4898d2ba9f205366aaf7d883c951f2bd
+DefaultImporter:
+  externalObjects: {}
+>>>>>>>> BoatMovementGerstner:Assets/Scenes/WaterSimulation.unity.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 

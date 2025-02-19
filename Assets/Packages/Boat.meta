@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 1395e092de2ae964abc61af082fb7506
+<<<<<<<< HEAD:Assets/Packages/Boat.meta
+guid: 5244c1ac3828c8c4c8ace37a0638d1a9
+========
+guid: 8c23ec551bed3984b9823b8bc0bf206b
+>>>>>>>> BoatMovementGerstner:Assets/Packages/LowPolyTropicalEnvironment_LITE.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
