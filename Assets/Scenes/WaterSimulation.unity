@@ -535,7 +535,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 98c184c66d28e6940949e14a658b7ca4, type: 3}
       propertyPath: m_Name
-      value: helm
+      value: Helm
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 98c184c66d28e6940949e14a658b7ca4, type: 3}
       propertyPath: m_Layer
@@ -2413,6 +2413,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1005889522}
     - target: {fileID: 6154378646042413160, guid: 3418e14bef25e274787406b0f367cf9e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6154378646042413160, guid: 3418e14bef25e274787406b0f367cf9e, type: 3}
       propertyPath: HelmCamera
       value: 
       objectReference: {fileID: 100279400}
@@ -2424,7 +2428,13 @@ PrefabInstance:
       propertyPath: interactableLayer.m_Bits
       value: 64
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7540003589003144638, guid: 3418e14bef25e274787406b0f367cf9e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6154378646042413160, guid: 3418e14bef25e274787406b0f367cf9e, type: 3}
+    - {fileID: 7540003589003144638, guid: 3418e14bef25e274787406b0f367cf9e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
