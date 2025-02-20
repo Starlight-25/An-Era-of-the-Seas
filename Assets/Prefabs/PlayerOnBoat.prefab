@@ -171,8 +171,7 @@ GameObject:
   - component: {fileID: 1894957617907495330}
   - component: {fileID: 9158485015717722232}
   - component: {fileID: 7011943777074530012}
-  - component: {fileID: 6154378646042413160}
-  - component: {fileID: 7540003589003144638}
+  - component: {fileID: 7426471774250887024}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -270,7 +269,7 @@ MonoBehaviour:
   playerBody: {fileID: 3966950809888491865}
   playerCamera: {fileID: 1894957617907495330}
   otherCamera: []
---- !u!114 &6154378646042413160
+--- !u!114 &7426471774250887024
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -279,26 +278,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3944915030447682959}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dff90a20bd049ba4a9b6f126bdf1e30d, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b61230f6875bd54f833c9234bd60455, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractorSource: {fileID: 6575107725544787383}
-  InteractRange: 3
-  Player: {fileID: 2689627784956013479}
-  PlayerCamera: {fileID: 1894957617907495330}
-  HelmCamera: {fileID: 0}
-  Boat: {fileID: 0}
---- !u!114 &7540003589003144638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3944915030447682959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9dc70341be4c0540bed9a28922fded5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InteractorSource: {fileID: 6575107725544787383}
-  InteractRange: 3
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  infoText: {fileID: 0}

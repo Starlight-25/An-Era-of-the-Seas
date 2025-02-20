@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     
     void Update()
     {
-        if (HelmInteractor.inHelm == false) // If the player is not in the helm menu.
+        if (BoatState.inHelm == false) // If the player is not in the helm menu.
         {
             //Movement 
             float x = Input.GetAxis("Horizontal");

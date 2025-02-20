@@ -17,6 +17,7 @@ public class MouseLook : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         playerCamera.enabled = true;
 
         foreach (Camera camera in otherCamera)
@@ -27,7 +28,7 @@ public class MouseLook : MonoBehaviour
     
     void Update()
     {
-        if (!HelmInteractor.inHelm)
+        if (!BoatState.inHelm)
         {
             float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
             float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;

@@ -15,12 +15,12 @@ public class BoatMovement : MonoBehaviour
     
     void Update()
     {
-        if (!CapstanInteractor.isAnchored)
+        if (!BoatState.isAnchored)
         {
             MoveBoatForward(speed); 
         }
         
-        if (HelmInteractor.inHelm) // If the player IS in the helm menu, then he can be able to move the boat.
+        if (BoatState.inHelm) // If the player IS in the helm menu, then he can be able to move the boat.
         {
             xRotation = Input.GetAxis("Mouse X") * Time.deltaTime;
             
