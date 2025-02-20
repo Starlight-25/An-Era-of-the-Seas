@@ -1,18 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI; 
 
-//NPC roaming behaviour (random)
 public class RandomMovement : MonoBehaviour 
 {
-    public NavMeshAgent agent;
-    public float range; 
-
-    public Transform centrePoint; 
+    [SerializeField] private float range = 5; 
+    
+    private NavMeshAgent agent;
+    private Vector3 initialPosition;
+    
+    
+    
+    
+    
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        initialPosition = transform.position;
     }
 
     
@@ -21,13 +24,18 @@ public class RandomMovement : MonoBehaviour
         if(agent.remainingDistance <= agent.stoppingDistance) 
         {
             Vector3 point;
-            if (RandomPoint(centrePoint.position, range, out point)) 
+            if (RandomPoint(initialPosition, range, out point)) 
             {
                 agent.SetDestination(point);
             }
         }
 
     }
+    
+    
+    
+    
+    
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
 
@@ -35,7 +43,6 @@ public class RandomMovement : MonoBehaviour
         NavMeshHit hit;
         if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas)) 
         { 
-            
             result = hit.position;
             return true;
         }
@@ -43,6 +50,4 @@ public class RandomMovement : MonoBehaviour
         result = Vector3.zero;
         return false;
     }
-
-    
 }
