@@ -28,6 +28,10 @@ public class BoatMovement : MonoBehaviour
         }
     }
 
+    
+    
+    
+    
     private void MoveBoat()
     {
         Quaternion deltaRotation = Quaternion.Euler(EulerAngleVelocity * (xRotation * (helmMovingSpeed * Time.fixedDeltaTime)));
@@ -35,12 +39,15 @@ public class BoatMovement : MonoBehaviour
         BoatBody.MoveRotation(BoatBody.rotation * deltaRotation);
     }
     
+    
+    
+    
+    
     private void MoveBoatForward(float movementSpeed)
     {
         Vector3 movement = transform.TransformDirection(new Vector3(0,0, 1)) * movementSpeed;
         BoatBody.linearVelocity = new Vector3(movement.x, movement.y, movement.z);
     }
-    
 }
     
     /* Trigonometry of sailing: https://www.youtube.com/watch?v=_zDF40XFWN4
