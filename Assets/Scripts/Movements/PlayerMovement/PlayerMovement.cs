@@ -4,26 +4,31 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    
     //Movement
-    public CharacterController controller;
-    public float speed = 12f; // Adjustable
+    private CharacterController controller;
+    [SerializeField] private float speed = 12f; // Adjustable
     
     //Gravity
-    public float gravity = -9.81f; // Two times earth gravity because it feels nicer, need to ajust.
-    
-    public Transform groundCheck;
-    public float groundDistance = 0.4f;
-    public LayerMask groundMask;
-    public float jumpHeight = 1f; // Adjustable too
+    [SerializeField] private float gravity = -9.81f; // Two times earth gravity because it feels nicer, need to ajust.
+    [SerializeField] private float groundDistance = 0.4f;
+    [SerializeField] private LayerMask groundMask;
+    [SerializeField] private float jumpHeight = 1f; // Adjustable too
     
     Vector3 velocity;
     bool isGrounded;
     
+    
+    
+    
+    
     void Start()
     {
-        
+        controller = GetComponent<CharacterController>();
     }
+    
+    
+    
+    
     
     void Update()
     {
@@ -41,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
             velocity.y += gravity * Time.deltaTime;
             controller.Move(velocity * Time.deltaTime);
         
-            isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+            isGrounded = Physics.CheckSphere(transform.position, groundDistance, groundMask);
         
             // Resets velocity when grounded
             if (isGrounded && velocity.y < 0)
@@ -54,6 +59,32 @@ public class PlayerMovement : MonoBehaviour
             {
                 velocity.y = Mathf.Sqrt(-2.0f * jumpHeight * gravity);
             }
+            
+            Rotation();
+        }
+    }
+
+    
+    
+    
+    
+    private int GetRotationAngle()
+    {
+        if (Input.GetKey(KeyCode.D)) return 90;
+        if (Input.GetKey(KeyCode.A)) return -90;
+        if (Input.GetKey(KeyCode.S)) return 180;
+        return 0;
+    }
+    
+    private void Rotation()
+    {
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) ||
+            Input.GetKey(KeyCode.S))
+        {
+            float targetRotationY = transform.eulerAngles.y + GetRotationAngle();
+
+            float newRotationY = Mathf.MoveTowardsAngle(transform.eulerAngles.y, targetRotationY, 50f * Time.deltaTime);
+            transform.eulerAngles = new Vector3(0, newRotationY, 0);
         }
     }
 }

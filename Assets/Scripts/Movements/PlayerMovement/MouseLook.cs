@@ -5,17 +5,24 @@ using UnityEngine;
 public class MouseLook : MonoBehaviour
 {
     
-    public float mouseSensitivity = 1000f;    
+    [SerializeField] private float mouseSensitivity = 100;    
     
-    public Transform playerBody;
+    private Transform playerBody;
+    private Camera playerCamera;
     
-    public Camera playerCamera;
-    public Camera[] otherCamera;
+    [SerializeField] private Camera[] otherCamera;
     
     float xRotation = 0f;
     
+    
+    
+    
+    
     void Start()
     {
+        playerBody = transform.parent;
+        playerCamera = GetComponent<Camera>();
+        
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         playerCamera.enabled = true;
@@ -25,6 +32,10 @@ public class MouseLook : MonoBehaviour
             camera.enabled = false;
         }
     }
+    
+    
+    
+    
     
     void Update()
     {
@@ -40,5 +51,4 @@ public class MouseLook : MonoBehaviour
             playerBody.Rotate(Vector3.up * mouseX); // Rotate the CHARACTER on the X axis
         }
     }
-    
 }

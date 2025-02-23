@@ -5,11 +5,19 @@ public class AnimationHandler : MonoBehaviour
 {
     private Animator Animator;
 
+    
+    
+    
+    
     private void Start()
     {
         Animator = transform.Find("Pirate").GetComponent<Animator>();
     }
 
+    
+    
+    
+    
     private void Update()
     {
         bool isRunning = Animator.GetBool("isRunning");
@@ -20,6 +28,10 @@ public class AnimationHandler : MonoBehaviour
         Jump(isRunning);
     }
 
+    
+    
+    
+    
     private void Jump(bool isRunning)
     {
         bool JumpTrigger = Input.GetKeyDown(KeyCode.Space);
