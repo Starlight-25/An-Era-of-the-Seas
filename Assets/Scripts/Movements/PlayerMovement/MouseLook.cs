@@ -5,18 +5,26 @@ using UnityEngine;
 public class MouseLook : MonoBehaviour
 {
     
-    public float mouseSensitivity = 1000f;    
+    [SerializeField] private float mouseSensitivity = 100;    
     
-    public Transform playerBody;
+    private Transform playerBody;
+    private Camera playerCamera;
     
-    public Camera playerCamera;
-    public Camera[] otherCamera;
+    [SerializeField] private Camera[] otherCamera;
     
     float xRotation = 0f;
     
+    
+    
+    
+    
     void Start()
     {
+        playerBody = transform.parent;
+        playerCamera = GetComponent<Camera>();
+        
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         playerCamera.enabled = true;
 
         foreach (Camera camera in otherCamera)
@@ -25,9 +33,13 @@ public class MouseLook : MonoBehaviour
         }
     }
     
+    
+    
+    
+    
     void Update()
     {
-        if (!HelmInteractor.inHelm)
+        if (!BoatState.inHelm && !Input.GetKey(KeyCode.LeftAlt))
         {
             float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
             float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
@@ -39,5 +51,4 @@ public class MouseLook : MonoBehaviour
             playerBody.Rotate(Vector3.up * mouseX); // Rotate the CHARACTER on the X axis
         }
     }
-    
 }

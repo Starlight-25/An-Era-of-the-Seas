@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Floater : MonoBehaviour
 {
-    public Rigidbody rigidbody;
+    public new Rigidbody rigidbody;
     public float depthbeforesubmerge = 1f;
     public float displacememtAmount = 3f;
     public float floatercount = 1;
@@ -13,8 +13,6 @@ public class Floater : MonoBehaviour
     public float waterDrag = 0.99f;
     public float waterAngularDrag = 0.5f;
     private void FixedUpdate(){
-
-
         rigidbody.AddForceAtPosition(Physics.gravity / floatercount, transform.position, ForceMode.Acceleration);
         float waveHeight = WaveManager.instance.GetWaveDisplacement(transform.position).y;
         if(transform.position.y < waveHeight){
@@ -22,10 +20,6 @@ public class Floater : MonoBehaviour
             rigidbody.AddForceAtPosition(new Vector3(0f, Mathf.Abs(Physics.gravity.y) * displacememtMultiplier, 0f), transform.position,ForceMode.Acceleration);
             rigidbody.AddForce(displacememtMultiplier * -rigidbody.linearVelocity * waterDrag * Time.fixedDeltaTime, ForceMode.VelocityChange);
             rigidbody.AddTorque(displacememtMultiplier * -rigidbody.angularVelocity * waterAngularDrag * Time.fixedDeltaTime, ForceMode.VelocityChange);
-            
         }
-
-        
     } 
-    
 }

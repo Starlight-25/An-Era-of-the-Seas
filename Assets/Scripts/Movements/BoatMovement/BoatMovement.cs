@@ -15,12 +15,12 @@ public class BoatMovement : MonoBehaviour
     
     void Update()
     {
-        if (!CapstanInteractor.isAnchored)
+        if (!BoatState.isAnchored)
         {
             MoveBoatForward(speed); 
         }
         
-        if (HelmInteractor.inHelm) // If the player IS in the helm menu, then he can be able to move the boat.
+        if (BoatState.inHelm) // If the player IS in the helm menu, then he can be able to move the boat.
         {
             xRotation = Input.GetAxis("Mouse X") * Time.deltaTime;
             
@@ -28,6 +28,10 @@ public class BoatMovement : MonoBehaviour
         }
     }
 
+    
+    
+    
+    
     private void MoveBoat()
     {
         Quaternion deltaRotation = Quaternion.Euler(EulerAngleVelocity * (xRotation * (helmMovingSpeed * Time.fixedDeltaTime)));
@@ -35,12 +39,15 @@ public class BoatMovement : MonoBehaviour
         BoatBody.MoveRotation(BoatBody.rotation * deltaRotation);
     }
     
+    
+    
+    
+    
     private void MoveBoatForward(float movementSpeed)
     {
         Vector3 movement = transform.TransformDirection(new Vector3(0,0, 1)) * movementSpeed;
         BoatBody.linearVelocity = new Vector3(movement.x, movement.y, movement.z);
     }
-    
 }
     
     /* Trigonometry of sailing: https://www.youtube.com/watch?v=_zDF40XFWN4
