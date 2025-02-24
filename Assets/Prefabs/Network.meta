@@ -1,6 +1,13 @@
 fileFormatVersion: 2
-guid: 19bbe51aef6ca6243960c4d494651398
+<<<<<<<< HEAD:Assets/Prefabs/Network.meta
+guid: 4d03a270ae396ac4c848ee62a2ac21ed
 folderAsset: yes
+========
+guid: 731f1baa9d144a9897cb1d341c2092b8
+folderAsset: yes
+timeCreated: 1442040525
+licenseType: Pro
+>>>>>>>> Init:Assets/Packages/TextMesh Pro/Resources/Fonts & Materials.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
