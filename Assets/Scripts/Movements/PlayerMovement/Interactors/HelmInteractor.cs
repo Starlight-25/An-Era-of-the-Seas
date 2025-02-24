@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public static class HelmInteractor1
+public static class HelmInteractor
 {
     private static Transform Player;
     private static Camera PlayerCamera;

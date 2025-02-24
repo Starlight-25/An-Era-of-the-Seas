@@ -96,8 +96,8 @@ public class InteractorHandler : MonoBehaviour
                     BoatState.isAnchored = !BoatState.isAnchored;
                     break;
                 case "Helm":
-                    HelmInteractor1.Init(transform.parent, GameObject.Find("BoatWSail").transform);
-                    HelmInteractor1.SwitchCameras();
+                    HelmInteractor.Init(transform.parent, GameObject.Find("BoatWSail").transform);
+                    HelmInteractor.SwitchCameras();
                     break;
             }
         }
@@ -119,7 +119,7 @@ public class InteractorHandler : MonoBehaviour
     
     private void HandleExitHelm()
     {
-        if (Input.GetKeyDown(KeyCode.E) && BoatState.inHelm) HelmInteractor1.SwitchCameras();
+        if (Input.GetKeyDown(KeyCode.E) && BoatState.inHelm) HelmInteractor.SwitchCameras();
     }
 
     
