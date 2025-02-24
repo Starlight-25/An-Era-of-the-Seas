@@ -4,8 +4,8 @@ using UnityEngine;
 public class Player1stPersonVisibility : MonoBehaviour
 {
     [SerializeField] private SkinnedMeshRenderer PlayerMeshRenderer;
-    [SerializeField] private UnityEngine.Material PlayerMaterial;
-    [SerializeField] private UnityEngine.Material InvisibleMaterial;
+    [SerializeField] private Material PlayerMaterial;
+    [SerializeField] private Material InvisibleMaterial;
     
     
     
