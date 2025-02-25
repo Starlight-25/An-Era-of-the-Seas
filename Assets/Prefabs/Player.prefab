@@ -32,7 +32,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2996405473281451963}
-  - {fileID: 2315247032146500214}
   m_Father: {fileID: 3966950809888491865}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -103,74 +102,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!1 &1166305277591984014
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2315247032146500214}
-  - component: {fileID: 6556832629230163135}
-  - component: {fileID: 5744647955537115210}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2315247032146500214
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1166305277591984014}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -960, y: -540, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 899798986339179145}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6556832629230163135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1166305277591984014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!114 &5744647955537115210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1166305277591984014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!1 &2689627784956013479
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +117,7 @@ GameObject:
   - component: {fileID: 7119445049927876872}
   - component: {fileID: 4353496858643267627}
   - component: {fileID: 229454349396436010}
-  - component: {fileID: 8661709589521232800}
+  - component: {fileID: 4879662363253831461}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -327,10 +258,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 12
   gravity: -9.81
-  groundDistance: 0.4
-  groundMask:
+  GroundLayer:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 128
   jumpHeight: 1
 --- !u!114 &229454349396436010
 MonoBehaviour:
@@ -344,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 539fff38e4614b9aafec30b74879451e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &8661709589521232800
+--- !u!114 &4879662363253831461
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -353,7 +283,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2689627784956013479}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ddcc17a9ba2486e9a81a710a55b1e92, type: 3}
+  m_Script: {fileID: 11500000, guid: 4501b214e401405badd2edf802e234f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3944915030447682959
@@ -561,7 +491,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
