@@ -1,50 +1,69 @@
-using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 using Unity.Netcode;
+using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerMovementNetwork : NetworkBehaviour
 {
-    // Movement
-    public CharacterController controller;
-    public float speed = 12f; // Adjustable
-
-    // Gravity
-    public float gravity = -19.62f; // Two times earth gravity because it feels nicer
-    public Transform groundCheck;
-    public float groundDistance = 0.4f;
-    public LayerMask groundMask;
-    public float jumpHeight = 1f; // Adjustable too
-
-    private Vector3 velocity;
-    private bool isGrounded;
-
+    //Movement
+    private CharacterController controller;
+    [SerializeField] public float speed = 12f; // Adjustable
+    
+    //Gravity
+    [SerializeField] private float gravity = -9.81f; // Two times earth gravity because it feels nicer, need to ajust.
+    [SerializeField] private LayerMask GroundLayer;
+    [SerializeField] private float jumpHeight = 1f; // Adjustable too
+    
+    Vector3 velocity;
+    bool isGrounded;
+    
+    
+    
+    
+    
+    void Start()
+    {
+        controller = GetComponent<CharacterController>();
+    }
+    
+    
+    
+    
+    
     void Update()
     {
-        // Ensure only the owner of the object can control it
         if (!IsOwner) return;
-
-        // Movement
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-
-        Vector3 move = transform.right * x + transform.forward * z;
-        controller.Move(move * (speed * Time.deltaTime));
-
-        // Gravity
-        velocity.y += gravity * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);
-
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-
-        // Reset velocity when grounded
-        if (isGrounded && velocity.y < 0)
+        
+        if (!BoatState.inHelm) // If the player is not in the helm menu.
         {
-            velocity.y = -2f; // Small negative to keep the player grounded
-        }
+            //Movement 
+            float x = Input.GetAxis("Horizontal");
+            float z = Input.GetAxis("Vertical");
+        
+            Vector3 move = transform.right * x + transform.forward * z;
+        
+            controller.Move(move * (speed * Time.deltaTime));
+        
+            //Gravity
+            velocity.y += gravity * Time.deltaTime;
+            controller.Move(velocity * Time.deltaTime);
+        
+            isGrounded = Physics.Raycast(transform.position, Vector3.down, 1.1f, GroundLayer);
+        
 
-        // Jump
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            velocity.y = Mathf.Sqrt(-2.0f * jumpHeight * gravity);
+            if (isGrounded && velocity.y < 0)            // Resets velocity when grounded
+            {
+                velocity.y = -2f; // Not 0 to be sure that the player is REALLY on the ground
+            }
+        
+            // Jump
+            if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+            {
+                velocity.y = Mathf.Sqrt(-2.0f * jumpHeight * gravity);
+            }
+            
+            Rotation();
         }
     }
 
@@ -52,13 +71,23 @@ public class PlayerMovementNetwork : NetworkBehaviour
     
     
     
-    // Ensure this script only works for the object owned by the player
-    public override void OnNetworkSpawn()
+    private int GetRotationAngle()
     {
-        if (!IsOwner)
+        if (Input.GetKey(KeyCode.D)) return 90;
+        if (Input.GetKey(KeyCode.A)) return -90;
+        if (Input.GetKey(KeyCode.S)) return 180;
+        return 0;
+    }
+    
+    private void Rotation()
+    {
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) ||
+            Input.GetKey(KeyCode.S))
         {
-            // Disable components that should only work for the owner
-            controller.enabled = false; // Disable CharacterController for non-owners
+            float targetRotationY = transform.eulerAngles.y + GetRotationAngle();
+
+            float newRotationY = Mathf.MoveTowardsAngle(transform.eulerAngles.y, targetRotationY, 50f * Time.deltaTime);
+            transform.eulerAngles = new Vector3(0, newRotationY, 0);
         }
     }
 }
