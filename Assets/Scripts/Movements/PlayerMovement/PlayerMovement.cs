@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     //Gravity
     [SerializeField] private float gravity = -9.81f; // Two times earth gravity because it feels nicer, need to ajust.
     [SerializeField] private float groundDistance = 0.4f;
-    [SerializeField] private LayerMask groundMask;
+    [SerializeField] private LayerMask GroundLayer;
     [SerializeField] private float jumpHeight = 1f; // Adjustable too
     
     Vector3 velocity;
@@ -46,10 +47,10 @@ public class PlayerMovement : MonoBehaviour
             velocity.y += gravity * Time.deltaTime;
             controller.Move(velocity * Time.deltaTime);
         
-            isGrounded = Physics.CheckSphere(transform.position, groundDistance, groundMask);
+            isGrounded = Physics.Raycast(transform.position, Vector3.down, 1.1f, GroundLayer);
         
-            // Resets velocity when grounded
-            if (isGrounded && velocity.y < 0)
+
+            if (isGrounded && velocity.y < 0)            // Resets velocity when grounded
             {
                 velocity.y = -2f; // Not 0 to be sure that the player is REALLY on the ground
             }

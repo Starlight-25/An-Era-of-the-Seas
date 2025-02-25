@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 103411595}
   - component: {fileID: 103411597}
   - component: {fileID: 103411596}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Terrain_(-1000.00, 0.00, 0.00)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,12 +318,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 692473096}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Terrains
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &692473096
 Transform:
@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 1115600076}
   - component: {fileID: 1115600078}
   - component: {fileID: 1115600077}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Terrain_(0.00, 0.00, -1000.00)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -448,7 +448,7 @@ GameObject:
   - component: {fileID: 1320508806}
   - component: {fileID: 1320508808}
   - component: {fileID: 1320508807}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -538,6 +538,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 229454349396436010, guid: d3ca6424f370d3d4ba5ccf25e1c75276, type: 3}
+      propertyPath: GroundLayer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 2689627784956013479, guid: d3ca6424f370d3d4ba5ccf25e1c75276, type: 3}
       propertyPath: m_Name
       value: Player
@@ -582,6 +586,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4353496858643267627, guid: d3ca6424f370d3d4ba5ccf25e1c75276, type: 3}
+      propertyPath: GroundLayer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -598,7 +606,7 @@ GameObject:
   - component: {fileID: 2082502787}
   - component: {fileID: 2082502789}
   - component: {fileID: 2082502788}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Terrain_(-1000.00, 0.00, -1000.00)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
