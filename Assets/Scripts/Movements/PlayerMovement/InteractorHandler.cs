@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class InteractorHandler : MonoBehaviour
 {
-    public LayerMask interactableLayer;
+    private LayerMask interactableLayer;
     [SerializeField] private TextMeshProUGUI infoText;
 
     
+    
+    
+
+    private void Start() => interactableLayer = LayerMask.GetMask("Interactable");
+
+
     
     
     
