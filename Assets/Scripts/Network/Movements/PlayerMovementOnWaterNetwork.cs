@@ -31,11 +31,11 @@ public class PlayerMovementOnWaterNetwork : NetworkBehaviour
                                  currentHeight - 1f;
             transform.GetComponent<CharacterController>().Move(new Vector3(0, verticalMove, 0));
 
-            transform.GetComponent<PlayerMovement>().speed = 5f;
+            transform.GetComponent<PlayerMovementNetwork>().speed = 5f;
         }
         else
         {
-            transform.GetComponent<PlayerMovement>().speed = 12f;
+            transform.GetComponent<PlayerMovementNetwork>().speed = 12f;
         }
     }
 
