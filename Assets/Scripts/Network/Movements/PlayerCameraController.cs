@@ -3,13 +3,8 @@ using Unity.Netcode;
 
 public class PlayerCameraController : NetworkBehaviour
 {
-    public Camera playerCamera;
-
-    void Start()
+    void Start() 
     {
-        if (!IsOwner)
-        {
-            playerCamera.gameObject.SetActive(false);
-        }
+        if (!IsOwner) transform.Find("Camera").gameObject.SetActive(false);
     }
 }
