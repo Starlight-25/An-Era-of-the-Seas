@@ -12,7 +12,7 @@ public class Player1stPersonVisibility : MonoBehaviour
     
     private void Update()
     {
-        if (transform.GetComponent<Camera>().enabled) SetPlayerVisiblility(false);
+        if (transform.GetComponent<Camera>().enabled || BoatState.inHelm) SetPlayerVisiblility(false);
         else SetPlayerVisiblility(true);
     }
     
