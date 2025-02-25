@@ -186,6 +186,7 @@ GameObject:
   - component: {fileID: 7119445049927876872}
   - component: {fileID: 4353496858643267627}
   - component: {fileID: 229454349396436010}
+  - component: {fileID: 4879662363253831461}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -324,14 +325,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8685800ea8d2d134885c084f25127d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 7119445049927876872}
   speed: 12
   gravity: -9.81
-  groundCheck: {fileID: 3966950809888491865}
-  groundDistance: 0.4
-  groundMask:
+  GroundLayer:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 128
   jumpHeight: 1
 --- !u!114 &229454349396436010
 MonoBehaviour:
@@ -345,6 +343,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 539fff38e4614b9aafec30b74879451e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GroundLayer:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!114 &4879662363253831461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2689627784956013479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4501b214e401405badd2edf802e234f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WaterLayer:
+    serializedVersion: 2
+    m_Bits: 16
 --- !u!1 &3944915030447682959
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,8 +484,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSensitivity: 1000
-  playerBody: {fileID: 3966950809888491865}
-  playerCamera: {fileID: 1894957617907495330}
   otherCamera: []
 --- !u!114 &7426471774250887024
 MonoBehaviour:
