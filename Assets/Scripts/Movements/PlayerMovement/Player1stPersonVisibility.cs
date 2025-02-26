@@ -4,17 +4,18 @@ using UnityEngine.Serialization;
 
 public class Player1stPersonVisibility : MonoBehaviour
 {
-    [SerializeField] private SkinnedMeshRenderer PlayerMeshRenderer;
+    private SkinnedMeshRenderer PlayerMeshRenderer;
     [SerializeField] private Material PlayerMaterial;
     [SerializeField] private Material InvisibleMaterial;
-    
-    
-    
-    
-    
+
+
+    private void Start() =>
+        PlayerMeshRenderer = transform.Find("Pirate").Find("Pirate").GetComponent<SkinnedMeshRenderer>();
+
+
     private void Update()
     {
-        if (transform.GetComponent<Camera>().enabled || BoatState.inHelm) SetPlayerVisiblility(false);
+        if (transform.Find("Camera").GetComponent<Camera>().enabled || BoatState.inHelm) SetPlayerVisiblility(false);
         else SetPlayerVisiblility(true);
     }
     

@@ -5,13 +5,19 @@ using UnityEngine;
 public class InteractorHandler : MonoBehaviour
 {
     private LayerMask interactableLayer;
-    [SerializeField] private TextMeshProUGUI infoText;
+    private TextMeshProUGUI infoText;
+    private Transform Camera;
 
-    
-    
-    
 
-    private void Start() => interactableLayer = LayerMask.GetMask("Interactable");
+
+
+
+    private void Start()
+    {
+        interactableLayer = LayerMask.GetMask("Interactable");
+        infoText = transform.Find("Interactor Text").Find("Text (TMP)").GetComponent<TextMeshProUGUI>();
+        Camera = transform.Find("Camera");
+    }
 
 
     
@@ -23,7 +29,7 @@ public class InteractorHandler : MonoBehaviour
         ShowInteractorText(10f);
         
         if (Input.GetKeyDown(KeyCode.E)) HandleInteractorPressed();
-        if (Input.GetKeyDown(KeyCode.X) && BoatState.inBoat && !BoatState.inHelm) ExitBoat(GameObject.Find("BoatTest").transform, infoText.transform.parent.parent);
+        if (Input.GetKeyDown(KeyCode.X) && BoatState.inBoat && !BoatState.inHelm) ExitBoat(GameObject.Find("BoatTest").transform, transform);
     }
 
     
@@ -32,7 +38,7 @@ public class InteractorHandler : MonoBehaviour
     
     private void ShowInteractorText(float distance)
     {
-        Ray ray = new Ray(transform.position, transform.forward);
+        Ray ray = new Ray(Camera.position, Camera.forward);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, distance, interactableLayer))
@@ -81,7 +87,7 @@ public class InteractorHandler : MonoBehaviour
     
     private void HandleInteractorPressed()
     {
-        Ray ray = new Ray(transform.position, transform.forward);
+        Ray ray = new Ray(Camera.position, Camera.forward);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, 3f, interactableLayer)) HandleAction(hit.collider.gameObject, 3f);
@@ -110,7 +116,7 @@ public class InteractorHandler : MonoBehaviour
                     BoatState.isAnchored = !BoatState.isAnchored;
                     break;
                 case "Helm":
-                    HelmInteractor.Init(transform.parent, GameObject.Find("BoatTest").transform);
+                    HelmInteractor.Init(transform, GameObject.Find("BoatTest").transform);
                     HelmInteractor.SwitchCameras();
                     EnterBoat(hitedGameObject.transform.parent);
                     break;
@@ -134,10 +140,9 @@ public class InteractorHandler : MonoBehaviour
 
     private void EnterBoat(Transform boat)
     {
-        Transform player = infoText.transform.parent.parent;
-        player.GetComponent<CharacterController>().enabled = false;
-        player.position = boat.position + new Vector3(0, 4, 0);
-        player.GetComponent<CharacterController>().enabled = true;
+        transform.GetComponent<CharacterController>().enabled = false;
+        transform.position = boat.position + new Vector3(0, 4, 0);
+        transform.GetComponent<CharacterController>().enabled = true;
     }
 
     public static void ExitBoat(Transform boat, Transform player)
