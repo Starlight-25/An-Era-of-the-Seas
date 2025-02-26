@@ -49,12 +49,9 @@ public class BoatMovement : MonoBehaviour
         BoatBody.linearVelocity = new Vector3(movement.x, movement.y, movement.z);
     }
 }
-    
-    /* Trigonometry of sailing: https://www.youtube.com/watch?v=_zDF40XFWN4
-     
-     Real life data for optimal angle between the wind and the sail, for optimal speed. (theta = 38°)
-     Conducted at the University of Miami (Rosenstiel School of Marine and Atmospheric Science)
-     
-     To learn more, see pdf on Discord.
-     
-     */
+
+/* Trigonometry of sailing: https://www.youtube.com/watch?v=_zDF40XFWN4
+Real life data for optimal angle between the wind and the sail, for optimal speed. (theta = 38°)
+Conducted at the University of Miami (Rosenstiel School of Marine and Atmospheric Science)
+To learn more, see pdf on Discord.
+*/

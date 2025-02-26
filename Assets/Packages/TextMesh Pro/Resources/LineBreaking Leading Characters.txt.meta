@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt.meta
+guid: 394c671fd9087364caa389c308c1eef9
+========
 guid: d82c1b31c7e74239bff1220585707d2b
+>>>>>>>> Init:Assets/Packages/TextMesh Pro/Resources/LineBreaking Leading Characters.txt.meta
 timeCreated: 1425440388
 licenseType: Store
 TextScriptImporter:
