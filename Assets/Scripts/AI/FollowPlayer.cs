@@ -1,31 +1,33 @@
 ﻿using UnityEngine;
 using UnityEngine.AI; 
 
-public class enemymovements : MonoBehaviour 
+public class FollowPlayer : MonoBehaviour 
 {
-    
-     
-    private float range = 5; 
+    [SerializeField] private float range = 5; 
     private NavMeshAgent agent;
     private Vector3 initialPosition;
-    public GameObject player;
+    private Transform Player;
     
     
     
     
     
-    void Start()
+    private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         initialPosition = transform.position;
+        Player = GameObject.Find("Player").transform;
     }
 
     
-    void Update()
+    
+    
+    
+    private void Update()
     {   
-        if (PLayer_in_range(player,initialPosition))
+        if (PLayer_in_range(initialPosition))
         {
-            agent.SetDestination(player.transform.position);   
+            agent.SetDestination(GetStoppingPosition(2f));   
         }
         else
         {
@@ -44,9 +46,8 @@ public class enemymovements : MonoBehaviour
     
     
     
-    bool RandomPoint(Vector3 center, float range, out Vector3 result)
+    private bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
-
         Vector3 randomPoint = center + Random.insideUnitSphere * range; 
         NavMeshHit hit;
         if (NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas)) 
@@ -59,13 +60,23 @@ public class enemymovements : MonoBehaviour
         return false;
     }
 
-    bool PLayer_in_range(GameObject player , Vector3 bot)
-    {
-        if (Vector3.Distance(player.transform.position,bot) <= range*10 )
-        {
-            return true;
-        }
-        return false;
-    }
+
+
+
+
+    private bool PLayer_in_range(Vector3 botPosition) => Vector3.Distance(Player.position, botPosition) <= range * 2;
+
+
     
+    
+    
+    private Vector3 GetStoppingPosition(float stopDistance)
+    {
+        Vector3 direction = (Player.position - transform.position).normalized;
+        Vector3 targetPosition = Player.position - direction * stopDistance;
+
+        NavMeshHit hit;
+        if (NavMesh.SamplePosition(targetPosition, out hit, 1f, NavMesh.AllAreas)) return hit.position;
+        return Player.transform.position;
+    }
 }
