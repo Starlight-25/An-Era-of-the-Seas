@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.AI; 
 
-public class FollowPlayer : MonoBehaviour 
+public class EnemyMovement : MonoBehaviour 
 {
     [SerializeField] private float range = 5; 
     private NavMeshAgent agent;
