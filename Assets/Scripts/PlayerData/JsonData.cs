@@ -17,7 +17,6 @@ public class JsonData : MonoBehaviour
        BoatJSON = new BoatJSON().Load();
        CrewJSON = new CrewJSON().Load();
        StigmaJSON = new StigmaJSON().Load();
-       Debug.Log("JsonData Loaded");
     }
 
     
