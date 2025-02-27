@@ -21,6 +21,5 @@ public class PlayerDataManager : MonoBehaviour
     {
         savePath = Path.Combine(Application.persistentDataPath, "playerData.json");
         LoadPlayerData();
-        Debug.Log("PlayerDataManager loaded");
     }
 }

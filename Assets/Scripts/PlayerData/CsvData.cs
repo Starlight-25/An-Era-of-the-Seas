@@ -154,6 +154,5 @@ public class CsvData : MonoBehaviour
         LoadStigmaCSV();
         LoadCrewCSV();
         LoadWeaponCSV();
-        Debug.Log("CSVData Loaded");
     }
 }

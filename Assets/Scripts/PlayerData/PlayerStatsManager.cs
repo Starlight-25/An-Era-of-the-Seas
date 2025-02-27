@@ -163,6 +163,5 @@ public class PlayerStatsManager : MonoBehaviour
     {
         UpdatePlayerStats();
         UpdateBoatStats();
-        Debug.Log("PlayerStats Loaded");
     }
 }
