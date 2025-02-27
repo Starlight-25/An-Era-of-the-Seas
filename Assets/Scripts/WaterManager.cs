@@ -6,25 +6,67 @@ using UnityEngine;
 [RequireComponent(typeof(MeshRenderer))]
 public class WaterManager : MonoBehaviour
 {
-    private MeshFilter meshFilter;
-    private Vector3[] baseVertices;
+    public GameObject waterTilePrefab; // Prefab of a single water plane
+    public int gridSizeX = 10; // Number of tiles in X direction
+    public int gridSizeZ = 10; // Number of tiles in Z direction
+    public float tileSize = 10f; // Size of each tile
+    public Transform player; // Reference to the player
 
-    private void Awake()
+    private List<GameObject> waterTiles = new List<GameObject>();
+    private Vector3 lastPlayerPosition;
+
+    private void Start()
     {
-        meshFilter = GetComponent<MeshFilter>();
-        baseVertices = meshFilter.mesh.vertices;
+        GenerateWaterGrid();
+        lastPlayerPosition = player.position;
     }
 
     private void Update()
     {
-        Vector3[] vertices = new Vector3[baseVertices.Length];
-        for (int i = 0; i < vertices.Length; i++)
+        // Only update the grid if the player has moved significantly
+        if (Vector3.Distance(player.position, lastPlayerPosition) > tileSize)
         {
-            Vector3 worldPosition = transform.TransformPoint(baseVertices[i]);
-            Vector3 waveDisplacement = WaveManager.instance.GetWaveDisplacement(worldPosition);
-            vertices[i] = baseVertices[i] + transform.InverseTransformVector(waveDisplacement);
+            UpdateWaterGrid();
+            lastPlayerPosition = player.position;
         }
-        meshFilter.mesh.vertices = vertices;
-        meshFilter.mesh.RecalculateNormals();
+    }
+
+    private void GenerateWaterGrid()
+    {
+        if (waterTilePrefab == null)
+        {
+            Debug.LogError("Water tile prefab is not assigned!");
+            return;
+        }
+
+        for (int x = -gridSizeX / 2; x < gridSizeX / 2; x++)
+        {
+            for (int z = -gridSizeZ / 2; z < gridSizeZ / 2; z++)
+            {
+                Vector3 spawnPosition = new Vector3(x * tileSize, 0, z * tileSize);
+                GameObject waterTile = Instantiate(waterTilePrefab, spawnPosition, Quaternion.identity, transform);
+                waterTiles.Add(waterTile);
+            }
+        }
+
+        Debug.Log("Total water tiles instantiated: " + waterTiles.Count);
+    }
+
+    private void UpdateWaterGrid()
+    {
+        Vector3 playerPosition = player.position;
+        int index = 0;
+
+        for (int x = -gridSizeX / 2; x < gridSizeX / 2; x++)
+        {
+            for (int z = -gridSizeZ / 2; z < gridSizeZ / 2; z++)
+            {
+                Vector3 newPosition = new Vector3(playerPosition.x + x * tileSize, 0, playerPosition.z + z * tileSize);
+                waterTiles[index].transform.position = newPosition;
+                index++;
+            }
+        }
+
+        Debug.Log("Water grid updated.");
     }
 }
