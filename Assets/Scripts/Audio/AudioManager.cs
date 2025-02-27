@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class AudioManager : MonoBehaviour
@@ -11,6 +12,7 @@ public class AudioManager : MonoBehaviour
     private List<AudioClip> BackgroundMusics;
     private List<AudioClip> TownMusics;
     private AudioClip ButtonSound;
+    private List<Button> trackedButtons = new List<Button>();
     private AudioClip CoinsSound;
     private AudioClip RepairSound;
     private List<AudioClip> SwordsSounds;
@@ -52,6 +54,8 @@ public class AudioManager : MonoBehaviour
             if (isInTown) ChangeTownBackgroundMusic();
             else PlayRandomMusic();
         }
+
+        TrackButtons();
     }
 
 
@@ -95,6 +99,19 @@ public class AudioManager : MonoBehaviour
     {
         SFXSource.clip = ButtonSound;
         SFXSource.Play();
+    }
+
+    private void TrackButtons()
+    {
+        Button[] buttons = FindObjectsByType<Button>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        foreach (Button button in buttons)
+        {
+            if (!trackedButtons.Contains(button))
+            {
+                button.onClick.AddListener(TriggerButtonSound);
+                trackedButtons.Add(button);
+            }
+        }
     }
     
     public void TriggerCoinsSounds()
