@@ -6,11 +6,11 @@ using UnityEngine;
 [RequireComponent(typeof(MeshRenderer))]
 public class WaterManager : MonoBehaviour
 {
-    public GameObject waterTilePrefab; // Prefab of a single water plane
+    public GameObject waterTilePrefab; 
     public int gridSizeX = 10; // Number of tiles in X direction
     public int gridSizeZ = 10; // Number of tiles in Z direction
     public float tileSize = 10f; // Size of each tile
-    public Transform player; // Reference to the player
+    public Transform player; // Reference to the player (because i don't have the player on this branch)
 
     private List<GameObject> waterTiles = new List<GameObject>();
     private Vector3 lastPlayerPosition;
@@ -23,7 +23,6 @@ public class WaterManager : MonoBehaviour
 
     private void Update()
     {
-        // Only update the grid if the player has moved significantly
         if (Vector3.Distance(player.position, lastPlayerPosition) > tileSize)
         {
             UpdateWaterGrid();

@@ -14,7 +14,7 @@ public class WaveManager : MonoBehaviour
         public float influenceRadius;
         public float wavelength;
         public float speed;
-        public float directionAngle; // Determines the direction of the waves
+        public float directionAngle; 
     }
 
     public List<ImpactPoint> impactPoints = new List<ImpactPoint>();
@@ -56,7 +56,7 @@ public class WaveManager : MonoBehaviour
             if (distanceToIsland < islandRadius)
             {
                 float islandEffect = (1f - (distanceToIsland / islandRadius));
-                amplitude *= (1f - islandEffect);  // Reduce amplitude near islands
+                amplitude *= (1f - islandEffect);  
             }
         }
 
