@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Scripts/PlayerData/CsvData.cs.meta
-guid: d413c4cb16a68f8418f78b92bd6863e3
-========
-guid: c4c88bbf5f996f6f986fccfbf88ca856
->>>>>>>> BoatMovementGerstner:Assets/Scripts/WaterSimulation/Floater.cs.meta
+guid: 830ec5144517a2d489f3b70eb938db4c
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
