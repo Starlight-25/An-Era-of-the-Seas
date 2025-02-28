@@ -6,10 +6,10 @@ using UnityEngine;
 [RequireComponent(typeof(MeshRenderer))]
 public class WaterManager : MonoBehaviour
 {
-    public GameObject waterTilePrefab; 
-    public int gridSizeX = 10; // Number of tiles in X direction
-    public int gridSizeZ = 10; // Number of tiles in Z direction
-    public float tileSize = 10f; // Size of each tile
+    [SerializeField] private GameObject waterTilePrefab; 
+    [SerializeField] private int gridSizeX = 10; // Number of tiles in X direction
+    [SerializeField] private int gridSizeZ = 10; // Number of tiles in Z direction
+    [SerializeField] private float tileSize = 10f; // Size of each tile
     public Transform player; // Reference to the player (because i don't have the player on this branch)
 
     private List<GameObject> waterTiles = new List<GameObject>();

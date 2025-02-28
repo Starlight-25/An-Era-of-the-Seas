@@ -29,7 +29,6 @@ public class WaveManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("WaveManager instance already exists!");
             return;
         }
     }
