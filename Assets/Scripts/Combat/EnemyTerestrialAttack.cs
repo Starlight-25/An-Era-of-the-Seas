@@ -3,8 +3,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyAttack : MonoBehaviour
+public class EnemyTerestrialAttack : MonoBehaviour
 {
+    [SerializeField] private EnemyStatsManager EnemyStatsManager;
     private EnemyTerestrialStats EnemyTerestrialStats;
     private Transform Player;
     private PlayerStats playerStats;
@@ -18,7 +19,7 @@ public class EnemyAttack : MonoBehaviour
     
     private void Start()
     {
-        EnemyTerestrialStats = transform.GetComponent<EnemyStatsManager>().EnemyTerestrialStats;
+        EnemyTerestrialStats = EnemyStatsManager.EnemyTerestrialStats;
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         playerStats = FindFirstObjectByType<PlayerStatsManager>().GetComponent<PlayerStatsManager>().PlayerStats;
         HealthBar = transform.Find("EnemyCanvas").Find("HealthBar").GetComponent<Slider>();

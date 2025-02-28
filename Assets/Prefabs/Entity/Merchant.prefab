@@ -15,9 +15,8 @@ GameObject:
   - component: {fileID: 6459107239930719612}
   - component: {fileID: 781210572004420767}
   - component: {fileID: 8174803863441033493}
-  - component: {fileID: 8030707819170689121}
   m_Layer: 0
-  m_Name: NPC
+  m_Name: Merchant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,7 +145,7 @@ Animator:
   m_GameObject: {fileID: 3054095200621606220}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 78c072ea05d9cfe4f9f77ef1dd3c2023, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7e8ec6ba4ed93ce42a0ab2e7aace46c1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -171,15 +170,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 5
---- !u!114 &8030707819170689121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3054095200621606220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9f5e5df2b5f403ea0494e0f0d0823de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

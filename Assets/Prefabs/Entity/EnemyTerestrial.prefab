@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 8886222496156537654}
   - component: {fileID: 6385136766519758746}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: EnemyTerestrial
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -525,6 +525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0dde294b502486b8c644fe547fac51f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnemyStatsManager: {fileID: 6187181825452532528}
 --- !u!95 &6385136766519758746
 Animator:
   serializedVersion: 7
