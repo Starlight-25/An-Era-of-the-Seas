@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using UnityEngine.Windows;
+using Input = UnityEngine.Input;
 
 public class MainMenu : MonoBehaviour
 {
@@ -47,15 +48,15 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    
+    
+    
+    
+    
+    
+    
 
-    
-    
-    
-    
-    
-    
-    
-    
+
     public void StartButtonClicked()
     {
         MainMenuCanvas.SetActive(false);
@@ -68,6 +69,7 @@ public class MainMenu : MonoBehaviour
 
     public void MultiplayerButtonClicked()
     {
+        SceneManager.LoadScene("Network");
         MainMenuCanvas.SetActive(false);
         MultiplayerCanvas.SetActive(true);
     }

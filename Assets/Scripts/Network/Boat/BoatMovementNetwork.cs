@@ -13,7 +13,7 @@ public class BoatMovementNetwork : NetworkBehaviour
 
     private Vector3 EulerAngleVelocity = new Vector3(0, 1, 0);
     private float xRotation = 0f;
-    private BoatState BoatState;
+    private BoatStateNetwork BoatStateNetwork;
 
     
     
@@ -22,7 +22,7 @@ public class BoatMovementNetwork : NetworkBehaviour
     private void Start() 
     {
         BoatBody = transform.GetComponent<Rigidbody>();
-        BoatState = transform.GetComponent<BoatState>();
+        BoatStateNetwork = transform.GetComponent<BoatStateNetwork>();
     }
     
 
@@ -31,12 +31,12 @@ public class BoatMovementNetwork : NetworkBehaviour
     
     void Update()
     {
-        if (!BoatState.isAnchored)
+        if (!BoatStateNetwork.isAnchored)
         {
             MoveBoatForward(speed);
         }
         
-        if (BoatState.inHelm) // If the player IS in the helm menu, then he can be able to move the boat.
+        if (BoatStateNetwork.inHelm) // If the player IS in the helm menu, then he can be able to move the boat.
         {
             xRotation = Input.GetAxis("Mouse X") * Time.deltaTime;
             

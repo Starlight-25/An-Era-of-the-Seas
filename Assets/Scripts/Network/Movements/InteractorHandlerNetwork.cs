@@ -7,7 +7,7 @@ public class InteractorHandlerNetwork : NetworkBehaviour
 {
     private LayerMask interactableLayer;
     private TextMeshProUGUI infoText;
-    private BoatState BoatState;
+    private BoatStateNetwork BoatStateNetwork;
 
     
     
@@ -17,7 +17,7 @@ public class InteractorHandlerNetwork : NetworkBehaviour
     {
         interactableLayer = LayerMask.GetMask("Interactable");
         infoText = transform.Find("Interactor Text").Find("Text (TMP)").GetComponent<TextMeshProUGUI>();
-        BoatState = transform.GetComponent<BoatInitHandler>().BoatState;
+        BoatStateNetwork = transform.GetComponent<BoatInitHandlerNetwork>().BoatStateNetwork;
     }
 
 
@@ -32,7 +32,7 @@ public class InteractorHandlerNetwork : NetworkBehaviour
         ShowInteractorText(10f);
         
         if (Input.GetKeyDown(KeyCode.E)) HandleInteractorPressed();
-        if (Input.GetKeyDown(KeyCode.X) && BoatState.inBoat && !BoatState.inHelm) ExitBoat(GameObject.Find("BoatTest").transform);
+        if (Input.GetKeyDown(KeyCode.X) && BoatStateNetwork.inBoat && !BoatStateNetwork.inHelm) ExitBoat(GameObject.Find("BoatTest").transform);
     }
 
     
@@ -68,17 +68,17 @@ public class InteractorHandlerNetwork : NetworkBehaviour
     {
         switch (name)
         {
-            case "Capstan" when !BoatState.isAnchored:
+            case "Capstan" when !BoatStateNetwork.isAnchored:
                 return "E to Enable anchor";
-            case "Capstan" when BoatState.isAnchored:
+            case "Capstan" when BoatStateNetwork.isAnchored:
                 return "E to Disable anchor";
-            case "Helm" when !BoatState.inHelm:
+            case "Helm" when !BoatStateNetwork.inHelm:
                 return "E to enter Helm mode";
-            case "Helm" when BoatState.inHelm:
+            case "Helm" when BoatStateNetwork.inHelm:
                 return "E to exit Helm mode";
-            case "Boat Interactor" when !BoatState.inBoat:
+            case "Boat Interactor" when !BoatStateNetwork.inBoat:
                 return "E to enter in the Boat";
-            case "Boat Interactor" when BoatState.inBoat:
+            case "Boat Interactor" when BoatStateNetwork.inBoat:
                 return "";
             default:
                 return "";
@@ -96,7 +96,7 @@ public class InteractorHandlerNetwork : NetworkBehaviour
         if (Physics.Raycast(ray, out hit, 3f, interactableLayer)) HandleAction(hit.collider.gameObject, 3f);
         else
         {
-            if (BoatState.inHelm)
+            if (BoatStateNetwork.inHelm)
             {
                 HelmInteractor.SwitchCameras();
                 EnterBoat(GameObject.Find("BoatTest").transform);
@@ -116,7 +116,7 @@ public class InteractorHandlerNetwork : NetworkBehaviour
             switch (hitedGameObject.name)
             {
                 case "Capstan":
-                    BoatState.isAnchored = !BoatState.isAnchored;
+                    BoatStateNetwork.isAnchored = !BoatStateNetwork.isAnchored;
                     break;
                 case "Helm":
                     HelmInteractor.Init(transform.parent, GameObject.Find("BoatTest").transform);
@@ -129,8 +129,8 @@ public class InteractorHandlerNetwork : NetworkBehaviour
         {
             switch (hitedGameObject.name)
             {
-                case "Boat Interactor" when !BoatState.inBoat:
-                    BoatState.inBoat = true;
+                case "Boat Interactor" when !BoatStateNetwork.inBoat:
+                    BoatStateNetwork.inBoat = true;
                     EnterBoat(hitedGameObject.transform.parent);
                     break;
             }
@@ -150,7 +150,7 @@ public class InteractorHandlerNetwork : NetworkBehaviour
 
     public void ExitBoat(Transform boat)
     {
-        BoatState.inBoat = false;
+        BoatStateNetwork.inBoat = false;
         transform.GetComponent<CharacterController>().enabled = false;
         transform.position = boat.position + new Vector3(10, 4, 10);
         transform.GetComponent<CharacterController>().enabled = true;
