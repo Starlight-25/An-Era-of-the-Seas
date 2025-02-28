@@ -4,12 +4,12 @@ using UnityEngine;
 public class BoatInitHandler : MonoBehaviour
 {
     public Transform Boat;
-    public BoatState BoatState;
+    [SerializeField] public BoatState BoatState;
 
     private void Start()
     {
         Boat = GetComponentInChildren<BoatMovement>(true).transform;
-        BoatState = Boat.GetComponent<BoatState>();
+        //BoatState = Boat.GetComponent<BoatState>();
         
         BoatStats boatStats = GameObject.FindFirstObjectByType<PlayerStatsManager>().BoatStats;
         SwitchBoat(boatStats.Name);
@@ -44,7 +44,7 @@ public class BoatInitHandler : MonoBehaviour
         Boat = newInstance.transform;
         Boat.SetParent(transform);
         Boat.position = Vector3.zero;
-        BoatState.isPlaced = false;
+        BoatState = Boat.GetComponent<BoatState>();
         Boat.gameObject.SetActive(false);
     }
 }
