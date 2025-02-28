@@ -1,9 +1,9 @@
 using System;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
-using UnityEngine.Windows;
-using Input = UnityEngine.Input;
+
+
 
 public class MainMenu : MonoBehaviour
 {
@@ -35,8 +35,7 @@ public class MainMenu : MonoBehaviour
 
     private void OnEnable()
     {
-        //Debug.Log(File.Exists(savepath));
-        if (!File.Exists(savepath))
+        if (!System.IO.File.Exists(savepath))
         {
             SoloButton.SetActive(false);
             MultiplayerButton.SetActive(false);
