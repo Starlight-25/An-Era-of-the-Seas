@@ -152,7 +152,7 @@ public class InteractorHandler : MonoBehaviour
     {
         BoatState.inBoat = false;
         transform.GetComponent<CharacterController>().enabled = false;
-        transform.position = boat.position + new Vector3(10, 4, 10);
+        transform.position = boat.position + boat.forward * -10f + boat.up * 5f;
         transform.GetComponent<CharacterController>().enabled = true;
     }
 }

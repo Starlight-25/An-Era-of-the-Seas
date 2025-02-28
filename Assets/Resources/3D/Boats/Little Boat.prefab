@@ -1257,6 +1257,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7019658789722128428}
     m_Modifications:
+    - target: {fileID: 1179759868583278190, guid: ea0644fb9a08d5044b51e607919087f5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2670057908315808390, guid: ea0644fb9a08d5044b51e607919087f5, type: 3}
       propertyPath: m_Name
       value: Wood_BoatV1
@@ -1315,6 +1319,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3334391237281232956, guid: ea0644fb9a08d5044b51e607919087f5, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4471247551404524371, guid: ea0644fb9a08d5044b51e607919087f5, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

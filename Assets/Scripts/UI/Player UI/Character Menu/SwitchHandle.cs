@@ -260,6 +260,8 @@ public class SwitchHandle : MonoBehaviour
                 Backpack.Crew.Boatswain.AddRange(Equipped.Crew.Boatswain);
                 Backpack.Crew.Boatswain.Sort((x, y) => x.Level.CompareTo(y.Level));
                 Equipped.Crew.Boatswain = new List<Boatswain>();
+                
+                GameObject.FindGameObjectWithTag("Player").GetComponent<BoatInitHandler>().SwitchBoat(Equipped.Boat.Name);
                 break;
             case "Crew Members Elements":
                 if (item.Object is Explorer explorer)
