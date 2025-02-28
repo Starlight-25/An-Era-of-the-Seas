@@ -1224,6 +1224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86177707b4c5b4e68dfb629a80d8974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meshFilter: {fileID: 0}
+  baseVertices: []
 --- !u!114 &437245348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1237,6 +1239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves: []
+  waveDirections: []
 --- !u!23 &437245349
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1663,6 +1666,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86177707b4c5b4e68dfb629a80d8974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meshFilter: {fileID: 0}
+  baseVertices: []
 --- !u!114 &537151294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1676,6 +1681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves: []
+  waveDirections: []
 --- !u!23 &537151295
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2191,6 +2197,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86177707b4c5b4e68dfb629a80d8974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meshFilter: {fileID: 0}
+  baseVertices: []
 --- !u!114 &677037107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2204,6 +2212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves: []
+  waveDirections: []
 --- !u!23 &677037108
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2304,6 +2313,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86177707b4c5b4e68dfb629a80d8974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meshFilter: {fileID: 0}
+  baseVertices: []
 --- !u!114 &677218534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2317,6 +2328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves: []
+  waveDirections: []
 --- !u!23 &677218535
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3209,6 +3221,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86177707b4c5b4e68dfb629a80d8974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meshFilter: {fileID: 0}
+  baseVertices: []
 --- !u!114 &982490506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3222,6 +3236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves: []
+  waveDirections: []
 --- !u!23 &982490507
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3284,7 +3299,7 @@ Transform:
   m_GameObject: {fileID: 982490504}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 180, y: 0, z: 450}
+  m_LocalPosition: {x: 179.9, y: 0, z: 450}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3373,6 +3388,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86177707b4c5b4e68dfb629a80d8974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meshFilter: {fileID: 0}
+  baseVertices: []
 --- !u!114 &1019757399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3386,6 +3403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves: []
+  waveDirections: []
 --- !u!23 &1019757400
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3548,6 +3566,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86177707b4c5b4e68dfb629a80d8974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meshFilter: {fileID: 0}
+  baseVertices: []
 --- !u!114 &1048043010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3561,6 +3581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves: []
+  waveDirections: []
 --- !u!23 &1048043011
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4010,6 +4031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves: []
+  waveDirections: []
 --- !u!114 &1113712091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4022,6 +4044,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86177707b4c5b4e68dfb629a80d8974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meshFilter: {fileID: 0}
+  baseVertices: []
 --- !u!1 &1231229974
 GameObject:
   m_ObjectHideFlags: 0
@@ -4151,6 +4175,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86177707b4c5b4e68dfb629a80d8974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meshFilter: {fileID: 0}
+  baseVertices: []
 --- !u!114 &1285339847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4164,6 +4190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves: []
+  waveDirections: []
 --- !u!23 &1285339848
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4382,6 +4409,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86177707b4c5b4e68dfb629a80d8974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meshFilter: {fileID: 0}
+  baseVertices: []
 --- !u!114 &1305883375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4395,6 +4424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves: []
+  waveDirections: []
 --- !u!23 &1305883376
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4712,6 +4742,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86177707b4c5b4e68dfb629a80d8974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meshFilter: {fileID: 0}
+  baseVertices: []
 --- !u!114 &1376822356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4725,6 +4757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves: []
+  waveDirections: []
 --- !u!23 &1376822357
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4825,6 +4858,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86177707b4c5b4e68dfb629a80d8974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meshFilter: {fileID: 0}
+  baseVertices: []
 --- !u!114 &1450292307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4838,6 +4873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves: []
+  waveDirections: []
 --- !u!23 &1450292308
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5218,6 +5254,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86177707b4c5b4e68dfb629a80d8974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meshFilter: {fileID: 0}
+  baseVertices: []
 --- !u!114 &1722995397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5231,6 +5269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves: []
+  waveDirections: []
 --- !u!23 &1722995398
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5533,6 +5572,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86177707b4c5b4e68dfb629a80d8974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meshFilter: {fileID: 0}
+  baseVertices: []
 --- !u!114 &1798958265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5546,6 +5587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves: []
+  waveDirections: []
 --- !u!23 &1798958266
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5676,6 +5718,182 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7381775301970821947, guid: 3f3fe03e033d43a49ba2cfb47082b18f, type: 3}
   m_PrefabInstance: {fileID: 1811344947}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1814103364
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 32e8bb8b012d5044f9d3b1691d53e629, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 32e8bb8b012d5044f9d3b1691d53e629, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 32e8bb8b012d5044f9d3b1691d53e629, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 32e8bb8b012d5044f9d3b1691d53e629, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 184.71808
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 32e8bb8b012d5044f9d3b1691d53e629, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.84
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 32e8bb8b012d5044f9d3b1691d53e629, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 449.0691
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 32e8bb8b012d5044f9d3b1691d53e629, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 32e8bb8b012d5044f9d3b1691d53e629, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 32e8bb8b012d5044f9d3b1691d53e629, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 32e8bb8b012d5044f9d3b1691d53e629, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 32e8bb8b012d5044f9d3b1691d53e629, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 32e8bb8b012d5044f9d3b1691d53e629, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 32e8bb8b012d5044f9d3b1691d53e629, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32e8bb8b012d5044f9d3b1691d53e629, type: 3}
+      propertyPath: m_Name
+      value: BoatWSail
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 32e8bb8b012d5044f9d3b1691d53e629, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 32e8bb8b012d5044f9d3b1691d53e629, type: 3}
+--- !u!1 &1814180063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1814180067}
+  - component: {fileID: 1814180066}
+  - component: {fileID: 1814180065}
+  - component: {fileID: 1814180064}
+  m_Layer: 0
+  m_Name: WaterManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1814180064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814180063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 030d4a84f8aeeda45bc266c30efbde39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterTilePrefab: {fileID: 3839123111065721117, guid: d712270f7e98c8a4095783916619fc62, type: 3}
+  gridSizeX: 10
+  gridSizeZ: 10
+  tileSize: 10
+--- !u!23 &1814180065
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814180063}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1814180066
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814180063}
+  m_Mesh: {fileID: 0}
+--- !u!4 &1814180067
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814180063}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 186.57036, y: 1.1664801, z: 453.31088}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1819841573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6236,6 +6454,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86177707b4c5b4e68dfb629a80d8974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meshFilter: {fileID: 0}
+  baseVertices: []
 --- !u!114 &1918721737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6249,6 +6469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves: []
+  waveDirections: []
 --- !u!23 &1918721738
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7332,6 +7553,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86177707b4c5b4e68dfb629a80d8974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meshFilter: {fileID: 0}
+  baseVertices: []
 --- !u!114 &2131916490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7345,6 +7568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves: []
+  waveDirections: []
 --- !u!23 &2131916491
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7487,3 +7711,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 2125904214}
   - {fileID: 1231229975}
+  - {fileID: 1814103364}
+  - {fileID: 1814180067}

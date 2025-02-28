@@ -7,16 +7,19 @@ public class WaveManager : MonoBehaviour
     public static WaveManager instance;
 
     [System.Serializable]
-    public class GerstnerWave
+    public class ImpactPoint
     {
-        public float amplitude = 1f;      
-        public float wavelength = 2f;  
-        public float speed = 1f;        
-        public float directionAngle = 0f; 
+        public Vector3 position;
+        public float maxAmplitude;
+        public float influenceRadius;
+        public float wavelength;
+        public float speed;
+        public float directionAngle; 
     }
 
-    public List<GerstnerWave> waves = new List<GerstnerWave>();
-    private List<Vector2> waveDirections = new List<Vector2>();
+    public List<ImpactPoint> impactPoints = new List<ImpactPoint>();
+    public List<Vector3> islandPositions = new List<Vector3>();
+    public float islandRadius = 5f;
 
     private void Awake()
     {
@@ -24,35 +27,56 @@ public class WaveManager : MonoBehaviour
         {
             instance = this;
         }
-        else if (instance != this)
+        else
         {
-            //Debug.Log("WaveManager instance already exists!");
+            return;
+        }
+    }
+
+    private float GetDynamicAmplitude(Vector3 position)
+    {
+        float amplitude = 0f;
+
+        // Apply impact points
+        foreach (var impact in impactPoints)
+        {
+            float distance = Vector3.Distance(position, impact.position);
+            if (distance < impact.influenceRadius)
+            {
+                float influence = (1f - (distance / impact.influenceRadius)) * impact.maxAmplitude;
+                amplitude += influence;
+            }
         }
 
-        // Precompute wave directions
-        foreach (var wave in waves)
+        // Reduce waves near islands
+        foreach (var island in islandPositions)
         {
-            Vector2 direction = new Vector2(
-                Mathf.Cos(wave.directionAngle * Mathf.Deg2Rad),
-                Mathf.Sin(wave.directionAngle * Mathf.Deg2Rad)
-            ).normalized;
-            waveDirections.Add(direction);
+            float distanceToIsland = Vector3.Distance(position, island);
+            if (distanceToIsland < islandRadius)
+            {
+                float islandEffect = (1f - (distanceToIsland / islandRadius));
+                amplitude *= (1f - islandEffect);  
+            }
         }
+
+        return Mathf.Max(amplitude, 0f);
     }
 
     public Vector3 GetWaveDisplacement(Vector3 position)
     {
         Vector3 displacement = Vector3.zero;
 
-        for (int i = 0; i < waves.Count; i++)
+        foreach (var impact in impactPoints)
         {
-            var wave = waves[i];
-            Vector2 waveDirection = waveDirections[i];
+            Vector2 waveDirection = new Vector2(
+                Mathf.Cos(impact.directionAngle * Mathf.Deg2Rad),
+                Mathf.Sin(impact.directionAngle * Mathf.Deg2Rad)
+            ).normalized;
 
-            float phase = Vector2.Dot(new Vector2(position.x, position.z), waveDirection) / wave.wavelength + Time.time * wave.speed;
-            float waveHeight = wave.amplitude * Mathf.Sin(phase);
-
-            float horizontalDisplacement = wave.amplitude * Mathf.Cos(phase);
+            float dynamicAmplitude = GetDynamicAmplitude(position);
+            float phase = Vector2.Dot(new Vector2(position.x, position.z), waveDirection) / impact.wavelength + Time.time * impact.speed;
+            float waveHeight = dynamicAmplitude * Mathf.Sin(phase);
+            float horizontalDisplacement = dynamicAmplitude * Mathf.Cos(phase);
 
             displacement.x += horizontalDisplacement * waveDirection.x;
             displacement.z += horizontalDisplacement * waveDirection.y;
