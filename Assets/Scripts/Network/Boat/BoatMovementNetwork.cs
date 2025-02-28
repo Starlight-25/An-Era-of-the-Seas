@@ -13,12 +13,17 @@ public class BoatMovementNetwork : NetworkBehaviour
 
     private Vector3 EulerAngleVelocity = new Vector3(0, 1, 0);
     private float xRotation = 0f;
+    private BoatState BoatState;
 
     
     
     
     
-    private void Start() => BoatBody = transform.GetComponent<Rigidbody>();
+    private void Start() 
+    {
+        BoatBody = transform.GetComponent<Rigidbody>();
+        BoatState = transform.GetComponent<BoatState>();
+    }
     
 
     

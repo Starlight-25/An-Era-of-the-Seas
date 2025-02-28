@@ -7,6 +7,7 @@ public class InteractorHandlerNetwork : NetworkBehaviour
 {
     private LayerMask interactableLayer;
     private TextMeshProUGUI infoText;
+    private BoatState BoatState;
 
     
     
@@ -16,6 +17,7 @@ public class InteractorHandlerNetwork : NetworkBehaviour
     {
         interactableLayer = LayerMask.GetMask("Interactable");
         infoText = transform.Find("Interactor Text").Find("Text (TMP)").GetComponent<TextMeshProUGUI>();
+        BoatState = transform.GetComponent<BoatInitHandler>().BoatState;
     }
 
 
@@ -30,7 +32,7 @@ public class InteractorHandlerNetwork : NetworkBehaviour
         ShowInteractorText(10f);
         
         if (Input.GetKeyDown(KeyCode.E)) HandleInteractorPressed();
-        if (Input.GetKeyDown(KeyCode.X) && BoatState.inBoat && !BoatState.inHelm) ExitBoat(GameObject.Find("BoatTest").transform, transform);
+        if (Input.GetKeyDown(KeyCode.X) && BoatState.inBoat && !BoatState.inHelm) ExitBoat(GameObject.Find("BoatTest").transform);
     }
 
     
@@ -146,11 +148,11 @@ public class InteractorHandlerNetwork : NetworkBehaviour
         transform.GetComponent<CharacterController>().enabled = true;
     }
 
-    public static void ExitBoat(Transform boat, Transform player)
+    public void ExitBoat(Transform boat)
     {
         BoatState.inBoat = false;
-        player.GetComponent<CharacterController>().enabled = false;
-        player.position = boat.position + new Vector3(10, 4, 10);
-        player.GetComponent<CharacterController>().enabled = true;
+        transform.GetComponent<CharacterController>().enabled = false;
+        transform.position = boat.position + new Vector3(10, 4, 10);
+        transform.GetComponent<CharacterController>().enabled = true;
     }
 }

@@ -12,6 +12,20 @@ public class BoatMovement : MonoBehaviour
 
     private Vector3 EulerAngleVelocity = new Vector3(0, 1, 0);
     private float xRotation = 0f;
+    private BoatState BoatState;
+
+    
+    
+    
+
+    private void Start()
+    {
+        BoatState = transform.GetComponent<BoatState>();
+    }
+
+    
+    
+    
     
     void Update()
     {

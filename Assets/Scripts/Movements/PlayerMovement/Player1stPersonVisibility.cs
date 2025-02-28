@@ -7,10 +7,14 @@ public class Player1stPersonVisibility : MonoBehaviour
     private SkinnedMeshRenderer PlayerMeshRenderer;
     [SerializeField] private UnityEngine.Material PlayerMaterial;
     [SerializeField] private UnityEngine.Material InvisibleMaterial;
+    private BoatState BoatState;
 
 
-    private void Start() =>
+    private void Start()
+    {
         PlayerMeshRenderer = transform.Find("Pirate").Find("Pirate").GetComponent<SkinnedMeshRenderer>();
+        BoatState = transform.GetComponent<BoatInitHandler>().BoatState;
+    }
 
 
     private void Update()

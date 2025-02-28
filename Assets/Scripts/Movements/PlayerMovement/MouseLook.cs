@@ -13,6 +13,8 @@ public class MouseLook : MonoBehaviour
     [SerializeField] private Camera[] otherCamera;
     
     float xRotation = 0f;
+
+    private BoatState BoatState;
     
     
     
@@ -31,6 +33,8 @@ public class MouseLook : MonoBehaviour
         {
             camera.enabled = false;
         }
+
+        BoatState = playerBody.GetComponent<BoatInitHandler>().BoatState;
     }
     
     

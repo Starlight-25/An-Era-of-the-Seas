@@ -1317,6 +1317,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoatTest
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0f36ad158113db3e990420f00f0da656, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1345,6 +1349,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f36ad158113db3e990420f00f0da656, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8031062436834124898}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f36ad158113db3e990420f00f0da656, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3608382346694338864}
   m_SourcePrefab: {fileID: 100100000, guid: 0f36ad158113db3e990420f00f0da656, type: 3}
 --- !u!4 &405598251751669359 stripped
 Transform:
@@ -1398,6 +1405,19 @@ MonoBehaviour:
   BoatBody: {fileID: 1555422128954559854}
   speed: 1
   helmMovingSpeed: 10000
+--- !u!114 &3608382346694338864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074998955015480533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b5cf8d093514aeca4103e482098d69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlaced: 0
 --- !u!1001 &6587755119020099187
 PrefabInstance:
   m_ObjectHideFlags: 0

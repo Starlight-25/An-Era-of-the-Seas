@@ -7,6 +7,7 @@ public class InteractorHandler : MonoBehaviour
     private LayerMask interactableLayer;
     private TextMeshProUGUI infoText;
     private Transform Camera;
+    private BoatState BoatState;
 
 
 
@@ -17,6 +18,7 @@ public class InteractorHandler : MonoBehaviour
         interactableLayer = LayerMask.GetMask("Interactable");
         infoText = transform.Find("Interactor Text").Find("Text (TMP)").GetComponent<TextMeshProUGUI>();
         Camera = transform.Find("Camera");
+        BoatState = transform.GetComponent<BoatInitHandler>().BoatState;
     }
 
 
@@ -29,7 +31,8 @@ public class InteractorHandler : MonoBehaviour
         ShowInteractorText(10f);
         
         if (Input.GetKeyDown(KeyCode.E)) HandleInteractorPressed();
-        if (Input.GetKeyDown(KeyCode.X) && BoatState.inBoat && !BoatState.inHelm) ExitBoat(GameObject.Find("BoatTest").transform, transform);
+        //if (Input.GetKeyDown(KeyCode.X) && BoatState.inBoat && !BoatState.inHelm) ExitBoat(GameObject.Find("BoatTest").transform);
+        if (Input.GetKeyDown(KeyCode.X) && BoatState.inBoat && !BoatState.inHelm) ExitBoat(transform.GetComponent<BoatInitHandler>().Boat);
     }
 
     
@@ -96,7 +99,7 @@ public class InteractorHandler : MonoBehaviour
             if (BoatState.inHelm)
             {
                 HelmInteractor.SwitchCameras();
-                EnterBoat(GameObject.Find("BoatTest").transform);
+                EnterBoat(transform.GetComponent<BoatInitHandler>().Boat);
             }
         }
         if (Physics.Raycast(ray, out hit, 10f, interactableLayer)) HandleAction(hit.collider.gameObject, 10f);
@@ -116,7 +119,7 @@ public class InteractorHandler : MonoBehaviour
                     BoatState.isAnchored = !BoatState.isAnchored;
                     break;
                 case "Helm":
-                    HelmInteractor.Init(transform, GameObject.Find("BoatTest").transform);
+                    HelmInteractor.Init(transform, transform.GetComponent<BoatInitHandler>().Boat);
                     HelmInteractor.SwitchCameras();
                     EnterBoat(hitedGameObject.transform.parent);
                     break;
@@ -145,11 +148,11 @@ public class InteractorHandler : MonoBehaviour
         transform.GetComponent<CharacterController>().enabled = true;
     }
 
-    public static void ExitBoat(Transform boat, Transform player)
+    public void ExitBoat(Transform boat)
     {
         BoatState.inBoat = false;
-        player.GetComponent<CharacterController>().enabled = false;
-        player.position = boat.position + new Vector3(10, 4, 10);
-        player.GetComponent<CharacterController>().enabled = true;
+        transform.GetComponent<CharacterController>().enabled = false;
+        transform.position = boat.position + new Vector3(10, 4, 10);
+        transform.GetComponent<CharacterController>().enabled = true;
     }
 }

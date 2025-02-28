@@ -17,6 +17,7 @@ public class PlayerMovementNetwork : NetworkBehaviour
     
     Vector3 velocity;
     bool isGrounded;
+    private BoatState BoatState;
     
     
     
@@ -25,6 +26,7 @@ public class PlayerMovementNetwork : NetworkBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        BoatState = transform.GetComponent<BoatInitHandler>().BoatState;
     }
     
     

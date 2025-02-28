@@ -28,7 +28,6 @@ public class MainMenu : MonoBehaviour
     private void Awake()
     {
         savepath = Application.persistentDataPath + "/playerData.json";
-        Debug.Log(savepath);
     }
 
     private void OnEnable()
@@ -64,7 +63,7 @@ public class MainMenu : MonoBehaviour
     }
     public void SoloButtonClicked()
     {
-        SceneManager.LoadScene("PlayerUI");
+        SceneManager.LoadScene("SoloGame");
     }
 
     public void MultiplayerButtonClicked()

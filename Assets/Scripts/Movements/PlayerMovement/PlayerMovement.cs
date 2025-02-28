@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     
     Vector3 velocity;
     bool isGrounded;
+    private BoatState BoatState;
     
     
     
@@ -24,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        BoatState = transform.GetComponent<BoatInitHandler>().BoatState;
     }
     
     
