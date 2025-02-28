@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class AnimationHandler : MonoBehaviour
 {
@@ -37,4 +39,16 @@ public class AnimationHandler : MonoBehaviour
         Animator.SetBool("IsOnWater", isOnWater);
         Animator.SetBool("IsSwimming", isOnWater && isRunning);
     }
+
+
+
+    
+
+    public void TrigerDeathAnimation() => Animator.SetTrigger("Death");
+
+
+    
+    
+    
+    public void TriggerAttackAnimation() => Animator.SetTrigger($"Attack{Random.Range(1, 4)}");
 }

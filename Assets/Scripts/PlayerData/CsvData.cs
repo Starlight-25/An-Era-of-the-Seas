@@ -77,6 +77,17 @@ public class WeaponCSV
     public int Steel { get; set; }
 }
 
+public class EnemyCSV
+{
+    public int Level { get; set; }
+    public int HP { get; set; }
+    public int ATK { get; set; }
+}
+
+public class EnemyTerestrialCSV : EnemyCSV { }
+
+public class EnemyMarineCSV : EnemyCSV { }
+
 
 
 
@@ -93,6 +104,8 @@ public class CsvData : MonoBehaviour
     public List<CrewCSV> CrewCSV = new List<CrewCSV>();
     public List<StigmaCSV> StigmaCSV = new List<StigmaCSV>();
     public List<WeaponCSV> WeaponCSV = new List<WeaponCSV>();
+    public List<EnemyTerestrialCSV> EnemyTerestrialCSV = new List<EnemyTerestrialCSV>();
+    public List<EnemyMarineCSV> EnemyMarineCSV = new List<EnemyMarineCSV>();
     
     private void LoadPlayerCSV()
     {
@@ -142,6 +155,26 @@ public class CsvData : MonoBehaviour
             WeaponCSV = csv.GetRecords<WeaponCSV>().ToList();
         }
     }
+
+    private void LoadEnemyTerestrialCSV()
+    {
+        string data = Resources.Load<TextAsset>("Stats/enemies/terestrial").text;
+        using (StringReader reader = new StringReader(data))
+        using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+        {
+            EnemyTerestrialCSV = csv.GetRecords<EnemyTerestrialCSV>().ToList();
+        }
+    }
+
+    private void LoadEnemyMarineCSV()
+    {
+        string data = Resources.Load<TextAsset>("Stats/enemies/marine").text;
+        using (StringReader reader = new StringReader(data))
+        using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+        {
+            EnemyMarineCSV = csv.GetRecords<EnemyMarineCSV>().ToList();
+        }
+    }
     
     
     
@@ -154,5 +187,7 @@ public class CsvData : MonoBehaviour
         LoadStigmaCSV();
         LoadCrewCSV();
         LoadWeaponCSV();
+        LoadEnemyTerestrialCSV();
+        LoadEnemyMarineCSV();
     }
 }

@@ -51,9 +51,24 @@ public class PlayerStatsManager : MonoBehaviour
     public PlayerStats PlayerStats = new PlayerStats();
     public BoatStats BoatStats = new BoatStats();
 
+    
+    
+    
+    
+    private void Awake()
+    {
+        UpdatePlayerStats();
+        UpdateBoatStats();
+    }
+    
+    
+    
+    
+    
     private void InitPlayerStats()
     {
         PlayerStats.Level = PlayerDataManager.PlayerData.Level;
+        Debug.Log(PlayerStats.Level);
         PlayerStats.MaxHP = CsvData.PlayerCSV[PlayerStats.Level - 1].HP;
         PlayerStats.MaxDEF = CsvData.PlayerCSV[PlayerStats.Level - 1].DEF;
         PlayerStats.ATK = CsvData.PlayerCSV[PlayerStats.Level - 1].ATK;
@@ -62,6 +77,10 @@ public class PlayerStatsManager : MonoBehaviour
         PlayerStats.Storage = CsvData.PlayerCSV[PlayerStats.Level - 1].Storage;
     }
 
+    
+    
+    
+    
     private void SetPlayerBonus()
     {
         var weaponCsv = CsvData.WeaponCSV;
@@ -153,15 +172,5 @@ public class PlayerStatsManager : MonoBehaviour
         SetBoatBonus();
         BoatStats.HP = BoatStats.MaxHP;
         BoatStats.DEF = BoatStats.MaxDEF;
-    }
-    
-    
-    
-    
-    
-    private void Awake()
-    {
-        UpdatePlayerStats();
-        UpdateBoatStats();
     }
 }

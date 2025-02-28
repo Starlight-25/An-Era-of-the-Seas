@@ -77,6 +77,6 @@ public class EnemyMovement : MonoBehaviour
 
         NavMeshHit hit;
         if (NavMesh.SamplePosition(targetPosition, out hit, 1f, NavMesh.AllAreas)) return hit.position;
-        return Player.transform.position;
+        return transform.position;
     }
 }
