@@ -246,11 +246,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impactPoints:
-  - position: {x: 0, y: 0, z: 0}
-    maxAmplitude: 0.5
-    influenceRadius: 60
+  - position: {x: 100, y: 0, z: 450}
+    maxAmplitude: 1
+    influenceRadius: 100
     wavelength: 2
     speed: 1
     directionAngle: 45
-  islandPositions: []
-  islandRadius: 60
+  islandPositions:
+  - {x: 200, y: 0, z: 450}
+  islandRadius: 10

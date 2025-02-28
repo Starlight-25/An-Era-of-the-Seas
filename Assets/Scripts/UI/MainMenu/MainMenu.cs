@@ -29,6 +29,8 @@ public class MainMenu : MonoBehaviour
     private void Awake()
     {
         savepath = Application.persistentDataPath + "/playerData.json";
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     private void OnEnable()

@@ -33,11 +33,12 @@ public class WaterManager : MonoBehaviour
 
     private void GenerateWaterGrid()
     {
+        Vector3 playerPosition = player.position;
         for (int x = -gridSizeX / 2; x < gridSizeX / 2; x++)
         {
             for (int z = -gridSizeZ / 2; z < gridSizeZ / 2; z++)
             {
-                Vector3 spawnPosition = new Vector3(x * tileSize, 0, z * tileSize);
+                Vector3 spawnPosition = new Vector3(playerPosition.x + x * tileSize, 0, playerPosition.z + z * tileSize);
                 GameObject waterTile = Instantiate(waterTilePrefab, spawnPosition, Quaternion.identity, transform);
                 waterTiles.Add(waterTile);
             }
