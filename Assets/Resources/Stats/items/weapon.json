@@ -1,0 +1,95 @@
+{
+  "Rusty Sword": {
+    "Rarity": "Common",
+    "Max Level": 25,
+    "Price": 100,
+    "Stats": [
+      "ATK",
+      "CritRate"
+    ]
+  },
+  "Iron Blade": {
+    "Rarity": "Common",
+    "Max Level": 25,
+    "Price": 100,
+    "Stats": [
+      "ATK",
+      "CritDMG"
+    ]
+  },
+  "Cinder Blade": {
+    "Rarity": "Rare",
+    "Max Level": 500,
+    "Price": 1000,
+    "Stats": [
+      "ATK",
+      "CritRate"
+    ]
+  },
+  "Water Edge": {
+    "Rarity": "Rare",
+    "Max Level": 500,
+    "Price": 1000,
+    "Stats": [
+      "ATK",
+      "CritDMG"
+    ]
+  },
+  "Dragon Claw": {
+    "Rarity": "Epic",
+    "Max Level": 75,
+    "Price": 10000,
+    "Stats": [
+      "CritRate",
+      "CritDMG"
+    ]
+  },
+  "Vortex Blade": {
+    "Rarity": "Epic",
+    "Max Level": 75,
+    "Price": 10000,
+    "Stats": [
+      "ATK",
+      "CritRate"
+    ]
+  },
+  "Shadow Sword": {
+    "Rarity": "Epic",
+    "Max Level": 75,
+    "Price": 10000,
+    "Stats": [
+      "ATK",
+      "CritDMG"
+    ]
+  },
+  "Emberstrike": {
+    "Rarity": "Epic",
+    "Max Level": 75,
+    "Price": 10000,
+    "Stats": [
+      "ATK",
+      "CritRate",
+      "CritDMG"
+    ]
+  },
+  "Excalibur": {
+    "Rarity": "Legendary",
+    "Max Level": 100,
+    "Price": 75000,
+    "Stats": [
+      "ATK",
+      "CritRate",
+      "CritDMG"
+    ]
+  },
+  "Eclipse": {
+    "Rarity": "Legendary",
+    "Max Level": 100,
+    "Price": 75000,
+    "Stats": [
+      "ATK",
+      "CritRate",
+      "CritDMG"
+    ]
+  }
+}
