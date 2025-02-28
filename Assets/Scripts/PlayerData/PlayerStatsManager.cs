@@ -68,6 +68,7 @@ public class PlayerStatsManager : MonoBehaviour
     private void InitPlayerStats()
     {
         PlayerStats.Level = PlayerDataManager.PlayerData.Level;
+        Debug.Log(PlayerStats.Level);
         PlayerStats.MaxHP = CsvData.PlayerCSV[PlayerStats.Level - 1].HP;
         PlayerStats.MaxDEF = CsvData.PlayerCSV[PlayerStats.Level - 1].DEF;
         PlayerStats.ATK = CsvData.PlayerCSV[PlayerStats.Level - 1].ATK;

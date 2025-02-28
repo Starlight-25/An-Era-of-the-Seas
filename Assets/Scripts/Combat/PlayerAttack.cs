@@ -33,13 +33,15 @@ public class PlayerAttack : MonoBehaviour
     
     private void Attack()
     {
+        transform.GetComponent<AnimationHandler>().TriggerAttackAnimation();
+        
         PlayerStats playerStats = PlayerStatsManager.PlayerStats;
         int critrate = Random.Range(0, 101) <= playerStats.CritRate ? 1 : 0;
         int dmg = Mathf.RoundToInt(playerStats.ATK * (1 + critrate * (playerStats.CritDMG / 100f)));
         Transform target = GetEnemy();
         if (target != null)
         {
-            Debug.Log($"{target.name} has taken {dmg} DMG");
+            DMGOnEnemy(target, dmg);
         }
     }
 
@@ -55,5 +57,18 @@ public class PlayerAttack : MonoBehaviour
             }
         }
         return null;
+    }
+
+    private void DMGOnEnemy(Transform enemy, int dmg)
+    {
+        EnemyTerestrialStats enemmEnemyTerestrialStats = enemy.GetComponent<EnemyStatsManager>().EnemyTerestrialStats;
+        enemmEnemyTerestrialStats.HP -= dmg;
+        if (enemmEnemyTerestrialStats.HP <= 0) DeathEnemy(enemy);
+    }
+
+    private void DeathEnemy(Transform enemy)
+    {
+        enemy.GetComponent<EnemyAnimation>().TriggerDeathAnimation();
+        Destroy(enemy.gameObject, 1f);
     }
 }
