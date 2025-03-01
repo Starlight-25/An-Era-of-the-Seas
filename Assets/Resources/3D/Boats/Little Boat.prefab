@@ -156,10 +156,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 562305854609734608}
   depthbeforesubmerge: 1
-  displacememtAmount: 3
-  floatercount: 1
-  waterDrag: 0.99
-  waterAngularDrag: 0.5
+  displacememtAmount: 1
+  floatercount: 5
+  waterDrag: 10
+  waterAngularDrag: 25
 --- !u!1 &1117442521325266801
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,10 +406,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 562305854609734608}
   depthbeforesubmerge: 1
-  displacememtAmount: 3
-  floatercount: 1
-  waterDrag: 0.99
-  waterAngularDrag: 0.5
+  displacememtAmount: 1
+  floatercount: 5
+  waterDrag: 10
+  waterAngularDrag: 25
 --- !u!1 &6461147398969207119
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,10 +456,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 562305854609734608}
   depthbeforesubmerge: 1
-  displacememtAmount: 3
-  floatercount: 1
-  waterDrag: 0.99
-  waterAngularDrag: 0.5
+  displacememtAmount: 1
+  floatercount: 5
+  waterDrag: 10
+  waterAngularDrag: 25
 --- !u!1 &6475140705322245019
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,10 +506,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 562305854609734608}
   depthbeforesubmerge: 1
-  displacememtAmount: 3
-  floatercount: 1
-  waterDrag: 0.99
-  waterAngularDrag: 0.5
+  displacememtAmount: 1
+  floatercount: 5
+  waterDrag: 10
+  waterAngularDrag: 25
 --- !u!1 &7448640356197929745
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,10 +1137,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 562305854609734608}
   depthbeforesubmerge: 1
-  displacememtAmount: 3
-  floatercount: 1
-  waterDrag: 0.99
-  waterAngularDrag: 0.5
+  displacememtAmount: 1
+  floatercount: 5
+  waterDrag: 10
+  waterAngularDrag: 25
 --- !u!1 &9029675135402265685
 GameObject:
   m_ObjectHideFlags: 0

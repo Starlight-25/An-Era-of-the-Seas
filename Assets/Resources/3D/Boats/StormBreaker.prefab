@@ -265,9 +265,9 @@ MonoBehaviour:
   rigidbody: {fileID: 1560506433337819941}
   depthbeforesubmerge: 1
   displacememtAmount: 3
-  floatercount: 1
-  waterDrag: 0.99
-  waterAngularDrag: 0.5
+  floatercount: 5
+  waterDrag: 5
+  waterAngularDrag: 10
 --- !u!1 &2722254726886354589
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,9 +515,9 @@ MonoBehaviour:
   rigidbody: {fileID: 1560506433337819941}
   depthbeforesubmerge: 1
   displacememtAmount: 3
-  floatercount: 1
-  waterDrag: 0.99
-  waterAngularDrag: 0.5
+  floatercount: 5
+  waterDrag: 5
+  waterAngularDrag: 10
 --- !u!1 &3967509512229648007
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,9 +781,9 @@ MonoBehaviour:
   rigidbody: {fileID: 1560506433337819941}
   depthbeforesubmerge: 1
   displacememtAmount: 3
-  floatercount: 1
-  waterDrag: 0.99
-  waterAngularDrag: 0.5
+  floatercount: 5
+  waterDrag: 5
+  waterAngularDrag: 10
 --- !u!1 &5420984860402677141
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,9 +975,9 @@ MonoBehaviour:
   rigidbody: {fileID: 1560506433337819941}
   depthbeforesubmerge: 1
   displacememtAmount: 3
-  floatercount: 1
-  waterDrag: 0.99
-  waterAngularDrag: 0.5
+  floatercount: 5
+  waterDrag: 5
+  waterAngularDrag: 10
 --- !u!1 &7308991454685523550
 GameObject:
   m_ObjectHideFlags: 0
@@ -1246,9 +1246,9 @@ MonoBehaviour:
   rigidbody: {fileID: 1560506433337819941}
   depthbeforesubmerge: 1
   displacememtAmount: 3
-  floatercount: 1
-  waterDrag: 0.99
-  waterAngularDrag: 0.5
+  floatercount: 5
+  waterDrag: 5
+  waterAngularDrag: 10
 --- !u!1001 &1702878178065748076
 PrefabInstance:
   m_ObjectHideFlags: 0
