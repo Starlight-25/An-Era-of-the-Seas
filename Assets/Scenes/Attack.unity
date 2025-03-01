@@ -570,15 +570,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2785550985397821224, guid: 8dafc109eb65110418ebb7bcde3a4a04, type: 3}
       propertyPath: m_Name
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 4210815841591685742, guid: 8dafc109eb65110418ebb7bcde3a4a04, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4210815841591685742, guid: 8dafc109eb65110418ebb7bcde3a4a04, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
+      value: EnemyTerestrial
       objectReference: {fileID: 0}
     - target: {fileID: 5697977906478058816, guid: 8dafc109eb65110418ebb7bcde3a4a04, type: 3}
       propertyPath: m_LocalPosition.x
@@ -618,18 +610,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5697977906478058816, guid: 8dafc109eb65110418ebb7bcde3a4a04, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5896601899559436760, guid: 8dafc109eb65110418ebb7bcde3a4a04, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5896601899559436760, guid: 8dafc109eb65110418ebb7bcde3a4a04, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5896601899559436760, guid: 8dafc109eb65110418ebb7bcde3a4a04, type: 3}
-      propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

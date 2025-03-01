@@ -24,7 +24,7 @@ public class EnemyMovement : MonoBehaviour
     
     
     private void Update()
-    {   
+    {
         if (PLayer_in_range(initialPosition))
         {
             agent.SetDestination(GetStoppingPosition(2f));   
@@ -76,7 +76,7 @@ public class EnemyMovement : MonoBehaviour
         Vector3 targetPosition = Player.position - direction * stopDistance;
 
         NavMeshHit hit;
-        if (NavMesh.SamplePosition(targetPosition, out hit, 1f, NavMesh.AllAreas)) return hit.position;
+        if (NavMesh.SamplePosition(targetPosition, out hit, range * 2, NavMesh.AllAreas)) return hit.position;
         return transform.position;
     }
 }
