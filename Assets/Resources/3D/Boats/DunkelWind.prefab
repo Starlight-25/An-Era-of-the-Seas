@@ -1315,7 +1315,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0f36ad158113db3e990420f00f0da656, type: 3}
       propertyPath: m_Name
-      value: Sea Wanderer
+      value: DunkelWind
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0f36ad158113db3e990420f00f0da656, type: 3}
       propertyPath: m_IsActive

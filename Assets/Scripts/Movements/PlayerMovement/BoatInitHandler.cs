@@ -12,7 +12,7 @@ public class BoatInitHandler : MonoBehaviour
         //BoatState = Boat.GetComponent<BoatState>();
         
         BoatStats boatStats = GameObject.FindFirstObjectByType<PlayerStatsManager>().BoatStats;
-        SwitchBoat(boatStats.Name);
+        //SwitchBoat(boatStats.Name);
     }
 
 
