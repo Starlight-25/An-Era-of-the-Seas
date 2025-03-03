@@ -1,0 +1,1217 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage[table]{xcolor}
+\usepackage{xcolor}
+\usepackage{longtable}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{caption}
+\usepackage{ulem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\pagestyle{fancy}
+\fancyhead[L]{Defense Report : \textit{An Era of the Seas}}
+\fancyfoot[L]{Dream Chasers}
+\fancyfoot[C]{
+    \begin{minipage}{1.5cm}
+        \centering
+        \includegraphics[width=1cm]{logo.png}
+    \end{minipage}
+}
+\fancyfoot[R]{\thepage}
+
+\renewcommand{\footrulewidth}{0.1pt}
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\subsectionmark}[1]{}
+\renewcommand{\contentsname}{}
+
+\definecolor{lightblue}{HTML}{55FFFF}
+\definecolor{pastelblue}{HTML}{097CA5}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\title{\textbf{Defense Report}\\
+\textbf{\textit{An Era of the Seas}}}
+\author{%
+    \begin{minipage}[c]{\textwidth}
+        \centering
+        \includegraphics[width=3.5in]{AEotS Logo.png} \\
+        \vspace{2cm}
+        \includegraphics[width=4in]{logo text.png}
+    \end{minipage}
+}
+\date{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+
+\maketitle
+
+\vfill
+\begin{center}
+    \textbf{Lin Jérôme}\\
+    \textbf{Ben Abdallah Achref}\\
+    \textbf{Bruno Ethan}\\
+    \textbf{Devin Joseph}\\
+    \textbf{Class : A1}
+\end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\thispagestyle{empty}
+\addtocounter{page}{-1}
+\null
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section*{Introduction}\hfill
+
+The project \textit{An Era of the Seas} stands out for its ambition to create a captivating maritime world where adventure and exploration lie at the heart of the gaming experience. Developed by the passionate team of \textbf{Dream Chasers}, this visual novel invites players to immerse themselves in the fascinating universe of sailing, through epic quests and strategic challenges.\\
+
+\textit{An Era of the Seas} places players in the shoes of a captain who must traverse uncharted islands, confront formidable foes, and rebuild a family legacy. While navigating the Shattered Seas, players will discover a living, evolving environment designed to bring new life to every exploration. The realistic navigation system, ship upgrades, and crew management are all elements that enrich the experience while immersing the player in an authentic and intriguing world.\\
+
+Through this project, \textbf{Dream Chasers} aims to deliver a complete and immersive gaming experience, combining technological innovation with narrative depth. The team strives to push the boundaries of video game development to offer a unique adventure, rich in discovery and strategy, that will captivate fans of exploration and piracy games.
+
+\newpage
+\subsection*{Summary}
+\tableofcontents
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{Origin and nature of the Project}
+\subsection{Origin}\hfill
+
+The project for the game \textit{An Era of the Seas} stems from a shared interest among team members in video games and software development. It involves combining knowledge in computer science and video game development to create a captivating experience. This project is an opportunity to put acquired knowledge into practice by creating a tangible product.\\
+
+Developing a game is an opportunity to acquire skills in various fields, from programming to graphic design, as well as sound production. Each member can contribute their unique skills, enriching the collective experience.\\
+
+The rise of the video game industry and its growing importance in various domains such as education and entertainment also influenced the decision to create a game. It is an opportunity to immerse ourselves in the dynamic and ever-evolving video game sector.
+
+
+
+
+
+\subsection{Game Information} 
+\subsubsection{Beginning and Story of the Main Character}\hfill
+
+\textit{An Era of the Seas} is a game where the maritime environment plays a central role. Players will embody the son of a great and powerful merchant who wielded significant influence and control over the seas. One day, he receives a letter informing him that his father perished during a mysterious expedition. Determined to uncover the truth, he begins his journey as a captain, aiming not only to restore his father’s legacy but also to discover what truly happened.\\
+
+As he explores the diversity of islands, he embarks on a voyage to become a great hero, just as his father was, while seeking answers to his own questions.
+
+
+
+\subsubsection{Player Objectives}\hfill
+
+Players will navigate and explore the islands of the Shattered Seas. To begin this adventure, the captain starts with nothing more than a small wooden boat he found on the shore. He must also explore eight different islands. Players will begin on the first island, where they will discover the main features, functionalities, and backstory of the son of the great merchant. Here, they will uncover the path to achieving the captain’s ultimate goal.\\
+
+The captain must travel to and reach each island to recover his father’s scattered treasures and take control of the Shattered Seas. After exploring the first seven islands, the captain will finally be able to complete his journey on the last island, where the most challenging obstacles and trials await.
+
+
+
+\subsubsection{Game Features}\hfill
+
+This game offers unique features tied to its environment.
+
+\paragraph{Main Quest}\hfill
+
+This game is story-driven. Players will experience the captain's tale and be fully immersed in the game's maritime universe. Through the main quest, players will follow the captain's journey.
+
+\paragraph{Side Quests}\hfill
+
+While the main quest revolves around the captain's primary story, there are also secondary stories that unfold during his adventure across the seas and islands. These side quests can help players understand specific features and provide generous rewards. They involve completing tasks, deliveries, battles against specific enemies, or assisting residents of the Shattered Seas.
+
+\paragraph{Immersive Navigation System}\hfill
+
+The ship uses either wind or oars for navigation, depending on the ship's level and the crew's capabilities. This means starting with oars for lower-level ships, then progressing to harnessing the wind's direction, adjusting sails, and using the rudder for higher-level ships. To help the captain locate himself and chart a course to a specific destination, he will use a map and a compass.
+
+\paragraph{Ship Maintenance and Upgrades}\hfill
+
+The player's ship can be upgraded as they progress through the main quest. When the ship is damaged, the player must repair it using materials to continue navigating the seas. They can purchase a basic ship from a vendor and enhance it with specific materials.
+
+\paragraph{Crew Members}\hfill
+
+Since the player assumes the role of a captain navigating the seas, they have their own crew. This crew consists of various members with diverse tasks who have been carefully recruited from towns and quests to assist the captain on his journey. Each member has specific stats. Therefore, it is advisable to assign them to the appropriate tasks that will benefit the captain's journey. For example, some crew members are better suited to handle the oars, while others are more adept at exploration.
+
+\paragraph{Weapons}\hfill
+
+To fight against enemies, the player has the option to use swords and rifles. Weapons can be found in treasure chests, but these are common and low-powered. It is recommended to purchase weapons from merchants in the towns to acquire those with better stats and deal more damage.
+
+\paragraph{Stigmata (Player Upgrades)}\hfill
+
+Stigmata (Stigma in the singular) are marks inscribed on the hand with the help of a mage located in the towns. These marks enhance the player's abilities (speed, attack, etc.). They can be obtained by collecting them in treasure chests or by purchasing them from the mage. The mages have invested significant time and effort into creating the Stigmata. As a result, Stigmata sold by mages are much more effective and powerful than those found in nature. Therefore, buying Stigmata from a mage provides significantly higher stats than those found in treasure chests. Of course, this quality comes at a cost, as these Stigmata are far more expensive than those discovered in nature.
+
+\paragraph{Treasure Chest}\hfill
+
+To obtain resources and coins, treasure chests can be discovered on the islands and in areas guarded by enemies. These chests contain coins, weapons, Stigmata, and items to improve the ship, weapons, and Stigmata. These treasures help the captain build wealth, and since money means power in the Shattered Seas, it allows him to increase his influence over the seas.
+
+\paragraph{Towns}\hfill
+
+Each island has its own town, where various types of merchants can be found:
+\begin{itemize}
+    \item \textbf{Boat and Ship Makers:} They offer their exquisite creations, from small boats to massive ships. Depending on the island, these dealers provide better hulls and ship upgrades.
+    \item \textbf{Weapon Makers:} They sell high-quality swords and rifles to face enemies.
+    \item \textbf{Mages:} They use their mystical magic to inscribe a Stigma that the captain owns or has purchased. They also sell their own more powerful Stigmata.
+    \item \textbf{Food Vendors:} They sell delicious food to the locals and adventurers, ensuring they don’t run out of energy or starve to death.
+\end{itemize}
+
+\paragraph{Combat (PvE)}\hfill
+
+In this adventure, the captain's journey is far from peaceful; he will encounter various enemies, both on the islands and across the seas. To defend himself and attack enemies, weapons, Stigmata, and the crew will be useful in battle. As with the seas, the ship can also attack, and the crew members are crucial in this regard. Therefore, the stats of weapons, Stigmata, the crew, and the ship are essential for dealing damage and withstanding enemy attacks.
+
+\paragraph{Multiplayer}\hfill
+
+This game features a multiplayer mode where players can choose a class and play according to it. In this mode, no advantages related to progress or items from the single-player mode are granted to the player.
+
+\paragraph{Fishing}\hfill
+
+A fun mechanic allowing the player to catch fish, which are useful for food and treasures like coins and resources. This is possible with a fishing rod that the captain possesses from the start of the game, and it can be used in large bodies of water such as lakes and oceans.
+
+
+
+
+
+\subsection{Tools}
+\subsubsection{Team Management Tools}\hfill
+
+To communicate effectively on various aspects of game development among team members, it is crucial to have a dedicated tool. In this regard, a Discord server is particularly useful. It allows the team to easily communicate and organize discussions into different channels based on specific development topics.\\
+
+Additionally, task management is essential for keeping the project on track and monitoring progress. A to-do list can be very helpful in this area, providing a clear overview of tasks to be completed. Microsoft To Do is an excellent solution for this. Tasks can be assigned to a team member, and a deadline can be set for each task. This allows team members to be aware of what needs to be done, the deadlines, and helps maintain their productivity.
+
+
+
+\subsubsection{Game Development Tools}\hfill
+
+Dream Chasers uses GitHub to work efficiently as a group on the project. It allows the team to track changes made to the game's code, ensuring that everyone is working on the latest version without overwriting others' work.\\
+
+The game is coded in C\# (Csharp) for several reasons. C\# is an object-oriented programming language, a useful feature for games, and C\# is also commonly used in game engines like Unity.\\
+
+For the IDE (Integrated Development Environment), the team uses Rider by JetBrains because it offers various advantages. It is specifically designed for .NET development (dotnet). Here, the team uses .NET Core 7 to develop the game. Rider’s debugging tool is very powerful, making it easier to identify issues in the code through step-by-step debugging and variable monitoring. Additionally, Rider provides a Unity editor and is generally faster than other IDEs like Visual Studio.\\
+
+The game engine used is Unity, as mentioned earlier, for many reasons. It provides an accessible user interface that simplifies project management for developers. With Unity, the game can be supported on multiple platforms, meaning it will run smoothly whether the player is using Windows, macOS, or Linux. It offers a variety of tools and features for the game’s 3D environment, including an integrated physics engine.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{Study Objective}
+\subsection{Interests and Objectives}\hfill
+
+The main objective of the project is to create an immersive gaming experience, with a captivating story and engaging mechanics. Through this project, the team members will be able to apply the knowledge and concepts they have learned in a real and creative context. The game development process allows the team to overcome technical challenges and encourages them to develop practical problem-solving skills.
+
+
+
+
+
+\subsection{Shared Benefits}\hfill
+
+This project offers numerous benefits for teamwork.
+
+Working with others fosters effective communication between team members, a crucial skill in the professional world. Through frequent discussions, team members develop the ability to clearly express their ideas, listen to feedback, and adapt to different perspectives.\\
+
+Moreover, teamwork encourages better coordination, with management of task dependencies. Each team member can specialize in certain tasks, such as programming, game design, and audio engineering, which enhances productivity and efficiency. Task division also allows the project to progress more quickly, as tasks can be completed simultaneously.\\
+
+Finally, teamwork leads to more innovative and creative solutions. Brainstorming can generate a variety of ideas, resulting in more original and unique game concepts and mechanics.
+
+
+
+
+
+\subsection{Individual Benefits}\hfill
+
+There are also many personal benefits to participating in this type of project.\\
+
+Game development primarily allows developers to master specific technologies. For example, team members can focus on different aspects of game creation, such as game logic, physics engine, 3D design and animation, sound design, and more.\\
+
+Additionally, team members will inevitably encounter technical challenges, obstacles, and problems throughout the process. Problem-solving strengthens problem-solving abilities, which is a crucial skill in any computer science career. Overcoming these challenges also boosts confidence and helps members become more adaptable.\\
+
+In a collaborative project, each member must take on responsibilities. They are accountable for the quality and timeliness of their work. This can enhance the sense of autonomy and ownership. They must ensure that their contributions meet the team's expectations and deadlines, which helps in gaining independence.\\
+
+Participating in a group project requires good time management. This means learning to balance personal work with the needs of the group. Team members must plan and prioritize their tasks, ensuring they contribute to the progress of the project.\\
+
+Finally, working in a group on a game project allows members to acquire technical communication skills. Members must clearly explain ideas, solutions, and complex code to others, ensuring that everyone understands. This ability to communicate technical details in an accessible way is a very useful skill, one that will be frequently required in the professional world.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{Company}
+\subsection{Dream Chasers}\hfill
+
+The company is called \textbf{Dream Chasers}, a name that reflects the company’s spirit, in pursuit of creating an experience that turns the wildest dreams into reality. The company believes that games are not just mere entertainment; they are a gateway to new worlds, adventures, and the realization of fantastic ideas. The company’s name is a tribute to those who dream and those who wish to chase those dreams.
+
+
+
+
+
+\subsection{Specificities}\hfill
+
+Dream Chasers stands out for its ability to blend technical skills with artistic expression. The company is dedicated to developing games that engage players not only intellectually, but also emotionally. The team is made up of enthusiastic developers, designers, and storytellers who view game creation as a form of art, combining cutting-edge technology, rich narratives, and immersive environments.\\
+
+Dream Chasers' distinctive methodology is characterized by meticulous attention to detail, covering everything from gameplay mechanics to evocative music that enhances each scene. The company aspires to create not just games, but deep experiences that leave a lasting impression on players, encouraging them to reflect on their journey long after completing the game.\\
+
+Furthermore, Dream Chasers prioritizes collaboration and innovation within its company culture. An atmosphere is cultivated to allow creativity to thrive, providing each team member with the opportunity to influence the trajectory of projects. This spirit of collaboration fosters new perspectives and continuous experimentation, ensuring that every game developed is a unique adventure.
+
+
+
+
+
+\subsection{Field of Activity}\hfill
+
+Dream Chasers operates in the dynamic field of video game development, but its scope extends beyond conventional gaming. The main goal lies in creating narrative-driven adventure games while exploring opportunities in educational technologies and virtual reality experiences.\\
+
+Dream Chasers' aim is to create games that both educate and entertain, using interactive storytelling to address important themes such as environmental awareness, historical narratives, and personal growth. The company recognizes the potential of video games as effective learning and development tools, committing to integrate these elements into its projects as it moves forward.
+
+
+
+
+
+\subsection{About the Game and the Company}\hfill
+
+With this game, Dream Chasers engages players by asking if they have ever wondered what pirates did in the distant past. Players can feel a sense of nostalgia for the history of sailing and plundering in the Caribbean. This is why the team works closely with the Nostalgic Pirates Association (NPA) to develop this game, which aims to offer a refreshing reminiscence of the atmosphere and piracy of the 18th-century Caribbean. It will bring to life all the captains who lived during that era. Nostalgic pirates are invited to ask themselves if there is a more fulfilling way of life than sharing a drink with friendly crewmates on deck. Together, they can breathe the salty sea air, discover enchanting and unexplored islands, sail the seven seas, and embark on the search for magnificent treasures.\\
+
+At Dream Chasers, there is a genuine commitment to addressing the concerns of the nostalgic pirate spirits, which is why the company helps those who can no longer pursue their dreams to experience them through a visual novel with the game \textit{An Era of the Seas}, designed for dreamers of the seas.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{Team}\hfill
+
+For this game, it is crucial to include individuals with diverse talents and specialties in order to offer players the world of their dreams.
+
+\subsection{Jérôme}\hfill
+
+
+
+
+
+Always close to cities from a young age, Jérôme aspires to understand how peaceful the natural environment can be. He chooses his own path by exploring the video game industry and aims to fulfill his ambitions by creating imaginary worlds with others. In this project, he will lead the team in creating a magnificent maritime world. He is also responsible for setting up items, rewards, chests, weapons, boats, Stigmata statistics, and account management.
+
+
+
+
+
+\subsection{Achref}\hfill
+
+Passionate about geek culture since childhood, Achref shaped his character by playing video games and watching numerous anime. In addition to that, his experience in the vast world of programming led him into the game development field, with a focus on story-based and role-playing games.
+
+
+
+
+
+\subsection{Ethan}\hfill
+
+From childhood to the present day, Ethan has always sought to understand how the world around him worked and how one could interact with it. Creating an environment with its own physics and logic represents a perfect opportunity to develop his understanding. He will oversee the game environment, such as water simulation, weather, and physics.
+
+
+
+
+
+\subsection{Joseph}\hfill
+
+Raised in the seaside city of Le Havre, Joseph grew to love the ocean and wants to explore this theme with his teammates during this project. Having been sailing for a long time, he is primarily responsible for implementing the navigation system in the game. Joseph is in charge of setting up the wind, managing the sails, the location system, and everything related to the ocean and navigation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{Task Distribution}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|>{\columncolor{pastelblue!60}}l|c|c|c|c|}
+        \hline
+        \rowcolor{pastelblue!60}
+        \textbf{Tasks} & \textbf{Jérôme} & \textbf{Achref} & \textbf{Ethan} & \textbf{Joseph}\\
+        \hline
+        Menu \& UI & \cellcolor{blue}R &  & \cellcolor{cyan}S &\\
+        \hline
+        Water Simulation & & & \cellcolor{blue}R & \cellcolor{cyan}S\\
+        \hline
+        Weather Simulation & & \cellcolor{blue}R & \cellcolor{cyan}S &\\
+        \hline
+        Movements (boat, player...) & & & \cellcolor{cyan}S & \cellcolor{blue}R\\
+        \hline
+        AI Movements (enemies, movements, attacks) & & \cellcolor{blue}R & & \cellcolor{cyan}S\\
+        \hline
+        Map & \cellcolor{cyan}S & & \cellcolor{blue}R &\\
+        \hline
+        Localization System (map, compass...) & & \cellcolor{cyan}S & & \cellcolor{blue}R\\
+        \hline
+        Item Statistics & \cellcolor{blue}R & & & \cellcolor{cyan}S\\
+        \hline
+        Fishing System & \cellcolor{cyan}S & \cellcolor{blue}R & &\\
+        \hline
+        Hunger System & & \cellcolor{cyan}S & \cellcolor{blue}R &\\
+        \hline
+        Network & \cellcolor{blue}R & \cellcolor{cyan}S & &\\
+        \hline
+        Multiplayer & \cellcolor{cyan}S & & & \cellcolor{blue}R\\
+        \hline
+        Story (Lore) & & & \cellcolor{cyan}S & \cellcolor{blue}R\\
+        \hline
+        Quests & & \cellcolor{cyan}S & \cellcolor{blue}R &\\
+        \hline
+        Website & & \cellcolor{blue}R & & \cellcolor{cyan}S\\
+        \hline
+        Entity Design & & \cellcolor{blue}R & \cellcolor{cyan}S &\\
+        \hline
+        Entity Animations & \cellcolor{cyan}S & & \cellcolor{blue}R &\\
+        \hline
+        SFX & \cellcolor{blue}R & & & \cellcolor{cyan}S\\
+        \hline
+        Music & \cellcolor{blue}R & \cellcolor{cyan}S & &\\
+        \hline
+        Code Optimization & \cellcolor{blue}R & \cellcolor{blue}S & \cellcolor{blue}S & \cellcolor{blue}S\\
+        \hline
+        Language Correction & \cellcolor{cyan}S & & & \cellcolor{blue}R\\
+        \hline
+        Testing & \cellcolor{blue}R & \cellcolor{blue}R & \cellcolor{blue}R & \cellcolor{blue}R\\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{itemize}
+    \item \textcolor{blue}{R : Responsible}
+    \item \textcolor{cyan}{S : Substitute}
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{Progress and Planning}
+\begin{longtable}{|>{\columncolor{pastelblue!60}}l|l|c|c|c|}
+    \hline
+    \rowcolor{pastelblue!60}
+    \textbf{Deadline} & \textbf{Tasks} & \textbf{Progress} & \textbf{Responsible} & \textbf{Substitute}\\
+    \hline
+    27/10/2024 & Item Statistics & 25\% & Jérôme & Joseph\\
+    \hline
+    \multicolumn{5}{|c|}{\cellcolor{pastelblue!60}\textbf{B1 Exams (28-31/10/2024)}}\\
+    \hline
+    03/11/2024 & Map & 80\% & Ethan & Jérôme\\
+    \hline
+    10/11/2024 & Water Simulation & 50\% & Ethan & Joseph\\
+    \hline
+    10/11/2024 & Item Statistics & 50\% & Jérôme & Joseph\\
+    \hline
+    10/11/2024 & Item Improvements & 25\% & Jérôme & Joseph\\
+    \hline
+    10/11/2024 & Website & 80\% & Achref & Joseph\\
+    \hline
+    17/11/2024 & Main Menu & 40\% & Jérôme & Ethan\\
+    \hline
+    24/11/2024 & Main Menu & 80\% & Jérôme & Ethan\\
+    \hline
+    24/11/2024 & Localization System & 80\% & Joseph & Achref\\
+    \hline
+    01/12/2024 & Player Movements & 50\% & Joseph & Ethan\\
+    \hline
+    08/12/2024 & Player UI & 25\% & Jérôme & Ethan\\
+    \hline
+    15/12/2024 & Localization System & 100\% & Joseph & Achref\\
+    \hline
+    22/12/2024 & Player UI & 50\% & Jérôme & Ethan\\
+    \hline
+    22/12/2024 & Player Movements & 80\% & Joseph & Ethan\\
+    \hline
+    22/12/2024 & SFX & 20\% & Jérôme & Joseph\\
+    \hline
+    29/12/2024 & Entity Animations & 10\% & Ethan & Jérôme\\
+    \hline
+    28/12/2024 & Entity/AI Movements & 20\% & Achref & Joseph\\
+    \hline
+    29/12/2025 & Map & 100\% & Ethan & Jérôme\\
+    \hline
+    29/12/2024 & Boat Movements & 50\% & Joseph & Ethan\\
+    \hline
+    05/01/2025 & Entity Design & 25\% & Achref & Ethan\\
+    \hline
+    05/01/2025 & Boat Movements & 80\% & Joseph & Ethan\\
+    \hline
+    05/01/2025 & Weather Simulation & 50\% & Achref & Ethan\\
+    \hline
+    05/01/2025 & Water Simulation & 80\% & Ethan & Joseph\\
+    \hline
+    \multicolumn{5}{|c|}{\cellcolor{pastelblue!60}\textbf{B2 Exams (6-10/01/2025)}}\\
+    \hline
+    12/01/2025 & Story & 40\% & Joseph & Ethan\\
+    \hline
+    12/01/2025 & Main Quest & 40\% & Ethan & Achref\\
+    \hline
+    \multicolumn{5}{|c|}{\cellcolor{pastelblue!60}\textbf{First Technical Defense (13-17/01/2025)}} \\
+    \hline
+    12/01/2025 & Website & 100\% & Achref & Joseph\\
+    \hline
+    19/01/2025 & Player UI & 100\% & Jérôme & Ethan\\
+    \hline
+    26/01/2025 & Item Statistics & 100\% & Jérôme & Joseph\\
+    \hline
+    02/02/2025 & SFX & 40\% & Jérôme & Joseph\\
+    \hline
+    02/02/2025 & Entity/AI Movements & 50\% & Achref & Joseph\\
+    \hline
+    02/02/2025 & Entity Design & 50\% & Achref & Ethan\\
+    \hline
+    02/02/2025 & Main Quest & 75\% & Ethan & Achref\\
+    \hline
+    09/02/2025 & Weather Simulation & 100\% & Achref & Ethan\\
+    \hline
+    16/02/2025 & Entity Animations & 50\% & Ethan & Jérôme\\
+    \hline
+    02/03/2025 & Entity/AI Movements & 80\% & Achref & Joseph\\
+    \hline
+    02/03/2025 & Entity Design & 80\% & Achref & Ethan\\
+    \hline
+    02/03/2025 & SFX & 60\% & Jérôme & Joseph\\
+    \hline
+    \multicolumn{5}{|c|}{\cellcolor{pastelblue!60}\textbf{B3 Exams (03-07/03/2025)}}\\
+    \hline
+    10/03/2025 & Main Quest & 100\% & Ethan & Achref\\
+    \hline
+    10/03/2025 & Story & 80\%\ & Joseph & Ethan\\
+    \hline
+    \multicolumn{5}{|c|}{\cellcolor{pastelblue!60}\textbf{Second Technical Defense (10-14/03/2025)}} \\
+    \hline
+    30/03/2025 & Fishing System & 100\% & Achref & Jérôme\\
+    \hline
+    30/03/2025 & Hunger System & 100\% & Ethan & Achref\\
+    \hline
+    20/04/2025 & Entity/AI Movements & 100\% & Achref & Joseph\\
+    \hline
+    04/05/2025 & Entity Animations & 100\% & Ethan & Jérôme\\
+    \hline
+    25/05/2025 & Story & 100\% & Joseph & Ethan\\
+    \hline
+    \multicolumn{5}{|c|}{\cellcolor{pastelblue!60}\textbf{Final Technical Defense (26-30/05/2025)}}\\
+    \hline
+\end{longtable}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section{Technical Specifications}
+\begin{itemize}
+    \item Group Name: Dream Chasers
+    \item Project Name: \textit{An Era of the Seas}
+\end{itemize}
+
+
+
+
+
+\begin{longtable}{|l|l|l|c|}
+    \caption*{\textbf{\uline{Names of the Members}}}\\
+    \hline
+    \rowcolor{pastelblue!60}
+    Last Name & First Name & Login & Class \\
+    \hline
+    Ben Abdallah & Achref & achref.ben-abdallah & A1 \\
+    \hline
+    Bruno & Ethan & ethan.bruno & A1 \\
+    \hline
+    Devin & Joseph & joseph.devin & A1 \\
+    \hline
+    Lin & Jérôme & jerome.lin & A1 \\
+    \hline
+\end{longtable}
+
+
+
+
+
+\begin{longtable}{|c|c|c|c|c|}
+    \caption*{\textbf{\uline{Game Types}}}\\
+    \hline
+    \cellcolor{lightblue}Action/Adventure & Battle Royale & Beat them up & Combat & Simulation \\
+    \hline
+    \cellcolor{lightblue}FPS & MMORPG & MOBA & Party Games & Survival Horror \\
+    \hline
+    Platformer & Puzzles & Strategy & Rogue-like & TPS \\
+    \hline
+    \cellcolor{lightblue}RPG & RTS & Sandbox & Shoot them up & Racing \\
+    \hline
+    Other: & \multicolumn{4}{|c|}{} \\
+    \hline
+\end{longtable}
+
+
+
+
+
+\begin{longtable}{|>{\columncolor{pastelblue!60}}l|l|l|l|l|}
+    \caption*{\textbf{\uline{Features}}}\\
+    \hline
+    \multicolumn{5}{|c|}{\cellcolor{pastelblue!60}\textbf{General Game Features}}\\
+    \hline
+    AI & \cellcolor{lightblue}Wander & \cellcolor{lightblue}Attack & \cellcolor{lightblue}Escape & "Path Finder"\\
+    \hline
+    Multiplayer & \cellcolor{lightblue}Cooperative & Battle (2-4) & \multicolumn{2}{|l|}{Massive}\\
+    \hline
+    Network & P2P & Lan & \multicolumn{2}{|l|}{\cellcolor{lightblue}Online}\\
+    \hline
+    \multicolumn{5}{|c|}{\cellcolor{pastelblue!60}\textbf{Graphic Features}}\\
+    \hline
+    Dimension & 2D & \cellcolor{lightblue}3D & Other: &\\
+    \hline
+    Specifics & Stereoscopy & AR & \multicolumn{2}{|l|}{VR}\\
+    \hline
+    Graphics & \cellcolor{lightblue}Custom & Custom & \multicolumn{2}{|l|}{\cellcolor{lightblue}Existing}\\
+    \hline
+    Details: & \multicolumn{4}{|c|}{}\\
+    \hline
+    \multicolumn{5}{|c|}{\cellcolor{pastelblue!60}\textbf{Sound Features}}\\
+    \hline
+    Music & Custom & Custom & \multicolumn{2}{|l|}{\cellcolor{lightblue}Existing}\\
+    \hline
+    FX & Custom & \cellcolor{lightblue}Custom & \multicolumn{2}{|l|}{Existing}\\
+    \hline
+    Details: & \multicolumn{4}{|c|}{Musical theme focused on a maritime universe}\\
+    \hline
+    \multicolumn{5}{|c|}{\cellcolor{pastelblue!60}\textbf{Other Features}}\\
+    \hline
+    Website & Custom & \cellcolor{lightblue}Custom & \multicolumn{2}{|l|}{Prefabricated}\\
+    \hline
+\end{longtable}
+
+
+
+
+
+
+
+\begin{figure}[h]
+    \caption*{\textbf{\uline{GANTT Chart}}}
+    \centering
+    \includegraphics[angle=90, width=3.22in]{gant.png}
+    \label{fig:my_image}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\clearpage
+\section{Development Narrative}
+\subsection{Jérôme}
+\subsubsection{Implementation of Objects in the Game}\hfill
+
+The development of the game began with a crucial phase: listing all the objects that would appear in the game. These objects were highly diverse, ranging from weapons like swords and firearms to stigmata, ships, crew members, and various materials such as coins, drops of pure water, wood, and steel. One of the most challenging aspects of this initial phase was coming up with original and captivating names for each of these items. This required a significant amount of creativity and inspiration, which led me to spend a considerable amount of time browsing the internet to gather ideas and fuel my imagination. The search for fitting names took longer than anticipated, but in the end, it was very rewarding to see everything come together.\\
+
+Once this initial challenge was overcome, I proceeded to structure this information in a JSON file. Fortunately, I was already familiar with working with JSON files, which made this part of the task relatively simple and fast. Having a well-structured format in place allowed me to move forward with confidence.\\
+
+Next, I faced a more complex challenge: creating an Excel document to define the player's base statistics depending on their level, knowing that the maximum level in the game would be 100. It was important to also determine the materials required to upgrade the player's level. Finding the right formulas for this purpose was quite a puzzle. I explored different models of exponential and linear growth, and I worked hard to define precise statistics for both level 1 and level 100. Even though I was quite comfortable with Excel, this step still required extensive online research, as the formulas I needed were quite specific and not immediately available in tutorials.\\
+
+After finalizing the player’s statistics, I moved on to defining the statistics for each type of item. Armed with the formulas I had established earlier, this step turned out to be quicker, although repetitive. However, I found myself adjusting the stats for levels 1 and 100 on several occasions to maintain a consistent balance with the player's stats. Ensuring these numbers aligned was critical, as any discrepancy would have a significant impact on the game's overall difficulty and player experience.\\
+
+Once all the necessary data had been compiled and organized, it was time to export it from Excel files (.xlsx) to CSV files (.csv). This conversion was crucial, as it would allow me to work with the data in C\# and eventually load it into Unity.\\
+
+Then came a pivotal phase in the development: writing scripts to integrate the game objects into Unity. This task involved handling both the JSON and CSV files, and I discovered and utilized two highly popular libraries to manage this process: Newtonsoft.Json for JSON files and CsvHelper for CSV files. The beauty of these libraries was their widespread use, which made finding resources, tutorials, and documentation easy.\\
+
+To fully grasp how to load the data correctly, I studied the documentation of these libraries in detail and watched several explanatory videos on YouTube. Handling JSON files proved to be a bit tricky, as the formatting and parsing were more complex than I initially thought, while working with CSV files was a bit more intuitive. Even so, there were several hurdles along the way, and it took time to get everything working perfectly.\\
+
+Once the loading functions were set up, the next step was to implement them in Unity using MonoBehaviour scripts. This opened the door to several additional challenges. One of the primary issues I encountered was how to efficiently share data between the scripts. Once I figured out the best approach for communication, another problem arose: the scripts weren’t being executed in the right order. To solve this, I had to modify the script execution order in Unity's game profile, which was a bit tricky but essential for everything to work as expected.\\
+
+Once these loading issues were sorted out and everything was functioning properly, I could finally tackle another critical step: managing the player’s data.\\
+
+Initially, I had planned to use Firebase Realtime Database to store player data. However, I quickly realized that it would be impossible to integrate the necessary libraries, available via NuGet, into a Unity project. Facing this limitation, I decided to go with a local solution: saving player data in JSON files. This approach had already been suggested to me during my research on how to handle save data in Unity, so it seemed like a reliable and feasible option.\\
+
+The JSON file needed to store several important elements: the player’s position, level, and inventory. As for the inventory, I had already planned a logical structure: distinguishing between the items equipped by the player and those stored in their inventory. This distinction was key for the game mechanics, as equipped items would affect the player’s stats, while stored items were simply available for use when needed.\\
+
+With this structure in mind, I set out to write a script that would manage these data. The script needed to load the information from the JSON file and convert it into a usable C\# object. Once the data was loaded, it was necessary to recalculate the player’s statistics based on various bonuses provided by the stigmata and the weapon they had equipped.\\
+
+This phase was more intuitive than I had anticipated. Most of the research required had already been completed during previous steps, and I had written the scripts for loading the data for the game objects. Now, I simply had to apply this data to adjust the player’s stats accordingly.\\
+
+Although this part of the process was largely technical, it went smoothly. It was rewarding to see the system working as expected and to watch the player’s stats dynamically change based on the items they equipped. This was one of those moments in the project when everything felt like it was falling into place.\\
+
+This milestone represented a significant advancement in the game’s development and brought me closer to realizing my final vision for the project. Each challenge overcome and every line of code written reinforced both my understanding and my enthusiasm for this game.
+
+
+\subsubsection{Menu \& User Interface}\hfill
+
+Before diving into Unity, I took the time to research and study how to create menus and user interfaces within the engine. I consulted several guides and watched multiple YouTube videos to understand the ins and outs of UI development. At first glance, this seemed relatively simple, but I knew I would need to pay close attention to how the buttons and other UI elements were presented. My primary goal was to create a clear, intuitive interface that would not disrupt the player’s experience.
+
+\paragraph{Designing the Main Menu}\hfill
+
+I began by placing the buttons and designing the background for the main menu. Finding an appropriate background was surprisingly quick thanks to Unity’s Asset Store. I discovered a set of images that fit perfectly with the maritime theme of my game, which helped set the tone for the menu's overall aesthetic.\\
+
+However, finding pre-made buttons that suited my needs turned out to be more difficult. After searching through the available assets, I couldn’t find any that matched my vision, so I decided to create my own. With my experience in photo manipulation, I designed custom buttons and selected a font that harmonized with the overall aesthetic of the game.\\
+
+Integrating these buttons into Unity was a valuable learning experience. At first, I didn’t understand how to replace the default Unity button sprites with my own designs. I simply tried to drag and drop my image files into the sprite area, but it didn’t work. After some research, I learned that I needed to convert my image files into sprites before they could be used. Once I mastered this step, I was able to apply my custom creations and give the main menu a unique and immersive visual appearance.
+
+\paragraph{Scripts for UI Navigation}\hfill
+
+The next step was writing the scripts to handle interactions between the different menu elements. I needed to allow the user to switch between canvases or show and hide GameObjects depending on their actions. This part was relatively straightforward, thanks to a built-in function in Unity, and the research I had to do to understand how it worked was minimal.
+
+\paragraph{Designing the Inventory Menu}\hfill
+
+The real challenge with the user interface came when I started working on the inventory menu. This menu needed to dynamically display the items the player had acquired, which was a far more complex system than the main menu. Fortunately, I came across a video tutorial that explained exactly how to accomplish what I wanted. By following this tutorial step by step, I was able to understand the necessary processes and overcome the challenges without too much difficulty.\\
+
+As I worked on this more complex inventory system, I had to ensure that the displayed items would be properly updated in real-time, based on what the player had in their inventory at any given moment. The solution required integrating a dynamic data-binding system where items could be added, removed, or updated as the player interacted with the game world. This meant creating an inventory system that could handle various types of objects, each with their own properties and associated visuals. As I developed this part, I had to consider how to visually represent these items in a way that would be easy for the player to understand, which included designing icons, organizing inventory slots, and allowing for efficient item sorting.\\
+
+This stage of the development allowed me to explore a variety of Unity’s UI components in depth, such as ScrollViews, Buttons, and TextMesh Pro for text formatting. It also required me to revisit some C\# programming concepts to ensure that the data was handled correctly and presented seamlessly within the game.\\
+
+The process of creating the inventory menu was quite rewarding. Although it was a complex challenge, it was satisfying to see the system come together and function as intended. Each time I made an improvement or fixed an issue, the entire user experience became more polished and coherent, making the game much more enjoyable to navigate. This also provided me with the tools to build other menus in the future, using the same principles and structure I developed for the inventory.
+
+
+\subsubsection{Organization}\hfill
+
+From the very beginning of the project, I took the initiative to volunteer as the project manager, driven by my strong sense of organization and attention to detail. This responsibility allowed me to structure the development phases and guide my team toward achieving our final objective. Taking on this leadership role was a way for me to both contribute to the project’s success and hone my organizational skills.
+
+\paragraph{Defining Tasks and Creating a Schedule}\hfill
+
+The first step was to define the different tasks that needed to be accomplished, which turned out to be relatively straightforward. Once the tasks were identified, the next challenge was to assign them among the team members and ensure that everyone agreed on the distribution. This involved understanding each member's strengths and weaknesses, and balancing the workload to avoid overburdening any one person while ensuring that all tasks were covered.\\
+
+The real challenge came in creating a clear, visual schedule. Initially, I started with a simple table that followed the requirements of the specifications document, including the percentage of tasks assigned to each team member. While this table technically met the requirements, I soon realized that it lacked readability and was not optimal for tracking the project's progress in a comprehensive way. To make the schedule more accessible and understandable, I decided to create a Gantt chart, which would give a more visual and intuitive representation of the project's timeline. Thanks to Excel, creating this chart was quick and efficient, and it greatly enhanced communication and collaboration within the team. It allowed everyone to visualize the project’s progress and deadlines, making it easier for us to adjust as needed.
+
+\paragraph{Adjustments After the First Technical Specification}\hfill
+
+After submitting the first technical specification document, I noticed some imbalances in the distribution of tasks. Some team members had taken on more responsibility than others, and this needed to be addressed in order to ensure a fair workload. I took the time to review the task distribution and made minor adjustments where necessary. I also consulted the rest of the team to validate these changes, ensuring that everyone was comfortable with the new assignments and that the workload was evenly spread.\\
+
+This process of reviewing and revising the tasks was crucial to maintaining the project’s momentum. Regular reassessments of the schedule allowed us to catch any potential issues before they became bigger problems and to make sure that no team member was left feeling overwhelmed or underutilized.
+
+\paragraph{Attendance Issues}\hfill
+
+Another organizational challenge arose when one of the team members failed to meet the deadlines for their assigned tasks. Just one week before the methodological defense, the 2D map and the game logo were still not completed. This was a critical situation, as these tasks were essential for the project’s progress. Faced with this setback, I had no choice but to take over the creation of the 2D map myself to ensure the project didn’t fall behind. Fortunately, the logo, which was being created by the team member, was eventually completed, albeit later than expected. Despite the delay, we were able to adapt and move forward without compromising the overall quality of the work.\\
+
+This situation taught me a valuable lesson in flexibility and time management. Although it was frustrating to have to take on additional tasks, I was able to maintain focus on the bigger picture and ensure that the project continued to move forward. Additionally, I had to consider how to better monitor progress in the future to avoid such situations.
+
+\paragraph{Departure of a Team Member Before the Defense}\hfill
+
+The most significant challenge occurred the day before the methodological defense: one of the team members, Matteo Bollot, announced that he was leaving the institution. This sudden departure threw a wrench into our plans, as we now faced the issue of ensuring an equitable distribution of speaking time during the defense presentation. Matteo’s departure left us with one less voice to represent the project, and this required a quick and coordinated response.\\
+
+Thanks to the prompt reaction of the remaining members, we were able to quickly rearrange the speaking roles and adjust the presentation accordingly. We divided the speaking time equally among ourselves, and the presentation went ahead without any major issues. This unexpected change highlighted the importance of being adaptable and flexible, as unforeseen circumstances can often throw projects off course. In the end, the defense went smoothly, and we were able to present our work effectively.\\
+
+After Matteo’s departure, the team was reduced to four members. This shift required me to reassess the distribution of tasks to account for the additional workload now spread among fewer people. I took extra care to consult the remaining team members before finalizing these adjustments, as I wanted to ensure that no one felt overwhelmed by the added responsibility. Though each member now had a bit more work, I decided to stick to the original planning, hoping that everyone would continue to meet their commitments despite the changes. This phase of the project was a reminder of the importance of communication and collaboration, especially when dealing with unexpected setbacks.
+
+\paragraph{Conclusion}\hfill
+
+This experience as a project manager exposed me to various human and organizational challenges, but it also allowed me to strengthen my skills in group management. I learned the importance of maintaining a clear and realistic vision for the project while being flexible enough to adjust when necessary. While the challenges were significant, they were ultimately manageable due to the collaborative and proactive approach we adopted as a team. Despite the unexpected hurdles, the team remained cohesive, and we continue to make progress toward the completion of our video game. Through each difficulty, we became better at navigating the complexities of teamwork and project management, which will undoubtedly benefit us in future endeavors.
+
+
+
+
+
+\newpage
+\subsection{Achref}
+\subsubsection{Website Development}\hfill
+
+The website creation project officially began on October 31st, setting the stage for an ambitious and meticulous journey. The initial task involved designing the general structure of the site. This crucial step aimed to outline a coherent framework and identify the essential web pages needed to meet the project's goals. It was during this phase that the blueprint for the website began to take shape, establishing a clear vision of its layout and purpose.\\
+
+Just a few days later, on November 5th, a market study was conducted to analyze the practices and approaches of various video game development companies. This research aimed to provide inspiration and ensure that the project aligned with industry standards and user expectations.\\
+
+Simultaneously, technical development commenced with the writing of the core code in HTML and CSS. This stage brought the website to life by defining its visual and structural elements. The hands-on work of coding provided a tangible sense of progress and accomplishment for the project team, as the abstract concepts and designs began to materialize.\\
+
+On November 9th, the focus shifted to the critical task of planning the website's deployment strategy. The person in charge undertook a thorough reflection on the optimal methods for deploying and managing the site. This process uncovered areas that required reconfiguration and led to the decision to adopt Odoo, an advanced platform known for its robust integration and management capabilities.\\
+
+However, this shift in strategy brought unexpected challenges. The adoption of Odoo necessitated a complete reset of several configurations and even required the person in charge to restart the work from scratch. This development was a significant setback and caused considerable frustration, as much of the progress had to be redone. Despite the hurdles, the decision to pivot to Odoo promised long-term benefits, providing enhanced scalability and efficiency for the project.\\
+
+By November 11th, the project reached its final phase. During this stage, all remaining elements—graphic design, technical features, and functional components—were carefully refined and completed. This comprehensive effort ensured that the website not only met the initial requirements but also offered a polished, professional user experience.\\
+
+Finally, on November 15th, the website was officially deployed. This milestone marked the culmination of weeks of dedicated effort, overcoming technical challenges, and refining every aspect of the project. The successful deployment represented a major achievement, signaling the completion of the website creation phase and paving the way for the next stages of the broader project.
+
+
+
+\subsubsection{Artificial Intelligence}\hfill
+
+On January 1st, a detailed reflection was carried out to determine the various artificial intelligences (AI) to be implemented in the project, along with their specific behaviors. This phase included extensive online research to gather resources and inspiration, ensuring the coding of these behaviors would be both effective and innovative.\\
+
+Following several days of design and programming, significant progress was made. By January 11th, the development of enemy AIs for scenarios involving movement and interaction on solid ground was successfully completed, marking an important milestone in the project.
+
+
+
+
+
+\newpage
+\subsection{Ethan}\hfill
+
+One of the most important features of this project is the water simulation, which serves as the foundation for realistic water behavior and interactions. Early in development, I focused on creating waves and buoyancy systems that would allow floating objects to interact naturally with the water. 
+
+\subsubsection{Initial Approach: Sine Wave Simulation}\hfill
+
+The starting point for the water simulation was a simple sine wave model. This approach used the WaveManager script to calculate wave heights along the water’s surface. The sine function determined the height of the water at any given point based on the x-coordinate, creating a repeating up-and-down motion across the mesh. The WaterManager script then applied these wave heights to the vertices of the water mesh, dynamically updating the water’s surface in real time.\\
+
+For buoyancy, I implemented the Floater script. This script allowed floating objects, such as boats or debris, to interact with the simulated water. It calculated buoyant forces based on the height of the wave at the object's position and applied upward forces to simulate floating. The objects could rise, fall, and tilt based on the water’s surface height and the forces acting on them.\\
+
+While this approach allowd to the player to see some basic wave motion and buoyancy effects, it appeared to us that the simulation was too simplistic. The sine wave model resulted in water that felt static, repetitive, and unnatural. In larger scenes, such as open oceans or large lakes, the uniformity of the waves made the water look artificial and overly mechanical. This issue became more noticeable when trying to achieve a sense of immersion and realism in the environment.
+
+
+
+\subsubsection{Transition to Gerstner Waves}\hfill
+
+To fix the the lack of realism of the simulation and after stumbling accross an article on CatLikeCoding.com, We decided to change the model that was currently implemented to a better one : Gerstner Waves. Gerstner waves provide a realistic representation of water surfaces by introducing both a displacement to the water vertices. Unlike sine waves, which only move vertices up and down, Gerstner waves simulate the rolling motion of real-world waves, making them appear dynamic and way more lively.\\
+
+\paragraph{Key Concepts of Gerstner Waves}\hfill
+
+Gerstner waves use a mathematical function that takes into account several parameters:
+\begin{itemize}
+    \item Wave Direction: Determines the direction in which the wave travels.
+    \item Wavelength: Controls the distance between wave peaks.
+    \item Steepness: Defines the sharpness of the waves, giving them a more or less pronounced curve.
+    \item Speed: Determines how fast the wave propagates over time.
+\end{itemize}
+
+The formula combines these parameters to calculate the displacement for each vertex on the water mesh. Specifically, it adjusts the horizontal position of vertices along the wave’s direction while simultaneously modifying their vertical height to create the illusion of rolling water.\\
+
+However even after implementing this formula to the Water simulation it appeared that it still had some issues, which were caused by the fact that real life waves are combination of multiple waves. By making multiples Gerstner waves enter in contact, we were left with a much more lively simulation.
+
+
+
+\subsubsection{Implementation Details}
+
+\paragraph{WaveManager}\hfill
+
+The WaveManager script has been modified to include the Gerstner wave formula.\\
+
+The script now calculates both vertical and horizontal displacements for each vertex, incorporating the direction, steepness, wavelength, and speed into the calculations.\\
+
+By layering multiple Gerstner waves traveling in different directions, I was able to create complex, overlapping wave patterns that mimic the chaotic nature of real water.
+
+\paragraph{WaterManager}\hfill
+
+The WaterManager script was updated to apply the new wave calculations to the water mesh.\\
+
+Each vertex's position is adjusted based on the Gerstner wave displacement at its world-space coordinates, creating a dynamic and realistic water surface.
+
+\paragraph{Floater}\hfill
+
+The Floater script was modified to calculate buoyancy forces based on the new Gerstner wave heights.\\
+
+Objects now interact with the water in a more natural manner, rising, falling, and tilting according to the rolling waves beneath them.
+
+
+
+\subsubsection{Results and Improvements}\hfill
+
+The transition to Gerstner waves dramatically improved the quality of the water simulation:
+\begin{itemize}
+    \item Visual Realism: The rolling motion of the water surface made the simulation feel far more natural and immersive.
+    \item Customization: By tweaking the parameters of the Gerstner wave formula, I can easily simulate different water conditions, from calm lakes to rough seas. Which will also help me with the upcoming Climate Simulation.
+\end{itemize}
+
+The layered approach also allows for greater flexibility in creating complex wave patterns. For instance, I can simulate multiple waves traveling in different directions, adding to the sense of realism and unpredictability in the water surface.
+
+
+
+
+
+\newpage
+\subsection{Joseph}
+\subsubsection{Implementation of Basic Movements}\hfill
+
+The first major challenge in the game was implementing player movement. In an open-world game like ours, this is the core of the experience. Movements must be fluid, intuitive, and enjoyable for the user.
+
+\paragraph{Research}\hfill
+
+After exploring YouTube tutorials, I discovered two main ways to implement a movement system in Unity: using a "Character Controller" or a "Rigid Body." I chose the former, as it handles slopes, stairs, and uneven terrain more effectively, which are essential given the rugged nature of our world.
+
+\paragraph{Design}\hfill
+
+I started by creating an object to represent our player, assigning it a "Rigid Body" and a script to bring it to life. I defined constants such as gravity, movement speed, and jump height. Using the Input class, I captured a 3D vector representing the desired movement based on the player's keyboard inputs. I then applied this vector, multiplied by the movement speed, to the Character Controller, which allowed the player to move forward.\\
+
+Next, I implemented gravity in the game by multiplying the player’s vertical position by the gravity constant defined earlier and applying it to the Character Controller.\\
+
+Finally, I designed the jump system by reusing the Input class to detect when the player pressed the assigned jump key and ensured the player was grounded (to prevent mid-air jumps!). Then, I applied a negative force to the Character Controller on the vertical axis, multiplied by the jump height and gravity.\\
+
+I also implemented a system that allows the player to use the mouse to look around. Similarly, I used the Input class to capture the player's mouse movements and applied them to the player's camera, enabling it to rotate and provide an immersive view.
+
+\subsubsection{Movement and interaction with the ship}
+\paragraph{Research}\hfill
+
+Building on my experience with player movement, I applied similar principles for the ship but opted for the "Rigid Body" approach, using the same resources as before. Additionally, I researched "Ray Casting" to manage player interactions with ship elements such as the helm and capstan.
+
+\paragraph{Design}\hfill
+
+As I did for player movement, I first defined constants for ship speed (to vary with wind angle and strength) and helm rotation speed.\\
+
+Then two functions were implemented:
+\begin{itemize}
+    \item Move Boat: Activated when the player interacts with the helm, it captures mouse input and applies rotational velocity to the ship's Rigid Body.
+    \item Move Boat Forward: Moves the ship forward unless the anchor is deployed. It applies forward velocity to the Rigid Body along the Z-axis.
+\end{itemize}
+
+To control the anchor, I created a capstan and an interaction system using Ray Casting. When the interaction key is pressed, an invisible ray is generated; if it hits the capstan, the anchor state toggles. The same system was used for interacting with the helm.
+
+\subsubsection{Conclusion and Perspectives}\hfill
+
+These development steps provided a solid foundation for realistic and immersive player and ship control. Moving forward, the following will be implemented:
+\begin{itemize}
+    \item A system for managing sails.
+    \item Refining the wind mechanics (currently in a basic stage).
+    \item Comprehensive testing to optimize physical gameplay parameters.
+\end{itemize}
+
+\paragraph{Resources}\hfill
+
+\begin{itemize}
+    \item \url{https://www.youtube.com/watch?v=_QajrabyTJc}
+    \item Trigonometry of sailing: \url{https://www.youtube.com/watch?v=_zDF40XFWN4}\\
+    Real life data for optimal angle between the wind and the sail, for optimal speed. (theta = 38°)\\
+    Conducted at the University of Miami (Rosenstiel School of Marine and Atmospheric Science)
+\end{itemize}
+
+
+
+
+\newpage
+\section{Conclusion}\hfill
+
+In conclusion, the project \textit{An Era of the Seas}, developed by Dream Chasers, represents a deep dive into the multifaceted process of creating an immersive video game. This project is built upon a shared passion for crafting engaging, dynamic experiences and exploring captivating maritime themes. The Dream Chasers team, a multidisciplinary group of talented developers, designers, and artists, is dedicated to delivering a truly unique experience that combines an intriguing narrative, innovative gameplay mechanics, and a strong emphasis on collaboration.\\
+
+The project provides not only the opportunity to gain hands-on skills in various fields such as programming, graphic design, and sound production but also reflects the innovative spirit of Dream Chasers. Each team member brings their own expertise to the table, allowing the team to overcome technical challenges while fostering creativity and ingenuity. This collaborative effort ensures that every facet of the game, from the visuals to the gameplay to the sound design, comes together seamlessly, creating a cohesive and immersive experience.\\
+
+\textit{An Era of the Seas} is not just a technical challenge; it is also a human adventure. It is a journey in which each team member has the chance to grow, learn, and develop new skills, both personally and professionally. The challenges of development are met with enthusiasm and determination, with each obstacle offering an opportunity for growth. At the same time, the creative aspects of the project serve as a constant source of motivation and inspiration for the team, as they work together to bring their shared vision to life.\\
+
+The ambition behind \textit{An Era of the Seas} is clear: it aspires to offer players a memorable and immersive experience, one that not only entertains but also captivates them with its world-building, story, and gameplay. For Dream Chasers, this project marks the culmination of hard work, dedication, and creativity. It is a testament to their ability to turn bold, ambitious ideas into an interactive reality. More than just a game, \textit{An Era of the Seas} is a reflection of the values and vision that drive the Dream Chasers team forward.\\
+
+Ultimately, this project is a powerful demonstration of how a passionate, driven team can work together to create something special. It is not only a journey for the players who will experience the world of \textit{An Era of the Seas}, but also for the team members who have dedicated themselves to this endeavor. Through their collective efforts, they have managed to transform a creative vision into something that will leave a lasting impact, not just on those who play the game, but on those who have worked tirelessly to make it a reality. The journey of \textit{An Era of the Seas} has been one of growth, both for the Dream Chasers team and for the game itself, and the result will undoubtedly resonate with players and creators alike for years to come.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section*{Appendix}
+\subsection*{Items list}
+\begin{itemize}
+    \item Boats/Ships
+    \begin{itemize}
+        \item Little boat
+        \item Sea Wanderer
+        \item DunkelWind
+        \item StormBreaker
+        \item Imperial Flame
+    \end{itemize}
+    \item Stigmata
+    \begin{itemize}
+        \item Common
+        \begin{itemize}
+            \item Faint Mark
+            \item Glimmering Scar
+        \end{itemize}
+        \item Rare
+        \begin{itemize}
+            \item Knight Spirit
+            \item Arcane Corruption
+            \item Golden Destiny
+        \end{itemize}
+        \item Epic
+        \begin{itemize}
+            \item Disciplinary Perdition
+            \item Elysian Sigil
+            \item Phoenix Feather
+            \item Celestial Crown
+            \item Signet of Infinity
+        \end{itemize}
+        \item Legendary
+        \begin{itemize}
+            \item Ruler of Death
+            \item Licht des Himmels
+        \end{itemize}
+    \end{itemize}
+    \item Weapons
+    \begin{itemize}
+        \item Swords
+        \begin{itemize}
+            \item Common
+            \begin{itemize}
+                \item Rusty Sword
+                \item Iron Blade
+            \end{itemize}
+            \item Rare
+            \begin{itemize}
+                \item Cinder Blade
+                \item Water Edge
+            \end{itemize}
+            \item Epic
+            \begin{itemize}
+                \item Dragon Claw
+                \item Vortex Blade
+                \item Shadow Sword
+                \item Emberstrike
+            \end{itemize}
+            \item Legendary
+            \begin{itemize}
+                \item Excalibur
+                \item Eclipse
+            \end{itemize}
+        \end{itemize}
+        \item Guns
+        \begin{itemize}
+            \item Common
+            \begin{itemize}
+                \item Flintlock Pistol
+                \item Smuggler's Blunderbuss
+            \end{itemize}
+            \item Rare
+            \begin{itemize}
+                \item Mariner's Revolver
+                \item Corsair's Flintlock
+            \end{itemize}
+            \item Epic
+            \begin{itemize}
+                \item Tempest Pistol
+                \item Vortex Cannon
+                \item Ghost Ship Musket
+                \item Comet's Fury
+            \end{itemize}
+            \item Legendary
+            \begin{itemize}
+                \item Hellfire Revolver
+                \item Heavenly Shard
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \item Crew Members
+    \begin{itemize}
+        \item Rarity
+        \begin{itemize}
+            \item Common
+            \item Rare
+            \item Epic
+            \item Legendary
+        \end{itemize}
+        \item Type
+        \begin{itemize}
+            \item Explorer
+            \item Navigator
+            \item Gunner
+            \item Boatswain
+        \end{itemize}
+    \end{itemize}
+    \item Materials
+    \begin{itemize}
+        \item Coin
+        \item Pure Water Drop
+        \item Wood
+        \item Steal
+        \item Gem
+    \end{itemize}
+\end{itemize}
+
+
+
+
+
+\newpage
+\subsection*{Item data}
+\paragraph{Csv file}\hfill
+
+\includegraphics[width=5in]{annex/itemData1.png}
+
+\paragraph{Json file}\hfill
+
+\includegraphics[width=2.5in]{annex/itemData2.png}
+
+
+
+
+\newpage
+\subsection*{2D Map}
+\subsubsection*{Scratch}
+\includegraphics[width=5in]{annex/mapscratch.png}
+
+\subsubsection*{Result}
+\includegraphics[width=5in]{annex/Map.png}
+
+
+
+
+
+\newpage
+\subsection*{Website}
+https://dream-chasers.odoo.com\\
+\includegraphics[width=6in]{annex/website1.png}\\
+\includegraphics[width=6in]{annex/website2.png}
+
+
+
+
+
+\newpage
+\subsection*{Main Menu and UI}
+\subsubsection*{Main Menu}
+\includegraphics[width=6in]{annex/mainMenu.png}
+
+\subsubsection*{UI}
+\includegraphics[width=6in]{annex/UI.png}
+
+
+
+
+
+
+\newpage
+\subsection*{Water Simulation \& Boat Movements}
+\includegraphics[width=6in]{annex/BoatMovement.png}
+
+
+
+\end{document}
