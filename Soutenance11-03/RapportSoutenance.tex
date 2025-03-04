@@ -730,7 +730,7 @@ Raised in the seaside city of Le Havre, Joseph grew to love the ocean and wants 
 \begin{figure}[h]
     \caption*{\textbf{\uline{GANTT Chart}}}
     \centering
-    \includegraphics[angle=90, width=3.22in]{gant.png}
+    \includegraphics[angle=90, width=4.2in]{gant.png}
     \label{fig:my_image}
 \end{figure}
 
@@ -858,11 +858,11 @@ The primary goal of this phase was to establish a seamless connection between th
 
 To begin, the game required a vast array of item images, including Stigmata, weapons, boats, coins, Pure Water Drops, steel, and wood. Gathering and researching appropriate visual assets for these elements took considerable time. After selecting the necessary images, they were configured as sprites in Unity and renamed to match their corresponding item names. This approach streamlined asset management and ensured consistency within the game's database.\\
 
-To integrate these items into the inventory UI, object-oriented programming principles were applied. The game retrieves item data from CSV and JSON files, structured during the early development phases as part of the Items Stats Implementation. By leveraging this data-driven approach, item integration became a matter of efficient object manipulation within Unity, allowing for a scalable and flexible inventory system.\\
-
-Additionally, players needed to be able to upgrade items and utilize materials such as Coins, Pure Water Drops, Steel, and Wood. This required the creation of an Upgrade Menu within the Player Interface. Implementing this feature was particularly challenging due to potential errors related to null variables when switching between different menus. Furthermore, to enhance accessibility, the Upgrade Menu had to be accessible from both the Inventory Menu and the Equipment Menu, adding another layer of complexity to its implementation.
+To integrate these items into the inventory UI, object-oriented programming principles were applied. The game retrieves item data from CSV and JSON files, structured during the early development phases as part of the Items Stats Implementation. By leveraging this data-driven approach, item integration became a matter of efficient object manipulation within Unity, allowing for a scalable and flexible inventory system.
 
 \paragraph{Implementation}\hfill
+
+Players needed to be able to upgrade items and utilize materials such as Coins, Pure Water Drops, Steel, and Wood. This required the creation of an Upgrade Menu within the Player Interface. Implementing this feature was particularly challenging due to potential errors related to null variables when switching between different menus. Furthermore, to enhance accessibility, the Upgrade Menu had to be accessible from both the Inventory Menu and the Equipment Menu, adding another layer of complexity to its implementation.\\
 
 Beyond inventory management, the Equipment Menu needed to facilitate the handling of equipped items. A crucial requirement was to enable seamless switching between items, leading to the development of a Switch Item Menu. After working through the complexities of the Upgrade Menu, item switching within the UI became more intuitive and easier to manage.\\
 
@@ -893,11 +893,11 @@ I reshaped the island's height to provide a more natural and seamless transition
 
 \paragraph{Conclusion}\hfill
 
-Stepping in to complete the first island's development demonstrated the importance of adaptability and problem-solving in game development. Ensuring a visually engaging and functional map was crucial for creating an immersive player experience. Despite unexpected challenges, through meticulous development and iterative problem-solving, the inventory, equipment UI, and game world were successfully integrated, providing players with a seamless and engaging experience.
+Stepping in to complete the first island's development demonstrated the importance of adaptability and problem-solving in game development. Ensuring a visually engaging and functional map was crucial for creating an immersive player experience.
 
 
 
-\subsubsection{Boat and player movements}
+\subsubsection{Boat and player movements review}
 \paragraph{Objectives}\hfill
 
 After reviewing the map, I decided to evaluate other core functionalities of the game, specifically the movement of both the player and the boat. Upon testing these mechanics, I found that while both movement systems were functional, the boat movement lacked precise control, particularly when the player needed to interact with specific objects on board. One of the main issues was the interaction system for key elements such as the Helm and the Capstan. Initially, two very similar scripts handled these interactions separately, but the player also needed to interact with additional objects, such as chests.
@@ -1316,6 +1316,14 @@ I also implemented a system that allows the player to use the mouse to look arou
 
 Building on my experience with player movement, I applied similar principles for the ship but opted for the "Rigid Body" approach, using the same resources as before. Additionally, I researched "Ray Casting" to manage player interactions with ship elements such as the helm and capstan.
 
+\paragraph{Resources}\hfill
+\begin{itemize}
+    \item \url{https://www.youtube.com/watch?v=_QajrabyTJc}
+    \item Trigonometry of sailing: \url{https://www.youtube.com/watch?v=_zDF40XFWN4}\\
+    Real life data for optimal angle between the wind and the sail, for optimal speed. (theta = 38°)\\
+    Conducted at the University of Miami (Rosenstiel School of Marine and Atmospheric Science)
+\end{itemize}
+
 \paragraph{Design}\hfill
 
 As I did for player movement, I first defined constants for ship speed (to vary with wind angle and strength) and helm rotation speed.\\
@@ -1327,24 +1335,6 @@ Then two functions were implemented:
 \end{itemize}
 
 To control the anchor, I created a capstan and an interaction system using Ray Casting. When the interaction key is pressed, an invisible ray is generated; if it hits the capstan, the anchor state toggles. The same system was used for interacting with the helm.
-
-\subsubsection{Conclusion and Perspectives}\hfill
-
-These development steps provided a solid foundation for realistic and immersive player and ship control. Moving forward, the following will be implemented:
-\begin{itemize}
-    \item A system for managing sails.
-    \item Refining the wind mechanics (currently in a basic stage).
-    \item Comprehensive testing to optimize physical gameplay parameters.
-\end{itemize}
-
-\paragraph{Resources}\hfill
-
-\begin{itemize}
-    \item \url{https://www.youtube.com/watch?v=_QajrabyTJc}
-    \item Trigonometry of sailing: \url{https://www.youtube.com/watch?v=_zDF40XFWN4}\\
-    Real life data for optimal angle between the wind and the sail, for optimal speed. (theta = 38°)\\
-    Conducted at the University of Miami (Rosenstiel School of Marine and Atmospheric Science)
-\end{itemize}
 
 
 
@@ -1365,7 +1355,7 @@ The wind zones were implemented using invisible sphere objects placed across the
 
 This system added a layer of depth to the sailing mechanics, as players now had to adapt their navigation strategies based on changing wind conditions.
 
-\paragraph{Conclusion}
+\paragraph{Conclusion}\hfill
 
 The addition of dynamic wind zones significantly enhanced the realism and challenge of sailing. By introducing variable wind patterns, the game world became more interactive and immersive, rewarding players who adapted their strategies to the shifting environment.
 
@@ -1396,7 +1386,7 @@ This system provided players with precise control over their sailing, reinforcin
 The implementation of the winch system greatly enhanced the sailing experience by giving players meaningful control over their sails. This mechanic adds depth and realism to navigation, making wind management a key part of gameplay.
 
 
-\subsubsection{Winch}
+\subsubsection{Game story}
 \paragraph{Objectives}\hfill
 
 A well-crafted narrative is essential for immersion, player engagement, and long-term retention. Our goal was to create a rich backstory that would provide context and motivation for the player's journey while enhancing the game's historical and adventurous atmosphere.
@@ -1483,55 +1473,27 @@ Ultimately, this project is a powerful demonstration of how a passionate, driven
     \end{itemize}
     \item Weapons
     \begin{itemize}
-        \item Swords
+        \item Common
         \begin{itemize}
-            \item Common
-            \begin{itemize}
-                \item Rusty Sword
-                \item Iron Blade
-            \end{itemize}
-            \item Rare
-            \begin{itemize}
-                \item Cinder Blade
-                \item Water Edge
-            \end{itemize}
-            \item Epic
-            \begin{itemize}
-                \item Dragon Claw
-                \item Vortex Blade
-                \item Shadow Sword
-                \item Emberstrike
-            \end{itemize}
-            \item Legendary
-            \begin{itemize}
-                \item Excalibur
-                \item Eclipse
-            \end{itemize}
+            \item Rusty Sword
+            \item Iron Blade
         \end{itemize}
-        \item Guns
+        \item Rare
         \begin{itemize}
-            \item Common
-            \begin{itemize}
-                \item Flintlock Pistol
-                \item Smuggler's Blunderbuss
-            \end{itemize}
-            \item Rare
-            \begin{itemize}
-                \item Mariner's Revolver
-                \item Corsair's Flintlock
-            \end{itemize}
-            \item Epic
-            \begin{itemize}
-                \item Tempest Pistol
-                \item Vortex Cannon
-                \item Ghost Ship Musket
-                \item Comet's Fury
-            \end{itemize}
-            \item Legendary
-            \begin{itemize}
-                \item Hellfire Revolver
-                \item Heavenly Shard
-            \end{itemize}
+            \item Cinder Blade
+            \item Water Edge
+        \end{itemize}
+        \item Epic
+        \begin{itemize}
+            \item Dragon Claw
+            \item Vortex Blade
+            \item Shadow Sword
+            \item Emberstrike
+        \end{itemize}
+        \item Legendary
+        \begin{itemize}
+            \item Excalibur
+            \item Eclipse
         \end{itemize}
     \end{itemize}
     \item Crew Members
@@ -1557,7 +1519,6 @@ Ultimately, this project is a powerful demonstration of how a passionate, driven
         \item Pure Water Drop
         \item Wood
         \item Steal
-        \item Gem
     \end{itemize}
 \end{itemize}
 
