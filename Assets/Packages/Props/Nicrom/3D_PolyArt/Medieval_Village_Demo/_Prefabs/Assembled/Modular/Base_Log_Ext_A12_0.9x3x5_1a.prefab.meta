@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: d2ef8192d65af5648b5f937206ac7c98
-DefaultImporter:
+guid: 6740acdb6530a6e419f4e021614c1c8d
+PrefabImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
@@ -10,5 +10,5 @@ AssetOrigin:
   productId: 274109
   packageName: Medieval Village - POLY Pack - Demo
   packageVersion: 1.0.1
-  assetPath: Assets/Packages/Props/Nicrom/3D_PolyArt/Medieval_Village_Demo/UpgradePackages/MVD_HDRP_2021.3.33.unitypackage
+  assetPath: Assets/Packages/Props/Nicrom/3D_PolyArt/Medieval_Village_Demo/_Prefabs/Assembled/Modular/Base/Logs/W3/Base_Log_Ext_A12_0.9x3x5_1a.prefab
   uploadId: 650086
