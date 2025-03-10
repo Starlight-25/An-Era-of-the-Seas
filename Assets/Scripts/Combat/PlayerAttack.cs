@@ -34,7 +34,8 @@ public class PlayerAttack : MonoBehaviour
     private void Attack()
     {
         transform.GetComponent<AnimationHandler>().TriggerAttackAnimation();
-        
+        FindFirstObjectByType<AudioManager>().TriggerSwordSounds();
+            
         PlayerStats playerStats = PlayerStatsManager.PlayerStats;
         int critrate = Random.Range(0, 101) <= playerStats.CritRate ? 1 : 0;
         int dmg = Mathf.RoundToInt(playerStats.ATK * (1 + critrate * (playerStats.CritDMG / 100f)));

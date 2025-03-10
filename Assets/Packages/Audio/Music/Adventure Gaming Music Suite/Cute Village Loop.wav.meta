@@ -26,5 +26,6 @@ AssetOrigin:
   productId: 300438
   packageName: Adventure Gaming Music Suite
   packageVersion: 1.0.0
-  assetPath: Assets/Adventure Gaming Music Suite/Cute Village Loop.wav
+  assetPath: Assets/Packages/Audio/Music/Adventure Gaming Music Suite/Cute Village
+    Loop.wav
   uploadId: 703575

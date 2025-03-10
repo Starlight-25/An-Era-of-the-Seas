@@ -50,6 +50,7 @@ public class EnemyTerestrialAttack : MonoBehaviour
     private void AttackPlayer()
     {
         transform.GetComponent<EnemyAnimation>().TriggerAttackAnimation();
+        FindFirstObjectByType<AudioManager>().TriggerSwordSounds();
         
         if (playerStats.DEF > 0)
         {

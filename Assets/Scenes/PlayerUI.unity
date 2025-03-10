@@ -376,6 +376,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2558248309485041726, guid: fa465705fda8fc846b95ff36350f8766, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2558248309485041726, guid: fa465705fda8fc846b95ff36350f8766, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2558248309485041726, guid: fa465705fda8fc846b95ff36350f8766, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2558248309485041726, guid: fa465705fda8fc846b95ff36350f8766, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2558248309485041726, guid: fa465705fda8fc846b95ff36350f8766, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 3445422710219194903, guid: fa465705fda8fc846b95ff36350f8766, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.83873135
@@ -433,7 +453,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4117794528942723289, guid: fa465705fda8fc846b95ff36350f8766, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa465705fda8fc846b95ff36350f8766, type: 3}

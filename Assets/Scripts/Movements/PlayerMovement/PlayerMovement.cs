@@ -61,32 +61,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 velocity.y = Mathf.Sqrt(-2.0f * jumpHeight * gravity);
             }
-            
-            Rotation();
-        }
-    }
-
-    
-    
-    
-    
-    private int GetRotationAngle()
-    {
-        if (Input.GetKey(KeyCode.D)) return 90;
-        if (Input.GetKey(KeyCode.A)) return -90;
-        if (Input.GetKey(KeyCode.S)) return 180;
-        return 0;
-    }
-    
-    private void Rotation()
-    {
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) ||
-            Input.GetKey(KeyCode.S))
-        {
-            float targetRotationY = transform.eulerAngles.y + GetRotationAngle();
-
-            float newRotationY = Mathf.MoveTowardsAngle(transform.eulerAngles.y, targetRotationY, 50f * Time.deltaTime);
-            transform.eulerAngles = new Vector3(0, newRotationY, 0);
         }
     }
 }

@@ -64,7 +64,7 @@ public class EnemyMovement : MonoBehaviour
 
 
 
-    private bool PLayer_in_range(Vector3 botPosition) => Vector3.Distance(Player.position, botPosition) <= range * 2;
+    private bool PLayer_in_range(Vector3 botPosition) => Vector3.Distance(Player.position, botPosition) <= range * 3;
 
 
     
@@ -76,7 +76,7 @@ public class EnemyMovement : MonoBehaviour
         Vector3 targetPosition = Player.position - direction * stopDistance;
 
         NavMeshHit hit;
-        if (NavMesh.SamplePosition(targetPosition, out hit, range * 2, NavMesh.AllAreas)) return hit.position;
+        if (NavMesh.SamplePosition(targetPosition, out hit, range * 3, NavMesh.AllAreas)) return hit.position;
         return transform.position;
     }
 }

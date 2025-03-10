@@ -26,7 +26,7 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         BackgroundSource = transform.Find("Background").GetComponent<AudioSource>();
-        BackgroundSource.volume = 0.5f;
+        BackgroundSource.volume = 0.25f;
         SFXSource = transform.Find("SFX").GetComponent<AudioSource>();
         
         BackgroundMusics = new List<AudioClip>();
@@ -78,14 +78,14 @@ public class AudioManager : MonoBehaviour
     {
         if (BackgroundSource.isPlaying)
         {
-            for (float v = 0.5f; v > 0; v -= 0.05f)
+            for (float v = 0.25f; v > 0; v -= 0.05f)
             {
                 BackgroundSource.volume = v;
                 yield return new WaitForSeconds(0.1f);
             }
         }
         BackgroundSource.clip = newClip;
-        BackgroundSource.volume = 0.5f;
+        BackgroundSource.volume = 0.25f;
         BackgroundSource.Play();
     }
     
