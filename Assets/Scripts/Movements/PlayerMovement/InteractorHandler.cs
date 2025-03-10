@@ -31,7 +31,6 @@ public class InteractorHandler : MonoBehaviour
         ShowInteractorText(10f);
         
         if (Input.GetKeyDown(KeyCode.E)) HandleInteractorPressed();
-        //if (Input.GetKeyDown(KeyCode.X) && BoatState.inBoat && !BoatState.inHelm) ExitBoat(GameObject.Find("BoatTest").transform);
         if (Input.GetKeyDown(KeyCode.X) && BoatState.inBoat && !BoatState.inHelm) ExitBoat(transform.GetComponent<BoatInitHandler>().Boat);
     }
 

@@ -18,7 +18,7 @@ public class BoatInitHandler : MonoBehaviour
 
     public void HandlePlaceBoat()
     {
-        if (BoatState.isPlaced)
+        if (BoatState.isPlaced && !BoatState.inBoat && !BoatState.inHelm)
         {
             Boat.SetParent(transform);
             Boat.position = Vector3.zero;
