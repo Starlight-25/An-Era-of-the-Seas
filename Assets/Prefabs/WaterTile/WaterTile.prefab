@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8625734739983632272}
   - component: {fileID: 5223876578551532305}
   - component: {fileID: 8559380709200251433}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: WaterCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 5030730800900577764}
   - component: {fileID: 815965427334070342}
   - component: {fileID: 7302537647764009659}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: WaterTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3839123111065721117}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbbb59d3c00e4cf40bbf1184b31f072a, type: 3}
+  m_Script: {fileID: 11500000, guid: d4f32d4390d3b191291724d5922b6ce8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   impactPoints:
@@ -253,5 +253,5 @@ MonoBehaviour:
     speed: 1
     directionAngle: 45
   islandPositions:
-  - {x: 180, y: 0, z: 450}
-  islandRadius: 5
+  - {x: 200, y: 0, z: 450}
+  islandRadius: 10

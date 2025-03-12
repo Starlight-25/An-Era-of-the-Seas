@@ -10,5 +10,5 @@ AssetOrigin:
   productId: 200192
   packageName: Stylized Pirate Ship
   packageVersion: 1.0
-  assetPath: Assets/Stylized_Pirate_Ship/StylShip_Barrel.prefab
+  assetPath: Assets/Packages/Boat/Stylized_Pirate_Ship/StylShip_Barrel.prefab
   uploadId: 445377

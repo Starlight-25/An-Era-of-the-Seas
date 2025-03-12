@@ -1,5 +1,7 @@
+using System;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CustomNetworkHUD : MonoBehaviour
@@ -25,8 +27,17 @@ public class CustomNetworkHUD : MonoBehaviour
         NetworkManager.Singleton.OnClientConnectedCallback -= OnClientConnected;
         NetworkManager.Singleton.OnClientDisconnectCallback -= OnClientDisconnected;
     }
+
+
     
     
+    
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape)) ReturnButtonClicked();
+    }
+
+
     
     
     
@@ -70,4 +81,9 @@ public class CustomNetworkHUD : MonoBehaviour
     }
 
 
+
+    public void ReturnButtonClicked()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }

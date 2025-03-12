@@ -7,6 +7,7 @@ public static class HelmInteractor
     private static Camera PlayerCamera;
     private static Transform Boat;
     private static Camera HelmCamera;
+    private static BoatState BoatState;
 
 
     public static void Init(Transform player, Transform boat)
@@ -15,6 +16,7 @@ public static class HelmInteractor
         PlayerCamera = player.Find("Camera").gameObject.GetComponent<Camera>();
         Boat = boat;
         HelmCamera = boat.Find("HelmCamera").gameObject.GetComponent<Camera>();
+        BoatState = Player.GetComponent<BoatInitHandler>().BoatState;
     }
 
     public static void SwitchCameras()

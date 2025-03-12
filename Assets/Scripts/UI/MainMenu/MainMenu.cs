@@ -1,8 +1,9 @@
 using System;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
-using UnityEngine.Windows;
+
+
 
 public class MainMenu : MonoBehaviour
 {
@@ -28,13 +29,13 @@ public class MainMenu : MonoBehaviour
     private void Awake()
     {
         savepath = Application.persistentDataPath + "/playerData.json";
-        Debug.Log(savepath);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     private void OnEnable()
     {
-        //Debug.Log(File.Exists(savepath));
-        if (!File.Exists(savepath))
+        if (!System.IO.File.Exists(savepath))
         {
             SoloButton.SetActive(false);
             MultiplayerButton.SetActive(false);
@@ -48,15 +49,15 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    
+    
+    
+    
+    
+    
+    
 
-    
-    
-    
-    
-    
-    
-    
-    
+
     public void StartButtonClicked()
     {
         MainMenuCanvas.SetActive(false);
@@ -64,11 +65,12 @@ public class MainMenu : MonoBehaviour
     }
     public void SoloButtonClicked()
     {
-        SceneManager.LoadScene("PlayerUI");
+        SceneManager.LoadScene("SoloGame");
     }
 
     public void MultiplayerButtonClicked()
     {
+        SceneManager.LoadScene("Network");
         MainMenuCanvas.SetActive(false);
         MultiplayerCanvas.SetActive(true);
     }

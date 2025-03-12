@@ -1,0 +1,50 @@
+{
+  "Pseudo": null,
+  "Level": 1,
+  "Location": [
+    0,
+    0,
+    0
+  ],
+  "Inventory": {
+    "Equipped": {
+      "Weapon": {
+        "Name": "Rusty Sword",
+        "Rarity": "Common",
+        "Level": 1
+      },
+      "Stigmata": [
+        null,
+        null
+      ],
+      "Boat": {
+        "Name": "Little Boat",
+        "Rarity": "Common",
+        "Level": 1
+      },
+      "Crew": {
+        "Explorer": [],
+        "Navigator": [],
+        "Gunner": [],
+        "Boatswain": []
+      }
+    },
+    "Backpack": {
+      "Materials": {
+        "Coins": 0,
+        "PureWaterDrop": 0,
+        "Wood": 0,
+        "Steel": 0
+      },
+      "Weapons": [],
+      "Stigmata": [],
+      "Boats": [],
+      "Crew": {
+        "Explorer": [],
+        "Navigator": [],
+        "Gunner": [],
+        "Boatswain": []
+      }
+    }
+  }
+}

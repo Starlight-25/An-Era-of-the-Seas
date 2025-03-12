@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 4297351568692070}
   - component: {fileID: 33551589738496840}
   - component: {fileID: 23948308917432584}
+  - component: {fileID: 4583421479507029072}
   m_Layer: 0
   m_Name: Cube.006
   m_TagString: Untagged
@@ -271,6 +272,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4583421479507029072
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508574014914094}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300010, guid: 5fe16056a96fc1e489264ffd29ee00ab, type: 3}
 --- !u!1 &1516079438935316
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,6 +371,7 @@ GameObject:
   - component: {fileID: 4181442903375990}
   - component: {fileID: 33865429817942290}
   - component: {fileID: 23812509850299162}
+  - component: {fileID: 6322442004651255590}
   m_Layer: 0
   m_Name: Cube.002
   m_TagString: Untagged
@@ -428,6 +452,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6322442004651255590
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522317658209550}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: 5fe16056a96fc1e489264ffd29ee00ab, type: 3}
 --- !u!1 &1592158854591054
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,6 +571,7 @@ GameObject:
   - component: {fileID: 4300811161891848}
   - component: {fileID: 33889053640393070}
   - component: {fileID: 23302854993795570}
+  - component: {fileID: 7901991941836185463}
   m_Layer: 0
   m_Name: Plane.002
   m_TagString: Untagged
@@ -600,6 +647,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7901991941836185463
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602579517462230}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 5fe16056a96fc1e489264ffd29ee00ab, type: 3}
 --- !u!1 &1630314122542726
 GameObject:
   m_ObjectHideFlags: 0

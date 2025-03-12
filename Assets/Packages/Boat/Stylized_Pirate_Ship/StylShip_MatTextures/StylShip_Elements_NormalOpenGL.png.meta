@@ -95,5 +95,5 @@ AssetOrigin:
   productId: 200192
   packageName: Stylized Pirate Ship
   packageVersion: 1.0
-  assetPath: Assets/Stylized_Pirate_Ship/StylShip_MatTextures/StylShip_Elements_NormalOpenGL.png
+  assetPath: Assets/Packages/Boat/Stylized_Pirate_Ship/StylShip_MatTextures/StylShip_Elements_NormalOpenGL.png
   uploadId: 445377

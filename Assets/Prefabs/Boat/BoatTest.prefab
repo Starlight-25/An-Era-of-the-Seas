@@ -288,9 +288,9 @@ MonoBehaviour:
   rigidbody: {fileID: 1555422128954559854}
   depthbeforesubmerge: 1
   displacememtAmount: 3
-  floatercount: 1
-  waterDrag: 0.99
-  waterAngularDrag: 0.5
+  floatercount: 5
+  waterDrag: 5
+  waterAngularDrag: 10
 --- !u!1 &4674570318625311872
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 7802911539474460176}
   m_Layer: 6
   m_Name: Capstan
-  m_TagString: Capstan
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -880,9 +880,9 @@ MonoBehaviour:
   rigidbody: {fileID: 1555422128954559854}
   depthbeforesubmerge: 1
   displacememtAmount: 3
-  floatercount: 1
-  waterDrag: 0.99
-  waterAngularDrag: 0.5
+  floatercount: 5
+  waterDrag: 5
+  waterAngularDrag: 10
 --- !u!1 &6779602178180038611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,9 +1038,9 @@ MonoBehaviour:
   rigidbody: {fileID: 1555422128954559854}
   depthbeforesubmerge: 1
   displacememtAmount: 3
-  floatercount: 1
-  waterDrag: 0.99
-  waterAngularDrag: 0.5
+  floatercount: 5
+  waterDrag: 5
+  waterAngularDrag: 10
 --- !u!1 &7471191460531845765
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,9 +1088,9 @@ MonoBehaviour:
   rigidbody: {fileID: 1555422128954559854}
   depthbeforesubmerge: 1
   displacememtAmount: 3
-  floatercount: 1
-  waterDrag: 0.99
-  waterAngularDrag: 0.5
+  floatercount: 5
+  waterDrag: 5
+  waterAngularDrag: 10
 --- !u!1 &7541348882246805632
 GameObject:
   m_ObjectHideFlags: 0
@@ -1138,9 +1138,9 @@ MonoBehaviour:
   rigidbody: {fileID: 1555422128954559854}
   depthbeforesubmerge: 1
   displacememtAmount: 3
-  floatercount: 1
-  waterDrag: 0.99
-  waterAngularDrag: 0.5
+  floatercount: 5
+  waterDrag: 5
+  waterAngularDrag: 10
 --- !u!1 &7915014493128888370
 GameObject:
   m_ObjectHideFlags: 0
@@ -1317,6 +1317,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoatTest
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0f36ad158113db3e990420f00f0da656, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1345,6 +1349,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f36ad158113db3e990420f00f0da656, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8031062436834124898}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f36ad158113db3e990420f00f0da656, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3608382346694338864}
   m_SourcePrefab: {fileID: 100100000, guid: 0f36ad158113db3e990420f00f0da656, type: 3}
 --- !u!4 &405598251751669359 stripped
 Transform:
@@ -1398,6 +1405,22 @@ MonoBehaviour:
   BoatBody: {fileID: 1555422128954559854}
   speed: 1
   helmMovingSpeed: 10000
+--- !u!114 &3608382346694338864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074998955015480533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b5cf8d093514aeca4103e482098d69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAnchored: 1
+  inHelm: 0
+  inBoat: 0
+  isPlaced: 0
 --- !u!1001 &6587755119020099187
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1488,7 +1511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 98c184c66d28e6940949e14a658b7ca4, type: 3}
       propertyPath: m_TagString
-      value: Helm
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7401267006024419442, guid: 98c184c66d28e6940949e14a658b7ca4, type: 3}
       propertyPath: m_Layer

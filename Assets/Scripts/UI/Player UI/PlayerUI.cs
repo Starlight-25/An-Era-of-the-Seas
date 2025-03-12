@@ -46,9 +46,9 @@ public class PlayerUIManager : MonoBehaviour
         MapCanvas.SetActive(true);
     }
 
-    public void AttackButtonClicked()
+    public void BoatButtonClicked()
     {
-        Debug.Log("Attack");
+        GameObject.FindGameObjectWithTag("Player").GetComponent<BoatInitHandler>().HandlePlaceBoat();
     }
 
     private void SetCursorState(bool locked = false)
@@ -86,7 +86,7 @@ public class PlayerUIManager : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.C)) CharacterButtonClicked();
         else if (Input.GetKeyDown(KeyCode.B)) BackpackButtonClicked();
         else if (Input.GetKeyDown(KeyCode.M)) MapButtonClicked();
-        //else if (Input.GetMouseButtonDown(0)) AttackButton();
+        else if (Input.GetKeyDown(KeyCode.H)) BoatButtonClicked();
 
         LevelText.text = $"Lvl {playerDataManager.PlayerData.Level}";
         HPSlider.maxValue = PlayerStatsManager.PlayerStats.MaxHP;

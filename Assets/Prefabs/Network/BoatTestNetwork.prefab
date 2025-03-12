@@ -1317,6 +1317,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoatTestNetwork
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0f36ad158113db3e990420f00f0da656, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4937040577431317676, guid: 0f36ad158113db3e990420f00f0da656, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.001
@@ -1351,7 +1355,7 @@ PrefabInstance:
       addedObject: {fileID: 2948901413120910311}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f36ad158113db3e990420f00f0da656, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 16544387709217234}
+      addedObject: {fileID: 3115915719459493885}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f36ad158113db3e990420f00f0da656, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2954361789367998347}
@@ -1408,7 +1412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 0
+  GlobalObjectIdHash: 1154325346
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -1421,7 +1425,7 @@ MonoBehaviour:
   AutoObjectParentSync: 1
   SyncOwnerTransformWhenParented: 1
   AllowOwnerToParent: 0
---- !u!114 &16544387709217234
+--- !u!114 &3115915719459493885
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1430,7 +1434,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1074998955015480533}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e96cb6065543e43c4a752faaa1468eb1, type: 3}
+  m_Script: {fileID: 11500000, guid: f38f3e30f547d4b4590e267b598c7923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
@@ -1488,6 +1492,7 @@ MonoBehaviour:
   isAnchored: 1
   inHelm: 0
   inBoat: 0
+  isPlaced: 0
 --- !u!1001 &6587755119020099187
 PrefabInstance:
   m_ObjectHideFlags: 0

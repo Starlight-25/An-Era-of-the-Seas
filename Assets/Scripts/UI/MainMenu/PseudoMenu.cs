@@ -1,15 +1,8 @@
 using System;
-using System.Collections.Generic;
-using System.IO;
+
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.UI;
-using UnityEngine.Windows;
-using Directory = System.IO.Directory;
-using File = UnityEngine.Windows.File;
 using Input = UnityEngine.Input;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 public class PseudoMenu : MonoBehaviour
