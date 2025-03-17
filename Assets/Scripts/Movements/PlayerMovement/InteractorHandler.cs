@@ -47,18 +47,16 @@ public class InteractorHandler : MonoBehaviour
         {
             if (distance == 10f && hit.collider.gameObject.name == "Boat Interactor")
             {
-                infoText.gameObject.SetActive(true);
                 infoText.text = GetInteractorText(hit.collider.gameObject.name, distance);
             }
             else if (distance == 3f && hit.collider.gameObject.name != "Boat Interactor")
             {
-                infoText.gameObject.SetActive(true);
                 infoText.text = GetInteractorText(hit.collider.gameObject.name, distance);
             }
         }
         else
         {
-            infoText.gameObject.SetActive(false);
+            infoText.text = "";
         }
     }
 

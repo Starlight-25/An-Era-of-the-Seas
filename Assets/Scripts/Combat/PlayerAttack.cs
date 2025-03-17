@@ -1,18 +1,23 @@
 using System;
+using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class PlayerAttack : MonoBehaviour
 {
     private PlayerStatsManager PlayerStatsManager;
-    
+    private TextMeshProUGUI DmgText;
     private float lastAttackTime = 0f;
 
     
     
     
     
-    private void Start() => PlayerStatsManager = FindFirstObjectByType<PlayerStatsManager>().GetComponent<PlayerStatsManager>();
+    private void Start()
+    {
+        PlayerStatsManager = FindFirstObjectByType<PlayerStatsManager>().GetComponent<PlayerStatsManager>();
+        DmgText = transform.Find("Interactor Text").Find("DmgText").GetComponent<TextMeshProUGUI>();
+    }
 
     
     
@@ -24,6 +29,10 @@ public class PlayerAttack : MonoBehaviour
         {
             Attack();
             lastAttackTime = Time.time;
+        }
+        else if (Time.time >= lastAttackTime + 0.5f)
+        {
+            DmgText.text = "";
         }
     }
 
@@ -42,6 +51,7 @@ public class PlayerAttack : MonoBehaviour
         Transform target = GetEnemy();
         if (target != null)
         {
+            DmgText.text = dmg.ToString();
             DMGOnEnemy(target, dmg);
         }
     }
