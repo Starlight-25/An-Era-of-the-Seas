@@ -80,6 +80,9 @@ public class EnemyCSV
     public int Level { get; set; }
     public int HP { get; set; }
     public int ATK { get; set; }
+    public int CoinsDrop { get; set; }
+    public int PWDDrop { get; set; }
+    public string SwordRarityDrop { get; set; }
 }
 
 public class EnemyTerestrialCSV : EnemyCSV { }

@@ -172,4 +172,47 @@ public class PlayerStatsManager : MonoBehaviour
         BoatStats.HP = BoatStats.MaxHP;
         BoatStats.DEF = BoatStats.MaxDEF;
     }
+
+
+
+
+
+
+
+    private int GetTotalItem()
+    {
+        Inventory Inventory = PlayerDataManager.PlayerData.Inventory;
+        int totalItem = 0;
+        totalItem += Inventory.Backpack.Weapons.Count + 1;
+        totalItem += Inventory.Backpack.Boats.Count + 1;
+        totalItem += Inventory.Backpack.Stigmata.Count + Inventory.Equipped.Stigmata.Count;
+        totalItem += Inventory.Backpack.Crew.Navigator.Count + Inventory.Equipped.Crew.Navigator.Count;
+        totalItem += Inventory.Backpack.Crew.Gunner.Count + Inventory.Equipped.Crew.Gunner.Count;
+        totalItem += Inventory.Backpack.Crew.Explorer.Count + Inventory.Equipped.Crew.Explorer.Count;
+        totalItem += Inventory.Backpack.Crew.Boatswain.Count + Inventory.Equipped.Crew.Boatswain.Count;
+        return totalItem;
+    }
+    
+    public void AddItem(object item)
+    {
+        if (GetTotalItem() >= PlayerStats.Storage) return;
+
+        Backpack Backpack = PlayerDataManager.PlayerData.Inventory.Backpack;
+        if (item is Weapon weapon) Backpack.Weapons.Add(weapon);
+        else if (item is Boat boat) Backpack.Boats.Add(boat);
+        else if (item is Stigma stigma) Backpack.Stigmata.Add(stigma);
+        else if (item is Explorer explorer) Backpack.Crew.Explorer.Add(explorer);
+        else if (item is Navigator navigator) Backpack.Crew.Navigator.Add(navigator);
+        else if (item is Gunner gunner) Backpack.Crew.Gunner.Add(gunner);
+        else if (item is Boatswain boatswain) Backpack.Crew.Boatswain.Add(boatswain);
+    }
+
+    public void AddMaterial(int coins, int PDW, int wood, int steel)
+    {
+        Materials Material = PlayerDataManager.PlayerData.Inventory.Backpack.Materials;
+        Material.Coins += coins;
+        Material.PureWaterDrop += PDW;
+        Material.Wood += wood;
+        Material.Steel += steel;
+    }
 }

@@ -9,11 +9,16 @@ public class EnemyStats
     public int MaxHP;
     public int HP;
     public int ATK;
+    public int CoinsDrop;
+    public int PWDDrop;
+    public string SwordRarityDrop;
+
 }
 
 public class EnemyTerestrialStats : EnemyStats { }
 
 public class EnemyMarineStats : EnemyStats { }
+
 public class EnemyStatsManager : MonoBehaviour
 {
     private PlayerStatsManager PlayerStatsManager;
@@ -44,6 +49,9 @@ public class EnemyStatsManager : MonoBehaviour
         EnemyTerestrialStats.MaxHP = CsvData.EnemyTerestrialCSV[EnemyTerestrialStats.Level - 1].HP;
         EnemyTerestrialStats.HP = EnemyTerestrialStats.MaxHP;
         EnemyTerestrialStats.ATK = CsvData.EnemyTerestrialCSV[EnemyTerestrialStats.Level - 1].ATK;
+        EnemyTerestrialStats.CoinsDrop = CsvData.EnemyTerestrialCSV[EnemyTerestrialStats.Level - 1].CoinsDrop;
+        EnemyTerestrialStats.PWDDrop = CsvData.EnemyTerestrialCSV[EnemyTerestrialStats.Level - 1].PWDDrop;
+        EnemyTerestrialStats.SwordRarityDrop = CsvData.EnemyTerestrialCSV[EnemyTerestrialStats.Level - 1].SwordRarityDrop;
     }
 
     public void UpdateEnemyTerestrialStats() => InitEnemyTerestrialStats();
@@ -58,6 +66,9 @@ public class EnemyStatsManager : MonoBehaviour
         EnemyMarineStats.MaxHP = CsvData.EnemyMarineCSV[EnemyMarineStats.Level - 1].HP;
         EnemyMarineStats.HP = EnemyTerestrialStats.MaxHP;
         EnemyMarineStats.ATK = CsvData.EnemyMarineCSV[EnemyMarineStats.Level - 1].ATK;
+        EnemyMarineStats.CoinsDrop = CsvData.EnemyMarineCSV[EnemyMarineStats.Level - 1].CoinsDrop;
+        EnemyMarineStats.PWDDrop = CsvData.EnemyMarineCSV[EnemyMarineStats.Level - 1].PWDDrop;
+        EnemyMarineStats.SwordRarityDrop = CsvData.EnemyMarineCSV[EnemyMarineStats.Level - 1].SwordRarityDrop;
     }
 
     public void UpdateEnemyMarineStats() => InitEnemyMarineStats();

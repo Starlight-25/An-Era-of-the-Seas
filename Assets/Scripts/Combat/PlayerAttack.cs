@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -79,7 +80,32 @@ public class PlayerAttack : MonoBehaviour
 
     private void DeathEnemy(Transform enemy)
     {
+        EnemyTerestrialStats enemyTerestrialStats = enemy.GetComponent<EnemyStatsManager>().EnemyTerestrialStats;
+        PlayerStatsManager.AddMaterial(enemyTerestrialStats.CoinsDrop, enemyTerestrialStats.PWDDrop, 0, 0);
+        Debug.Log(enemyTerestrialStats.CoinsDrop + "    " + enemyTerestrialStats.PWDDrop + "    " + enemyTerestrialStats.SwordRarityDrop);
+        if (enemyTerestrialStats.SwordRarityDrop != "0") PlayerStatsManager.AddItem(GetRandomWeapon(enemyTerestrialStats.SwordRarityDrop));
+
         enemy.GetComponent<EnemyAnimation>().TriggerDeathAnimation();
         Destroy(enemy.gameObject, 1f);
+    }
+
+    private Weapon GetRandomWeapon(string rarity)
+    {
+        List<WeaponJSON> weaponlist = new List<WeaponJSON>();
+        List<WeaponJSON> weaponJsonList = PlayerStatsManager.JsonData.WeaponJSON;
+        foreach (WeaponJSON weaponJson in weaponJsonList)
+        {
+            if (weaponJson.Rarity == rarity) weaponlist.Add(weaponJson);
+        }
+
+        WeaponJSON selectedWeapon = weaponlist[Random.Range(0, weaponlist.Count)];
+        Weapon weapon = new Weapon()
+        {
+            Level = 1,
+            Name = selectedWeapon.Name,
+            Rarity = rarity
+        };
+
+        return weapon;
     }
 }
