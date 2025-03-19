@@ -82,11 +82,18 @@ public class PlayerAttack : MonoBehaviour
     {
         EnemyTerestrialStats enemyTerestrialStats = enemy.GetComponent<EnemyStatsManager>().EnemyTerestrialStats;
         PlayerStatsManager.AddMaterial(enemyTerestrialStats.CoinsDrop, enemyTerestrialStats.PWDDrop, 0, 0);
-        Debug.Log(enemyTerestrialStats.CoinsDrop + "    " + enemyTerestrialStats.PWDDrop + "    " + enemyTerestrialStats.SwordRarityDrop);
-        if (enemyTerestrialStats.SwordRarityDrop != "0") PlayerStatsManager.AddItem(GetRandomWeapon(enemyTerestrialStats.SwordRarityDrop));
+        if (enemyTerestrialStats.SwordRarityDrop != "0")
+        {
+            Weapon weapon = GetRandomWeapon(enemyTerestrialStats.SwordRarityDrop);
+            PlayerStatsManager.AddItem(weapon);
+            DmgText.text = $"+ {weapon.Name}\n";
+        }
 
         enemy.GetComponent<EnemyAnimation>().TriggerDeathAnimation();
         Destroy(enemy.gameObject, 1f);
+        
+        lastAttackTime = Time.time;
+        DmgText.text += $"+ {enemyTerestrialStats.CoinsDrop} Coins\n+ {enemyTerestrialStats.PWDDrop}";
     }
 
     private Weapon GetRandomWeapon(string rarity)
