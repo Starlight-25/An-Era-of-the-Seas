@@ -193,9 +193,9 @@ public class PlayerStatsManager : MonoBehaviour
         return totalItem;
     }
     
-    public void AddItem(object item)
+    public bool AddItem(object item)
     {
-        if (GetTotalItem() >= PlayerStats.Storage) return;
+        if (GetTotalItem() >= PlayerStats.Storage) return false;
 
         Backpack Backpack = PlayerDataManager.PlayerData.Inventory.Backpack;
         if (item is Weapon weapon) Backpack.Weapons.Add(weapon);
@@ -205,6 +205,7 @@ public class PlayerStatsManager : MonoBehaviour
         else if (item is Navigator navigator) Backpack.Crew.Navigator.Add(navigator);
         else if (item is Gunner gunner) Backpack.Crew.Gunner.Add(gunner);
         else if (item is Boatswain boatswain) Backpack.Crew.Boatswain.Add(boatswain);
+        return true;
     }
 
     public void AddMaterial(int coins, int PDW, int wood, int steel)
