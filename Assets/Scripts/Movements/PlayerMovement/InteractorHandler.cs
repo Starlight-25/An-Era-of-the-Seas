@@ -47,11 +47,11 @@ public class InteractorHandler : MonoBehaviour
         {
             if (distance == 10f && hit.collider.gameObject.name == "Boat Interactor")
             {
-                infoText.text = GetInteractorText(hit.collider.gameObject.name, distance);
+                infoText.text = GetInteractorText(hit.collider.gameObject.name);
             }
             else if (distance == 3f && hit.collider.gameObject.name != "Boat Interactor")
             {
-                infoText.text = GetInteractorText(hit.collider.gameObject.name, distance);
+                infoText.text = GetInteractorText(hit.collider.gameObject.name);
             }
         }
         else
@@ -61,7 +61,7 @@ public class InteractorHandler : MonoBehaviour
     }
 
 
-    private string GetInteractorText(string name, float distance)
+    private string GetInteractorText(string name)
     {
         switch (name)
         {
@@ -77,6 +77,8 @@ public class InteractorHandler : MonoBehaviour
                 return "E to enter in the Boat";
             case "Boat Interactor" when BoatState.inBoat:
                 return "";
+            case string shop when shop == "Armorer" || shop == "Mage" || shop == "Boat Salesman" || shop == "Crew Agent":
+                return $"E to buy from the {shop}";
             default:
                 return "";
         }
@@ -119,6 +121,18 @@ public class InteractorHandler : MonoBehaviour
                     HelmInteractor.Init(transform, transform.GetComponent<BoatInitHandler>().Boat);
                     HelmInteractor.SwitchCameras();
                     EnterBoat(hitedGameObject.transform.parent);
+                    break;
+                case "Armorer":
+                    ShopInteractor.ShowShop("Weapon");
+                    break;
+                case "Mage":
+                    ShopInteractor.ShowShop("Stigmata");
+                    break;
+                case "Boat Salesman":
+                    ShopInteractor.ShowShop("Boat");
+                    break;
+                case "Crew Agent":
+                    ShopInteractor.ShowShop("Crew");
                     break;
             }
         }

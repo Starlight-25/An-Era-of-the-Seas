@@ -77,7 +77,10 @@ public class ItemShopDescription : MonoBehaviour
         {
             materials.Coins -= coin;
             materials.PureWaterDrop -= pwd;
+            PlayerStatsManager.PlayerDataManager.SavePlayerData();
+            PlayerStatsManager.UpdatePlayerStats();
+            PlayerStatsManager.UpdateBoatStats();
+            transform.parent.Find("Material Owned").GetComponent<OwnedMaterial>().UpdateNumber();
         }
-        transform.parent.Find("Material Owned").GetComponent<OwnedMaterial>().UpdateNumber();
     }
 }
