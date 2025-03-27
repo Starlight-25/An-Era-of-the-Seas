@@ -297,8 +297,8 @@ Transform:
   - {fileID: 4269673560937034217}
   - {fileID: 5872375188634237409}
   - {fileID: 9166483050700980876}
-  - {fileID: 8583467925734090792}
   - {fileID: 460937743706382508}
+  - {fileID: 8583467925734090792}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9150235882295643103
@@ -1467,7 +1467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6422508699295992450, guid: 65f64c7825b88ee42a01bb75c520e497, type: 3}
       propertyPath: m_Name
-      value: TownMusicZone (1)
+      value: TownMusicZone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

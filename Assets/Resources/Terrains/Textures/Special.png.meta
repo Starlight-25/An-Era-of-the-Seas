@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Resources/UI/Sprites/red-compass-needle-md.png.meta
-guid: 45b685ab48548be46b6243bfbdc3dfcb
-========
-guid: a50def5d44c6e73459ab8a256f949621
->>>>>>>> Map:Assets/Resources/Terrains/Textures/Rock.png.meta
+guid: 31bc6808af054714bb0592088903c18f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

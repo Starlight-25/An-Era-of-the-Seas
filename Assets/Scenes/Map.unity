@@ -1119,6 +1119,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1852873054934688749, guid: 712500f18f61ce84e819d2f15f1907d5, type: 3}
+      propertyPath: m_Name
+      value: TownMusicZone
+      objectReference: {fileID: 0}
     - target: {fileID: 2547354117696781823, guid: 712500f18f61ce84e819d2f15f1907d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3000
