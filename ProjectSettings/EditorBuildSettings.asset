@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 88a4a1aae78d56e4f9471d23d9c895ec
   - enabled: 1
-    path: Assets/Scenes/SoloGame.unity
+    path: Assets/SoloGame.unity
     guid: 4f5caca473afca140bfe543288df7556
   - enabled: 1
     path: Assets/Scenes/Network.unity
