@@ -1,14 +1,19 @@
 using UnityEngine;
 public class click : MonoBehaviour
 {
-    private Renderer _rend;
-    private Transform transform;
+    Renderer _rend;
+    Transform transform;
     int cpt;
     float x ;
     float y ;
     int shitty;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Awake()
+    {
+        QualitySettings.vSyncCount = 1;
+        Application.targetFrameRate = 60;
+    }
     void Start()
     {
         _rend = GetComponent<Renderer>();
@@ -25,10 +30,10 @@ public class click : MonoBehaviour
         
         transform.position=new Vector3((float)x,y,transform.position[2]);
         
-        x+= (float)0.05;
+        x+= (float)0.2;
         
         
-        y+=(Mathf.Sin(x)/20) ;
+        y+=(Mathf.Sin(x)/10) ;
         
         
         if(x>9){
