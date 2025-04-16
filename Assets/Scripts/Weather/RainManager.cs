@@ -12,6 +12,7 @@ public class RainManager : MonoBehaviour
     private void Start()
     {
         StartCoroutine(RainRoutine(Random.Range(0f, rainInterval)));
+        transform.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -26,10 +27,10 @@ public class RainManager : MonoBehaviour
 
         while (true)
         {
-            transform.gameObject.SetActive(true); // Start rain
+            transform.gameObject.SetActive(true);
             yield return new WaitForSeconds(rainDuration);
 
-            transform.gameObject.SetActive(false); // Stop rain
+            transform.gameObject.SetActive(false);
             yield return new WaitForSeconds(rainInterval);
         }
     }
