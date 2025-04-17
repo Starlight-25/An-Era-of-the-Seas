@@ -119,4 +119,5 @@ public class Materials
     public int PureWaterDrop;
     public int Wood;
     public int Steel;
+    public int Fish;
 }
