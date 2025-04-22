@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using TMPro;
 using UnityEngine;
 
@@ -154,16 +154,39 @@ public class InteractorHandler : MonoBehaviour
 
     private void EnterBoat(Transform boat)
     {
-        transform.GetComponent<CharacterController>().enabled = false;
-        transform.position = boat.position + new Vector3(0, 4, 0);
-        transform.GetComponent<CharacterController>().enabled = true;
+        BoatState.inBoat = true;
+
+        // Disable CharacterController to manually set position
+        var controller = GetComponent<CharacterController>();
+        controller.enabled = false;
+
+        // Position the player on the boat
+        transform.position = boat.position + new Vector3(0, 2, 0);
+
+        // Enable CharacterController
+        controller.enabled = true;
+
+        // Set the current boat in PlayerMovement to track its movement
+        GetComponent<PlayerMovement>().SetBoat(boat);
     }
 
     public void ExitBoat(Transform boat)
     {
+
         BoatState.inBoat = false;
-        transform.GetComponent<CharacterController>().enabled = false;
+
+        // Disable CharacterController to manually set position
+        var controller = GetComponent<CharacterController>();
+        controller.enabled = false;
+
+        // Clear the current boat in PlayerMovement
+        GetComponent<PlayerMovement>().ClearBoat();
+
+        // Position the player off the boat
         transform.position = boat.position + boat.forward * -10f + boat.up * 5f;
-        transform.GetComponent<CharacterController>().enabled = true;
+
+        // Enable CharacterController
+        controller.enabled = true;
+    
     }
 }
