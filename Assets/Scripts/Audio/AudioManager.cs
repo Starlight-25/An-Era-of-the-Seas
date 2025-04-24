@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +6,7 @@ using Random = UnityEngine.Random;
 
 public class AudioManager : MonoBehaviour
 {
+    private SettingsManager SettingsManager;
     public AudioSource BackgroundSource;
     private AudioSource SFXSource;
     private List<AudioClip> BackgroundMusics;
@@ -25,9 +25,11 @@ public class AudioManager : MonoBehaviour
     
     private void Start()
     {
+        SettingsManager = FindFirstObjectByType<SettingsManager>();
+        
         BackgroundSource = transform.Find("Background").GetComponent<AudioSource>();
-        BackgroundSource.volume = 0.25f;
         SFXSource = transform.Find("SFX").GetComponent<AudioSource>();
+        UpdateVolume();
         
         BackgroundMusics = new List<AudioClip>();
         BackgroundMusics.AddRange(Resources.LoadAll<AudioClip>("Audio/Music/Outdoors"));
@@ -59,8 +61,18 @@ public class AudioManager : MonoBehaviour
     }
 
 
-    
 
+
+
+    public void UpdateVolume()
+    {
+        BackgroundSource.volume = SettingsManager.Settings.Sound.MusicVolume;
+        SFXSource.volume = SettingsManager.Settings.Sound.SFXVolume;
+    }
+
+    
+    
+    
 
     public void PlayRandomMusic()
     {
@@ -78,14 +90,14 @@ public class AudioManager : MonoBehaviour
     {
         if (BackgroundSource.isPlaying)
         {
-            for (float v = 0.25f; v > 0; v -= 0.05f)
+            for (float v = SettingsManager.Settings.Sound.MusicVolume; v > 0; v -= SettingsManager.Settings.Sound.MusicVolume / 5)
             {
                 BackgroundSource.volume = v;
                 yield return new WaitForSeconds(0.1f);
             }
         }
         BackgroundSource.clip = newClip;
-        BackgroundSource.volume = 0.25f;
+        BackgroundSource.volume = SettingsManager.Settings.Sound.MusicVolume;
         BackgroundSource.Play();
     }
     

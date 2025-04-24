@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using JetBrains.Annotations;using UnityEngine;
+using JetBrains.Annotations;
 
 public class PlayerData
 {
