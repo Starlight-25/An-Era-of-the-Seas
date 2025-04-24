@@ -216,4 +216,10 @@ public class PlayerStatsManager : MonoBehaviour
         Material.Wood += wood;
         Material.Steel += steel;
     }
+
+    public void AddFish(int fish)
+    {
+        Materials Material = PlayerDataManager.PlayerData.Inventory.Backpack.Materials;
+        Material.Fish += fish;
+    }
 }

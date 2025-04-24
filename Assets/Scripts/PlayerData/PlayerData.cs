@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using JetBrains.Annotations;using UnityEngine;
+using JetBrains.Annotations;
 
 public class PlayerData
 {
@@ -119,4 +119,5 @@ public class Materials
     public int PureWaterDrop;
     public int Wood;
     public int Steel;
+    public int Fish;
 }
