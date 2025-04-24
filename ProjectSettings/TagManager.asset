@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Enemy
+  - Capstan
+  - Helm
+  - Chest
   layers:
   - Default
   - TransparentFX
