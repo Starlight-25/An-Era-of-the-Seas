@@ -47,6 +47,5 @@ public class SettingsMenuNetwork : MonoBehaviour
     {
         Cursor.lockState = visible ? CursorLockMode.None : CursorLockMode.Locked;
         Cursor.visible = visible;
-        Debug.Log($"SettingsMenu : {visible}");
     }
 }

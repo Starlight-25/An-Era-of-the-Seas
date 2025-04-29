@@ -1,8 +1,9 @@
 using System;
 using TMPro;
+using Unity.Netcode;
 using UnityEngine;
 
-public class TreasureInteractor : MonoBehaviour
+public class TreasureInteractor : NetworkBehaviour
 {
     private LayerMask interactableLayer;
     private Transform Camera;

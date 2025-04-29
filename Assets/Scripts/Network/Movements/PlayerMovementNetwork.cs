@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -66,5 +67,18 @@ public class PlayerMovementNetwork : NetworkBehaviour
             }
         
         //}
+    }
+
+
+
+
+
+
+    public void Teleport(Vector3 position)
+    {
+        CharacterController characterController = transform.GetComponent<CharacterController>();
+        characterController.enabled = false;
+        transform.position = position;
+        characterController.enabled = true;
     }
 }

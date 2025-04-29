@@ -1,5 +1,7 @@
 using System.Collections;
+using Unity.Mathematics;
 using Unity.Netcode;
+using Unity.Netcode.Components;
 using UnityEngine;
 
 public class GameManager : NetworkBehaviour
@@ -33,21 +35,25 @@ public class GameManager : NetworkBehaviour
     public void StartTreasureHuntGame()
     {
         transform.GetComponent<TreasureHuntMode>().SpawnChest();
-        TeleportAllPlayers(new Vector3(500, 5, 500));
+        TeleportAllPlayersServerRpc(new Vector3(500, 5, 500));
 
     }
     
-    private void TeleportAllPlayers(Vector3 tpPosition)
+    
+    [ServerRpc(RequireOwnership = false)]
+    public void TeleportAllPlayersServerRpc(Vector3 tpPosition)
     {
-        foreach (var clientPair in NetworkManager.Singleton.ConnectedClients)
+        // Une fois sur le serveur, demande à tous les clients de se téléporter
+        TeleportAllPlayersClientRpc(tpPosition);
+    }
+    
+    [ClientRpc]
+    private void TeleportAllPlayersClientRpc(Vector3 tpPosition)
+    {
+        foreach (var client in NetworkManager.Singleton.ConnectedClientsList)
         {
-            NetworkObject playerObject = clientPair.Value.PlayerObject;
-            if (playerObject != null)
-            {
-                playerObject.GetComponent<CharacterController>().enabled = false;
-                playerObject.transform.position = tpPosition;
-                playerObject.GetComponent<CharacterController>().enabled = true;
-            }
+            NetworkObject playerObject = client.PlayerObject;
+            playerObject.GetComponent<PlayerMovementNetwork>().Teleport(tpPosition);
         }
     }
 

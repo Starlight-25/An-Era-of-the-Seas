@@ -5,7 +5,7 @@ public class MultiplayerInteractor : NetworkBehaviour
 { 
     public void Interact()
     {
-        if (IsOwner) InteractServerRpc(NetworkManager.Singleton.LocalClientId);
+        InteractServerRpc(NetworkManager.Singleton.LocalClientId);
     }
 
     
@@ -26,10 +26,11 @@ public class MultiplayerInteractor : NetworkBehaviour
     [ClientRpc]
     void ShowMessageClientRpc(ulong actorClientId)
     {
-        ulong localClientId = NetworkManager.Singleton.LocalClientId;
-
-        string message = localClientId == actorClientId ? "You won" : "You lose";
-
-        FindObjectOfType<UIManager>().DisplayResult(message);
+        foreach (var client in NetworkManager.Singleton.ConnectedClientsList)
+        {
+            string message = client.ClientId == actorClientId ? "You won" : "You lose";
+            NetworkObject playerObject = client.PlayerObject;
+            playerObject.transform.Find("Player UI").GetComponent<UIManager>().DisplayResult(message);
+        }
     }
 }

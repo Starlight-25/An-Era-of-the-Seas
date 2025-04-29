@@ -190,13 +190,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235ef554393476b41aac256ba40c75ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Chest: {fileID: 1574412197466904096, guid: 45bff944ba7e5d84c9428c7753a00344, type: 3}
+  ShowTopMostFoldoutHeaderGroup: 1
+  ChestPrefab: {fileID: 1574412197466904096, guid: 45bff944ba7e5d84c9428c7753a00344, type: 3}
   SpawnAreas:
   - {x: 483.87, y: 1.2, z: 285.28}
   - {x: 461.65, y: 1.638, z: 403.25}
   - {x: 431.7, y: 1.52, z: 449.83}
   - {x: 442.13, y: 1.51, z: 414.39}
-  - {x: 595.32, y: 1.71, z: 341.53}
   - {x: 595.32, y: 1.71, z: 341.53}
   - {x: 620.38, y: 1.52, z: 351.17}
   - {x: 543.33, y: 1.45, z: 617.4}
