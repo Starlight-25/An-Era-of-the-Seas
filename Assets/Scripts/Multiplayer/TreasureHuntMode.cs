@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Treasure : MonoBehaviour
+public class TreasureHuntMode : MonoBehaviour
 {
     
     public GameObject Chest;
@@ -8,13 +8,8 @@ public class Treasure : MonoBehaviour
         new Vector3(442.13f,1.51f,414.39f), new Vector3(595.32f,1.71f,341.53f), new Vector3(595.32f,1.71f,341.53f), new Vector3(620.38f,1.52f,351.17f),
         new Vector3(543.33f,1.45f,617.4f), new Vector3(519.18f,1.24f,609.14f)
     };
-    
-    void Start()
-    {
-        SpawnChest();
-    }
 
-    void SpawnChest() 
+    public void SpawnChest() 
     {
         Vector3 position = SpawnAreas[Random.Range(0, SpawnAreas.Length)];
         
