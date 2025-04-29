@@ -44,7 +44,9 @@ public class GameManager : NetworkBehaviour
             NetworkObject playerObject = clientPair.Value.PlayerObject;
             if (playerObject != null)
             {
+                playerObject.GetComponent<CharacterController>().enabled = false;
                 playerObject.transform.position = tpPosition;
+                playerObject.GetComponent<CharacterController>().enabled = true;
             }
         }
     }

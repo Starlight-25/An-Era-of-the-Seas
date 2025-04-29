@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameModeMenu : MonoBehaviour
 {
+    [SerializeField] private GameObject DefaultUI;
+    [SerializeField] private GameObject gameModeMenuGameObject;
     private GameManager GameManager;
 
     
@@ -21,6 +23,10 @@ public class GameModeMenu : MonoBehaviour
 
     public void TreasureHuntButtonClicked()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        DefaultUI.SetActive(true);
+        gameModeMenuGameObject.SetActive(false);
         GameManager.StartTreasureHuntGame();
     }
 
@@ -30,6 +36,10 @@ public class GameModeMenu : MonoBehaviour
     
     public void BoatRaceButtonClicked()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        DefaultUI.SetActive(true);
+        gameModeMenuGameObject.SetActive(false);
         GameManager.StartBoatRaceGame();
     }
 }
