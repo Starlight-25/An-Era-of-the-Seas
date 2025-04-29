@@ -1261,10 +1261,10 @@ GameObject:
   - component: {fileID: 8595541847830282901}
   - component: {fileID: 5943668182047262761}
   - component: {fileID: 7018234107350343986}
-  - component: {fileID: 4849434773873259900}
   - component: {fileID: 8946505082740008235}
   - component: {fileID: 1322898264515349405}
   - component: {fileID: 1748765792327047689}
+  - component: {fileID: 6807842574838497667}
   m_Layer: 0
   m_Name: PlayerNetwork
   m_TagString: Untagged
@@ -1498,18 +1498,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
---- !u!114 &4849434773873259900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4424122001290306904}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ddcc17a9ba2486e9a81a710a55b1e92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8946505082740008235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1549,6 +1537,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   PlayerNetworkCanvas: {fileID: 1796644330554637065}
+--- !u!114 &6807842574838497667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4424122001290306904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef359be2e974d0a8fe8f350b9b34755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4868815573518486616
 GameObject:
   m_ObjectHideFlags: 0

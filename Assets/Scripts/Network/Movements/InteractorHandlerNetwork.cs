@@ -8,6 +8,7 @@ public class InteractorHandlerNetwork : NetworkBehaviour
     private LayerMask interactableLayer;
     private TextMeshProUGUI infoText;
     private Transform Boat;
+    private Transform Camera;
     private BoatStateNetwork BoatStateNetwork;
 
     
@@ -16,6 +17,7 @@ public class InteractorHandlerNetwork : NetworkBehaviour
 
     private void Start()
     {
+        Camera = transform.Find("Camera");
         interactableLayer = LayerMask.GetMask("Interactable");
         infoText = transform.Find("Interactor Text").Find("Text (TMP)").GetComponent<TextMeshProUGUI>();
     }
@@ -41,7 +43,7 @@ public class InteractorHandlerNetwork : NetworkBehaviour
     
     private void ShowInteractorText(float distance)
     {
-        Ray ray = new Ray(transform.position, transform.forward);
+        Ray ray = new Ray(Camera.position, Camera.forward);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, distance, interactableLayer))
@@ -76,7 +78,7 @@ public class InteractorHandlerNetwork : NetworkBehaviour
     
     private void HandleInteractorPressed()
     {
-        Ray ray = new Ray(transform.position, transform.forward);
+        Ray ray = new Ray(Camera.position, Camera.forward);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit, 3f, interactableLayer)) HandleAction(hit.collider.gameObject, 3f);
@@ -84,7 +86,7 @@ public class InteractorHandlerNetwork : NetworkBehaviour
         {
             if (Boat is not null && BoatStateNetwork.inHelm)
             {
-                SwitchCameraHelm(transform.Find("Camera").GetComponent<Camera>(), Boat.Find("HelmCamera").GetComponent<Camera>());
+                SwitchCameraHelm(Camera.GetComponent<Camera>(), Boat.Find("HelmCamera").GetComponent<Camera>());
                 EnterBoat(Boat);
             }
         }
@@ -105,7 +107,7 @@ public class InteractorHandlerNetwork : NetworkBehaviour
                     BoatStateNetwork.isAnchored = !BoatStateNetwork.isAnchored;
                     break;
                 case "Helm":
-                    SwitchCameraHelm(transform.Find("Camera").GetComponent<Camera>(), Boat.Find("HelmCamera").GetComponent<Camera>());
+                    SwitchCameraHelm(Camera.GetComponent<Camera>(), Boat.Find("HelmCamera").GetComponent<Camera>());
                     EnterBoat(hitedGameObject.transform.parent);
                     break;
             }
