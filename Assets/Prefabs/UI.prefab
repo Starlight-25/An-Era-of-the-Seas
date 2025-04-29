@@ -1782,7 +1782,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Needles: {fileID: 6804338028743811621}
-  Player: {fileID: 0}
 --- !u!1 &916486032979014305
 GameObject:
   m_ObjectHideFlags: 0
@@ -19003,7 +19002,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7286670894010806256}
   - component: {fileID: 8145139562100952867}
-  - component: {fileID: 4859400467743270447}
+  - component: {fileID: 296501510048886218}
   m_Layer: 5
   m_Name: Needle
   m_TagString: Untagged
@@ -19038,7 +19037,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6804338028743811621}
   m_CullTransparentMesh: 1
---- !u!114 &4859400467743270447
+--- !u!114 &296501510048886218
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19047,7 +19046,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6804338028743811621}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -19058,13 +19057,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: b39570f65fc5da64c94bfef537d6a7aa, type: 3}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+  m_Sprite: {fileID: 21300000, guid: aa3c4d7a71676f74cab3bb9b4df6ba0c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &6898878894442136943
 GameObject:
   m_ObjectHideFlags: 0
