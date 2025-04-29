@@ -27,6 +27,7 @@ public class SettingsManager : MonoBehaviour
 
     private void Update()
     {
+        if (AudioManager is null) return;
         SoundVolHandler();
     }
 
