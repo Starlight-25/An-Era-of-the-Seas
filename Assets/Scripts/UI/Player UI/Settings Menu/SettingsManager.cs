@@ -1,5 +1,6 @@
 using System.IO;
 using Newtonsoft.Json;
+using Unity.Mathematics.Geometry;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,6 +27,7 @@ public class SettingsManager : MonoBehaviour
 
     private void Update()
     {
+        if (AudioManager is null) return;
         SoundVolHandler();
     }
 
@@ -46,6 +48,8 @@ public class SettingsManager : MonoBehaviour
     
     private void SoundVolHandler()
     {
+        MusicVolSlider.value = (int)MusicVolSlider.value;
+        SFXVolSlider.value = (int)SFXVolSlider.value;
         Settings.Sound.MusicVolume = MusicVolSlider.value / 100;
         Settings.Sound.SFXVolume = SFXVolSlider.value / 100;
         SaveSettings();
