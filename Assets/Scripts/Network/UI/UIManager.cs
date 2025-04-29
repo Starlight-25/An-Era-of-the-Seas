@@ -16,8 +16,7 @@ public class UIManager : MonoBehaviour
     
     public void DisplayResult(string msg)
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        SetCursorStatus();
         ResultGameMenu.SetActive(true);
         DefaultUI.SetActive(false);
         SettingsMenu.SetActive(false);
@@ -30,11 +29,23 @@ public class UIManager : MonoBehaviour
 
     public void DisplayGameModeMenu()
     {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        SetCursorStatus();
         GameModeMenu.SetActive(true);
         ResultGameMenu.SetActive(false);
         DefaultUI.SetActive(false);
         SettingsMenu.SetActive(false);
+    }
+    
+    
+    
+    
+    
+    
+    
+    private void SetCursorStatus(bool visible = true)
+    {
+        Cursor.lockState = visible ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = visible;
+        Debug.Log($"UIManager : {visible}");
     }
 }

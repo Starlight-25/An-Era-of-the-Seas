@@ -8,10 +8,12 @@ public class GameModeMenu : MonoBehaviour
     [SerializeField] private GameObject gameModeMenuGameObject;
     private GameManager GameManager;
 
-    
-    
-    
-    
+
+    private void Update()
+    {
+        SetCursorStatus();
+    }
+
     private void Start()
     {
         GameManager = FindFirstObjectByType<GameManager>();
@@ -23,8 +25,7 @@ public class GameModeMenu : MonoBehaviour
 
     public void TreasureHuntButtonClicked()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        SetCursorStatus(false);
         DefaultUI.SetActive(true);
         gameModeMenuGameObject.SetActive(false);
         GameManager.StartTreasureHuntGame();
@@ -35,11 +36,20 @@ public class GameModeMenu : MonoBehaviour
     
     
     public void BoatRaceButtonClicked()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+    { 
+        SetCursorStatus(false);
         DefaultUI.SetActive(true);
         gameModeMenuGameObject.SetActive(false);
         GameManager.StartBoatRaceGame();
+    }
+    
+    
+    
+    
+    
+    private void SetCursorStatus(bool visible = true)
+    {
+        Cursor.lockState = visible ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = visible;
     }
 }
