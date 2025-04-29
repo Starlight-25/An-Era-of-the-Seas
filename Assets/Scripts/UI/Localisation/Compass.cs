@@ -3,7 +3,7 @@ using UnityEngine;
 public class Compass : MonoBehaviour
 {
     [SerializeField] private GameObject Needles;
-    [SerializeField] private Transform Player;
+    private Transform Player;
     
     void Start()
     {

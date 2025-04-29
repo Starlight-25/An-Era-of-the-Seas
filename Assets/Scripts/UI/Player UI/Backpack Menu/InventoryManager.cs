@@ -84,6 +84,7 @@ public class InventoryManager : MonoBehaviour
         MaterialList.Add(new Material("Pure Water Drop", Backpack.Materials.PureWaterDrop));
         MaterialList.Add(new Material("Wood", Backpack.Materials.Wood));
         MaterialList.Add(new Material("Steel", Backpack.Materials.Steel));
+        MaterialList.Add(new Material("Fish", Backpack.Materials.Fish));
         FillInventory();
     }
     
