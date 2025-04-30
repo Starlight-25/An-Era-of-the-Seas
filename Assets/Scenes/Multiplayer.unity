@@ -307,6 +307,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Multiplayer (Canvas)
       objectReference: {fileID: 0}
+    - target: {fileID: 5135844511496879800, guid: 3d63e632d138c044fa7077d7c79e02cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
