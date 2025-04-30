@@ -7940,6 +7940,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2201921449425698766}
   - component: {fileID: 3730868821741920854}
+  - component: {fileID: 3436853284752549203}
   m_Layer: 5
   m_Name: Player UI Menu
   m_TagString: Untagged
@@ -7998,6 +7999,20 @@ MonoBehaviour:
   HPSlider: {fileID: 5750041164933877834}
   DefText: {fileID: 6400999160902862909}
   DEFSlider: {fileID: 8587788869994085654}
+--- !u!114 &3436853284752549203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2997845046157401659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1636ae8fcbda4ae7887fecba16b0b56f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HungerBar: {fileID: 1100544050950152837}
+  PlayerStatsManager: {fileID: 1226276490015288144}
 --- !u!1 &3033346704257920103
 GameObject:
   m_ObjectHideFlags: 0
@@ -22309,7 +22324,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 895526072283508325}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3436853284752549203}
+        m_TargetAssemblyTypeName: HungerManager, Assembly-CSharp
+        m_MethodName: Eat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8116093263854256605
 GameObject:
   m_ObjectHideFlags: 0
