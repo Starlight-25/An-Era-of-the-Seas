@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -64,32 +65,20 @@ public class PlayerMovementNetwork : NetworkBehaviour
             {
                 velocity.y = Mathf.Sqrt(-2.0f * jumpHeight * gravity);
             }
-            
-            Rotation();
+        
         //}
     }
 
-    
-    
-    
-    
-    private int GetRotationAngle()
-    {
-        if (Input.GetKey(KeyCode.D)) return 90;
-        if (Input.GetKey(KeyCode.A)) return -90;
-        if (Input.GetKey(KeyCode.S)) return 180;
-        return 0;
-    }
-    
-    private void Rotation()
-    {
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) ||
-            Input.GetKey(KeyCode.S))
-        {
-            float targetRotationY = transform.eulerAngles.y + GetRotationAngle();
 
-            float newRotationY = Mathf.MoveTowardsAngle(transform.eulerAngles.y, targetRotationY, 50f * Time.deltaTime);
-            transform.eulerAngles = new Vector3(0, newRotationY, 0);
-        }
+
+
+
+
+    public void Teleport(Vector3 position)
+    {
+        CharacterController characterController = transform.GetComponent<CharacterController>();
+        characterController.enabled = false;
+        transform.position = position;
+        characterController.enabled = true;
     }
 }

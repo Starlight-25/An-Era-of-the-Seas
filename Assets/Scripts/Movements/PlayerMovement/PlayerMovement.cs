@@ -17,15 +17,18 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
     private BoatState BoatState;
-    
-    
-    
-    
-    
+
+
+
+    private Transform currentBoat;
+    private Vector3 lastBoatPosition;
+    private Quaternion lastBoatRotation;
+
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        BoatState = transform.GetComponent<BoatInitHandler>().BoatState;
+        BoatState = GetComponent<BoatInitHandler>().BoatState;
     }
     
     
@@ -62,5 +65,33 @@ public class PlayerMovement : MonoBehaviour
                 velocity.y = Mathf.Sqrt(-2.0f * jumpHeight * gravity);
             }
         }
+      
+    }
+
+    void LateUpdate()
+    {
+        if (BoatState.inBoat && currentBoat != null && !BoatState.inHelm)
+        {
+            Vector3 boatMovement = currentBoat.position - lastBoatPosition;
+            Quaternion boatRotation = currentBoat.rotation * Quaternion.Inverse(lastBoatRotation);
+
+            controller.Move(boatMovement);
+            transform.rotation = boatRotation * transform.rotation;
+
+            lastBoatPosition = currentBoat.position;
+            lastBoatRotation = currentBoat.rotation;
+        }
+    }
+
+    public void SetBoat(Transform boat)
+    {
+        currentBoat = boat;
+        lastBoatPosition = boat.position;
+        lastBoatRotation = boat.rotation;
+    }
+
+    public void ClearBoat()
+    {
+        currentBoat = null;
     }
 }

@@ -55,7 +55,8 @@ public class WaveManager : MonoBehaviour
             if (distanceToIsland < islandRadius)
             {
                 float islandEffect = (1f - (distanceToIsland / islandRadius));
-                amplitude *= (1f - islandEffect);  
+                
+                amplitude = (islandEffect);
             }
         }
 

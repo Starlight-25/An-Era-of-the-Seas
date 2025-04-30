@@ -34,7 +34,8 @@
         "Coins": 0,
         "PureWaterDrop": 0,
         "Wood": 0,
-        "Steel": 0
+        "Steel": 0,
+        "Fish" : 0
       },
       "Weapons": [],
       "Stigmata": [],

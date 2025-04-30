@@ -10,6 +10,7 @@ public class PlayerUIManager : MonoBehaviour
     [SerializeField] private GameObject BackpackCanvas;
     [SerializeField] private GameObject CharacterCanvas;
     [SerializeField] private GameObject MapCanvas;
+    [SerializeField] private GameObject ShopCanvas;
 
     public void SettingsButtonClicked()
     {
@@ -49,6 +50,14 @@ public class PlayerUIManager : MonoBehaviour
     public void BoatButtonClicked()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<BoatInitHandler>().HandlePlaceBoat();
+    }
+
+    public void ShopCanvasShow()
+    {
+        Time.timeScale = 0f;
+        SetCursorState();
+        ShopCanvas.SetActive(true);
+        PlayerUICanvas.SetActive(false);
     }
 
     private void SetCursorState(bool locked = false)

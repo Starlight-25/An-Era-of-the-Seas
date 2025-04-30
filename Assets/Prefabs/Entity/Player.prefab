@@ -49,9 +49,9 @@ Canvas:
   m_GameObject: {fileID: 536663096520581152}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_RenderMode: 1
+  m_Camera: {fileID: 1894957617907495330}
+  m_PlaneDistance: 0.4
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -147,6 +147,7 @@ Transform:
   - {fileID: 899798986339179145}
   - {fileID: 8046620052603129390}
   - {fileID: 4433063217462732046}
+  - {fileID: 1167901058592767623}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6261759127725472360
@@ -721,6 +722,72 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1001 &2467599933134829897
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3966950809888491865}
+    m_Modifications:
+    - target: {fileID: 3606146091172366286, guid: 49d38ab4fa9950f4f83c26f0b5c963fb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606146091172366286, guid: 49d38ab4fa9950f4f83c26f0b5c963fb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606146091172366286, guid: 49d38ab4fa9950f4f83c26f0b5c963fb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606146091172366286, guid: 49d38ab4fa9950f4f83c26f0b5c963fb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606146091172366286, guid: 49d38ab4fa9950f4f83c26f0b5c963fb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606146091172366286, guid: 49d38ab4fa9950f4f83c26f0b5c963fb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606146091172366286, guid: 49d38ab4fa9950f4f83c26f0b5c963fb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606146091172366286, guid: 49d38ab4fa9950f4f83c26f0b5c963fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606146091172366286, guid: 49d38ab4fa9950f4f83c26f0b5c963fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3606146091172366286, guid: 49d38ab4fa9950f4f83c26f0b5c963fb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6125841572972191806, guid: 49d38ab4fa9950f4f83c26f0b5c963fb, type: 3}
+      propertyPath: m_Name
+      value: Rain Particles
+      objectReference: {fileID: 0}
+    - target: {fileID: 6125841572972191806, guid: 49d38ab4fa9950f4f83c26f0b5c963fb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 49d38ab4fa9950f4f83c26f0b5c963fb, type: 3}
+--- !u!4 &1167901058592767623 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3606146091172366286, guid: 49d38ab4fa9950f4f83c26f0b5c963fb, type: 3}
+  m_PrefabInstance: {fileID: 2467599933134829897}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4045814612188863329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -769,6 +836,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 466891798961893824, guid: 9bc6c3c9276d99c48bf26b72053b7501, type: 3}
+      propertyPath: waterDrag
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 466891798961893824, guid: 9bc6c3c9276d99c48bf26b72053b7501, type: 3}
+      propertyPath: waterAngularDrag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 466891798961893824, guid: 9bc6c3c9276d99c48bf26b72053b7501, type: 3}
+      propertyPath: depthbeforesubmerge
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 958537467917000247, guid: 9bc6c3c9276d99c48bf26b72053b7501, type: 3}
+      propertyPath: waterDrag
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 958537467917000247, guid: 9bc6c3c9276d99c48bf26b72053b7501, type: 3}
+      propertyPath: waterAngularDrag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 958537467917000247, guid: 9bc6c3c9276d99c48bf26b72053b7501, type: 3}
+      propertyPath: depthbeforesubmerge
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1074998955015480533, guid: 9bc6c3c9276d99c48bf26b72053b7501, type: 3}
       propertyPath: m_Name
       value: BoatTest
@@ -776,6 +867,42 @@ PrefabInstance:
     - target: {fileID: 1074998955015480533, guid: 9bc6c3c9276d99c48bf26b72053b7501, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1441809461403377329, guid: 9bc6c3c9276d99c48bf26b72053b7501, type: 3}
+      propertyPath: waterDrag
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1441809461403377329, guid: 9bc6c3c9276d99c48bf26b72053b7501, type: 3}
+      propertyPath: waterAngularDrag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1441809461403377329, guid: 9bc6c3c9276d99c48bf26b72053b7501, type: 3}
+      propertyPath: depthbeforesubmerge
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529095471514594652, guid: 9bc6c3c9276d99c48bf26b72053b7501, type: 3}
+      propertyPath: waterDrag
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529095471514594652, guid: 9bc6c3c9276d99c48bf26b72053b7501, type: 3}
+      propertyPath: waterAngularDrag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529095471514594652, guid: 9bc6c3c9276d99c48bf26b72053b7501, type: 3}
+      propertyPath: depthbeforesubmerge
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3010781320586962559, guid: 9bc6c3c9276d99c48bf26b72053b7501, type: 3}
+      propertyPath: waterDrag
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3010781320586962559, guid: 9bc6c3c9276d99c48bf26b72053b7501, type: 3}
+      propertyPath: waterAngularDrag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3010781320586962559, guid: 9bc6c3c9276d99c48bf26b72053b7501, type: 3}
+      propertyPath: depthbeforesubmerge
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

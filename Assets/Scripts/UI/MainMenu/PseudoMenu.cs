@@ -1,5 +1,3 @@
-using System;
-
 using TMPro;
 using UnityEngine;
 using Input = UnityEngine.Input;
@@ -37,6 +35,9 @@ public class PseudoMenu : MonoBehaviour
         string savepath = Application.persistentDataPath + "/playerData.json";
         string modelcontent = Resources.Load<TextAsset>("saveModel").text;
         System.IO.File.WriteAllText(savepath, modelcontent);
+        string settingsPath = Application.persistentDataPath + "/settings.json";
+        string settingsModelContent = Resources.Load<TextAsset>("settingsModel").text;
+        System.IO.File.WriteAllText(settingsPath, settingsModelContent);
 
         InitPseudo(savepath, pseudoinput);
         

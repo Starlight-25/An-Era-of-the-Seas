@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using TMPro;
 using UnityEngine;
 
@@ -47,11 +47,11 @@ public class InteractorHandler : MonoBehaviour
         {
             if (distance == 10f && hit.collider.gameObject.name == "Boat Interactor")
             {
-                infoText.text = GetInteractorText(hit.collider.gameObject.name, distance);
+                infoText.text = GetInteractorText(hit.collider.gameObject.name);
             }
             else if (distance == 3f && hit.collider.gameObject.name != "Boat Interactor")
             {
-                infoText.text = GetInteractorText(hit.collider.gameObject.name, distance);
+                infoText.text = GetInteractorText(hit.collider.gameObject.name);
             }
         }
         else
@@ -61,7 +61,7 @@ public class InteractorHandler : MonoBehaviour
     }
 
 
-    private string GetInteractorText(string name, float distance)
+    private string GetInteractorText(string name)
     {
         switch (name)
         {
@@ -77,6 +77,8 @@ public class InteractorHandler : MonoBehaviour
                 return "E to enter in the Boat";
             case "Boat Interactor" when BoatState.inBoat:
                 return "";
+            case string shop when shop == "Armorer" || shop == "Mage" || shop == "Boat Salesman" || shop == "Crew Agent":
+                return $"E to buy from the {shop}";
             default:
                 return "";
         }
@@ -120,6 +122,18 @@ public class InteractorHandler : MonoBehaviour
                     HelmInteractor.SwitchCameras();
                     EnterBoat(hitedGameObject.transform.parent);
                     break;
+                case "Armorer":
+                    ShopInteractor.ShowShop("Weapon");
+                    break;
+                case "Mage":
+                    ShopInteractor.ShowShop("Stigmata");
+                    break;
+                case "Boat Salesman":
+                    ShopInteractor.ShowShop("Boat");
+                    break;
+                case "Crew Agent":
+                    ShopInteractor.ShowShop("Crew");
+                    break;
             }
         }
         else if (distance == 10f)
@@ -140,16 +154,39 @@ public class InteractorHandler : MonoBehaviour
 
     private void EnterBoat(Transform boat)
     {
-        transform.GetComponent<CharacterController>().enabled = false;
-        transform.position = boat.position + new Vector3(0, 4, 0);
-        transform.GetComponent<CharacterController>().enabled = true;
+        BoatState.inBoat = true;
+
+        // Disable CharacterController to manually set position
+        var controller = GetComponent<CharacterController>();
+        controller.enabled = false;
+
+        // Position the player on the boat
+        transform.position = boat.position + new Vector3(0, 2, 0);
+
+        // Enable CharacterController
+        controller.enabled = true;
+
+        // Set the current boat in PlayerMovement to track its movement
+        GetComponent<PlayerMovement>().SetBoat(boat);
     }
 
     public void ExitBoat(Transform boat)
     {
+
         BoatState.inBoat = false;
-        transform.GetComponent<CharacterController>().enabled = false;
+
+        // Disable CharacterController to manually set position
+        var controller = GetComponent<CharacterController>();
+        controller.enabled = false;
+
+        // Clear the current boat in PlayerMovement
+        GetComponent<PlayerMovement>().ClearBoat();
+
+        // Position the player off the boat
         transform.position = boat.position + boat.forward * -10f + boat.up * 5f;
-        transform.GetComponent<CharacterController>().enabled = true;
+
+        // Enable CharacterController
+        controller.enabled = true;
+    
     }
 }

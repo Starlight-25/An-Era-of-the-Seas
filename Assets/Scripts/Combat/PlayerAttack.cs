@@ -81,7 +81,7 @@ public class PlayerAttack : MonoBehaviour
     private void DeathEnemy(Transform enemy)
     {
         EnemyTerestrialStats enemyTerestrialStats = enemy.GetComponent<EnemyStatsManager>().EnemyTerestrialStats;
-        PlayerStatsManager.AddMaterial(enemyTerestrialStats.CoinsDrop, enemyTerestrialStats.PWDDrop, 0, 0);
+        PlayerStatsManager.UpdateMaterial(enemyTerestrialStats.CoinsDrop, enemyTerestrialStats.PWDDrop);
         if (enemyTerestrialStats.SwordRarityDrop != "0")
         {
             Weapon weapon = GetRandomWeapon(enemyTerestrialStats.SwordRarityDrop);
