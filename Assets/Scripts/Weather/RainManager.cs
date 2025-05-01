@@ -8,11 +8,17 @@ public class RainManager : MonoBehaviour
 {
     private float rainInterval = 1200f;
     private float rainDuration = 180f;
-
+    private ParticleSystem rainParticle;
+    
+    
+    
+    
+    
     private void Start()
     {
+        rainParticle = transform.GetComponent<ParticleSystem>();
+        rainParticle.Stop();
         StartCoroutine(RainRoutine(Random.Range(0f, rainInterval)));
-        transform.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -27,10 +33,10 @@ public class RainManager : MonoBehaviour
 
         while (true)
         {
-            transform.gameObject.SetActive(true);
+            rainParticle.Play();
             yield return new WaitForSeconds(rainDuration);
 
-            transform.gameObject.SetActive(false);
+            rainParticle.Stop();
             yield return new WaitForSeconds(rainInterval);
         }
     }
