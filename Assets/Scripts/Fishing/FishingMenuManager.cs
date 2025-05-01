@@ -19,7 +19,7 @@ public class FishingMenuManager : MonoBehaviour
     
     private void Awake()
     {
-        FishPrefabs = Resources.LoadAll<GameObject>("Fishes/Prefab");
+        FishPrefabs = Resources.LoadAll<GameObject>("Fish/Prefab");
     }
 
     
