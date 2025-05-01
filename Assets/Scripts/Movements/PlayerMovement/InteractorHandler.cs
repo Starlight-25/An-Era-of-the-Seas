@@ -47,11 +47,11 @@ public class InteractorHandler : MonoBehaviour
         {
             if (distance == 10f && hit.collider.gameObject.name == "Boat Interactor")
             {
-                infoText.text = GetInteractorText(hit.collider.gameObject.name);
+                infoText.text = GetInteractorText(hit.collider.name);
             }
             else if (distance == 3f && hit.collider.gameObject.name != "Boat Interactor")
             {
-                infoText.text = GetInteractorText(hit.collider.gameObject.name);
+                infoText.text = GetInteractorText(hit.collider.name);
             }
         }
         else
@@ -63,6 +63,7 @@ public class InteractorHandler : MonoBehaviour
 
     private string GetInteractorText(string name)
     {
+        Debug.Log(name);
         switch (name)
         {
             case "Capstan" when !BoatState.isAnchored:
@@ -79,6 +80,8 @@ public class InteractorHandler : MonoBehaviour
                 return "";
             case string shop when shop == "Armorer" || shop == "Mage" || shop == "Boat Salesman" || shop == "Crew Agent":
                 return $"E to buy from the {shop}";
+            case "FishingWaterPond":
+                return "E to fish";
             default:
                 return "";
         }
@@ -134,6 +137,9 @@ public class InteractorHandler : MonoBehaviour
                 case "Crew Agent":
                     ShopInteractor.ShowShop("Crew");
                     break;
+                case "FishingWaterPond":
+                    StartFishing();
+                    break;
             }
         }
         else if (distance == 10f)
@@ -188,5 +194,15 @@ public class InteractorHandler : MonoBehaviour
         // Enable CharacterController
         controller.enabled = true;
     
+    }
+
+
+
+
+    private void StartFishing()
+    {
+        FishingMenuManager fishingMenuManager =
+            GameObject.Find("UI").transform.Find("Fishing Menu").GetComponent<FishingMenuManager>();
+        fishingMenuManager.ShowFishingMenu();
     }
 }

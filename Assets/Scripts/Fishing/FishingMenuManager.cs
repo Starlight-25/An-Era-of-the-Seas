@@ -57,6 +57,9 @@ public class FishingMenuManager : MonoBehaviour
 
     public void ShowFishingMenu()
     {
+        Time.timeScale = 0f;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         FishingMenu.SetActive(true);
         PlayerUI.SetActive(false);
     }

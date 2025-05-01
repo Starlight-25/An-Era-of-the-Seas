@@ -7,9 +7,11 @@ public class HungerManager : MonoBehaviour
     [SerializeField] private Slider HungerBar;
     [SerializeField] private PlayerStatsManager PlayerStatsManager;
     private float lastTimeHunger;
-    private float DeltaHunger = 45f;
+    private float DeltaHunger = 30f;
     private float lastTimeDmg;
     private float DeltaDamage = 1f;
+    private float lastTimeRegen;
+    private float DeltaRegen = 1f;
 
 
 
@@ -27,26 +29,46 @@ public class HungerManager : MonoBehaviour
     
     private void Update()
     {
-        if (lastTimeHunger + DeltaHunger < Time.time && HungerBar.value > 0)
+        float curTime = Time.time;
+        if (HungerBar.value > 0 && lastTimeHunger + DeltaHunger < curTime)
         {
-            lastTimeHunger = Time.time;
+            lastTimeHunger = curTime;
             HungerBar.value--;
         }
 
-        if (HungerBar.value == 0 && lastTimeDmg + DeltaHunger < Time.time)
+        if (HungerBar.value == 0 && lastTimeDmg + DeltaDamage < curTime)
         {
-            lastTimeDmg = Time.time;
+            lastTimeDmg = curTime;
             DamageHunger();
         }
-        
+
+        if (HungerBar.value == HungerBar.maxValue && lastTimeRegen + DeltaRegen < curTime)
+        {
+            lastTimeRegen = curTime;
+            RegenerateHP();
+        }
         if (Input.GetKeyDown(KeyCode.R)) Eat();
     }
 
+
+
+
+
+    private void DamageHunger()
+    {
+        PlayerStats playerStats = PlayerStatsManager.PlayerStats;
+        playerStats.HP -= playerStats.MaxHP / 100;
+        if (playerStats.HP <= 0) DeathPlayer();
+    }
     
-    
-    
-    
-    private void DamageHunger() => PlayerStatsManager.PlayerStats.HP -= PlayerStatsManager.PlayerStats.MaxHP / 100;
+    private void DeathPlayer()
+    {
+        PlayerStats playerStats = PlayerStatsManager.PlayerStats;
+        playerStats.DEF = playerStats.MaxDEF;
+        playerStats.HP = playerStats.MaxHP;
+        //teleport
+        //Player.GetComponent<AnimationHandler>().TrigerDeathAnimation();
+    }
     
     
     
@@ -54,9 +76,21 @@ public class HungerManager : MonoBehaviour
     
     public void Eat()
     {
+        lastTimeHunger = Time.time;
         if (PlayerStatsManager.PlayerDataManager.PlayerData.Inventory.Backpack.Materials.Fish <= 0 &&
             HungerBar.value >= HungerBar.maxValue) return;
         HungerBar.value++;
         PlayerStatsManager.UpdateFish(-1);
+    }
+
+
+    
+    
+
+    private void RegenerateHP()
+    {
+        PlayerStats playerStats = PlayerStatsManager.PlayerStats;
+        playerStats.HP += playerStats.MaxHP / 100;
+        if (playerStats.HP > playerStats.MaxHP) playerStats.HP = playerStats.MaxHP;
     }
 }
