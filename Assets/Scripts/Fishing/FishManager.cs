@@ -29,8 +29,8 @@ public class FishManager : MonoBehaviour
     {
         transform.position = new Vector3(x, y, transform.position.z);
 
-        x += 10;
-        y += Mathf.Sin(x/50) * 10;
+        x += 1;
+        y += Mathf.Sin(x/50) * 2;
 
         if (x > ParentRectTransform.rect.width)
         {

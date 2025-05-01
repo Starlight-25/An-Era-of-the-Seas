@@ -62,16 +62,8 @@ public class PlayerUIManager : MonoBehaviour
 
     private void SetCursorState(bool locked = false)
     {
-        if (locked)
-        {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-        else
-        {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-        }
+        Cursor.visible = !locked;
+        Cursor.lockState = locked ? CursorLockMode.Locked : CursorLockMode.None;
     }
 
     [SerializeField] private PlayerDataManager playerDataManager;
