@@ -70,7 +70,7 @@ public class MainMenu : MonoBehaviour
 
     public void MultiplayerButtonClicked()
     {
-        SceneManager.LoadScene("Network");
+        SceneManager.LoadScene("Multiplayer");
         MainMenuCanvas.SetActive(false);
         MultiplayerCanvas.SetActive(true);
     }

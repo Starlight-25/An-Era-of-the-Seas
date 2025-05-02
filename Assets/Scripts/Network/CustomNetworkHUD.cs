@@ -9,7 +9,11 @@ public class CustomNetworkHUD : MonoBehaviour
     [SerializeField] private Button hostButton;
     [SerializeField] private Button clientButton;
     [SerializeField] private GameObject NetworkCanvas;
-
+    
+    
+    
+    
+    
     void Start()
     {
         hostButton.onClick.AddListener(StartHost);
@@ -19,6 +23,10 @@ public class CustomNetworkHUD : MonoBehaviour
         NetworkManager.Singleton.OnClientDisconnectCallback += OnClientDisconnected;
     }
 
+    
+    
+    
+    
     void OnDestroy()
     {
         // Se désabonner pour éviter les erreurs de mémoire
@@ -28,13 +36,14 @@ public class CustomNetworkHUD : MonoBehaviour
         NetworkManager.Singleton.OnClientDisconnectCallback -= OnClientDisconnected;
     }
 
-
+    
     
     
     
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) ReturnButtonClicked();
+        if (!Cursor.visible) SetCursorStatus();
     }
 
 
@@ -54,9 +63,8 @@ public class CustomNetworkHUD : MonoBehaviour
         NetworkManager.Singleton.StartClient();
         NetworkCanvas.SetActive(false);
     }
+
     
-    //NetworkManager.Singleton.Shutdown();
-    //pour se deconnecter
     
     
     
@@ -80,10 +88,22 @@ public class CustomNetworkHUD : MonoBehaviour
         }
     }
 
-
-
+    
+    
+    
+    
     public void ReturnButtonClicked()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+    
+    
+    
+    
+    
+    private void SetCursorStatus(bool visible = true)
+    {
+        Cursor.lockState = visible ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = visible;
     }
 }
