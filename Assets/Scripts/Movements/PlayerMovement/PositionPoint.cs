@@ -45,7 +45,6 @@ public class PositionPoint : MonoBehaviour
     
     private void SaveNewPosition(Vector3 position)
     {
-        Debug.Log(position);
         PlayerDataManager.PlayerData.Location = new List<int>() { (int)position.x, (int)(position.y + 5), (int)position.z };
         PlayerDataManager.SavePlayerData();
     }
