@@ -21,12 +21,26 @@ public class TreasureInteractor : NetworkBehaviour
     {
         Ray ray = new Ray(Camera.position, Camera.forward);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 3f, interactableLayer) && hit.collider.CompareTag("Chest"))
+        if (!GameManager.Mode) // Treasure Hunt
         {
-            infoText.text = "E to interact with the Chest";
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Physics.Raycast(ray, out hit, 3f, interactableLayer) && hit.collider.CompareTag("Chest"))
             {
-                hit.collider.GetComponent<MultiplayerInteractor>().Interact();
+                infoText.text = "E to interact with the Chest";
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    hit.collider.GetComponent<MultiplayerInteractor>().Interact();
+                }
+            }
+        }
+        else // Boat race
+        {
+            if (Physics.Raycast(ray, out hit, 3f, interactableLayer) && hit.collider.CompareTag("Buoy"))
+            {
+                infoText.text = "E to interact with the Buoy";
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    hit.collider.GetComponent<MultiplayerInteractor>().Interact();
+                }
             }
         }
     }

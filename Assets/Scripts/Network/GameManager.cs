@@ -3,14 +3,12 @@ using Unity.Mathematics;
 using Unity.Netcode;
 using Unity.Netcode.Components;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 
 public class GameManager : NetworkBehaviour
 {
     [SerializeField] private GameObject BoatPrefab;
-
-    
-    
-    
+    public static bool Mode; // False == Treasure Hunt && True == Boat Race
     
     private void Start()
     {
@@ -29,14 +27,13 @@ public class GameManager : NetworkBehaviour
         uiManager.DisplayGameModeMenu();
     }
     
-    
-    
-    
     public void StartTreasureHuntGame()
     {
+        Debug.Log(Mode);
+        
         transform.GetComponent<TreasureHuntMode>().SpawnChest();
         TeleportAllPlayersServerRpc(new Vector3(500, 5, 500));
-
+        Mode = false;
     }
     
     
@@ -56,14 +53,14 @@ public class GameManager : NetworkBehaviour
             playerObject.GetComponent<PlayerMovementNetwork>().Teleport(tpPosition);
         }
     }
-
-    
-    
-    
     
     public void StartBoatRaceGame()
     {
-        Debug.Log("Not implemented yet...");
+        Debug.Log(Mode);
+        
+        Mode = true;
+        transform.GetComponent<BoatRaceMode>().SpawnBuoy();
+        TeleportAllPlayersServerRpc(new Vector3(335,-139,353));
     }
     
     public void SpawnBoats()
