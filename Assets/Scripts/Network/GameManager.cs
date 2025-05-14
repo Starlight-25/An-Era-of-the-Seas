@@ -22,6 +22,7 @@ public enum GameMode
 public class GameManager : NetworkBehaviour
 {
     [SerializeField] private GameObject BoatPrefab;
+    [SerializeField] private WaterManagerNetwork WaterManager;
     public static GameMode Mode; // False == Treasure Hunt && True == Boat Race
     
     private void Start()
@@ -46,6 +47,7 @@ public class GameManager : NetworkBehaviour
         Mode = GameMode.TreasureHunt;
         transform.GetComponent<TreasureHuntMode>().SpawnChest();
         TeleportAllPlayersServerRpc(new Vector3(500, 5, 500));
+        WaterManager.Initialize();
     }
     
     
@@ -72,6 +74,7 @@ public class GameManager : NetworkBehaviour
         transform.GetComponent<BoatRaceMode>().SpawnBuoy();
         TeleportAllPlayersServerRpc(new Vector3(200, 10, 445));
         SpawnBoats();
+        WaterManager.Initialize();
     }
     
     public void SpawnBoats()
