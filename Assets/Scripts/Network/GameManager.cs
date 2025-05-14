@@ -5,10 +5,24 @@ using Unity.Netcode.Components;
 using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
 
+
+
+
+
+public enum GameMode
+{
+    TreasureHunt,
+    BoatRace
+}
+
+
+
+
+
 public class GameManager : NetworkBehaviour
 {
     [SerializeField] private GameObject BoatPrefab;
-    public static bool Mode; // False == Treasure Hunt && True == Boat Race
+    public static GameMode Mode; // False == Treasure Hunt && True == Boat Race
     
     private void Start()
     {
@@ -29,11 +43,9 @@ public class GameManager : NetworkBehaviour
     
     public void StartTreasureHuntGame()
     {
-        Debug.Log(Mode);
-        
+        Mode = GameMode.TreasureHunt;
         transform.GetComponent<TreasureHuntMode>().SpawnChest();
         TeleportAllPlayersServerRpc(new Vector3(500, 5, 500));
-        Mode = false;
     }
     
     
@@ -56,16 +68,16 @@ public class GameManager : NetworkBehaviour
     
     public void StartBoatRaceGame()
     {
-        Debug.Log(Mode);
-        
-        Mode = true;
+        Mode = GameMode.BoatRace;
         transform.GetComponent<BoatRaceMode>().SpawnBuoy();
-        TeleportAllPlayersServerRpc(new Vector3(335,-139,353));
+        TeleportAllPlayersServerRpc(new Vector3(200, 10, 445));
+        SpawnBoats();
     }
     
     public void SpawnBoats()
     {
-        Instantiate(BoatPrefab, new Vector3(20, 5, 20), Quaternion.identity);
+        Instantiate(BoatPrefab, new Vector3(175, 5, 445), Quaternion.identity);
+        Instantiate(BoatPrefab, new Vector3(175, 5, 455), Quaternion.identity);
     }
 
 }

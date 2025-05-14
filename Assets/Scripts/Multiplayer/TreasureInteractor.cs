@@ -21,7 +21,7 @@ public class TreasureInteractor : NetworkBehaviour
     {
         Ray ray = new Ray(Camera.position, Camera.forward);
         RaycastHit hit;
-        if (!GameManager.Mode) // Treasure Hunt
+        if (GameManager.Mode == GameMode.TreasureHunt)
         {
             if (Physics.Raycast(ray, out hit, 3f, interactableLayer) && hit.collider.CompareTag("Chest"))
             {
