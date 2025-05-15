@@ -1,0 +1,63 @@
+Name of the Game: An Era of the Seas  
+Developed by: Dream Chasers  
+
+Programming:  
+- Achref Ben-Abdallah
+- Ethan Bruno
+- Joseph Devin
+- Jérôme Lin
+
+Art & Graphics:  
+- "9 Free Backgrounds" by Catlands Games (https://assetstore.unity.com/packages/2d/environments/9-free-backgrounds-285183)
+- "Gold coins icons, tokens for game ui interface Free Vector" by Yuliya Pauliukevich (https://www.vecteezy.com/vector-art/16962878-gold-coins-icons-tokens-for-game-ui-interface)
+- "Hand drawn animation frames element collection" by freepik (https://www.freepik.com/free-vector/hand-drawn-animation-frames-element-collection_32376918.htm)
+- "Stump log Cartoon piece of wood Broken oak linden maple cedar" by valadzionak_volha (https://www.freepik.com/free-vector/stump-log-cartoon-piece-wood-broken-oak-linden-maple-cedar_20366568.htm)
+- "Steal" by Canvas (https://media-public.canva.com/9TFWM/MAF-OH9TFWM/1/tl.png)
+- "Free Low Poly Swords" by Pure Poly (https://assetstore.unity.com/packages/3d/props/weapons/free-low-poly-swords-189978)
+- "Fantasy Sword" by 3dKingdom (https://assetstore.unity.com/packages/3d/props/weapons/fantasy-sword-25596)
+- "FREE - Low Poly Swords - RPG Weapons" by Blink (https://assetstore.unity.com/packages/3d/props/weapons/free-low-poly-swords-rpg-weapons-198166)
+- "sabre excalibur modèle 3D" by rito-kun (https://free3d.com/fr/3d-model/saber-excalibur-81501.html)
+- "Poly Angel - Mini Pirates Island" by Poly Angel (https://assetstore.unity.com/packages/3d/vehicles/sea/poly-angel-mini-pirates-island-267015)
+- "Stylized Pirate Ship" by Comeback (https://assetstore.unity.com/packages/3d/vehicles/sea/stylized-pirate-ship-200192)
+- "Boats - PolyPack" by Alstra Infinite (https://assetstore.unity.com/packages/3d/vehicles/sea/boats-polypack-189866)
+- "x mark png" by pngfind (https://www.pngfind.com/mpng/iiTwhiT_x-pirate-pirate-x-marks-the-spot-hd/)
+- "clipart-scar" by purepng (https://purepng.com/photo/12877/clipart-scar)
+- "Low-Poly Medieval Market" by VanillaArt (https://assetstore.unity.com/packages/3d/environments/low-poly-medieval-market-262473)
+- "LowPoly Survival Character Rio" by VertexModeler Team (https://assetstore.unity.com/packages/3d/characters/humanoids/lowpoly-survival-character-rio-273074)
+- "FREE Low Poly Human - RPG Character" by Blink (https://assetstore.unity.com/packages/3d/characters/humanoids/fantasy/free-low-poly-human-rpg-character-219979)
+- "FREE - Modular Character - Fantasy RPG Human Male" by Blink (https://assetstore.unity.com/packages/3d/characters/humanoids/humans/free-modular-character-fantasy-rpg-human-male-228952)
+- "Modular Fantasy Character" by asoliddev (https://assetstore.unity.com/packages/3d/characters/modular-fantasy-character-165896)
+- "Brick Textures (LITE) FREE" by SR Studios Kerala (https://assetstore.unity.com/packages/2d/textures-materials/brick-textures-lite-free-289917)
+- "Lowpoly Nature & Village Pack" by Hasan3DModels (https://assetstore.unity.com/packages/3d/environments/lowpoly-nature-village-pack-165318)
+- "Stylised Fantasy House" by Naasz Arts (https://assetstore.unity.com/packages/3d/environments/fantasy/stylised-fantasy-house-257964)
+- "Low Poly Fantasy Medieval Village Vol.2 Lite" by JustCreate (https://assetstore.unity.com/packages/3d/environments/fantasy/low-poly-fantasy-medieval-village-vol-2-lite-242322)
+- "Medieval Village - POLY Pack - Demo" by Nicrom (https://assetstore.unity.com/packages/3d/environments/fantasy/medieval-village-poly-pack-demo-274109)
+- "Lowpoly Medieval Peasants - Free - MEDIEVAL FANTASY SERIES" by Polytope Studio (https://assetstore.unity.com/packages/3d/characters/humanoids/humans/lowpoly-medieval-peasants-free-medieval-fantasy-series-122225)
+- "Minimalist Demon" by Conquerror (https://assetstore.unity.com/packages/3d/characters/minimalist-demon-255613)
+- "Goblin LowPoly - Animation" by Sr_bodinho (https://assetstore.unity.com/packages/3d/characters/goblin-lowpoly-animation-311643)
+
+Music & Sound Effects:  
+- "UI SFX Free Pack" by Skril Studio (https://assetstore.unity.com/packages/audio/sound-fx/ui-sfx-free-pack-245925)
+- "FREE Casual Game SFX Pack" by Dustyroom (https://assetstore.unity.com/packages/audio/sound-fx/free-casual-game-sfx-pack-54116)
+- "Adventure Gaming Music Suite" by Alison Turk (https://assetstore.unity.com/packages/audio/music/orchestral/adventure-gaming-music-suite-300438)
+- "Music - Sanctuary (Free Piano Solo)" by Neko Legends (https://assetstore.unity.com/packages/audio/music/music-sanctuary-free-piano-solo-296088)
+- "Mountain Pass Fantasy Music" by Alison Turk (https://assetstore.unity.com/packages/audio/music/orchestral/mountain-pass-fantasy-music-308919)
+- "Medieval Music Pack Vol. 2" by alkakrab (https://assetstore.unity.com/packages/audio/music/medieval-music-pack-vol-2-233785)
+- "25 Fantasy RPG Game Tracks Music Pack" by alkakrab (https://assetstore.unity.com/packages/audio/music/25-fantasy-rpg-game-tracks-music-pack-240154)
+- "Piano Instrumental Music Loops" by alkakrab (https://assetstore.unity.com/packages/audio/music/piano-instrumental-music-loops-240221)
+- "Music - Medieval Marketplace (Free Single)" by Neko Legends (https://assetstore.unity.com/packages/audio/music/music-medieval-marketplace-free-single-311109)
+
+Game Engine:
+- Unity (https://unity.com) Version 6000.0.30f1
+
+Development Tools:
+- Unity (https://unity.com) – Game engine
+- Blender (https://blender.org) – 3D modeling
+- Inkarnate (https://inkarnate.com) – 2D map design 
+- Adobe Photoshop – Image editing
+- Canva (https://www.canva.com) – Graphic design
+- Git & GitHub – Version control and collaboration
+- Inno Setup (https://jrsoftware.org/isinfo.php) – Installer creation
+
+
+© 2025 Dream Chasers. All rights reserved.
