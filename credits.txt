@@ -35,16 +35,6 @@ Art & Graphics:
 - "Lowpoly Medieval Peasants - Free - MEDIEVAL FANTASY SERIES" by Polytope Studio (https://assetstore.unity.com/packages/3d/characters/humanoids/humans/lowpoly-medieval-peasants-free-medieval-fantasy-series-122225)
 - "Minimalist Demon" by Conquerror (https://assetstore.unity.com/packages/3d/characters/minimalist-demon-255613)
 - "Goblin LowPoly - Animation" by Sr_bodinho (https://assetstore.unity.com/packages/3d/characters/goblin-lowpoly-animation-311643)
-- "Pirate" by AliceCassie (https://poly.pizza/m/CwWl7iqnxN)
-- "Pirate Captain" by Quaternius (https://poly.pizza/m/sN18LyyHAU)
-- "Pirate" by jeremy (https://poly.pizza/m/baCkFv7jhGo)
-- "Fish" by Quaternius (https://poly.pizza/m/ypEYhCImAB)
-- "Mushroom King" by Quaternius (https://poly.pizza/m/grnFTziU8u)
-- "Colossus pre Tilt Brush" by Darwin Yamamoto (https://poly.pizza/m/1JrbPYnWdeA)
-- "Golem" by joney_lol (https://poly.pizza/m/aqrX9Hly1W)
-- "Beserker Viking" by blaeksprut (https://poly.pizza/m/nFpGL0W7CQ)
-- "Animated Wizard" by Quaternius (https://poly.pizza/m/kttbFvCl2C)
-- "Low Poly Character - Price" by Carlos Ezequiel Centurion (https://sketchfab.com/3d-models/low-poly-character-price-d0979d767fbb4b3ab18c337c7742591e)
 
 Music & Sound Effects:  
 - "UI SFX Free Pack" by Skril Studio (https://assetstore.unity.com/packages/audio/sound-fx/ui-sfx-free-pack-245925)
@@ -63,7 +53,6 @@ Game Engine:
 Development Tools:
 - Unity (https://unity.com) – Game engine
 - Blender (https://blender.org) – 3D modeling
-- Mixamo (https://www.mixamo.com) - Animation
 - Inkarnate (https://inkarnate.com) – 2D map design 
 - Adobe Photoshop – Image editing
 - Canva (https://www.canva.com) – Graphic design
