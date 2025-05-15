@@ -42,8 +42,9 @@ public class InteractorHandler : MonoBehaviour
     {
         Ray ray = new Ray(Camera.position, Camera.forward);
         RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit, distance, interactableLayer))
+        
+        if (BoatState.inHelm) infoText.text = "E to exit Helm mode";
+        else if (Physics.Raycast(ray, out hit, distance, interactableLayer))
         {
             if (distance == 10f && hit.collider.gameObject.name == "Boat Interactor")
             {
@@ -63,7 +64,6 @@ public class InteractorHandler : MonoBehaviour
 
     private string GetInteractorText(string name)
     {
-        Debug.Log(name);
         switch (name)
         {
             case "Capstan" when !BoatState.isAnchored:
@@ -95,15 +95,12 @@ public class InteractorHandler : MonoBehaviour
         Ray ray = new Ray(Camera.position, Camera.forward);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, 3f, interactableLayer)) HandleAction(hit.collider.gameObject, 3f);
-        else
+        if (BoatState.inHelm)
         {
-            if (BoatState.inHelm)
-            {
-                HelmInteractor.SwitchCameras();
-                EnterBoat(transform.GetComponent<BoatInitHandler>().Boat);
-            }
+            HelmInteractor.SwitchCameras();
+            EnterBoat(transform.GetComponent<BoatInitHandler>().Boat);
         }
+        else if (Physics.Raycast(ray, out hit, 3f, interactableLayer)) HandleAction(hit.collider.gameObject, 3f);
         if (Physics.Raycast(ray, out hit, 10f, interactableLayer)) HandleAction(hit.collider.gameObject, 10f);
     }
     

@@ -35,7 +35,6 @@ public class PositionPoint : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.name);
         if (other.name == "TownMusicZone") SaveNewPosition(other.transform.position);
     }
 
