@@ -1,39 +1,59 @@
-# An-Era-of-the-Seas
+# An Era of the Seas
+
+![image](https://github.com/user-attachments/assets/c758f36e-4dcb-408a-b385-30456b4a61f2)
+
+## Introduction 
+Welcome to An Era of the Seas, an open-world adventure and exploration game where every island holds its mysteries, dangers… and opportunities. In this vast and living world, you play as the son of a debt-ridden merchant, determined to restore your family’s honor and fortune.
+
+Your mission: explore the 8 islands of the archipelago, each with its own resources, inhabitants, challenges, and secrets. Whether through trading, treasure hunting, or battling enemies, every means is fair game to repay the family debt… and perhaps, along the way, forge your own legend.
+
+Sail between islands, build your network, upgrade your ship, make tough decisions… The world of An Era of the Seas is open, but unforgiving. The path you choose is yours alone.
+
+Get ready to set sail. The adventure begins now.
+
+## A propos des developpeurs
+Dream Chasers is an independent studio driven by one passion: turning dreams into interactive worlds. For them, a video game is more than entertainment — it's an adventure, a story to live.
+
+With An Era of the Seas, their ambition is clear: to deliver an immersive experience blending exploration, realistic navigation, and strategic progression. This project reflects their commitment to pushing the boundaries of narrative gaming and crafting rich, captivating universes for players seeking escape.
 
 
-Le projet An Era of the Seas se distingue par son ambition de créer un monde maritime captivant, où l'aventure et l'exploration sont au cœur de l'expérience du jeu. Développé par l’équipe passionnée de Dream Chasers, ce roman visuel propose aux joueurs de se plonger dans l’univers fascinant de la navigation à voile, à travers des quêtes épiques et des défis stratégiques.
+## Installation
+On Windows (7, 8, 10, 11):
+* Download the installer (AnEraOfTheSeasSetup.exe)
+  Source: [link]
+* Run the installer (AnEraOfTheSeasSetup.exe)
 
-An Era of the Seas place les joueurs dans la peau d’un capitaine qui doit parcourir des îles inexplorées, affronter des ennemis redoutables et reconstituer un héritage familial. Tout en naviguant sur les Shattered Seas, les joueurs découvriront un environnement vivant et évolutif, conçu pour offrir à chaque exploration un nouveau souffle. Le système de navigation réaliste, les améliorations du navire et la gestion de l’équipage sont autant d’éléments qui enrichissent l'expérience tout en plongeant le joueur dans un monde authentique et intrigant.
-
-À travers ce projet, Dream Chasers souhaite offrir une expérience de jeu complète et immersive, alliant innovation technologique et profondeur narrative. L'équipe s'efforce de repousser les limites du développement de jeux vidéo pour proposer une aventure unique, riche en découvertes et en stratégies, qui captivera les amateurs de jeux d'exploration et de piraterie.
-
-# Assets File Architecture
+On Linux:
+```bash
+tar -xvzf AnEraOfTheSeas.tar.gz
+cd AnEraOfTheSeas
 ```
-Assets/
-|-- Scenes/
-|   |-- MainMenu.unity
-|   |-- ...
-|-- Scripts/
-|   |-- Movements
-|   |   |-- BoatMovement/
-|   |   |-- PlayerMovement/
-|   |-- Items/
-|   |-- UI/
-|   |   |-- MainMenu/
-|   |   |-- PlayerUI/
-|   |-- WaterSimulation/
-|   |-- WeatherSimulation/
-|   |-- AI
-|-- Ressources/
-|   |-- Art/
-|   |   |-- Sprites/
-|   |   |   |-- UI/
-|   |   |-- 3Dmodels/
-|   |-- Materials/
-|   |-- Stats/
-|   |-- Audio/
-|   |   |-- Music/
-|   |   |-- SFX/
-|-- Prefabs/
-|-- Packages/
+Make the main executable runnable:
+```bash
+chmod +x AnEraOfTheSeas.x86_64
+./ AnEraOfTheSeas.x86_64
 ```
+
+## Uninstallation
+On Windows:
+* Open Control Panel > Programs > Uninstall a program
+* Select AnEraOfTheSeas and click Uninstall
+Or:
+* Use the Uninstall AnEraOfTheSeas shortcut from the Start Menu
+
+On Linux:
+```bash
+rm -rf ~/ AnEraOfTheSeas /
+rm -rf ~/.config/unity3d/DreamChasers/ AnEraOfTheSeas /
+```
+
+## License
+End-User License Agreement (EULA)
+
+This game is licensed, not sold. By installing or using the software, you agree to the following terms:
+1. You may use this software for personal entertainment.
+2. You may not redistribute, modify, or decompile this software.
+3. All content, including code, art, and audio, is owned by Dream Chasers.
+4. This software is provided "as is", without warranty of any kind.
+
+© 2025 Dream Chasers. All rights reserved.
