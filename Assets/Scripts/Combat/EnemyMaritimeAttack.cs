@@ -87,9 +87,11 @@ public class EnemyMaritimeAttack : MonoBehaviour
     {
         List<int> savedPos = PlayerDataManager.PlayerData.Location;
         Vector3 position = new Vector3(savedPos[0], savedPos[1], savedPos[2]);
-        if (Player.parent is not null) // the player is in the boat
+        BoatState boatState = Player.GetComponent<BoatInitHandler>().BoatState;
+        if (boatState.inBoat) // the player is in the boat
         {
-            Player.GetComponent<InteractorHandler>().ExitBoat(Player.parent);
+            if (boatState.inHelm) HelmInteractor.SwitchCameras(); // the player is in helm mode
+            Player.GetComponent<InteractorHandler>().ExitBoat(FindAnyObjectByType<BoatMovement>().transform);
             FindFirstObjectByType<PlayerUIManager>().BoatButtonClicked();
         }
         Player.GetComponent<CharacterController>().enabled = false;

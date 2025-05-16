@@ -43,8 +43,8 @@ public class InteractorHandler : MonoBehaviour
         Ray ray = new Ray(Camera.position, Camera.forward);
         RaycastHit hit;
         
-        if (BoatState.inHelm) infoText.text = "E to exit Helm mode";
-        else if (Physics.Raycast(ray, out hit, distance, interactableLayer))
+        //if (BoatState.inHelm) infoText.text = "E to exit Helm mode";
+        if (Physics.Raycast(ray, out hit, distance, interactableLayer))
         {
             if (distance == 10f && hit.collider.gameObject.name == "Boat Interactor")
             {
@@ -190,7 +190,7 @@ public class InteractorHandler : MonoBehaviour
 
         // Enable CharacterController
         controller.enabled = true;
-    
+        transform.rotation = Quaternion.identity;
     }
 
 
