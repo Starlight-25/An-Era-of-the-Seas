@@ -110,6 +110,14 @@ public class EnemyMaritimeAttack : MonoBehaviour
         Transform playerCamera = Player.Find("Camera");
         Transform enemyCanvas = HealthBar.transform.parent;
         enemyCanvas.LookAt(playerCamera);
+        
+        if (Vector3.Distance(Player.position, transform.position) <= 10f)
+        {
+            Vector3 directon = playerCamera.position - transform.position;
+            directon.y = 0f;
+            transform.rotation = Quaternion.LookRotation(directon);
+        }
+        
         enemyCanvas.rotation = Quaternion.Euler(0, enemyCanvas.rotation.eulerAngles.y + 180, 0);
     }
 }
