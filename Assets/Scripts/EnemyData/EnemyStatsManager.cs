@@ -64,7 +64,7 @@ public class EnemyStatsManager : MonoBehaviour
     {
         EnemyMarineStats.Level = PlayerStatsManager.PlayerStats.Level;
         EnemyMarineStats.MaxHP = CsvData.EnemyMarineCSV[EnemyMarineStats.Level - 1].HP;
-        EnemyMarineStats.HP = EnemyTerestrialStats.MaxHP;
+        EnemyMarineStats.HP = EnemyMarineStats.MaxHP;
         EnemyMarineStats.ATK = CsvData.EnemyMarineCSV[EnemyMarineStats.Level - 1].ATK;
         EnemyMarineStats.CoinsDrop = CsvData.EnemyMarineCSV[EnemyMarineStats.Level - 1].CoinsDrop;
         EnemyMarineStats.PWDDrop = CsvData.EnemyMarineCSV[EnemyMarineStats.Level - 1].PWDDrop;

@@ -45,6 +45,9 @@ Art & Graphics:
 - "Beserker Viking" by blaeksprut (https://poly.pizza/m/nFpGL0W7CQ)
 - "Animated Wizard" by Quaternius (https://poly.pizza/m/kttbFvCl2C)
 - "Low Poly Character - Price" by Carlos Ezequiel Centurion (https://sketchfab.com/3d-models/low-poly-character-price-d0979d767fbb4b3ab18c337c7742591e)
+- "Sea anemone" by Poly by Google (https://poly.pizza/m/5mWGVL6VgMd)
+- "Squid" by Poly by Google (https://poly.pizza/m/6ar_2XbrzCp)
+- "Seahorse" by Poly by Google (https://poly.pizza/m/d_36p3CahYa)
 
 Music & Sound Effects:  
 - "UI SFX Free Pack" by Skril Studio (https://assetstore.unity.com/packages/audio/sound-fx/ui-sfx-free-pack-245925)

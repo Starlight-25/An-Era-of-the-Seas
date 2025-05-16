@@ -4,34 +4,33 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyTerestrialAttack : MonoBehaviour
+public class EnemyMaritimeAttack : MonoBehaviour
 {
     [SerializeField] private EnemyStatsManager EnemyStatsManager;
-    private EnemyTerestrialStats EnemyTerestrialStats;
+    private EnemyMarineStats EnemyMarineStats;
     private Transform Player;
-    private PlayerStats playerStats;
+    private BoatStats BoatStats;
     private PlayerDataManager PlayerDataManager;
     private float lastAttackTime;
 
     private Slider HealthBar;
-    
-    
+
+
     
     
     
     private void Start()
     {
-        EnemyTerestrialStats = EnemyStatsManager.EnemyTerestrialStats;
+        EnemyMarineStats = EnemyStatsManager.EnemyMarineStats;
         Player = GameObject.FindGameObjectWithTag("Player").transform;
-        playerStats = FindFirstObjectByType<PlayerStatsManager>().PlayerStats;
-        PlayerDataManager = FindAnyObjectByType<PlayerDataManager>();
+        BoatStats = FindFirstObjectByType<PlayerStatsManager>().BoatStats;
+        PlayerDataManager = FindFirstObjectByType<PlayerDataManager>();
         HealthBar = transform.Find("EnemyCanvas").Find("HealthBar").GetComponent<Slider>();
-        HealthBar.transform.Find("LvlText").GetComponent<TextMeshProUGUI>().text = $"Lvl {EnemyTerestrialStats.Level}";
-        HealthBar.maxValue = EnemyTerestrialStats.MaxHP;
-        lastAttackTime = Time.time;
+        HealthBar.transform.Find("LvlText").GetComponent<TextMeshProUGUI>().text = $"Lvl {EnemyMarineStats.Level}";
+        HealthBar.maxValue = EnemyMarineStats.MaxHP;
     }
 
-    
+
     
     
     
@@ -39,7 +38,7 @@ public class EnemyTerestrialAttack : MonoBehaviour
     {
         float distancePlayer = Vector3.Distance(transform.position, Player.position);
 
-        if (distancePlayer <= 3f && Time.time >= lastAttackTime + 1f && EnemyTerestrialStats.HP > 0)
+        if (distancePlayer <= 10f && Time.time >= lastAttackTime + 1f && EnemyMarineStats.HP > 0)
         {
             AttackPlayer();
             lastAttackTime = Time.time;
@@ -47,54 +46,68 @@ public class EnemyTerestrialAttack : MonoBehaviour
         UpdateHealthBar();
     }
 
-    
-    
+
+
     
     
     private void AttackPlayer()
     {
-        transform.GetComponent<EnemyAnimation>().TriggerAttackAnimation();
-        FindFirstObjectByType<AudioManager>().TriggerSwordSounds();
-        
-        if (playerStats.DEF > 0)
+        if (BoatStats.DEF > 0)
         {
-            playerStats.DEF -= EnemyTerestrialStats.ATK;
-            if (playerStats.DEF < 0)
+            BoatStats.DEF -= EnemyMarineStats.ATK;
+            if (BoatStats.DEF < 0)
             {
-                playerStats.HP -= -playerStats.DEF;
-                playerStats.DEF = 0;
+                BoatStats.HP -= -BoatStats.DEF;
+                BoatStats.DEF = 0;
             }
         }
-        else playerStats.HP -= EnemyTerestrialStats.ATK;
+        else BoatStats.HP -= EnemyMarineStats.ATK;
         
-        if (playerStats.HP <= 0) DeathPlayer();
+        if (BoatStats.HP <= 0) DeathPlayer();
+        Debug.Log(BoatStats.HP + " " + BoatStats.DEF);
     }
-
+    
+    
+    
+    
+    
     private void DeathPlayer()
     {
-        playerStats.DEF = playerStats.MaxDEF;
-        playerStats.HP = playerStats.MaxHP;
+        BoatStats.DEF = BoatStats.MaxDEF;
+        BoatStats.HP = BoatStats.MaxHP;
         TeleportDeath();
         Player.GetComponent<AnimationHandler>().TrigerDeathAnimation();
     }
-
+    
+    
+    
+    
+    
     private void TeleportDeath()
     {
         List<int> savedPos = PlayerDataManager.PlayerData.Location;
         Vector3 position = new Vector3(savedPos[0], savedPos[1], savedPos[2]);
+        if (Player.parent is not null) // the player is in the boat
+        {
+            Player.GetComponent<InteractorHandler>().ExitBoat(Player.parent);
+            FindFirstObjectByType<PlayerUIManager>().BoatButtonClicked();
+        }
         Player.GetComponent<CharacterController>().enabled = false;
         Player.position = position;
         Player.GetComponent<CharacterController>().enabled = true;
     }
+
+    
+    
+    
     
     private void UpdateHealthBar()
     {
-        HealthBar.value = EnemyTerestrialStats.HP;
+        HealthBar.value = EnemyMarineStats.HP;
 
         Transform playerCamera = Player.Find("Camera");
         Transform enemyCanvas = HealthBar.transform.parent;
         enemyCanvas.LookAt(playerCamera);
         enemyCanvas.rotation = Quaternion.Euler(0, enemyCanvas.rotation.eulerAngles.y + 180, 0);
     }
-    
 }
