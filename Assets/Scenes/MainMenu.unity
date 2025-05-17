@@ -1380,6 +1380,265 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
+--- !u!1 &922756766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 922756767}
+  - component: {fileID: 922756769}
+  - component: {fileID: 922756768}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &922756767
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922756766}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1030626816}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &922756768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922756766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "Name of the Game: An Era of the Seas  \r\nDeveloped by: Dream Chasers 
+    \r\n\r\nProgramming:  \r\n- Achref Ben-Abdallah  \r\n- Ethan Bruno  \r\n- Joseph
+    Devin  \r\n- J\xE9r\xF4me Lin  \r\n\r\nArt & Graphics:  \r\n- <link=\"https://assetstore.unity.com/packages/2d/environments/9-free-backgrounds-285183\"><color=#4AA3DF>\"9
+    Free Backgrounds\"</color></link> by Catlands Games  \r\n- <link=\"https://www.vecteezy.com/vector-art/16962878-gold-coins-icons-tokens-for-game-ui-interface\"><color=#4AA3DF>\"Gold
+    coins icons, tokens for game ui interface Free Vector\"</color></link> by Yuliya
+    Pauliukevich  \r\n- <link=\"https://www.freepik.com/free-vector/hand-drawn-animation-frames-element-collection_32376918.htm\"><color=#4AA3DF>\"Hand
+    drawn animation frames element collection\"</color></link> by freepik  \r\n-
+    <link=\"https://www.freepik.com/free-vector/stump-log-cartoon-piece-wood-broken-oak-linden-maple-cedar_20366568.htm\"><color=#4AA3DF>\"Stump
+    log Cartoon piece of wood Broken oak linden maple cedar\"</color></link> by valadzionak_volha 
+    \r\n- <link=\"https://media-public.canva.com/9TFWM/MAF-OH9TFWM/1/tl.png\"><color=#4AA3DF>\"Steal\"</color></link>
+    by Canva  \r\n- <link=\"https://assetstore.unity.com/packages/3d/props/weapons/free-low-poly-swords-189978\"><color=#4AA3DF>\"Free
+    Low Poly Swords\"</color></link> by Pure Poly  \r\n- <link=\"https://assetstore.unity.com/packages/3d/props/weapons/fantasy-sword-25596\"><color=#4AA3DF>\"Fantasy
+    Sword\"</color></link> by 3dKingdom  \r\n- <link=\"https://assetstore.unity.com/packages/3d/props/weapons/free-low-poly-swords-rpg-weapons-198166\"><color=#4AA3DF>\"FREE
+    - Low Poly Swords - RPG Weapons\"</color></link> by Blink  \r\n- <link=\"https://free3d.com/fr/3d-model/saber-excalibur-81501.html\"><color=#4AA3DF>\"sabre
+    excalibur mod\xE8le 3D\"</color></link> by rito-kun  \r\n- <link=\"https://assetstore.unity.com/packages/3d/vehicles/sea/poly-angel-mini-pirates-island-267015\"><color=#4AA3DF>\"Poly
+    Angel - Mini Pirates Island\"</color></link> by Poly Angel  \r\n- <link=\"https://assetstore.unity.com/packages/3d/vehicles/sea/stylized-pirate-ship-200192\"><color=#4AA3DF>\"Stylized
+    Pirate Ship\"</color></link> by Comeback  \r\n- <link=\"https://assetstore.unity.com/packages/3d/vehicles/sea/boats-polypack-189866\"><color=#4AA3DF>\"Boats
+    - PolyPack\"</color></link> by Alstra Infinite  \r\n- <link=\"https://www.pngfind.com/mpng/iiTwhiT_x-pirate-pirate-x-marks-the-spot-hd/\"><color=#4AA3DF>\"x
+    mark png\"</color></link> by pngfind  \r\n- <link=\"https://purepng.com/photo/12877/clipart-scar\"><color=#4AA3DF>\"clipart-scar\"</color></link>
+    by purepng  \r\n- <link=\"https://assetstore.unity.com/packages/3d/environments/low-poly-medieval-market-262473\"><color=#4AA3DF>\"Low-Poly
+    Medieval Market\"</color></link> by VanillaArt  \r\n- <link=\"https://assetstore.unity.com/packages/3d/characters/humanoids/lowpoly-survival-character-rio-273074\"><color=#4AA3DF>\"LowPoly
+    Survival Character Rio\"</color></link> by VertexModeler Team  \r\n- <link=\"https://assetstore.unity.com/packages/3d/characters/humanoids/fantasy/free-low-poly-human-rpg-character-219979\"><color=#4AA3DF>\"FREE
+    Low Poly Human - RPG Character\"</color></link> by Blink  \r\n- <link=\"https://assetstore.unity.com/packages/3d/characters/humanoids/humans/free-modular-character-fantasy-rpg-human-male-228952\"><color=#4AA3DF>\"FREE
+    - Modular Character - Fantasy RPG Human Male\"</color></link> by Blink   \r\n-
+    <link=\"https://assetstore.unity.com/packages/3d/characters/modular-fantasy-character-165896\"><color=#4AA3DF>\"Modular
+    Fantasy Character\"</color></link> by asoliddev  \r\n- <link=\"https://assetstore.unity.com/packages/2d/textures-materials/brick-textures-lite-free-289917\"><color=#4AA3DF>\"Brick
+    Textures (LITE) FREE\"</color></link> by SR Studios Kerala  \r\n- <link=\"https://assetstore.unity.com/packages/3d/environments/lowpoly-nature-village-pack-165318\"><color=#4AA3DF>\"Lowpoly
+    Nature & Village Pack\"</color></link> by Hasan3DModels  \r\n- <link=\"https://assetstore.unity.com/packages/3d/environments/fantasy/stylised-fantasy-house-257964\"><color=#4AA3DF>\"Stylised
+    Fantasy House\"</color></link> by Naasz Arts  \r\n- <link=\"https://assetstore.unity.com/packages/3d/environments/fantasy/low-poly-fantasy-medieval-village-vol-2-lite-242322\"><color=#4AA3DF>\"Low
+    Poly Fantasy Medieval Village Vol.2 Lite\"</color></link> by JustCreate  \r\n-
+    <link=\"https://assetstore.unity.com/packages/3d/environments/fantasy/medieval-village-poly-pack-demo-274109\"><color=#4AA3DF>\"Medieval
+    Village - POLY Pack - Demo\"</color></link> by Nicrom  \r\n- <link=\"https://assetstore.unity.com/packages/3d/characters/humanoids/humans/lowpoly-medieval-peasants-free-medieval-fantasy-series-122225\"><color=#4AA3DF>\"Lowpoly
+    Medieval Peasants - Free - MEDIEVAL FANTASY SERIES\"</color></link> by Polytope
+    Studio  \r\n- <link=\"https://assetstore.unity.com/packages/3d/characters/minimalist-demon-255613\"><color=#4AA3DF>\"Minimalist
+    Demon\"</color></link> by Conquerror  \r\n- <link=\"https://assetstore.unity.com/packages/3d/characters/goblin-lowpoly-animation-311643\"><color=#4AA3DF>\"Goblin
+    LowPoly - Animation\"</color></link> by Sr_bodinho  \r\n- <link=\"https://poly.pizza/m/CwWl7iqnxN\"><color=#4AA3DF>\"Pirate\"</color></link>
+    by AliceCassie  \r\n- <link=\"https://poly.pizza/m/sN18LyyHAU\"><color=#4AA3DF>\"Pirate
+    Captain\"</color></link> by Quaternius  \r\n- <link=\"https://poly.pizza/m/baCkFv7jhGo\"><color=#4AA3DF>\"Pirate\"</color></link>
+    by jeremy  \r\n- <link=\"https://poly.pizza/m/ypEYhCImAB\"><color=#4AA3DF>\"Fish\"</color></link>
+    by Quaternius  \r\n- <link=\"https://poly.pizza/m/grnFTziU8u\"><color=#4AA3DF>\"Mushroom
+    King\"</color></link> by Quaternius  \r\n- <link=\"https://poly.pizza/m/1JrbPYnWdeA\"><color=#4AA3DF>\"Colossus
+    pre Tilt Brush\"</color></link> by Darwin Yamamoto  \r\n- <link=\"https://poly.pizza/m/aqrX9Hly1W\"><color=#4AA3DF>\"Golem\"</color></link>
+    by joney_lol  \r\n- <link=\"https://poly.pizza/m/nFpGL0W7CQ\"><color=#4AA3DF>\"Beserker
+    Viking\"</color></link> by blaeksprut  \r\n- <link=\"https://poly.pizza/m/kttbFvCl2C\"><color=#4AA3DF>\"Animated
+    Wizard\"</color></link> by Quaternius  \r\n- <link=\"https://sketchfab.com/3d-models/low-poly-character-price-d0979d767fbb4b3ab18c337c7742591e\"><color=#4AA3DF>\"Low
+    Poly Character - Price\"</color></link> by Carlos Ezequiel Centurion  \r\n- <link=\"https://poly.pizza/m/5mWGVL6VgMd\"><color=#4AA3DF>\"Sea
+    anemone\"</color></link> by Poly by Google  \r\n- <link=\"https://poly.pizza/m/6ar_2XbrzCp\"><color=#4AA3DF>\"Squid\"</color></link>
+    by Poly by Google  \r\n- <link=\"https://poly.pizza/m/d_36p3CahYa\"><color=#4AA3DF>\"Seahorse\"</color></link>
+    by Poly by Google  \r\n\r\nMusic & Sound Effects:  \r\n- <link=\"https://assetstore.unity.com/packages/audio/sound-fx/ui-sfx-free-pack-245925\"><color=#4AA3DF>\"UI
+    SFX Free Pack\"</color></link> by Skril Studio  \r\n- <link=\"https://assetstore.unity.com/packages/audio/sound-fx/free-casual-game-sfx-pack-54116\"><color=#4AA3DF>\"FREE
+    Casual Game SFX Pack\"</color></link> by Dustyroom  \r\n- <link=\"https://assetstore.unity.com/packages/audio/music/orchestral/adventure-gaming-music-suite-300438\"><color=#4AA3DF>\"Adventure
+    Gaming Music Suite\"</color></link> by Alison Turk  \r\n- <link=\"https://assetstore.unity.com/packages/audio/music/music-sanctuary-free-piano-solo-296088\"><color=#4AA3DF>\"Music
+    - Sanctuary (Free Piano Solo)\"</color></link> by Neko Legends  \r\n- <link=\"https://assetstore.unity.com/packages/audio/music/orchestral/mountain-pass-fantasy-music-308919\"><color=#4AA3DF>\"Mountain
+    Pass Fantasy Music\"</color></link> by Alison Turk  \r\n- <link=\"https://assetstore.unity.com/packages/audio/music/medieval-music-pack-vol-2-233785\"><color=#4AA3DF>\"Medieval
+    Music Pack Vol. 2\"</color></link> by alkakrab  \r\n- <link=\"https://assetstore.unity.com/packages/audio/music/25-fantasy-rpg-game-tracks-music-pack-240154\"><color=#4AA3DF>\"25
+    Fantasy RPG Game Tracks Music Pack\"</color></link> by alkakrab  \r\n- <link=\"https://assetstore.unity.com/packages/audio/music/piano-instrumental-music-loops-240221\"><color=#4AA3DF>\"Piano
+    Instrumental Music Loops\"</color></link> by alkakrab  \r\n- <link=\"https://assetstore.unity.com/packages/audio/music/music-medieval-marketplace-free-single-311109\"><color=#4AA3DF>\"Music
+    - Medieval Marketplace (Free Single)\"</color></link> by Neko Legends  \r\n\r\nGame
+    Engine:  \r\n- <link=\"https://unity.com\"><color=#4AA3DF>Unity</color></link>
+    Version 6000.0.30f1  \r\n\r\nDevelopment Tools:  \r\n- <link=\"https://unity.com\"><color=#4AA3DF>Unity</color></link>
+    \u2013 Game engine  \r\n- <link=\"https://blender.org\"><color=#4AA3DF>Blender</color></link>
+    \u2013 3D modeling  \r\n- <link=\"https://www.mixamo.com\"><color=#4AA3DF>Mixamo</color></link>
+    \u2013 Animation  \r\n- <link=\"https://inkarnate.com\"><color=#4AA3DF>Inkarnate</color></link>
+    \u2013 2D map design  \r\n- Adobe Photoshop \u2013 Image editing  \r\n- <link=\"https://www.canva.com\"><color=#4AA3DF>Canva</color></link>
+    \u2013 Graphic design  \r\n- Git & GitHub \u2013 Version control and collaboration 
+    \r\n- <link=\"https://jrsoftware.org/isinfo.php\"><color=#4AA3DF>Inno Setup</color></link>
+    \u2013 Installer creation  \r\n\r\n\xA9 2025 Dream Chasers. All rights reserved.\r\n\r\n\r\n\r\nEnd-User
+    License Agreement (EULA)\r\n\r\nThis game is licensed, not sold. By installing
+    or using the software, you agree to the following terms:\r\n\r\n1. You may use
+    this software for personal entertainment.\r\n2. You may not redistribute, modify,
+    or decompile this software.\r\n3. All content, including code, art, and audio,
+    is owned by Dream Chasers.\r\n4. This software is provided \"as is\", without
+    warranty of any kind.\r\n\r\n\xA9 2025 Dream Chasers. All rights reserved.\r"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 40
+  m_fontSizeBase: 40
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &922756769
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922756766}
+  m_CullTransparentMesh: 1
+--- !u!1 &1030626815
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1030626816}
+  - component: {fileID: 1030626817}
+  m_Layer: 5
+  m_Name: Content
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1030626816
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030626815}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 922756767}
+  m_Father: {fileID: 1447346598}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 3500}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &1030626817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030626815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 0
 --- !u!1 &1081666501
 GameObject:
   m_ObjectHideFlags: 0
@@ -1691,6 +1950,114 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 600, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1139105941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1139105942}
+  - component: {fileID: 1139105945}
+  - component: {fileID: 1139105944}
+  - component: {fileID: 1139105943}
+  m_Layer: 5
+  m_Name: Scroll View
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1139105942
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139105941}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1447346598}
+  - {fileID: 1821325176}
+  m_Father: {fileID: 1464757991}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -50, y: -50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1139105943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139105941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Content: {fileID: 1030626816}
+  m_Horizontal: 1
+  m_Vertical: 1
+  m_MovementType: 1
+  m_Elasticity: 0.1
+  m_Inertia: 1
+  m_DecelerationRate: 0.135
+  m_ScrollSensitivity: 1
+  m_Viewport: {fileID: 1447346598}
+  m_HorizontalScrollbar: {fileID: 0}
+  m_VerticalScrollbar: {fileID: 1821325177}
+  m_HorizontalScrollbarVisibility: 2
+  m_VerticalScrollbarVisibility: 2
+  m_HorizontalScrollbarSpacing: -3
+  m_VerticalScrollbarSpacing: -3
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1139105944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139105941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1139105945
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139105941}
+  m_CullTransparentMesh: 1
 --- !u!1 &1141059966
 GameObject:
   m_ObjectHideFlags: 0
@@ -2424,6 +2791,96 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1440717936}
   m_CullTransparentMesh: 1
+--- !u!1 &1447346597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1447346598}
+  - component: {fileID: 1447346601}
+  - component: {fileID: 1447346600}
+  - component: {fileID: 1447346599}
+  m_Layer: 5
+  m_Name: Viewport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1447346598
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447346597}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1030626816}
+  m_Father: {fileID: 1139105942}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -17, y: 0}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &1447346599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447346597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 0
+--- !u!114 &1447346600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447346597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1447346601
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447346597}
+  m_CullTransparentMesh: 1
 --- !u!1 &1464757987
 GameObject:
   m_ObjectHideFlags: 0
@@ -2520,7 +2977,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1440717937}
-  - {fileID: 1641328332}
+  - {fileID: 1139105942}
   - {fileID: 1330398903}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2543,6 +3000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainMenuCanvas: {fileID: 444608846}
   CreditsCanvas: {fileID: 1464757987}
+  CreditsText: {fileID: 922756768}
 --- !u!1 &1477501457
 GameObject:
   m_ObjectHideFlags: 0
@@ -2618,6 +3076,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1477501457}
   m_CullTransparentMesh: 1
+--- !u!1 &1482060525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1482060526}
+  m_Layer: 5
+  m_Name: Sliding Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1482060526
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482060525}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2125367625}
+  m_Father: {fileID: 1821325176}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: -20}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1525866139
 GameObject:
   m_ObjectHideFlags: 0
@@ -2965,142 +3459,6 @@ MonoBehaviour:
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
---- !u!1 &1641328331
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1641328332}
-  - component: {fileID: 1641328334}
-  - component: {fileID: 1641328333}
-  m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1641328332
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641328331}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1464757991}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1641328333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641328331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: Credits
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 0
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1641328334
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641328331}
-  m_CullTransparentMesh: 1
 --- !u!1 &1788657172
 GameObject:
   m_ObjectHideFlags: 0
@@ -3489,6 +3847,132 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1816775005}
+  m_CullTransparentMesh: 1
+--- !u!1 &1821325175
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1821325176}
+  - component: {fileID: 1821325179}
+  - component: {fileID: 1821325178}
+  - component: {fileID: 1821325177}
+  m_Layer: 5
+  m_Name: Scrollbar Vertical
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1821325176
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821325175}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1482060526}
+  m_Father: {fileID: 1139105942}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 0}
+  m_Pivot: {x: 1, y: 1}
+--- !u!114 &1821325177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821325175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2125367626}
+  m_HandleRect: {fileID: 2125367625}
+  m_Direction: 2
+  m_Value: 1
+  m_Size: 0.22737306
+  m_NumberOfSteps: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1821325178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821325175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1821325179
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821325175}
   m_CullTransparentMesh: 1
 --- !u!1 &1959144832
 GameObject:
@@ -4050,6 +4534,81 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2125367624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2125367625}
+  - component: {fileID: 2125367627}
+  - component: {fileID: 2125367626}
+  m_Layer: 5
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2125367625
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125367624}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1482060526}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.77262694}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2125367626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125367624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2125367627
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125367624}
+  m_CullTransparentMesh: 1
 --- !u!1 &2134291159
 GameObject:
   m_ObjectHideFlags: 0
