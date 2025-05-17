@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - Chest
+  - Capstan
+  - Helm
+  - Quest
   layers:
   - Default
   - TransparentFX
