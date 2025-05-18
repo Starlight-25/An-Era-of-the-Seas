@@ -22,6 +22,7 @@ public class WaterManagerNetwork : NetworkBehaviour
 
     public void Initialize()
     {
+        playerGrids = new List<PlayerWaterGrid>();
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         foreach (GameObject player in players)
         {
@@ -36,6 +37,7 @@ public class WaterManagerNetwork : NetworkBehaviour
 
     private void Update()
     {
+        Initialize();
         foreach (PlayerWaterGrid grid in playerGrids)
         {
             if (Vector3.Distance(grid.playerTransform.position, grid.lastPlayerPosition) > tileSize)
