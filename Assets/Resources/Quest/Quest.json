@@ -27,14 +27,21 @@
       "Player:\n*approaching the island*\nThose towers may look as fearsome as the deep, but I reckon the Grog Atoll holds some safe harbor for me yet. If I’m to deal out justice proper, I’ll be needin’ better steel. The old cutlass the tavern keeper lent me’s been a trusty mate, but she’s seen her last fight…"
     ],
     [
-      
+      "Player:\nThis place reeks of venom and secrets. The charts call it Fangtooth Cay, but the old sailors whispered a darker name… Snake Island. Let’s hope it’s just stories.\n— As the player steps onto the shore, an old woman watches from the shadows of the jungle path. —",
+      "Villager (Maura 'Serpent-Tongue' Voss):\nSo... another warm-blood come seekin’ answers, gold, or perhaps just trouble? Careful where ye tread—this island don’t take kindly to strangers.",
+      "Player:\nI’m lookin’ for a way past the storms. Word is Snake Island holds a secret path through the maelstrom that guards the Merchants’ castle. True?",
+      "Maura 'Serpent-Tongue' Voss:\nAye, the Serpent's Maw—a hidden reef pass known only to a few. My kin once protected it. But the Merchants came with fire and coin, shattered our temples, and took the fang idols that kept the snakes and seas in balance. Now the Maw churns with death.",
+      "Player:\nAnd if I return the idols?\nMaura 'Serpent-Tongue' Voss:\nThen the snakes may bless ye. But beware—those idols are guarded. One lies within the old shrine, now a nest of scaled horrors. The other, the Merchants took to their outpost on the far side of the island, fed and watched over by a beast that drinks poison like rum. Bring them both, and I’ll guide you through the Serpent’s Maw meself."
     ],
     [
       "Player:\n*arriving at the island*\n This island was built by the mighty and courageous Glade ‘Disfigured’ Carlyle, one of the first explorers of the shattered seas. It is the last post guard before entering the fief of The Merchants of The Shattered Seas. How dare they appropriate this beautiful island, once the hideout for the bravest men!",
       "Player:\nWho came here looking for adventure and glory rather than for money! How dare they, yellow still from sleep in the corner of the eye, a crumpled honor, scruples in mourning, obsessed by the golden evil, their precious money. I swear revenge !"
     ],
     [
-      
+      "Player:\nThis is it… The seat of all this rot. The last debt to settle. I feel my father's shadow here—heavy, unspoken. Time to speak with steel.",
+      "*The merchants appear*\nMerchant (Veris ‘Coinveil’ Damar):\nWelcome, heir of debt. We have been expecting you. Have you come to pay, or to perish?",
+      "Player:\nI’ve come to end this charade. Your greed ends here.",
+      "Merchant (Veris ‘Coinveil’ Damar):\nSo be it. The contract is sealed in blood… and so shall be your fate.\n*The battle with the 5 merchants starts.*"
     ]
   ]
 }
