@@ -3,14 +3,27 @@ using Unity.Mathematics;
 using Unity.Netcode;
 using Unity.Netcode.Components;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
+
+
+
+
+
+public enum GameMode
+{
+    TreasureHunt,
+    BoatRace
+}
+
+
+
+
 
 public class GameManager : NetworkBehaviour
 {
     [SerializeField] private GameObject BoatPrefab;
-
-    
-    
-    
+    [SerializeField] private WaterManagerNetwork WaterManager;
+    public static GameMode Mode; // False == Treasure Hunt && True == Boat Race
     
     private void Start()
     {
@@ -29,14 +42,12 @@ public class GameManager : NetworkBehaviour
         uiManager.DisplayGameModeMenu();
     }
     
-    
-    
-    
     public void StartTreasureHuntGame()
     {
+        Mode = GameMode.TreasureHunt;
         transform.GetComponent<TreasureHuntMode>().SpawnChest();
         TeleportAllPlayersServerRpc(new Vector3(500, 5, 500));
-
+        WaterManager.Initialize();
     }
     
     
@@ -56,19 +67,20 @@ public class GameManager : NetworkBehaviour
             playerObject.GetComponent<PlayerMovementNetwork>().Teleport(tpPosition);
         }
     }
-
-    
-    
-    
     
     public void StartBoatRaceGame()
     {
-        Debug.Log("Not implemented yet...");
+        Mode = GameMode.BoatRace;
+        transform.GetComponent<BoatRaceMode>().SpawnBuoy();
+        TeleportAllPlayersServerRpc(new Vector3(200, 10, 445));
+        SpawnBoats();
+        WaterManager.Initialize();
     }
     
     public void SpawnBoats()
     {
-        Instantiate(BoatPrefab, new Vector3(20, 5, 20), Quaternion.identity);
+        Instantiate(BoatPrefab, new Vector3(175, 5, 445), Quaternion.identity);
+        Instantiate(BoatPrefab, new Vector3(175, 5, 455), Quaternion.identity);
     }
 
 }
