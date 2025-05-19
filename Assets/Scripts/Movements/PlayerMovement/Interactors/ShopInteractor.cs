@@ -10,4 +10,10 @@ public static class ShopInteractor
         ShopCanvas.GetComponent<ShopManager>().ShopContent(type);
         playerUIManager.ShopCanvasShow();
     }
+
+
+    public static void ShowSellMenu()
+    {
+        playerUIManager.SellMenuShow();
+    }
 }

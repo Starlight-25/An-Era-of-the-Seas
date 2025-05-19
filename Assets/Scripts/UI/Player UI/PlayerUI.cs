@@ -11,6 +11,7 @@ public class PlayerUIManager : MonoBehaviour
     [SerializeField] private GameObject CharacterCanvas;
     [SerializeField] private GameObject MapCanvas;
     [SerializeField] private GameObject ShopCanvas;
+    [SerializeField] private GameObject SellMenu;
 
     public void SettingsButtonClicked()
     {
@@ -57,6 +58,15 @@ public class PlayerUIManager : MonoBehaviour
         Time.timeScale = 0f;
         SetCursorState();
         ShopCanvas.SetActive(true);
+        PlayerUICanvas.SetActive(false);
+    }
+
+
+    public void SellMenuShow()
+    {
+        Time.timeScale = 0f;
+        SetCursorState();
+        SellMenu.SetActive(true);
         PlayerUICanvas.SetActive(false);
     }
 

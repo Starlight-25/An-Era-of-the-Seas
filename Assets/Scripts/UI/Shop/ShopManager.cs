@@ -12,11 +12,10 @@ public class ShopManager : MonoBehaviour
     private OwnedMaterial OwnedMaterial;
     private List<Item> ItemShopList;
 
-    private void Start()
+    private void OnEnable()
     {
         OwnedMaterial = transform.Find("Material Owned").GetComponent<OwnedMaterial>();
         OwnedMaterial.UpdateNumber();
-        ShopContent("Weapon");
     }
 
     public void ShopContent(string type)
@@ -28,6 +27,7 @@ public class ShopManager : MonoBehaviour
         else if (type == "Stigmata") AddStigmata();
         else if (type == "Crew") AddCrew();
         FillShop();
+        if (type == "Material") AddMaterials();
     }
     
     private void AddWeapon()
@@ -97,6 +97,27 @@ public class ShopManager : MonoBehaviour
                     break;
             }
             ItemShopList.Add(item);
+        }
+    }
+
+    private void AddMaterials()
+    {
+        foreach (Transform child in ContentParent)
+        {
+            Destroy(child.gameObject);
+        }
+        
+        foreach (string mat in new[] {"Wood", "Steel", "Pure Water Drop"})
+        {
+            foreach (int num in new[] {1, 10, 100, 1000, 10000, 100000})
+            {
+                Material material = new Material(mat, num);
+                GameObject newItem = Instantiate(ItemPrefab, ContentParent);
+                ItemButton itemButton = newItem.GetComponent<ItemButton>();
+                itemButton.InitMaterial(material);
+                
+                newItem.GetComponent<Button>().onClick.AddListener(() => ItemShopDescription.SetDescriptionMaterial(material, num));
+            }
         }
     }
 
