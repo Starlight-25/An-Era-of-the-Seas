@@ -89,12 +89,31 @@ public class PlayerUIManager : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.M)) MapButtonClicked();
         else if (Input.GetKeyDown(KeyCode.H)) BoatButtonClicked();
 
+        HpDefBarUpdate();
+    }
+
+
+
+    private void HpDefBarUpdate()
+    {
         LevelText.text = $"Lvl {playerDataManager.PlayerData.Level}";
-        HPSlider.maxValue = PlayerStatsManager.PlayerStats.MaxHP;
-        HPSlider.value = PlayerStatsManager.PlayerStats.HP;
-        HPText.text = $"{HPSlider.value}/{HPSlider.maxValue}";
-        DEFSlider.maxValue = PlayerStatsManager.PlayerStats.MaxDEF;
-        DEFSlider.value = PlayerStatsManager.PlayerStats.DEF;
-        DefText.text = $"{DEFSlider.value}/{DEFSlider.maxValue}";
+        if (FindFirstObjectByType<BoatInitHandler>().BoatState.inBoat)
+        {
+            HPSlider.maxValue = PlayerStatsManager.BoatStats.MaxHP;
+            HPSlider.value = PlayerStatsManager.BoatStats.HP;
+            HPText.text = $"{HPSlider.value}/{HPSlider.maxValue}";
+            DEFSlider.maxValue = PlayerStatsManager.BoatStats.MaxDEF;
+            DEFSlider.value = PlayerStatsManager.BoatStats.DEF;
+            DefText.text = $"{DEFSlider.value}/{DEFSlider.maxValue}";
+        }
+        else
+        {
+            HPSlider.maxValue = PlayerStatsManager.PlayerStats.MaxHP;
+            HPSlider.value = PlayerStatsManager.PlayerStats.HP;
+            HPText.text = $"{HPSlider.value}/{HPSlider.maxValue}";
+            DEFSlider.maxValue = PlayerStatsManager.PlayerStats.MaxDEF;
+            DEFSlider.value = PlayerStatsManager.PlayerStats.DEF;
+            DefText.text = $"{DEFSlider.value}/{DEFSlider.maxValue}";
+        }
     }
 }
