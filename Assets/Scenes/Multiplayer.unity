@@ -766,7 +766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
-  BoatPrefab: {fileID: 1074998955015480533, guid: f65aff85d17e7034db59677b68d48448, type: 3}
+  BoatPrefab: {fileID: 1074998955015480533, guid: d0cecb1d51046f74695c9497383a4c96, type: 3}
   WaterManager: {fileID: 2135817121}
 --- !u!114 &745794784
 MonoBehaviour:

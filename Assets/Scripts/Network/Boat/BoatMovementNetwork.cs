@@ -7,11 +7,7 @@ public class BoatMovementNetwork : NetworkBehaviour
 {
 
     private Rigidbody BoatBody;
-    
     public float speed = 1f; // Should change according to wind...
-    public float helmMovingSpeed = 10000f;
-
-    private Vector3 EulerAngleVelocity = new Vector3(0, 1, 0);
     private float xRotation = 0f;
     private BoatStateNetwork BoatStateNetwork;
 
@@ -31,17 +27,9 @@ public class BoatMovementNetwork : NetworkBehaviour
     
     void Update()
     {
-        if (!BoatStateNetwork.isAnchored)
-        {
-            MoveBoatForward(speed);
-        }
+        if (!BoatStateNetwork.isAnchored) MoveBoatForward(speed);
         
-        if (BoatStateNetwork.inHelm) // If the player IS in the helm menu, then he can be able to move the boat.
-        {
-            xRotation = Input.GetAxis("Mouse X") * Time.deltaTime;
-            
-            MoveBoat();
-        }
+        if (BoatStateNetwork.inHelm) MoveBoat(); // If the player IS in the helm menu, then he can be able to move the boat.
     }
 
     
@@ -50,8 +38,9 @@ public class BoatMovementNetwork : NetworkBehaviour
     
     private void MoveBoat()
     {
-        Quaternion deltaRotation = Quaternion.Euler(EulerAngleVelocity * (xRotation * (helmMovingSpeed * Time.fixedDeltaTime)));
-        
+        xRotation = Input.GetAxis("Mouse X") * Time.deltaTime;
+        //Quaternion deltaRotation = Quaternion.Euler(EulerAngleVelocity * (xRotation * (helmMovingSpeed * Time.fixedDeltaTime)));
+        Quaternion deltaRotation = Quaternion.Euler(0f, xRotation, 0f);
         BoatBody.MoveRotation(BoatBody.rotation * deltaRotation);
     }
     
