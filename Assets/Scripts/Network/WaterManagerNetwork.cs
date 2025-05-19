@@ -37,9 +37,17 @@ public class WaterManagerNetwork : NetworkBehaviour
 
     private void Update()
     {
-        Initialize();
-        foreach (PlayerWaterGrid grid in playerGrids)
+        for (int i = playerGrids.Count - 1; i >= 0; i--)
         {
+            var grid = playerGrids[i];
+
+            if (grid.playerTransform == null)
+            {
+                CleanupWaterGrid(grid);
+                playerGrids.RemoveAt(i);
+                continue;
+            }
+
             if (Vector3.Distance(grid.playerTransform.position, grid.lastPlayerPosition) > tileSize)
             {
                 UpdateWaterGridForPlayer(grid);
@@ -48,6 +56,10 @@ public class WaterManagerNetwork : NetworkBehaviour
         }
     }
 
+    
+    
+    
+    
     private void GenerateWaterGridForPlayer(PlayerWaterGrid grid)
     {
         Vector3 playerPosition = grid.playerTransform.position;
@@ -78,4 +90,20 @@ public class WaterManagerNetwork : NetworkBehaviour
             }
         }
     }
+    
+    
+    
+    
+    private void CleanupWaterGrid(PlayerWaterGrid grid)
+    {
+        foreach (GameObject tile in grid.waterTiles)
+        {
+            if (tile != null)
+            {
+                Destroy(tile);
+            }
+        }
+        grid.waterTiles.Clear();
+    }
+
 }

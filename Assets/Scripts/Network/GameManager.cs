@@ -79,8 +79,10 @@ public class GameManager : NetworkBehaviour
     
     public void SpawnBoats()
     {
-        Instantiate(BoatPrefab, new Vector3(175, 5, 445), Quaternion.identity);
-        Instantiate(BoatPrefab, new Vector3(175, 5, 455), Quaternion.identity);
+        GameObject boat1 = Instantiate(BoatPrefab, new Vector3(175, 5, 445), Quaternion.identity);
+        GameObject boat2 = Instantiate(BoatPrefab, new Vector3(175, 5, 455), Quaternion.identity);
+        boat1.GetComponent<NetworkObject>().Spawn();
+        boat2.GetComponent<NetworkObject>().Spawn();
     }
 
 }

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d67466556646c2745a587c2c1dd17d5b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 282246
+  packageName: Beach Lifeguard Buoy
+  packageVersion: 1.0
+  assetPath: Assets/LifeguardBuoy/Materials/M_Lifeguard_Buoy.mat
+  uploadId: 656910
