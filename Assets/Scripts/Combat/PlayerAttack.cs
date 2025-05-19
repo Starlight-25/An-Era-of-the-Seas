@@ -16,7 +16,7 @@ public class PlayerAttack : MonoBehaviour
     
     private void Start()
     {
-        PlayerStatsManager = FindFirstObjectByType<PlayerStatsManager>().GetComponent<PlayerStatsManager>();
+        PlayerStatsManager = FindFirstObjectByType<PlayerStatsManager>();
         DmgText = transform.Find("Interactor Text").Find("DmgText").GetComponent<TextMeshProUGUI>();
     }
 
@@ -26,14 +26,17 @@ public class PlayerAttack : MonoBehaviour
     
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && Time.time >= lastAttackTime + 0.5f)
+        if (!transform.GetComponent<BoatInitHandler>().BoatState.inBoat)
         {
-            Attack();
-            lastAttackTime = Time.time;
-        }
-        else if (Time.time >= lastAttackTime + 0.5f)
-        {
-            DmgText.text = "";
+            if (Input.GetMouseButtonDown(0) && Time.time >= lastAttackTime + 0.5f)
+            {
+                Attack();
+                lastAttackTime = Time.time;
+            }
+            else if (Time.time >= lastAttackTime + 0.5f)
+            {
+                DmgText.text = "";
+            }
         }
     }
 

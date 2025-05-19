@@ -1,0 +1,47 @@
+{
+  "Quest":[
+    [
+      "Letter:\nWe, the collective of The Merchants of The Shattered Seas, hereby declare you responsible for the debts of Sir Raoul 'Grimace' Rave after his tragic disappearance at sea. As his son, you must now repay his creditors scattered around the Shattered Seas. May you find us and our pouches quickly, for The Merchants do not wait."
+    ],
+    [
+      "Villager (Lockhart 'Daring' Tempest):\nHey there, mate! After some gold? My great-great-grandfather, Rockwell 'Grim' Stevens, left behind clues to his treasure. But who knows what’s lurking up there… If you're willing to take the risk, I'll split the treasure with you. I remember he said:",
+      "- Atop th’ tallest peak, where th’ wind howls fierce, lies a deep crater\n- an’ in its heart, me treasure be buried, aye!"
+    ],
+    [
+      "Villager (Tina 'Mad Eyes' Burton):\nAhoy, stranger! Ye be findin’ us in a right sorry state! Once, we was the proud folk o’ the Cay o’ Whispers, but them scurvy merchant dogs raided us! Stole our young ‘uns, plundered our gold… heartless bilge rats, the lot of ‘em! And now they be claimin’ we owe ‘em tribute—or they’ll be back to bleed us dry!",
+      "Player\nAye, I hear you. What can I do to help?",
+      "Villager (Tina 'Mad Eyes' Burton):\nYe look like a wanderin’ soul, aye? If you’re heading toward the frozen seas, take ‘em a cask o’ our finest grog—what they claim we still owe. The distillery lies on the northernmost spit o’ land in the archipelago. Keep yer wits about ye, and may the tides be kind!"
+    ],
+    [
+      "Player:\n*The player must bring the bottles to the tavern*\nSome weather ye got here! These bottles might warm some bellies—they're from the folk over at the Cay o’ Whispers. Tragic what happened to ‘em… How be ye holdin’ up in these cursed waters?",
+      "Tavern Keeper (Montgomery 'Corsair' Talon):\nHold up? Bah! How’s a man supposed to hold up when them merchant dogs be breathin’ down our necks? Bloody thieves, stealin’ our trade, hijackin’ our boats—we’re barely scrapin’ by! But that’s what comes of havin’ the finest timber in all the Shattered Seas. They can’t build a single ship without it!",
+      "Player:\nSounds like they need a lesson in fair play. Maybe I can help—reckon I’ll go and liberate a seaport they snatched.",
+      "Tavern Keeper (Montgomery 'Corsair' Talon):\nNow ye be speakin’ my language! A bit o’ rebellion never hurt nobody—‘cept the ones that deserve it! But ‘fore ye go, let me give ye a little somethin’ to help on yer way…"
+    ],
+    [
+      "Player:\nThis be the land o’ diamonds, big as a man’s fist! Just one good find, and I could be sailin’ in a fine new ship—aye, I’ll need one if I plan to venture past this isle, where the currents grow wild and fierce.",
+      "Player:\nAhoy, matey! Where might a bold soul find the mine that holds these fabled riches?",
+      "Villager (Crook 'No Cash' Atherton):\nHa! Another dreamer come lookin’ for our legendary diamonds, eh? Hate to break it to ye, lad, but no one’s laid eyes on so much as a glimmer since them damned merchants took over… Still, if ye got the guts to try yer luck, the cave lies on the island north o’ our proud land. But mind yer step—many who go don’t come back."
+    ],
+    [
+      "Player:\n*approaching the island*\nThose towers may look as fearsome as the deep, but I reckon the Grog Atoll holds some safe harbor for me yet. If I’m to deal out justice proper, I’ll be needin’ better steel. The old cutlass the tavern keeper lent me’s been a trusty mate, but she’s seen her last fight…"
+    ],
+    [
+      "Player:\nThis place reeks of venom and secrets. The charts call it Fangtooth Cay, but the old sailors whispered a darker name… Snake Island. Let’s hope it’s just stories.\n— As the player steps onto the shore, an old woman watches from the shadows of the jungle path. —",
+      "Villager (Maura 'Serpent-Tongue' Voss):\nSo... another warm-blood come seekin’ answers, gold, or perhaps just trouble? Careful where ye tread—this island don’t take kindly to strangers.",
+      "Player:\nI’m lookin’ for a way past the storms. Word is Snake Island holds a secret path through the maelstrom that guards the Merchants’ castle. True?",
+      "Maura 'Serpent-Tongue' Voss:\nAye, the Serpent's Maw—a hidden reef pass known only to a few. My kin once protected it. But the Merchants came with fire and coin, shattered our temples, and took the fang idols that kept the snakes and seas in balance. Now the Maw churns with death.",
+      "Player:\nAnd if I return the idols?\nMaura 'Serpent-Tongue' Voss:\nThen the snakes may bless ye. But beware—those idols are guarded. One lies within the old shrine, now a nest of scaled horrors. The other, the Merchants took to their outpost on the far side of the island, fed and watched over by a beast that drinks poison like rum. Bring them both, and I’ll guide you through the Serpent’s Maw meself."
+    ],
+    [
+      "Player:\n*arriving at the island*\n This island was built by the mighty and courageous Glade ‘Disfigured’ Carlyle, one of the first explorers of the shattered seas. It is the last post guard before entering the fief of The Merchants of The Shattered Seas. How dare they appropriate this beautiful island, once the hideout for the bravest men!",
+      "Player:\nWho came here looking for adventure and glory rather than for money! How dare they, yellow still from sleep in the corner of the eye, a crumpled honor, scruples in mourning, obsessed by the golden evil, their precious money. I swear revenge !"
+    ],
+    [
+      "Player:\nThis is it… The seat of all this rot. The last debt to settle. I feel my father's shadow here—heavy, unspoken. Time to speak with steel.",
+      "*The merchants appear*\nMerchant (Veris ‘Coinveil’ Damar):\nWelcome, heir of debt. We have been expecting you. Have you come to pay, or to perish?",
+      "Player:\nI’ve come to end this charade. Your greed ends here.",
+      "Merchant (Veris ‘Coinveil’ Damar):\nSo be it. The contract is sealed in blood… and so shall be your fate.\n*The battle with the 5 merchants starts.*"
+    ]
+  ]
+}

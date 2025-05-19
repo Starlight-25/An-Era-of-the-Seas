@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,7 +10,8 @@ public class EnemyTerestrialAttack : MonoBehaviour
     private EnemyTerestrialStats EnemyTerestrialStats;
     private Transform Player;
     private PlayerStats playerStats;
-    private float lastAttackTime = 0f;
+    private PlayerDataManager PlayerDataManager;
+    private float lastAttackTime;
 
     private Slider HealthBar;
     
@@ -21,10 +23,12 @@ public class EnemyTerestrialAttack : MonoBehaviour
     {
         EnemyTerestrialStats = EnemyStatsManager.EnemyTerestrialStats;
         Player = GameObject.FindGameObjectWithTag("Player").transform;
-        playerStats = FindFirstObjectByType<PlayerStatsManager>().GetComponent<PlayerStatsManager>().PlayerStats;
+        playerStats = FindFirstObjectByType<PlayerStatsManager>().PlayerStats;
+        PlayerDataManager = FindAnyObjectByType<PlayerDataManager>();
         HealthBar = transform.Find("EnemyCanvas").Find("HealthBar").GetComponent<Slider>();
         HealthBar.transform.Find("LvlText").GetComponent<TextMeshProUGUI>().text = $"Lvl {EnemyTerestrialStats.Level}";
         HealthBar.maxValue = EnemyTerestrialStats.MaxHP;
+        lastAttackTime = Time.time;
     }
 
     
@@ -70,10 +74,19 @@ public class EnemyTerestrialAttack : MonoBehaviour
     {
         playerStats.DEF = playerStats.MaxDEF;
         playerStats.HP = playerStats.MaxHP;
-        //teleport
+        TeleportDeath();
         Player.GetComponent<AnimationHandler>().TrigerDeathAnimation();
     }
 
+    private void TeleportDeath()
+    {
+        List<int> savedPos = PlayerDataManager.PlayerData.Location;
+        Vector3 position = new Vector3(savedPos[0], savedPos[1], savedPos[2]);
+        Player.GetComponent<CharacterController>().enabled = false;
+        Player.position = position;
+        Player.GetComponent<CharacterController>().enabled = true;
+    }
+    
     private void UpdateHealthBar()
     {
         HealthBar.value = EnemyTerestrialStats.HP;

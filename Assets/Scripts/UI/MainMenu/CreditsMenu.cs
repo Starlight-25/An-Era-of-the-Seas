@@ -1,9 +1,12 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class CreditsScrips : MonoBehaviour
+public class CreditsScrips : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private GameObject MainMenuCanvas;
     [SerializeField] private GameObject CreditsCanvas;
+    [SerializeField] private TextMeshProUGUI CreditsText;
     
     public void ReturnButtonClicked()
     {
@@ -16,6 +19,17 @@ public class CreditsScrips : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             ReturnButtonClicked();
+        }
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        int linkIndex = TMP_TextUtilities.FindIntersectingLink(CreditsText, eventData.position, null);
+        if (linkIndex != -1)
+        {
+            TMP_LinkInfo linkInfo = CreditsText.textInfo.linkInfo[linkIndex];
+            string linkId = linkInfo.GetLinkID();
+            Application.OpenURL(linkId);
         }
     }
 }

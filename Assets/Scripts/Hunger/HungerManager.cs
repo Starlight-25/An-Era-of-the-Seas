@@ -77,7 +77,7 @@ public class HungerManager : MonoBehaviour
     public void Eat()
     {
         lastTimeHunger = Time.time;
-        if (PlayerStatsManager.PlayerDataManager.PlayerData.Inventory.Backpack.Materials.Fish <= 0 &&
+        if (PlayerStatsManager.PlayerDataManager.PlayerData.Inventory.Backpack.Materials.Fish <= 0 ||
             HungerBar.value >= HungerBar.maxValue) return;
         HungerBar.value++;
         PlayerStatsManager.UpdateFish(-1);

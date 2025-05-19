@@ -1,0 +1,91 @@
+Name of the Game: An Era of the Seas  
+Developed by: Dream Chasers  
+
+Programming:  
+- Achref Ben-Abdallah  
+- Ethan Bruno  
+- Joseph Devin  
+- Jérôme Lin  
+
+Art & Graphics:  
+- <link="https://assetstore.unity.com/packages/2d/environments/9-free-backgrounds-285183"><color=#4AA3DF>"9 Free Backgrounds"</color></link> by Catlands Games  
+- <link="https://www.vecteezy.com/vector-art/16962878-gold-coins-icons-tokens-for-game-ui-interface"><color=#4AA3DF>"Gold coins icons, tokens for game ui interface Free Vector"</color></link> by Yuliya Pauliukevich  
+- <link="https://www.freepik.com/free-vector/hand-drawn-animation-frames-element-collection_32376918.htm"><color=#4AA3DF>"Hand drawn animation frames element collection"</color></link> by freepik  
+- <link="https://www.freepik.com/free-vector/stump-log-cartoon-piece-wood-broken-oak-linden-maple-cedar_20366568.htm"><color=#4AA3DF>"Stump log Cartoon piece of wood Broken oak linden maple cedar"</color></link> by valadzionak_volha  
+- <link="https://media-public.canva.com/9TFWM/MAF-OH9TFWM/1/tl.png"><color=#4AA3DF>"Steal"</color></link> by Canva  
+- <link="https://assetstore.unity.com/packages/3d/props/weapons/free-low-poly-swords-189978"><color=#4AA3DF>"Free Low Poly Swords"</color></link> by Pure Poly  
+- <link="https://assetstore.unity.com/packages/3d/props/weapons/fantasy-sword-25596"><color=#4AA3DF>"Fantasy Sword"</color></link> by 3dKingdom  
+- <link="https://assetstore.unity.com/packages/3d/props/weapons/free-low-poly-swords-rpg-weapons-198166"><color=#4AA3DF>"FREE - Low Poly Swords - RPG Weapons"</color></link> by Blink  
+- <link="https://free3d.com/fr/3d-model/saber-excalibur-81501.html"><color=#4AA3DF>"sabre excalibur modèle 3D"</color></link> by rito-kun  
+- <link="https://assetstore.unity.com/packages/3d/vehicles/sea/poly-angel-mini-pirates-island-267015"><color=#4AA3DF>"Poly Angel - Mini Pirates Island"</color></link> by Poly Angel  
+- <link="https://assetstore.unity.com/packages/3d/vehicles/sea/stylized-pirate-ship-200192"><color=#4AA3DF>"Stylized Pirate Ship"</color></link> by Comeback  
+- <link="https://assetstore.unity.com/packages/3d/vehicles/sea/boats-polypack-189866"><color=#4AA3DF>"Boats - PolyPack"</color></link> by Alstra Infinite  
+- <link="https://www.pngfind.com/mpng/iiTwhiT_x-pirate-pirate-x-marks-the-spot-hd/"><color=#4AA3DF>"x mark png"</color></link> by pngfind  
+- <link="https://purepng.com/photo/12877/clipart-scar"><color=#4AA3DF>"clipart-scar"</color></link> by purepng  
+- <link="https://assetstore.unity.com/packages/3d/environments/low-poly-medieval-market-262473"><color=#4AA3DF>"Low-Poly Medieval Market"</color></link> by VanillaArt  
+- <link="https://assetstore.unity.com/packages/3d/characters/humanoids/lowpoly-survival-character-rio-273074"><color=#4AA3DF>"LowPoly Survival Character Rio"</color></link> by VertexModeler Team  
+- <link="https://assetstore.unity.com/packages/3d/characters/humanoids/fantasy/free-low-poly-human-rpg-character-219979"><color=#4AA3DF>"FREE Low Poly Human - RPG Character"</color></link> by Blink  
+- <link="https://assetstore.unity.com/packages/3d/characters/humanoids/humans/free-modular-character-fantasy-rpg-human-male-228952"><color=#4AA3DF>"FREE - Modular Character - Fantasy RPG Human Male"</color></link> by Blink   
+- <link="https://assetstore.unity.com/packages/3d/characters/modular-fantasy-character-165896"><color=#4AA3DF>"Modular Fantasy Character"</color></link> by asoliddev  
+- <link="https://assetstore.unity.com/packages/2d/textures-materials/brick-textures-lite-free-289917"><color=#4AA3DF>"Brick Textures (LITE) FREE"</color></link> by SR Studios Kerala  
+- <link="https://assetstore.unity.com/packages/3d/environments/lowpoly-nature-village-pack-165318"><color=#4AA3DF>"Lowpoly Nature & Village Pack"</color></link> by Hasan3DModels  
+- <link="https://assetstore.unity.com/packages/3d/environments/fantasy/stylised-fantasy-house-257964"><color=#4AA3DF>"Stylised Fantasy House"</color></link> by Naasz Arts  
+- <link="https://assetstore.unity.com/packages/3d/environments/fantasy/low-poly-fantasy-medieval-village-vol-2-lite-242322"><color=#4AA3DF>"Low Poly Fantasy Medieval Village Vol.2 Lite"</color></link> by JustCreate  
+- <link="https://assetstore.unity.com/packages/3d/environments/fantasy/medieval-village-poly-pack-demo-274109"><color=#4AA3DF>"Medieval Village - POLY Pack - Demo"</color></link> by Nicrom  
+- <link="https://assetstore.unity.com/packages/3d/characters/humanoids/humans/lowpoly-medieval-peasants-free-medieval-fantasy-series-122225"><color=#4AA3DF>"Lowpoly Medieval Peasants - Free - MEDIEVAL FANTASY SERIES"</color></link> by Polytope Studio  
+- <link="https://assetstore.unity.com/packages/3d/characters/minimalist-demon-255613"><color=#4AA3DF>"Minimalist Demon"</color></link> by Conquerror  
+- <link="https://assetstore.unity.com/packages/3d/characters/goblin-lowpoly-animation-311643"><color=#4AA3DF>"Goblin LowPoly - Animation"</color></link> by Sr_bodinho  
+- <link="https://poly.pizza/m/CwWl7iqnxN"><color=#4AA3DF>"Pirate"</color></link> by AliceCassie  
+- <link="https://poly.pizza/m/sN18LyyHAU"><color=#4AA3DF>"Pirate Captain"</color></link> by Quaternius  
+- <link="https://poly.pizza/m/baCkFv7jhGo"><color=#4AA3DF>"Pirate"</color></link> by jeremy  
+- <link="https://poly.pizza/m/ypEYhCImAB"><color=#4AA3DF>"Fish"</color></link> by Quaternius  
+- <link="https://poly.pizza/m/grnFTziU8u"><color=#4AA3DF>"Mushroom King"</color></link> by Quaternius  
+- <link="https://poly.pizza/m/1JrbPYnWdeA"><color=#4AA3DF>"Colossus pre Tilt Brush"</color></link> by Darwin Yamamoto  
+- <link="https://poly.pizza/m/aqrX9Hly1W"><color=#4AA3DF>"Golem"</color></link> by joney_lol  
+- <link="https://poly.pizza/m/nFpGL0W7CQ"><color=#4AA3DF>"Beserker Viking"</color></link> by blaeksprut  
+- <link="https://poly.pizza/m/kttbFvCl2C"><color=#4AA3DF>"Animated Wizard"</color></link> by Quaternius  
+- <link="https://sketchfab.com/3d-models/low-poly-character-price-d0979d767fbb4b3ab18c337c7742591e"><color=#4AA3DF>"Low Poly Character - Price"</color></link> by Carlos Ezequiel Centurion  
+- <link="https://poly.pizza/m/5mWGVL6VgMd"><color=#4AA3DF>"Sea anemone"</color></link> by Poly by Google  
+- <link="https://poly.pizza/m/6ar_2XbrzCp"><color=#4AA3DF>"Squid"</color></link> by Poly by Google  
+- <link="https://poly.pizza/m/d_36p3CahYa"><color=#4AA3DF>"Seahorse"</color></link> by Poly by Google  
+- <link="https://assetstore.unity.com/packages/3d/props/beach-lifeguard-buoy-282246"><color=#4AA3DF>"Beach Lifeguard Buoy"</color></link> by PijayArt
+- <link="https://assetstore.unity.com/packages/3d/props/environment-track-lowpoly-cartoon-props-mobile-free-211494"><color=#4AA3DF>"Environment Track Lowpoly: Cartoon Props Mobile Free"</color></link> by BE DRILL ENTER
+
+Music & Sound Effects:  
+- <link="https://assetstore.unity.com/packages/audio/sound-fx/ui-sfx-free-pack-245925"><color=#4AA3DF>"UI SFX Free Pack"</color></link> by Skril Studio  
+- <link="https://assetstore.unity.com/packages/audio/sound-fx/free-casual-game-sfx-pack-54116"><color=#4AA3DF>"FREE Casual Game SFX Pack"</color></link> by Dustyroom  
+- <link="https://assetstore.unity.com/packages/audio/music/orchestral/adventure-gaming-music-suite-300438"><color=#4AA3DF>"Adventure Gaming Music Suite"</color></link> by Alison Turk  
+- <link="https://assetstore.unity.com/packages/audio/music/music-sanctuary-free-piano-solo-296088"><color=#4AA3DF>"Music - Sanctuary (Free Piano Solo)"</color></link> by Neko Legends  
+- <link="https://assetstore.unity.com/packages/audio/music/orchestral/mountain-pass-fantasy-music-308919"><color=#4AA3DF>"Mountain Pass Fantasy Music"</color></link> by Alison Turk  
+- <link="https://assetstore.unity.com/packages/audio/music/medieval-music-pack-vol-2-233785"><color=#4AA3DF>"Medieval Music Pack Vol. 2"</color></link> by alkakrab  
+- <link="https://assetstore.unity.com/packages/audio/music/25-fantasy-rpg-game-tracks-music-pack-240154"><color=#4AA3DF>"25 Fantasy RPG Game Tracks Music Pack"</color></link> by alkakrab  
+- <link="https://assetstore.unity.com/packages/audio/music/piano-instrumental-music-loops-240221"><color=#4AA3DF>"Piano Instrumental Music Loops"</color></link> by alkakrab  
+- <link="https://assetstore.unity.com/packages/audio/music/music-medieval-marketplace-free-single-311109"><color=#4AA3DF>"Music - Medieval Marketplace (Free Single)"</color></link> by Neko Legends  
+
+Game Engine:  
+- <link="https://unity.com"><color=#4AA3DF>Unity</color></link> Version 6000.0.30f1  
+
+Development Tools:  
+- <link="https://unity.com"><color=#4AA3DF>Unity</color></link> – Game engine  
+- <link="https://blender.org"><color=#4AA3DF>Blender</color></link> – 3D modeling  
+- <link="https://www.mixamo.com"><color=#4AA3DF>Mixamo</color></link> – Animation  
+- <link="https://inkarnate.com"><color=#4AA3DF>Inkarnate</color></link> – 2D map design  
+- Adobe Photoshop – Image editing  
+- <link="https://www.canva.com"><color=#4AA3DF>Canva</color></link> – Graphic design  
+- Git & GitHub – Version control and collaboration  
+- <link="https://jrsoftware.org/isinfo.php"><color=#4AA3DF>Inno Setup</color></link> – Installer creation  
+
+© 2025 Dream Chasers. All rights reserved.
+
+
+
+End-User License Agreement (EULA)
+
+This game is licensed, not sold. By installing or using the software, you agree to the following terms:
+
+1. You may use this software for personal entertainment.
+2. You may not redistribute, modify, or decompile this software.
+3. All content, including code, art, and audio, is owned by Dream Chasers.
+4. This software is provided "as is", without warranty of any kind.
+
+© 2025 Dream Chasers. All rights reserved.
