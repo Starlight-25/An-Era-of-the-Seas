@@ -2518,7 +2518,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Stigmata
+  m_text: Sigil
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c23e641dc9b582e4093aaa88f402beaa, type: 2}
   m_sharedMaterial: {fileID: -6179123584588955838, guid: c23e641dc9b582e4093aaa88f402beaa, type: 2}
