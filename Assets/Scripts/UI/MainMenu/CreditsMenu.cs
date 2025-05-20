@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -7,6 +8,19 @@ public class CreditsScrips : MonoBehaviour, IPointerClickHandler
     [SerializeField] private GameObject MainMenuCanvas;
     [SerializeField] private GameObject CreditsCanvas;
     [SerializeField] private TextMeshProUGUI CreditsText;
+
+    
+    
+    
+
+    private void Start()
+    {
+        CreditsText.text = Resources.Load<TextAsset>("credits").text;
+    }
+
+    
+    
+    
     
     public void ReturnButtonClicked()
     {

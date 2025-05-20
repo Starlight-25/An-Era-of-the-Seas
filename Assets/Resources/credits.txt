@@ -25,14 +25,14 @@ Art & Graphics:
 - <link="https://assetstore.unity.com/packages/3d/environments/low-poly-medieval-market-262473"><color=#4AA3DF>"Low-Poly Medieval Market"</color></link> by VanillaArt  
 - <link="https://assetstore.unity.com/packages/3d/characters/humanoids/lowpoly-survival-character-rio-273074"><color=#4AA3DF>"LowPoly Survival Character Rio"</color></link> by VertexModeler Team  
 - <link="https://assetstore.unity.com/packages/3d/characters/humanoids/fantasy/free-low-poly-human-rpg-character-219979"><color=#4AA3DF>"FREE Low Poly Human - RPG Character"</color></link> by Blink  
-- <link="https://assetstore.unity.com/packages/3d/characters/humanoids/humans/free-modular-character-fantasy-rpg-human-male-228952"><color=#4AA3DF>"FREE - Modular Character - Fantasy RPG Human Male"</color></link> by Blink   
+- <link="https://assetstore.unity.com/packages/3d/characters/humanoids/humans/free-modular-character-fantasy-rpg-human-male-228952><color=#4AA3DF>"FREE - Modular Character - Fantasy RPG Human Male"</color></link> by Blink   
 - <link="https://assetstore.unity.com/packages/3d/characters/modular-fantasy-character-165896"><color=#4AA3DF>"Modular Fantasy Character"</color></link> by asoliddev  
 - <link="https://assetstore.unity.com/packages/2d/textures-materials/brick-textures-lite-free-289917"><color=#4AA3DF>"Brick Textures (LITE) FREE"</color></link> by SR Studios Kerala  
 - <link="https://assetstore.unity.com/packages/3d/environments/lowpoly-nature-village-pack-165318"><color=#4AA3DF>"Lowpoly Nature & Village Pack"</color></link> by Hasan3DModels  
 - <link="https://assetstore.unity.com/packages/3d/environments/fantasy/stylised-fantasy-house-257964"><color=#4AA3DF>"Stylised Fantasy House"</color></link> by Naasz Arts  
 - <link="https://assetstore.unity.com/packages/3d/environments/fantasy/low-poly-fantasy-medieval-village-vol-2-lite-242322"><color=#4AA3DF>"Low Poly Fantasy Medieval Village Vol.2 Lite"</color></link> by JustCreate  
 - <link="https://assetstore.unity.com/packages/3d/environments/fantasy/medieval-village-poly-pack-demo-274109"><color=#4AA3DF>"Medieval Village - POLY Pack - Demo"</color></link> by Nicrom  
-- <link="https://assetstore.unity.com/packages/3d/characters/humanoids/humans/lowpoly-medieval-peasants-free-medieval-fantasy-series-122225"><color=#4AA3DF>"Lowpoly Medieval Peasants - Free - MEDIEVAL FANTASY SERIES"</color></link> by Polytope Studio  
+- <link="https://assetstore.unity.com/packages/3d/lowpoly-medieval-peasants-free-medieval-fantasy-series-122225"><color=#4AA3DF>"Lowpoly Medieval Peasants - Free - MEDIEVAL FANTASY SERIES"</color></link> by Polytope Studio 
 - <link="https://assetstore.unity.com/packages/3d/characters/minimalist-demon-255613"><color=#4AA3DF>"Minimalist Demon"</color></link> by Conquerror  
 - <link="https://assetstore.unity.com/packages/3d/characters/goblin-lowpoly-animation-311643"><color=#4AA3DF>"Goblin LowPoly - Animation"</color></link> by Sr_bodinho  
 - <link="https://poly.pizza/m/CwWl7iqnxN"><color=#4AA3DF>"Pirate"</color></link> by AliceCassie  
