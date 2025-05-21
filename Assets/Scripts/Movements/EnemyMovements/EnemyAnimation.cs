@@ -24,6 +24,7 @@ public class EnemyAnimation : MonoBehaviour
 
     private void Update()
     {
+        if (!agent.enabled) return;
         bool isMoving = agent.velocity.magnitude > 0.1f;
         Animator.SetBool("IsMoving", isMoving);
     }

@@ -275,6 +275,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyStatsManager: {fileID: 7521653451151071329}
+  EnemyCanvas: {fileID: 330823222429572908}
+  HealthBar: {fileID: 7251230316763930823}
 --- !u!1 &4902859007070878859
 GameObject:
   m_ObjectHideFlags: 0

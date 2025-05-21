@@ -7,7 +7,6 @@ public class BoatMovement : MonoBehaviour
 
     public Rigidbody BoatBody;
     public float speed = 1f; // Should change according to wind...
-    private float xRotation = 0f;
     private BoatState BoatState;
     private Transform HelmCamera;
     private float mouseSensitivity = 25f;

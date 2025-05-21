@@ -25,7 +25,11 @@ public class EnemyMovement : MonoBehaviour
     
     private void Update()
     {
-        if (PLayer_in_range(initialPosition))
+        float distance = Vector3.Distance(Player.position, initialPosition);
+        
+        if (HandleOptimization(distance)) return;
+        
+        if (PLayer_in_range(distance))
         {
             agent.SetDestination(GetStoppingPosition(2f));   
         }
@@ -41,7 +45,17 @@ public class EnemyMovement : MonoBehaviour
             }
         }
     }
-    
+
+    private bool HandleOptimization(float distance)
+    {
+        if (distance > 100f)
+        {
+            if (agent.enabled) agent.enabled = false;
+            return true;
+        }
+        if (!agent.enabled) agent.enabled = true;
+        return false;
+    }
     
     
     
@@ -64,7 +78,7 @@ public class EnemyMovement : MonoBehaviour
 
 
 
-    private bool PLayer_in_range(Vector3 botPosition) => Vector3.Distance(Player.position, botPosition) <= range * 3;
+    private bool PLayer_in_range(float distance) => distance <= range * 3;
 
 
     

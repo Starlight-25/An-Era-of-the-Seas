@@ -13,7 +13,10 @@ public class EnemyTerestrialAttack : MonoBehaviour
     private PlayerDataManager PlayerDataManager;
     private float lastAttackTime;
 
-    private Slider HealthBar;
+    [SerializeField] private Canvas EnemyCanvas;
+    private Transform EnemyCanvasTransform;
+    private GameObject EnemyCanvasGameObject;
+    [SerializeField] private Slider HealthBar;
     
     
     
@@ -23,9 +26,12 @@ public class EnemyTerestrialAttack : MonoBehaviour
     {
         EnemyTerestrialStats = EnemyStatsManager.EnemyTerestrialStats;
         Player = GameObject.FindGameObjectWithTag("Player").transform;
-        playerStats = FindFirstObjectByType<PlayerStatsManager>().PlayerStats;
-        PlayerDataManager = FindAnyObjectByType<PlayerDataManager>();
-        HealthBar = transform.Find("EnemyCanvas").Find("HealthBar").GetComponent<Slider>();
+        PlayerStatsManager playerStatsManager = FindAnyObjectByType<PlayerStatsManager>();
+        playerStats = playerStatsManager.PlayerStats;
+        PlayerDataManager = playerStatsManager.PlayerDataManager;
+
+        EnemyCanvasTransform = EnemyCanvas.transform;
+        EnemyCanvasGameObject = EnemyCanvas.gameObject;
         HealthBar.transform.Find("LvlText").GetComponent<TextMeshProUGUI>().text = $"Lvl {EnemyTerestrialStats.Level}";
         HealthBar.maxValue = EnemyTerestrialStats.MaxHP;
         lastAttackTime = Time.time;
@@ -44,7 +50,7 @@ public class EnemyTerestrialAttack : MonoBehaviour
             AttackPlayer();
             lastAttackTime = Time.time;
         }
-        UpdateHealthBar();
+        UpdateHealthBar(distancePlayer);
     }
 
     
@@ -87,14 +93,17 @@ public class EnemyTerestrialAttack : MonoBehaviour
         Player.GetComponent<CharacterController>().enabled = true;
     }
     
-    private void UpdateHealthBar()
+    private void UpdateHealthBar(float distance)
     {
+        if (distance > 50f)
+        {
+            if (EnemyCanvasGameObject.activeInHierarchy) EnemyCanvasGameObject.SetActive(false);
+            return;
+        }
+        if (!EnemyCanvasGameObject.activeInHierarchy) EnemyCanvasGameObject.SetActive(true);
         HealthBar.value = EnemyTerestrialStats.HP;
-
-        Transform playerCamera = Player.Find("Camera");
-        Transform enemyCanvas = HealthBar.transform.parent;
-        enemyCanvas.LookAt(playerCamera);
-        enemyCanvas.rotation = Quaternion.Euler(0, enemyCanvas.rotation.eulerAngles.y + 180, 0);
+        EnemyCanvasTransform.LookAt(Player);
+        EnemyCanvasTransform.rotation = Quaternion.Euler(0, EnemyCanvasTransform.rotation.eulerAngles.y + 180, 0);
     }
     
 }

@@ -526,6 +526,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyStatsManager: {fileID: 6187181825452532528}
+  EnemyCanvas: {fileID: 1385650313198467411}
+  HealthBar: {fileID: 2647408170615282750}
 --- !u!95 &6385136766519758746
 Animator:
   serializedVersion: 7
