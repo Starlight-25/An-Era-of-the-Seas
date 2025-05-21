@@ -33,6 +33,7 @@ public class NPCOptimization : MonoBehaviour
     
     private void Update()
     {
+        if (Entities is null) return;
         foreach (Vector3 islandPos in EntityposDict.Keys)
         {
             GameObject islandEntities = EntityposDict[islandPos];
