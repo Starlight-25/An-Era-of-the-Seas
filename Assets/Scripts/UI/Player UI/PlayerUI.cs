@@ -11,6 +11,7 @@ public class PlayerUIManager : MonoBehaviour
     [SerializeField] private GameObject CharacterCanvas;
     [SerializeField] private GameObject MapCanvas;
     [SerializeField] private GameObject ShopCanvas;
+    [SerializeField] private GameObject SellMenu;
 
     public void SettingsButtonClicked()
     {
@@ -60,6 +61,15 @@ public class PlayerUIManager : MonoBehaviour
         PlayerUICanvas.SetActive(false);
     }
 
+
+    public void SellMenuShow()
+    {
+        Time.timeScale = 0f;
+        SetCursorState();
+        SellMenu.SetActive(true);
+        PlayerUICanvas.SetActive(false);
+    }
+
     private void SetCursorState(bool locked = false)
     {
         Cursor.visible = !locked;
@@ -89,12 +99,31 @@ public class PlayerUIManager : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.M)) MapButtonClicked();
         else if (Input.GetKeyDown(KeyCode.H)) BoatButtonClicked();
 
+        HpDefBarUpdate();
+    }
+
+
+
+    private void HpDefBarUpdate()
+    {
         LevelText.text = $"Lvl {playerDataManager.PlayerData.Level}";
-        HPSlider.maxValue = PlayerStatsManager.PlayerStats.MaxHP;
-        HPSlider.value = PlayerStatsManager.PlayerStats.HP;
-        HPText.text = $"{HPSlider.value}/{HPSlider.maxValue}";
-        DEFSlider.maxValue = PlayerStatsManager.PlayerStats.MaxDEF;
-        DEFSlider.value = PlayerStatsManager.PlayerStats.DEF;
-        DefText.text = $"{DEFSlider.value}/{DEFSlider.maxValue}";
+        if (FindFirstObjectByType<BoatInitHandler>().BoatState.inBoat)
+        {
+            HPSlider.maxValue = PlayerStatsManager.BoatStats.MaxHP;
+            HPSlider.value = PlayerStatsManager.BoatStats.HP;
+            HPText.text = $"{HPSlider.value}/{HPSlider.maxValue}";
+            DEFSlider.maxValue = PlayerStatsManager.BoatStats.MaxDEF;
+            DEFSlider.value = PlayerStatsManager.BoatStats.DEF;
+            DefText.text = $"{DEFSlider.value}/{DEFSlider.maxValue}";
+        }
+        else
+        {
+            HPSlider.maxValue = PlayerStatsManager.PlayerStats.MaxHP;
+            HPSlider.value = PlayerStatsManager.PlayerStats.HP;
+            HPText.text = $"{HPSlider.value}/{HPSlider.maxValue}";
+            DEFSlider.maxValue = PlayerStatsManager.PlayerStats.MaxDEF;
+            DEFSlider.value = PlayerStatsManager.PlayerStats.DEF;
+            DefText.text = $"{DEFSlider.value}/{DEFSlider.maxValue}";
+        }
     }
 }

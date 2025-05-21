@@ -34,9 +34,9 @@ public class TreasureInteractor : NetworkBehaviour
         }
         else // Boat race
         {
-            if (Physics.Raycast(ray, out hit, 3f, interactableLayer) && hit.collider.CompareTag("Buoy"))
+            if (Physics.Raycast(ray, out hit, 5f, interactableLayer) && hit.collider.CompareTag("Buoy"))
             {
-                infoText.text = "E to interact with the Buoy";
+                infoText.text = "E to interact with the Flag";
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     hit.collider.GetComponent<MultiplayerInteractor>().Interact();

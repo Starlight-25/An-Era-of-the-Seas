@@ -527,7 +527,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!114 &1011105248434964675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -578,6 +578,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyStatsManager: {fileID: 7080894922026942769}
+  EnemyCanvas: {fileID: 2014413678218114374}
+  HealthBar: {fileID: 1671250998868564196}
 --- !u!95 &9057348473717816828
 Animator:
   serializedVersion: 7
@@ -587,7 +589,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5624406853308503125}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: e4c88fe2e81511d4dae9da620550ecf9, type: 3}
   m_Controller: {fileID: 9100000, guid: 37e44d309dae10c47a2bd266a0beb229, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0

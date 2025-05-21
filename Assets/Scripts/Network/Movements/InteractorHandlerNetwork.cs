@@ -9,7 +9,7 @@ public class InteractorHandlerNetwork : NetworkBehaviour
     private TextMeshProUGUI infoText;
     private Transform Boat;
     private Transform Camera;
-    private BoatStateNetwork BoatStateNetwork;
+    public BoatStateNetwork BoatStateNetwork;
 
     
     
@@ -81,15 +81,13 @@ public class InteractorHandlerNetwork : NetworkBehaviour
         Ray ray = new Ray(Camera.position, Camera.forward);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, 3f, interactableLayer)) HandleAction(hit.collider.gameObject, 3f);
-        else
+
+        if (BoatStateNetwork is not null && BoatStateNetwork.inHelm)
         {
-            if (Boat is not null && BoatStateNetwork.inHelm)
-            {
-                SwitchCameraHelm(Camera.GetComponent<Camera>(), Boat.Find("HelmCamera").GetComponent<Camera>());
-                EnterBoat(Boat);
-            }
+            SwitchCameraHelm(Camera.GetComponent<Camera>(), Boat.Find("HelmCamera").GetComponent<Camera>());
+            EnterBoat(Boat);
         }
+        else if (Physics.Raycast(ray, out hit, 3f, interactableLayer)) HandleAction(hit.collider.gameObject, 3f);
         if (Physics.Raycast(ray, out hit, 10f, interactableLayer)) HandleAction(hit.collider.gameObject, 10f);
     }
     
@@ -132,7 +130,7 @@ public class InteractorHandlerNetwork : NetworkBehaviour
         Boat = boat;
         BoatStateNetwork = Boat.GetComponent<BoatStateNetwork>();
         transform.GetComponent<CharacterController>().enabled = false;
-        transform.position = boat.position + new Vector3(0, 4, 0);
+        transform.position = boat.position + new Vector3(0, 4, 0);  
         transform.GetComponent<CharacterController>().enabled = true;
     }
 
@@ -143,6 +141,7 @@ public class InteractorHandlerNetwork : NetworkBehaviour
         transform.GetComponent<CharacterController>().enabled = false;
         transform.position = boat.position + new Vector3(10, 4, 10);
         transform.GetComponent<CharacterController>().enabled = true;
+        transform.rotation = Quaternion.identity;
     }
 
 

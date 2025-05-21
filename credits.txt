@@ -35,6 +35,11 @@ Art & Graphics:
 - "Lowpoly Medieval Peasants - Free - MEDIEVAL FANTASY SERIES" by Polytope Studio (https://assetstore.unity.com/packages/3d/characters/humanoids/humans/lowpoly-medieval-peasants-free-medieval-fantasy-series-122225)
 - "Minimalist Demon" by Conquerror (https://assetstore.unity.com/packages/3d/characters/minimalist-demon-255613)
 - "Goblin LowPoly - Animation" by Sr_bodinho (https://assetstore.unity.com/packages/3d/characters/goblin-lowpoly-animation-311643)
+- "Sea anemone" by Poly by Google (https://poly.pizza/m/5mWGVL6VgMd)
+- "Squid by Poly" by Google (https://poly.pizza/m/6ar_2XbrzCp)
+- "Seahorse" by Poly by Google (https://poly.pizza/m/d_36p3CahYa)
+- "Beach Lifeguard Buoy" by PijayArt (https://assetstore.unity.com/packages/3d/props/beach-lifeguard-buoy-282246)
+- "Environment Track Lowpoly: Cartoon Props Mobile Free" by BE DRILL ENTER (https://assetstore.unity.com/packages/3d/props/environment-track-lowpoly-cartoon-props-mobile-free-211494)
 
 Music & Sound Effects:  
 - "UI SFX Free Pack" by Skril Studio (https://assetstore.unity.com/packages/audio/sound-fx/ui-sfx-free-pack-245925)

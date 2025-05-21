@@ -139,7 +139,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!114 &8884388559323526698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,6 +190,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyStatsManager: {fileID: 7944980241672581675}
+  EnemyCanvas: {fileID: 4133432684253088822}
+  HealthBar: {fileID: 885322042913754305}
 --- !u!95 &1815172136002143511
 Animator:
   serializedVersion: 7

@@ -18,7 +18,7 @@ public class PlayerMovementNetwork : NetworkBehaviour
     
     Vector3 velocity;
     bool isGrounded;
-    //private BoatStateNetwork BoatStateNetwork;
+    private BoatStateNetwork BoatStateNetwork;
     
     
     
@@ -27,7 +27,7 @@ public class PlayerMovementNetwork : NetworkBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        //BoatStateNetwork = transform.GetComponent<BoatInitHandlerNetwork>().BoatStateNetwork;
+        BoatStateNetwork = transform.GetComponent<InteractorHandlerNetwork>().BoatStateNetwork;
     }
     
     
@@ -37,9 +37,9 @@ public class PlayerMovementNetwork : NetworkBehaviour
     void Update()
     {
         if (!IsOwner) return;
-        
-        //if (!BoatStateNetwork.inHelm) // If the player is not in the helm menu.
-        //{
+        BoatStateNetwork = transform.GetComponent<InteractorHandlerNetwork>().BoatStateNetwork;
+        if (BoatStateNetwork is null || !BoatStateNetwork.inHelm) // If the player is not in the helm menu.
+        {
             //Movement 
             float x = Input.GetAxis("Horizontal");
             float z = Input.GetAxis("Vertical");
@@ -66,7 +66,7 @@ public class PlayerMovementNetwork : NetworkBehaviour
                 velocity.y = Mathf.Sqrt(-2.0f * jumpHeight * gravity);
             }
         
-        //}
+        }
     }
 
 

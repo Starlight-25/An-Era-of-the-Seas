@@ -1535,7 +1535,6 @@ GameObject:
   - component: {fileID: 5943668182047262761}
   - component: {fileID: 7018234107350343986}
   - component: {fileID: 8946505082740008235}
-  - component: {fileID: 1322898264515349405}
   - component: {fileID: 8561148336948643095}
   - component: {fileID: 1748765792327047689}
   - component: {fileID: 6807842574838497667}
@@ -1786,18 +1785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
---- !u!114 &1322898264515349405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4424122001290306904}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 539fff38e4614b9aafec30b74879451e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  BoatStateNetwork: {fileID: 0}
 --- !u!114 &8561148336948643095
 MonoBehaviour:
   m_ObjectHideFlags: 0

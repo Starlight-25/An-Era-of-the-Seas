@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 9000000, guid: ed32f375cf0deb047840f00665ccc419, type: 3}
     - target: {fileID: 3054095200621606220, guid: 35bc86bf4f8a28644b157e20b8c79257, type: 3}
       propertyPath: m_Name
-      value: NPC
+      value: NPC4
       objectReference: {fileID: 0}
     - target: {fileID: 4156084627742876793, guid: 35bc86bf4f8a28644b157e20b8c79257, type: 3}
       propertyPath: m_LocalPosition.x
@@ -55,6 +55,10 @@ PrefabInstance:
     - target: {fileID: 4156084627742876793, guid: 35bc86bf4f8a28644b157e20b8c79257, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6459107239930719612, guid: 35bc86bf4f8a28644b157e20b8c79257, type: 3}
+      propertyPath: m_ObstacleAvoidanceType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9053509712027976828, guid: 35bc86bf4f8a28644b157e20b8c79257, type: 3}
       propertyPath: m_Enabled

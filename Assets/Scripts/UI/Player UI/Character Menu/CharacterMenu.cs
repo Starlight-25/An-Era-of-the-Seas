@@ -461,16 +461,18 @@ public class CharacterMenu : MonoBehaviour
 
     public void UpgradeStigma1ButtonClicked()
     {
+        Stigma stigma = PlayerDataManager.PlayerData.Inventory.Equipped.Stigmata[0];
+        if (stigma == null) return;
         CharacterCanvas.SetActive(false);
         UpgradeCanvas.SetActive(true);
-        Stigma stigma = PlayerDataManager.PlayerData.Inventory.Equipped.Stigmata[0];
         UpgradeCanvas.GetComponent<UpgradeUI>().Init(CharacterCanvas, new Item(stigma.Name, stigma.Rarity, stigma.Level, stigma));
     }
     public void UpgradeStigma2ButtonClicked()
     {
+        Stigma stigma = PlayerDataManager.PlayerData.Inventory.Equipped.Stigmata[1];
+        if (stigma == null) return;
         CharacterCanvas.SetActive(false);
         UpgradeCanvas.SetActive(true);
-        Stigma stigma = PlayerDataManager.PlayerData.Inventory.Equipped.Stigmata[1];
         UpgradeCanvas.GetComponent<UpgradeUI>().Init(CharacterCanvas, new Item(stigma.Name, stigma.Rarity, stigma.Level, stigma));
     }
 }

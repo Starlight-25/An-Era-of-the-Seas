@@ -78,7 +78,7 @@ public class InteractorHandler : MonoBehaviour
                 return "E to enter in the Boat";
             case "Boat Interactor" when BoatState.inBoat:
                 return "";
-            case string shop when shop == "Armorer" || shop == "Mage" || shop == "Boat Salesman" || shop == "Crew Agent":
+            case string shop when shop == "Armorer" || shop == "Mage" || shop == "Boat Salesman" || shop == "Crew Agent" || shop == "Materials Seller" || shop == "Purchaser":
                 return $"E to buy from the {shop}";
             case "FishingWaterPond":
                 return "E to fish";
@@ -133,6 +133,12 @@ public class InteractorHandler : MonoBehaviour
                     break;
                 case "Crew Agent":
                     ShopInteractor.ShowShop("Crew");
+                    break;
+                case "Materials Seller":
+                    ShopInteractor.ShowShop("Material");
+                    break;
+                case "Purchaser":
+                    ShopInteractor.ShowSellMenu();
                     break;
                 case "FishingWaterPond":
                     StartFishing();

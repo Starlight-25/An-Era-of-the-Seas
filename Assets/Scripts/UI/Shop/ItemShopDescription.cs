@@ -14,6 +14,7 @@ public class ItemShopDescription : MonoBehaviour
     private TextMeshProUGUI MaterialsNeeded;
 
     private Item Item;
+    private Material Material;
 
 
     private void Awake()
@@ -30,6 +31,7 @@ public class ItemShopDescription : MonoBehaviour
     {
         transform.gameObject.SetActive(true);
         Item = item;
+        Material = null;
         Name.text = Item.Name;
         RaritySprite.sprite = Item.RaritySprite;
         ItemSprite.sprite = Item.ItemSprite;
@@ -66,17 +68,39 @@ public class ItemShopDescription : MonoBehaviour
     }
 
 
+    public void SetDescriptionMaterial(Material material, int num)
+    {
+        transform.gameObject.SetActive(true);
+        Material = material;
+        Item = null;
+        Name.text = material.Name;
+        RaritySprite.sprite = material.RaritySprite;
+        ItemSprite.sprite = material.MaterialSprite;
+        MaterialsNeeded.text = $"Coins: {num * 2}";
+    }
 
 
 
     public void BuyButtonClicked()
     {
-        (int coin, int pwd) = GetNecessaryMaterial();
         Materials materials = PlayerStatsManager.PlayerDataManager.PlayerData.Inventory.Backpack.Materials;
-        if (PlayerStatsManager.AddItem(Item.Object) && materials.Coins >= coin && materials.PureWaterDrop >= pwd)
+        if (Item is null)
         {
-            PlayerStatsManager.UpdateMaterial(-coin, -pwd);
-            transform.parent.Find("Material Owned").GetComponent<OwnedMaterial>().UpdateNumber();
+            if (Material.Name == "Pure Water Drop" && materials.Coins >= 5 * Material.Number)
+                PlayerStatsManager.UpdateMaterial(-5 * Material.Number, Material.Number);
+            else if (Material.Name == "Wood" && materials.Coins >= 2 * Material.Number)
+                PlayerStatsManager.UpdateMaterial(-2 * Material.Number, 0, Material.Number);
+            else if (Material.Name == "Steel" && materials.Coins >= 2 * Material.Number)
+                PlayerStatsManager.UpdateMaterial(-2 * Material.Number, 0, 0, Material.Number);
         }
+        else
+        {
+            (int coin, int pwd) = GetNecessaryMaterial();
+            if (PlayerStatsManager.AddItem(Item.Object) && materials.Coins >= coin && materials.PureWaterDrop >= pwd)
+            {
+                PlayerStatsManager.UpdateMaterial(-coin, -pwd);
+            }
+        }    
+        transform.parent.Find("Material Owned").GetComponent<OwnedMaterial>().UpdateNumber();
     }
 }

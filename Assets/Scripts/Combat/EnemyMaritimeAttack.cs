@@ -13,7 +13,10 @@ public class EnemyMaritimeAttack : MonoBehaviour
     private PlayerDataManager PlayerDataManager;
     private float lastAttackTime;
 
-    private Slider HealthBar;
+    [SerializeField] private Canvas EnemyCanvas; 
+    private Transform EnemyCanvasTransform;
+    private GameObject EnemyCanvasGameObject;
+    [SerializeField] private Slider HealthBar;
 
 
     
@@ -23,9 +26,12 @@ public class EnemyMaritimeAttack : MonoBehaviour
     {
         EnemyMarineStats = EnemyStatsManager.EnemyMarineStats;
         Player = GameObject.FindGameObjectWithTag("Player").transform;
-        BoatStats = FindFirstObjectByType<PlayerStatsManager>().BoatStats;
-        PlayerDataManager = FindFirstObjectByType<PlayerDataManager>();
-        HealthBar = transform.Find("EnemyCanvas").Find("HealthBar").GetComponent<Slider>();
+        PlayerStatsManager playerStatsManager = FindFirstObjectByType<PlayerStatsManager>();
+        BoatStats = playerStatsManager.BoatStats;
+        PlayerDataManager = playerStatsManager.PlayerDataManager;
+
+        EnemyCanvasTransform = EnemyCanvas.transform;
+        EnemyCanvasGameObject = EnemyCanvas.gameObject;
         HealthBar.transform.Find("LvlText").GetComponent<TextMeshProUGUI>().text = $"Lvl {EnemyMarineStats.Level}";
         HealthBar.maxValue = EnemyMarineStats.MaxHP;
     }
@@ -64,7 +70,6 @@ public class EnemyMaritimeAttack : MonoBehaviour
         else BoatStats.HP -= EnemyMarineStats.ATK;
         
         if (BoatStats.HP <= 0) DeathPlayer();
-        Debug.Log(BoatStats.HP + " " + BoatStats.DEF);
     }
     
     
@@ -94,9 +99,10 @@ public class EnemyMaritimeAttack : MonoBehaviour
             Player.GetComponent<InteractorHandler>().ExitBoat(FindAnyObjectByType<BoatMovement>().transform);
             FindFirstObjectByType<PlayerUIManager>().BoatButtonClicked();
         }
-        Player.GetComponent<CharacterController>().enabled = false;
+        CharacterController characterController = Player.GetComponent<CharacterController>();
+        characterController.enabled = false;
         Player.position = position;
-        Player.GetComponent<CharacterController>().enabled = true;
+        characterController.enabled = true;
     }
 
     
@@ -105,19 +111,24 @@ public class EnemyMaritimeAttack : MonoBehaviour
     
     private void UpdateHealthBar()
     {
-        HealthBar.value = EnemyMarineStats.HP;
-
-        Transform playerCamera = Player.Find("Camera");
-        Transform enemyCanvas = HealthBar.transform.parent;
-        enemyCanvas.LookAt(playerCamera);
-        
-        if (Vector3.Distance(Player.position, transform.position) <= 10f)
+        float distance = Vector3.Distance(Player.position, transform.position);
+        if (distance > 50f)
         {
-            Vector3 directon = playerCamera.position - transform.position;
+            if (EnemyCanvasGameObject.activeInHierarchy) EnemyCanvasGameObject.SetActive(false);
+            return;
+        }
+        if (!EnemyCanvasGameObject.activeInHierarchy) EnemyCanvasGameObject.SetActive(true);
+        HealthBar.value = EnemyMarineStats.HP;
+        
+        EnemyCanvasTransform.LookAt(Player);
+        
+        if (distance <= 10f)
+        {
+            Vector3 directon = Player.position - transform.position;
             directon.y = 0f;
             transform.rotation = Quaternion.LookRotation(directon);
         }
         
-        enemyCanvas.rotation = Quaternion.Euler(0, enemyCanvas.rotation.eulerAngles.y + 180, 0);
+        EnemyCanvasTransform.rotation = Quaternion.Euler(0, EnemyCanvasTransform.rotation.eulerAngles.y + 180, 0);
     }
 }

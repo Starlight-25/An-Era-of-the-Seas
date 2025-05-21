@@ -11,6 +11,19 @@ public class CreditMenu : MonoBehaviour, IPointerClickHandler
     [SerializeField] private GameObject SettingsCanvas;
     [SerializeField] private TextMeshProUGUI CreditsText;
 
+
+    
+    
+    
+    private void Start()
+    {
+        CreditsText.text = Resources.Load<TextAsset>("credits").text;
+    }
+
+    
+    
+    
+    
     public void ReturnButtonClicked()
     {
         CreditCanvas.SetActive(false);
