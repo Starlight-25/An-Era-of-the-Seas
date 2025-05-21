@@ -1628,6 +1628,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship(Black)02
       objectReference: {fileID: 0}
+    - target: {fileID: 4168889964853319836, guid: 04b02631dc5604aaa875821f7d6393bd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

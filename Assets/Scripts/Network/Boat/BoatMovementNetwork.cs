@@ -1,5 +1,3 @@
-using System;
-using System.Linq.Expressions;
 using Unity.Netcode;
 using UnityEngine;
 
@@ -8,9 +6,11 @@ public class BoatMovementNetwork : NetworkBehaviour
 
     private Rigidbody BoatBody;
     public float speed = 1f; // Should change according to wind...
-    private float xRotation = 0f;
+    private Transform HelmCamera;
     private BoatStateNetwork BoatStateNetwork;
-
+    private float mouseSensitivity = 25f;
+    private float yRotationHelm = 0f;
+    
     
     
     
@@ -19,6 +19,7 @@ public class BoatMovementNetwork : NetworkBehaviour
     {
         BoatBody = transform.GetComponent<Rigidbody>();
         BoatStateNetwork = transform.GetComponent<BoatStateNetwork>();
+        HelmCamera = transform.Find("HelmCamera");
     }
     
 
@@ -28,21 +29,41 @@ public class BoatMovementNetwork : NetworkBehaviour
     void Update()
     {
         if (!BoatStateNetwork.isAnchored) MoveBoatForward(speed);
-        
-        if (BoatStateNetwork.inHelm) MoveBoat(); // If the player IS in the helm menu, then he can be able to move the boat.
+
+        if (BoatStateNetwork.inHelm) // If the player IS in the helm menu, then he can be able to move the boat.
+        {
+            HandleKeyRotation();
+            HandleMouseRotation();
+        }
     }
 
     
     
     
     
-    private void MoveBoat()
+    private void HandleKeyRotation()
     {
-        xRotation = Input.GetAxis("Mouse X") * Time.deltaTime;
-        //Quaternion deltaRotation = Quaternion.Euler(EulerAngleVelocity * (xRotation * (helmMovingSpeed * Time.fixedDeltaTime)));
-        Quaternion deltaRotation = Quaternion.Euler(0f, xRotation, 0f);
+        float horizontalInput = 0f;
+        if (Input.GetKey(KeyCode.A)) horizontalInput = -1;
+        if (Input.GetKey(KeyCode.D)) horizontalInput = 1;
+            
+        Quaternion deltaRotation = Quaternion.Euler(0f, horizontalInput * 50 * Time.fixedDeltaTime, 0f);
         BoatBody.MoveRotation(BoatBody.rotation * deltaRotation);
     }
+
+    
+    
+    
+    
+    private void HandleMouseRotation()
+    {
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+
+        yRotationHelm -= mouseX;
+        yRotationHelm = Mathf.Clamp(yRotationHelm, -90f, 90f);
+        HelmCamera.localRotation = Quaternion.Euler(0f, yRotationHelm, 0f);
+    }
+
     
     
     
@@ -50,8 +71,8 @@ public class BoatMovementNetwork : NetworkBehaviour
     
     private void MoveBoatForward(float movementSpeed)
     {
-        Vector3 movement = transform.TransformDirection(new Vector3(0,0, 1)) * movementSpeed;
-        BoatBody.linearVelocity = new Vector3(movement.x, movement.y, movement.z);
+        Vector3 forwardMove = transform.forward * movementSpeed;
+        BoatBody.linearVelocity = forwardMove;
     }
 }
     

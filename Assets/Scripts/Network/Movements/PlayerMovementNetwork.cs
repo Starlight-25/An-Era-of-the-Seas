@@ -22,6 +22,13 @@ public class PlayerMovementNetwork : NetworkBehaviour
     
     
     
+    private Transform currentBoat;
+    private Vector3 lastBoatPosition;
+    private Quaternion lastBoatRotation;
+
+    
+    
+    
     
     
     void Start()
@@ -81,4 +88,42 @@ public class PlayerMovementNetwork : NetworkBehaviour
         transform.position = position;
         characterController.enabled = true;
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    void LateUpdate()
+    {
+        BoatStateNetwork boatStateNetwork = transform.GetComponent<InteractorHandlerNetwork>().BoatStateNetwork;
+        if (BoatStateNetwork is not null && currentBoat != null && !boatStateNetwork.inHelm)
+        {
+            Vector3 boatMovement = currentBoat.position - lastBoatPosition;
+            Quaternion boatRotation = currentBoat.rotation * Quaternion.Inverse(lastBoatRotation);
+
+            controller.Move(boatMovement);
+            transform.rotation = boatRotation * transform.rotation;
+
+            lastBoatPosition = currentBoat.position;
+            lastBoatRotation = currentBoat.rotation;
+        }
+    }
+
+    public void SetBoat(Transform boat)
+    {
+        currentBoat = boat;
+        lastBoatPosition = boat.position;
+        lastBoatRotation = boat.rotation;
+    }
+
+    public void ClearBoat()
+    {
+        currentBoat = null;
+    }
+
 }

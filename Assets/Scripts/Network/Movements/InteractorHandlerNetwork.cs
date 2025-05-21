@@ -35,6 +35,9 @@ public class InteractorHandlerNetwork : NetworkBehaviour
         
         if (Input.GetKeyDown(KeyCode.E)) HandleInteractorPressed();
         if (Input.GetKeyDown(KeyCode.X) && Boat is not null && !BoatStateNetwork.inHelm) ExitBoat(Boat);
+        
+        
+        if (Boat is not null && BoatStateNetwork.inHelm) StayOnBoat();
     }
 
     
@@ -129,18 +132,22 @@ public class InteractorHandlerNetwork : NetworkBehaviour
     {
         Boat = boat;
         BoatStateNetwork = Boat.GetComponent<BoatStateNetwork>();
-        transform.GetComponent<CharacterController>().enabled = false;
+        CharacterController characterController = transform.GetComponent<CharacterController>();
+        characterController.enabled = false;
         transform.position = boat.position + new Vector3(0, 4, 0);  
-        transform.GetComponent<CharacterController>().enabled = true;
+        characterController.enabled = true;
+        transform.GetComponent<PlayerMovementNetwork>().SetBoat(boat);
     }
 
     public void ExitBoat(Transform boat)
     {
         Boat = null;
         BoatStateNetwork = null;
-        transform.GetComponent<CharacterController>().enabled = false;
+        CharacterController characterController = transform.GetComponent<CharacterController>();
+        characterController.enabled = false;
         transform.position = boat.position + new Vector3(10, 4, 10);
-        transform.GetComponent<CharacterController>().enabled = true;
+        transform.GetComponent<PlayerMovementNetwork>().ClearBoat();
+        characterController.enabled = true;
         transform.rotation = Quaternion.identity;
     }
 
@@ -157,6 +164,14 @@ public class InteractorHandlerNetwork : NetworkBehaviour
         BoatStateNetwork.inHelm = !BoatStateNetwork.inHelm;
         playerCam.enabled = !playerCam.enabled;
         helmCam.enabled = !helmCam.enabled;
-        transform.SetParent(BoatStateNetwork.inHelm ? Boat : null);
+        //transform.SetParent(BoatStateNetwork.inHelm ? Boat : null);
     }
+    
+    
+    
+    
+    
+    
+    
+    private void StayOnBoat() => transform.GetComponent<PlayerMovementNetwork>().Teleport(Boat.position + Vector3.up * 10);
 }

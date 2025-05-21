@@ -1572,6 +1572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship(Black)01
       objectReference: {fileID: 0}
+    - target: {fileID: 8352741009256633963, guid: a52cb6859b7974b34a1e04efcbb2a665, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8692287158484208849, guid: a52cb6859b7974b34a1e04efcbb2a665, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.02
