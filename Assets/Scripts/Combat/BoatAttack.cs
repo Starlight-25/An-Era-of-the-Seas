@@ -8,9 +8,9 @@ using Random = UnityEngine.Random;
 public class BoatAttack : MonoBehaviour
 {
     private PlayerStatsManager PlayerStatsManager;
-    [SerializeField] private TextMeshProUGUI DmgText;
+    private TextMeshProUGUI DmgText;
+    private Transform PlayerCamera;
     private float lastAttackTime;
-    [SerializeField] private Transform PlayerCamera;
 
     
     
@@ -19,6 +19,9 @@ public class BoatAttack : MonoBehaviour
     private void Start()
     {
         PlayerStatsManager = FindFirstObjectByType<PlayerStatsManager>();
+        Transform player = GameObject.FindGameObjectWithTag("Player").transform;
+        PlayerCamera = player.transform.Find("Camera");
+        DmgText = player.Find("Interactor Text").Find("DmgText").GetComponent<TextMeshProUGUI>();
     }
 
 
@@ -65,7 +68,6 @@ public class BoatAttack : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(camera.position, camera.forward, out hit, 10f, LayerMask.GetMask("Default")))
         {
-            Debug.Log(hit.transform.name);
             if (hit.collider.CompareTag("Enemy"))
             {
                 return hit.collider.transform;
