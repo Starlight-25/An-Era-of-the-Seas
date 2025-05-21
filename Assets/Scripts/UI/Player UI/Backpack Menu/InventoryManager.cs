@@ -62,10 +62,29 @@ public class InventoryManager : MonoBehaviour
     
     private Backpack Backpack;
     private Equipped Equipped;
-    private void BackpackInit()
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    private void Start()
     {
         Backpack = PlayerDataManager.PlayerData.Inventory.Backpack;
         Equipped = PlayerDataManager.PlayerData.Inventory.Equipped;
+    }
+
+
+    private void OnEnable()
+    {
+        foreach (Transform child in ContentParent)
+        {
+            Destroy(child.gameObject);
+        }
     }
 
 
@@ -244,19 +263,5 @@ public class InventoryManager : MonoBehaviour
                 AddMaterial(material);
             }
         }
-    }
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    private void Start()
-    {
-        BackpackInit();
     }
 }

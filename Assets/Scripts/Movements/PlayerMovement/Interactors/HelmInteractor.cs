@@ -25,8 +25,5 @@ public static class HelmInteractor
 
         PlayerCamera.enabled = !PlayerCamera.enabled;
         HelmCamera.enabled = !HelmCamera.enabled;
-        LockPlayerOnBoat();
     }
-
-    private static void LockPlayerOnBoat() => Player.transform.SetParent(BoatState.inHelm ? Boat : null);
 }

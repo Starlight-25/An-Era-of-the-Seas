@@ -1629,8 +1629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BoatBody: {fileID: 562305854609734608}
-  speed: 1
-  helmMovingSpeed: 10000
+  speed: 10
 --- !u!114 &4089979652974855712
 MonoBehaviour:
   m_ObjectHideFlags: 0

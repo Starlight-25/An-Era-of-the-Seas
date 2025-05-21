@@ -12,7 +12,7 @@ public class BoatInitHandler : MonoBehaviour
         //BoatState = Boat.GetComponent<BoatState>();
         
         BoatStats boatStats = GameObject.FindFirstObjectByType<PlayerStatsManager>().BoatStats;
-        //SwitchBoat(boatStats.Name);
+        SwitchBoat(boatStats.Name);
     }
 
 
@@ -28,6 +28,7 @@ public class BoatInitHandler : MonoBehaviour
         {
             Boat.SetParent(null);
             Boat.position = transform.position + transform.forward * 10f + transform.up * 1f;
+            Boat.rotation = transform.rotation;
             Boat.gameObject.SetActive(true);
         }
         BoatState.isPlaced = !BoatState.isPlaced;
@@ -45,6 +46,7 @@ public class BoatInitHandler : MonoBehaviour
         Boat.SetParent(transform);
         Boat.position = Vector3.zero;
         BoatState = Boat.GetComponent<BoatState>();
+        transform.GetComponent<InteractorHandler>().SwitchBoat(BoatState);
         Boat.gameObject.SetActive(false);
     }
 }

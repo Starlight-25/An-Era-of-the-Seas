@@ -32,6 +32,8 @@ public class InteractorHandler : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.E)) HandleInteractorPressed();
         if (Input.GetKeyDown(KeyCode.X) && BoatState.inBoat && !BoatState.inHelm) ExitBoat(transform.GetComponent<BoatInitHandler>().Boat);
+
+        if (BoatState.inHelm) StayOnBoat();
     }
 
     
@@ -164,15 +166,10 @@ public class InteractorHandler : MonoBehaviour
     private void EnterBoat(Transform boat)
     {
         BoatState.inBoat = true;
-
-        // Disable CharacterController to manually set position
-        var controller = GetComponent<CharacterController>();
+        
+        CharacterController controller = GetComponent<CharacterController>();
         controller.enabled = false;
-
-        // Position the player on the boat
         transform.position = boat.position + new Vector3(0, 2, 0);
-
-        // Enable CharacterController
         controller.enabled = true;
 
         // Set the current boat in PlayerMovement to track its movement
@@ -183,25 +180,39 @@ public class InteractorHandler : MonoBehaviour
     {
 
         BoatState.inBoat = false;
-
-        // Disable CharacterController to manually set position
-        var controller = GetComponent<CharacterController>();
+        
+        CharacterController controller = GetComponent<CharacterController>();
         controller.enabled = false;
 
         // Clear the current boat in PlayerMovement
         GetComponent<PlayerMovement>().ClearBoat();
-
-        // Position the player off the boat
         transform.position = boat.position + boat.forward * -10f + boat.up * 5f;
-
-        // Enable CharacterController
         controller.enabled = true;
         transform.rotation = Quaternion.identity;
     }
 
+    
 
 
+    private void StayOnBoat()
+    {
+        Vector3 position = BoatState.transform.position + Vector3.up * 10;
+        CharacterController characterController = transform.GetComponent<CharacterController>();
+        characterController.enabled = false;
+        transform.position = position;
+        characterController.enabled = true;
+    }
 
+    
+    
+    
+
+    public void SwitchBoat(BoatState boatState) => BoatState = boatState;
+
+    
+    
+    
+    
     private void StartFishing()
     {
         FishingMenuManager fishingMenuManager =
