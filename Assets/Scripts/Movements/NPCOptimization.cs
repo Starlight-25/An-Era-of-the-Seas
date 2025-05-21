@@ -13,6 +13,7 @@ public class NPCOptimization : MonoBehaviour
     
     private void Start()
     {
+        if (Entities == null) return; 
         EntityposDict = new Dictionary<Vector3, GameObject>()
         {
             { new Vector3(500, 0, 1500), Entities.GetChild(0).gameObject },
@@ -33,7 +34,7 @@ public class NPCOptimization : MonoBehaviour
     
     private void Update()
     {
-        if (Entities is null) return;
+        if (EntityposDict is null) return;
         foreach (Vector3 islandPos in EntityposDict.Keys)
         {
             GameObject islandEntities = EntityposDict[islandPos];

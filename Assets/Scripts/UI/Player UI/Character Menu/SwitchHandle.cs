@@ -64,6 +64,11 @@ public class SwitchHandle : MonoBehaviour
         Backpack = PlayerDataManager.PlayerData.Inventory.Backpack;
         Equipped = PlayerDataManager.PlayerData.Inventory.Equipped;
         
+        foreach (Transform child in ContentParent)
+        {
+            Destroy(child.gameObject);
+        }
+
         CurrentElements = currentElements;
         Item = item;
         ItemList = new List<Item>();

@@ -279,6 +279,12 @@ public class CharacterMenu : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
+        
+        Button switchButton = CrewMembersElements.transform.Find("Switch (Button)").GetComponent<Button>();
+        Button unequipButton = CrewMembersElements.transform.Find("Unequip (Button)").GetComponent<Button>();
+        switchButton.onClick.AddListener(SwitchButtonCLicked);
+        unequipButton.onClick.AddListener(UnequipItem);
+        
 
         int boatLevel = PlayerStatsManager.BoatStats.Level;
         BoatCSV boatCSV = CsvData.BoatCSV[boatLevel - 1];
@@ -299,11 +305,11 @@ public class CharacterMenu : MonoBehaviour
             if (i < PlayerDataManager.PlayerData.Inventory.Equipped.Crew.Navigator.Count)
             {
                 Navigator navigator = PlayerDataManager.PlayerData.Inventory.Equipped.Crew.Navigator[i];
-                AddItem(new Item("Navigator", navigator.Rarity, navigator.Level, navigator), "Explorer", NavigatorParent);
+                AddItem(new Item("Navigator", navigator.Rarity, navigator.Level, navigator), "Navigator", NavigatorParent);
             }
             else
             {
-                AddItem(null, "Explorer", NavigatorParent);
+                AddItem(null, "Navigator", NavigatorParent);
             }
         }
         for (int i = 0; i < boatCSV.Gunner; i++)
@@ -311,11 +317,11 @@ public class CharacterMenu : MonoBehaviour
             if (i < PlayerDataManager.PlayerData.Inventory.Equipped.Crew.Gunner.Count)
             {
                 Gunner gunner = PlayerDataManager.PlayerData.Inventory.Equipped.Crew.Gunner[i];
-                AddItem(new Item("Gunner", gunner.Rarity, gunner.Level, gunner), "Explorer", GunnerParent);
+                AddItem(new Item("Gunner", gunner.Rarity, gunner.Level, gunner), "Gunner", GunnerParent);
             }
             else
             {
-                AddItem(null, "Explorer", GunnerParent);
+                AddItem(null, "Gunner", GunnerParent);
             }
         }
         for (int i = 0; i < boatCSV.Boatswain; i++)
@@ -323,11 +329,11 @@ public class CharacterMenu : MonoBehaviour
             if (i < PlayerDataManager.PlayerData.Inventory.Equipped.Crew.Boatswain.Count)
             {
                 Boatswain boatswain = PlayerDataManager.PlayerData.Inventory.Equipped.Crew.Boatswain[i];
-                AddItem(new Item("Boatswain", boatswain.Rarity, boatswain.Level, boatswain), "Explorer", BoatswainParent);
+                AddItem(new Item("Boatswain", boatswain.Rarity, boatswain.Level, boatswain), "Boatswain", BoatswainParent);
             }
             else
             {
-                AddItem(null, "Explorer", BoatswainParent);
+                AddItem(null, "Boatswain", BoatswainParent);
             }
         }
     }
@@ -346,25 +352,26 @@ public class CharacterMenu : MonoBehaviour
             itemButton.Init();
         }
         
-        newItem.GetComponent<Button>().onClick.AddListener(() => InitCrewStats(item));
-        
-        Button switchButton = CrewMembersElements.transform.Find("Switch (Button)").GetComponent<Button>();
-        Button unequipButton = CrewMembersElements.transform.Find("Unequip (Button)").GetComponent<Button>();
-        if (item is null)
-        {
-            switchButton.onClick.AddListener(() => SwitchHandle.InitSwitchMenu(itemType, CrewMembersElements));
-        }
-        else
-        {
-            switchButton.onClick.AddListener(() => SwitchHandle.InitSwitchMenu(item, CrewMembersElements));
-            unequipButton.onClick.AddListener(() => UnequipItem(CrewItem, itemType));
-        }
+        newItem.GetComponent<Button>().onClick.AddListener(() => InitCrewStats(item, itemType));
+    }
+
+
+
+
+
+    private void SwitchButtonCLicked()
+    {
+        if (CrewType == null) return;
+        if (CrewItem is null) SwitchHandle.InitSwitchMenu(CrewType, CrewMembersElements);
+        else SwitchHandle.InitSwitchMenu(CrewItem, CrewMembersElements);
     }
 
     private Item CrewItem;
-    private void InitCrewStats(Item item)
+    private string CrewType;
+    private void InitCrewStats(Item item, string crewType)
     {
         CrewItem = item;
+        CrewType = crewType;
         TextMeshProUGUI CrewStats = CrewMembersElements.transform.Find("Stats (Text)").GetChild(0).GetComponent<TextMeshProUGUI>();
         if (item is not null)
         {
@@ -391,37 +398,37 @@ public class CharacterMenu : MonoBehaviour
         }
     }
 
-    private void UnequipItem(Item item, string itemType)
+    private void UnequipItem()
     {
-        if (item is null) return;
+        if (CrewItem is null) return;
         Crew backpackCrew = PlayerDataManager.PlayerData.Inventory.Backpack.Crew;
         Crew equippedCrew = PlayerDataManager.PlayerData.Inventory.Equipped.Crew;
 
-        switch (itemType)
+        switch (CrewType)
         {
             case "Explorer":
-                equippedCrew.Explorer.Remove((Explorer)item.Object);
-                backpackCrew.Explorer.Add((Explorer)item.Object);
+                equippedCrew.Explorer.Remove((Explorer)CrewItem.Object);
+                backpackCrew.Explorer.Add((Explorer)CrewItem.Object);
                 backpackCrew.Explorer.Sort((x, y) => x.Level.CompareTo(y.Level));
                 break;
             case "Navigator":
-                equippedCrew.Navigator.Remove((Navigator)item.Object);
-                backpackCrew.Navigator.Add((Navigator)item.Object);
+                equippedCrew.Navigator.Remove((Navigator)CrewItem.Object);
+                backpackCrew.Navigator.Add((Navigator)CrewItem.Object);
                 backpackCrew.Navigator.Sort((x, y) => x.Level.CompareTo(y.Level));
                 break;
             case "Gunner":
-                equippedCrew.Gunner.Remove((Gunner)item.Object);
-                backpackCrew.Gunner.Add((Gunner)item.Object);
+                equippedCrew.Gunner.Remove((Gunner)CrewItem.Object);
+                backpackCrew.Gunner.Add((Gunner)CrewItem.Object);
                 backpackCrew.Gunner.Sort((x, y) => x.Level.CompareTo(y.Level));
                 break;
             case "Boatswain":
-                equippedCrew.Boatswain.Remove((Boatswain)item.Object);
-                backpackCrew.Boatswain.Add((Boatswain)item.Object);
+                equippedCrew.Boatswain.Remove((Boatswain)CrewItem.Object);
+                backpackCrew.Boatswain.Add((Boatswain)CrewItem.Object);
                 backpackCrew.Boatswain.Sort((x, y) => x.Level.CompareTo(y.Level));
                 break;
         }
         CrewItem = null;
-        InitCrewStats(null);
+        InitCrewStats(null, null);
         PlayerDataManager.SavePlayerData();
         PlayerStatsManager.UpdateBoatStats();
         CrewMembersButtonClicked();

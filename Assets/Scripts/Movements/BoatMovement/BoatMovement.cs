@@ -9,6 +9,7 @@ public class BoatMovement : MonoBehaviour
     private Transform HelmCamera;
     private float mouseSensitivity = 25f;
     private float yRotationHelm = 0f;
+    private BoatStats BoatStats;
     
     
 
@@ -16,6 +17,7 @@ public class BoatMovement : MonoBehaviour
     {
         BoatState = transform.GetComponent<BoatState>();
         HelmCamera = transform.Find("HelmCamera");
+        BoatStats = FindFirstObjectByType<PlayerStatsManager>().BoatStats;
     }
 
     
@@ -24,13 +26,17 @@ public class BoatMovement : MonoBehaviour
     
     private void Update()
     {
-        if (!BoatState.isAnchored) MoveBoatForward(speed); 
+        if (!BoatState.isAnchored)
+        {
+            MoveBoatForward(speed);
+            if(Input.GetKey(KeyCode.W)) MoveBoatForward(BoatStats.Speed);
+        }
         
         if (BoatState.inHelm) // If the player IS in the helm menu, then he can be able to move the boat. and the camera of the helm
         {
             HandleKeyRotation();
             HandleMouseRotation();
-        } 
+        }
     }
 
     
