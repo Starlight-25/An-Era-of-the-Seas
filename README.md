@@ -20,7 +20,7 @@ With An Era of the Seas, their ambition is clear: to deliver an immersive experi
 ## Installation
 ### On Windows (7, 8, 10, 11):
 * Download the installer (AnEraOfTheSeasSetup.exe)  
-  [Source](https://download1582.mediafire.com/nqoazetimc9g7mYIqVPQEIsFwC2Uf4vehH1FVBWaLDEiRBp8NPr2jyTRCl37DCaSnowgKdpdsjAioLwcBRrDAG69xrnUVJphVyOI5gX57bvSlZ4o1X17Wfg2k1bQq9Siyx146AmTmJjgR2kpPfZu-jB4VsuWnSAQgVtwp0OLarGhxwU/og86mjld6ntj2st/AnEraOfTheSeasSetup.exe)
+  [Source](https://download1580.mediafire.com/w859c3l555rgs6AS34c_fAWbsvOa0hHahoD-Xid3Z1FFKXJcXsgI6-2kNsW_TvjBAwYlpcOLRWB_dHmvekkTYSGAmfgejQ-Y2DppY2OfAZSliXNVbwguNUOn7dzBn56VFz5A3UJ35QdDZqZiY2jGHSP8JhG4ptmugeIhEC3IxfXGyhc/2ni5q6ldp0itobt/AnEraOfTheSeasSetup.exe)
 * Run the installer (AnEraOfTheSeasSetup.exe) and follow the instructions
 * Follow the instructions of the installer:
 *  Choose your preferred language
@@ -40,7 +40,7 @@ You can launch the game in two ways:
 
 ### On Linux:
 * Download the tar file (AnEraOfTheSeas.tar):  
-  [Source](https://download1648.mediafire.com/ibn6vp5ja2sgDGpgB5HD_HmXPlW1ZruW5E57GJ3rv5Bv1-tBvMq_fPGTZnGtO2KW_LdCLfdhUDgeNN9r8DdUlPFRWEbufjB4PgW5-am_8mIW68nczco851fIek40dk8cOHmR64KHDnRNPXZ-ozjuLiF2OeA2McNqBWnfUIz3MtzlWQk/oor0adsw2i3e754/AnEraOfTheSeas.tar)
+  [Source](https://download1474.mediafire.com/kfchuimtbalgux0CYxqvN47FxhO4syOjfBRZCmL-Id1E4w34gKKnELwd6J1gbhERWZ9EMc2zwXZgknoaO_KEtYnrX5A26h-LW-4u3VTocIizDK-iisEFy-cBh0hfv4zEzxYCq2eN-PsIGWjaJUOJDSgKFDXQ2XM7jTIqAyW_vFbYpz0/l0yk9sok3m1cj5l/AnEraOfTheSeas.tar)
 ```bash
 tar -xvzf AnEraOfTheSeas.tar.gz
 cd AnEraOfTheSeas
