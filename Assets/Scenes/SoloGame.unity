@@ -402,6 +402,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1306765990410229899, guid: d3ca6424f370d3d4ba5ccf25e1c75276, type: 3}
+      propertyPath: Entities
+      value: 
+      objectReference: {fileID: 967302926}
     - target: {fileID: 2689627784956013479, guid: d3ca6424f370d3d4ba5ccf25e1c75276, type: 3}
       propertyPath: m_Name
       value: Player
@@ -6772,6 +6776,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94df402a157a64c4b8863860069de745, type: 3}
+--- !u!4 &967302926 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3378192136933662818, guid: 94df402a157a64c4b8863860069de745, type: 3}
+  m_PrefabInstance: {fileID: 888433087}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1221581101
 PrefabInstance:
   m_ObjectHideFlags: 0
