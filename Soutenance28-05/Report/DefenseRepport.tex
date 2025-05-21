@@ -550,6 +550,7 @@ The Equipment menu displays the player's current statistics and allows character
 
 
 
+\newpage
 \subsection{Water Simulation}
 \paragraph{Objectives}\hfill
 
@@ -605,6 +606,7 @@ This upgraded water simulation now provides a robust and adaptable foundation fo
 
 
 
+\newpage
 \subsection{Weather Simulation}
 \paragraph{Objective}\hfill
 
@@ -640,6 +642,7 @@ Overall, the system provides a simple yet effective weather simulation that bala
 
 
 
+\newpage
 \subsection{Player Movement}
 \paragraph{Objectives}\hfill
 
@@ -681,6 +684,7 @@ Additionally, the implementation of mouse-based camera control enhanced immersio
 
 
 
+\newpage
 \subsection{Boat Simulation}
 \paragraph{Objective}\hfill
 
@@ -715,6 +719,7 @@ Most importantly, the system is built with future scalability in mind. The wind 
 
 
 
+\newpage
 \subsection{AI}
 \paragraph{Objective}\hfill
 
@@ -779,6 +784,7 @@ The successful deployment of the new AI system has laid a strong foundation, ens
 
 
 
+\newpage
 \subsection{Combat System}
 \paragraph{Objective}\hfill
 
@@ -814,6 +820,7 @@ These refinements laid a solid foundation for more advanced combat systems in fu
 
 
 
+\newpage
 \subsection{Map}
 \paragraph{Objective}\hfill
 
@@ -846,6 +853,7 @@ Environmental decorations like trees, lanterns, and roads unify the world visual
 
 
 
+\newpage
 \subsection{Localisation system}
 
 
@@ -857,10 +865,11 @@ Environmental decorations like trees, lanterns, and roads unify the world visual
 
 
 
+\newpage
 \subsection{Implementation of Items}
 \paragraph{Objective}\hfill
 
-The primary objective was to comprehensively list and define all the objects that would appear in the game. This included a diverse range of items such as weapons, stigmata, ships, crew members, and various materials. A major goal was to create original and captivating names for each item, followed by establishing player and item statistics to ensure balanced gameplay progression and immersive player experience.
+The primary objective was to comprehensively list and define all the objects that would appear in the game. This included a diverse range of items such as weapons, sigils, ships, crew members, and various materials. A major goal was to create original and captivating names for each item, followed by establishing player and item statistics to ensure balanced gameplay progression and immersive player experience.
 
 \paragraph{Implementation}\hfill
 
@@ -872,7 +881,7 @@ Data from Excel was exported to CSV format to enable integration with Unity. To 
 
 For player data management, Firebase Realtime Database was initially considered but later discarded due to library incompatibility. Instead, a local JSON file approach was implemented to store essential player data such as position, level, and inventory. The inventory structure clearly distinguished between equipped and stored items, which was critical for correctly applying gameplay effects.\\
 
-A dedicated script was developed to load player data from the JSON file and convert it into usable C\# objects. This script recalculated player statistics dynamically based on equipped weapons and stigmata, integrating seamlessly with the earlier systems for game object data loading.
+A dedicated script was developed to load player data from the JSON file and convert it into usable C\# objects. This script recalculated player statistics dynamically based on equipped weapons and sigils, integrating seamlessly with the earlier systems for game object data loading.
 
 \paragraph{Result}\hfill
 
@@ -891,7 +900,109 @@ This milestone represented a crucial step toward the game's completion, uniting 
 
 
 
+\newpage
+\subsection{Shops}
+\paragraph{Objective}\hfill
+
+The primary objective of the shop system was to introduce a structured, intuitive interface that allows players to buy and sell in-game items, thereby supporting progression, strategic planning, and resource management. By establishing a functional in-game economy, the system enhances immersion and adds meaningful depth to the gameplay. The system also supports player agency by offering multiple avenues for acquiring equipment, resources, and allies critical for survival, exploration, and combat.\\
+
+To serve this goal, six distinct shop types were designed - each tailored to fulfill a specific role within the economy and support diverse player needs.
+
+\paragraph{Implementation}\hfill
+
+The shop system was built around six unique merchant types, each with specialized inventories and purposes:
+\begin{itemize}
+    \item \textbf{Armorer}: Offers melee and ranged weapons.
+    \item \textbf{Boat Salesman}: Provides various boats for travel and combat.
+    \item \textbf{Mage}: Sells magical sigils and enchantments.
+    \item \textbf{Crew Agent}: Enables the recruitment of crew members.
+    \item \textbf{Material Merchant}: Supplies raw crafting materials such as steel, wood, and Pure Water Drops.
+    \item \textbf{Purchaser}: Allows players to offload unused items for currency or materials.
+\end{itemize}
+
+Each merchant was implemented as an interactable NPC prefab, featuring unique visual designs. These prefabs were positioned throughout the game world in key locations to ensure logical access during gameplay.\\
+
+Interaction with merchants was enabled using Unity's raycasting system, allowing players to trigger specific shop menus by clicking on NPCs. Each merchant prefab includes a category identifier, which dynamically loads the corresponding inventory when accessed.\\
+
+A unified shop UI was created for all merchant types, promoting visual consistency and intuitive navigation. The shared interface includes:
+\begin{itemize}
+    \item Item Scroll View: Displays merchant-specific items.
+    \item Item Description Panel: Shows item details (e.g., stats, rarity, material costs).
+    \item Player Resources Display: Reflects current coin, material, and Pure Water Drop counts.
+    \item Buy/Sell Buttons: Executes the appropriate transaction logic based on the shop type.
+\end{itemize}
+
+The modular UI structure allowed for easy adaptation between shop types, with backend scripts dynamically populating the item list based on the interacting merchant.\\
+
+The shop system was built on top of the existing inventory infrastructure, allowing for efficient reuse of scripts and interfaces. Key enhancements included:
+\begin{itemize}
+    \item Buy Logic: Checks player resource availability before confirming purchases. Successful transactions add the item to the player's inventory and deduct the appropriate cost.
+    \item Sell Logic: Displays all inventory items in the Sell Menu. Items can be sold for coins or materials, freeing inventory space and rewarding players with resources.
+    \item Real-Time UI Updates: Ensures immediate feedback on transactions, reflecting changes to inventory and resource values.
+\end{itemize}
+
+Inventory data was managed through scriptable objects and categorized item databases. These databases were referenced at runtime based on the merchant type, enabling dynamic population of each merchant's offerings without hardcoded lists.\\
+
+During development, it became evident that players lacked a reliable way to acquire core crafting materials. To resolve this, the Material Merchant was introduced. This shop type followed the same UI and prefab structure but was connected to a materials-specific item database. It provided access to critical upgrade components and allowed for more balanced pacing in player progression.\\
+
+Similarly, the Sell Merchant was created to complete the economic loop. The sell system reused the inventory UI, replacing the Upgrade button with a Sell button that removed the item from the inventory and rewarded the player accordingly. Sell values were predefined based on item rarity and category.\\
+
+Both new shop types were implemented efficiently due to the modularity of the shop UI and the flexible inventory system, requiring only minor adjustments to existing scripts.
+
+\paragraph{Result}\hfill
+
+The fully implemented shop system introduced a diverse and meaningful layer of interactivity to the game's economic structure. With six distinct shop types covering equipment, magic, transport, personnel, resources, and item resale, players are empowered to make strategic decisions tailored to their playstyle and objectives.\\
+
+Key results include:
+\begin{itemize}
+    \item A consistent and intuitive UI across all shop interactions.
+    \item Efficient transaction handling, tied directly into the player's resource and inventory systems.
+    \item Improved pacing and balance, enabled by resource merchants and resale mechanics.
+    \item Enhanced immersion, driven by unique merchant NPCs and logical shop placements within the world.
+\end{itemize}
+
+This system not only enriches moment-to-moment gameplay but also lays the groundwork for potential future systems, including advanced crafting, faction-based economies, or dynamic pricing models. The modular and scalable design ensures that the shop system can evolve in complexity as the game continues to grow.
+
+
+
+
+
+
+
+
+\newpage
 \subsection{Fishing system}
+\paragraph{Objective}\hfill
+
+The goal of the fishing system was to introduce a unique, interactive minigame that adds variety to player activities while supporting core survival and economic mechanics. Fishing allows players to gather food to manage hunger, and also to sell caught fish for in-game currency. The system was designed to be immersive and skill-based, creating a more dynamic and rewarding gameplay experience within the game world.
+
+\paragraph{Implementation}\hfill
+
+The fishing mechanic was initially conceptualized as a reaction-based minigame triggered by player interaction with fishing ponds located throughout the game world. The core gameplay involved clicking on moving fish to catch them, with each fish moving unpredictably to challenge the player's reflexes and accuracy.\\
+
+The first prototype was implemented in a 3D environment. A fixed camera faced the pond as five fish moved laterally using sinusoidal motion, achieved with Mathf.Sin() in Unity. Fish were recycled to the left side of the screen upon reaching the right boundary to maintain gameplay flow. Extensive testing determined that five fish provided an ideal balance between difficulty and accessibility.\\
+
+After evaluating performance and user interaction, the system was reworked using Unity's 2D Canvas UI for better precision and optimization. Fish were converted into clickable UI Buttons, improving input responsiveness and simplifying detection logic using Unity's built-in UI system.\\
+
+This required converting GameObjects from Transform to RectTransform, and adjusting movement logic to function within the UI layout. Movement speed and screen boundaries were recalibrated to suit the 2D space, maintaining smooth and natural animation within the interface.\\
+
+To reward the player and support game progression, the inventory system was updated to include fish as a new item type. Upon each successful click, the player's fish count was incremented via a dedicated inventory function.\\
+
+A real-time fish counter UI element was also added to the interface. It updated instantly upon catching a fish, providing satisfying feedback and reinforcing a sense of achievement.\\
+
+Initially, caught fish were removed from the scene, gradually reducing the number of targets. This disrupted the gameplay flow and required players to restart the minigame. The mechanic was revised so that new fish spawned immediately upon a successful catch, creating a seamless and continuous fishing experience.\\
+
+Three 3D fish models were sourced from the Unity Asset Store. Since the Canvas system required 2D visuals, these models were converted into sprites using Blender. Renders were exported as high-resolution PNGs and imported into Unity, resulting in visually distinct and appealing UI elements for the minigame.\\
+
+Fishing ponds were strategically placed across multiple islands, allowing players to access the minigame during exploration. Interaction with these ponds activated the fishing interface, smoothly transitioning players into the minigame environment.
+
+\paragraph{Result}\hfill
+
+The fishing system successfully introduced an engaging and skill-based gameplay feature that complements both survival and exploration mechanics. Its transition from a 3D to a 2D interface resulted in improved performance, intuitive input, and polished visuals.\\
+
+The system's tight integration with the inventory and UI provided immediate feedback, enhancing player agency and reinforcing a sense of progression. Real-time counters and seamless spawning mechanics ensured a smooth and satisfying gameplay loop.\\
+
+Overall, the fishing minigame enriched the world with an enjoyable side activity that deepened immersion and offered strategic value, solidifying its role as a meaningful and well-integrated feature in the game's broader design.
 
 
 
@@ -901,6 +1012,8 @@ This milestone represented a crucial step toward the game's completion, uniting 
 
 
 
+
+\newpage
 \subsection{Network}
 \paragraph{Objective}\hfill
 
@@ -938,6 +1051,7 @@ The final implementation successfully synchronized player movement, animations, 
 
 
 
+\newpage
 \subsection{Multiplayer}
 
 
@@ -948,6 +1062,7 @@ The final implementation successfully synchronized player movement, animations, 
 
 
 
+\newpage
 \subsection{Story}
 \paragraph{Objective}\hfill
 
@@ -979,6 +1094,7 @@ Combined with thematic elements like the opening quote and environmental storyte
 
 
 
+\newpage
 \subsection{Quest}
 \paragraph{Objective}\hfill
 
@@ -1004,6 +1120,7 @@ The completed quest system provides a cohesive and immersive narrative experienc
 
 
 
+\newpage
 \subsection{Web Site}
 \paragraph{Objective}\hfill
 
@@ -1032,6 +1149,7 @@ The project culminated with the successful deployment of the website, marking th
 
 
 
+\newpage
 \subsection{Design Entities}
 \paragraph{Objective}\hfill
 
@@ -1045,7 +1163,7 @@ To ensure visual consistency, the original albedo texture (color texture) was ex
 
 Once extracted, the texture was applied to the duplicate model in Unity. A custom invisible material was then created using a transparent shader to make the model invisible when viewed from the local player's camera. With the invisible material working, a script was developed to handle dynamic visibility switching. This script toggled materials based on camera state, ensuring that the model became invisible only in the local first-person view while remaining visible to other players in the game.\\
 
-During the animation testing phase, it was observed that the player’s own texture, including elements such as the leg, was visible through the first-person camera. This visibility of the internal texture created an unrealistic and immersion-breaking effect. The core issue was that the player could see the inside of the 3D model’s texture from their own perspective. The objective was to develop a solution that would hide the player’s texture exclusively from their own camera view, while maintaining full visibility of the player’s model for other participants in a multiplayer environment. Addressing this was critical to preserving immersion and realism during gameplay.\\
+During the animation testing phase, it was observed that the player's own texture, including elements such as the leg, was visible through the first-person camera. This visibility of the internal texture created an unrealistic and immersion-breaking effect. The core issue was that the player could see the inside of the 3D model's texture from their own perspective. The objective was to develop a solution that would hide the player's texture exclusively from their own camera view, while maintaining full visibility of the player's model for other participants in a multiplayer environment. Addressing this was critical to preserving immersion and realism during gameplay.\\
 
 One approach involved moving the camera on the player prefab by a very small distance to mitigate the visibility issue.\\
 
@@ -1066,10 +1184,11 @@ The solution significantly enhanced the visual and immersive quality of the game
 
 
 
+\newpage
 \subsection{Animations of entities}
 \paragraph{Objective}\hfill
 
-The key objective was to implement smooth and responsive player animations covering a range of actions such as idle, running, walking, attacking, swimming, and death. This was essential to enhance the visual coherence and realism of the player’s movements and integrate seamlessly with the existing movement system, thereby improving overall gameplay immersion.
+The key objective was to implement smooth and responsive player animations covering a range of actions such as idle, running, walking, attacking, swimming, and death. This was essential to enhance the visual coherence and realism of the player's movements and integrate seamlessly with the existing movement system, thereby improving overall gameplay immersion.
 
 \paragraph{Implementation}\hfill
 
@@ -1090,7 +1209,7 @@ Special focus was given to jump and fall animations to make them responsive to v
 
 \paragraph{Result}\hfill
 
-The implementation of a properly rigged player model combined with a fully configured Animator Controller significantly improved the player’s visual and gameplay experience. Animations became fluid, context-aware, and responsive to player inputs, resulting in smooth transitions across different movement states.\\
+The implementation of a properly rigged player model combined with a fully configured Animator Controller significantly improved the player's visual and gameplay experience. Animations became fluid, context-aware, and responsive to player inputs, resulting in smooth transitions across different movement states.\\
 
 This enhancement brought a new level of polish and immersion to the game, providing more realistic character motion and a dynamic, engaging gameplay environment. The success of this phase laid a strong foundation for future animation improvements and additional character behaviors.
 
@@ -1103,6 +1222,7 @@ This enhancement brought a new level of polish and immersion to the game, provid
 
 
 
+\newpage
 \subsection{Music and Sound Effects}
 \paragraph{Objective}\hfill
 
@@ -1116,7 +1236,7 @@ A dedicated GameObject was created to host two Audio Sources: one dedicated to p
 
 A custom script was developed to enable the background music to randomly select and play tracks from a specified folder, ensuring auditory variety and maintaining player engagement throughout gameplay.\\
 
-To increase immersion, the system was enhanced to dynamically change the background music based on the player’s location within the game world. This involved detecting when players entered specific zones (such as towns or outdoor areas) and smoothly transitioning between different ambient music tracks to better suit the environment.\\
+To increase immersion, the system was enhanced to dynamically change the background music based on the player's location within the game world. This involved detecting when players entered specific zones (such as towns or outdoor areas) and smoothly transitioning between different ambient music tracks to better suit the environment.\\
 
 The second Audio Source was configured to trigger sound effects in response to player actions, providing immediate auditory feedback for interactions such as menu navigation and button presses.
 
