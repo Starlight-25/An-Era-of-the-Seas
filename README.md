@@ -34,7 +34,7 @@ With An Era of the Seas, their ambition is clear: to deliver an immersive experi
 
 You can launch the game in two ways:
   * From the desktop (if shortcut was created):  
-    From the desktop (if shortcut was created):\\Double-click the An Era Of the Seas icon.
+    Double-click the An Era Of the Seas icon.
   * From the Start Menu:  
     Go to Start > An Era Of The Seas > Open
 

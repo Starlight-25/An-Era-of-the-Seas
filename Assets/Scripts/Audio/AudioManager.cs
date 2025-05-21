@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
     private SettingsManager SettingsManager;
     public AudioSource BackgroundSource;
     private AudioSource SFXSource;
+    private AudioSource SFX2Source;
     private List<AudioClip> BackgroundMusics;
     private List<AudioClip> TownMusics;
     private AudioClip ButtonSound;
@@ -29,6 +30,7 @@ public class AudioManager : MonoBehaviour
         
         BackgroundSource = transform.Find("Background").GetComponent<AudioSource>();
         SFXSource = transform.Find("SFX").GetComponent<AudioSource>();
+        SFX2Source = transform.Find("SFX2").GetComponent<AudioSource>();
         UpdateVolume();
         
         BackgroundMusics = new List<AudioClip>();
@@ -128,14 +130,14 @@ public class AudioManager : MonoBehaviour
     
     public void TriggerCoinsSounds()
     {
-        SFXSource.clip = CoinsSound;
-        SFXSource.Play();
+        SFX2Source.clip = CoinsSound;
+        SFX2Source.Play();
     }
     
     public void TriggerRepairSounds()
     {
-        SFXSource.clip = RepairSound;
-        SFXSource.Play();
+        SFX2Source.clip = RepairSound;
+        SFX2Source.Play();
     }
     
     public void TriggerSwordSounds()
