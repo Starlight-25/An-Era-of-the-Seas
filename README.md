@@ -18,30 +18,47 @@ With An Era of the Seas, their ambition is clear: to deliver an immersive experi
 
 
 ## Installation
-On Windows (7, 8, 10, 11):
-* Download the installer (AnEraOfTheSeasSetup.exe)
-  Source: [link]
-* Run the installer (AnEraOfTheSeasSetup.exe)
+### On Windows (7, 8, 10, 11):
+* Download the installer (AnEraOfTheSeasSetup.exe)  
+  [Source](https://download1582.mediafire.com/nqoazetimc9g7mYIqVPQEIsFwC2Uf4vehH1FVBWaLDEiRBp8NPr2jyTRCl37DCaSnowgKdpdsjAioLwcBRrDAG69xrnUVJphVyOI5gX57bvSlZ4o1X17Wfg2k1bQq9Siyx146AmTmJjgR2kpPfZu-jB4VsuWnSAQgVtwp0OLarGhxwU/og86mjld6ntj2st/AnEraOfTheSeasSetup.exe)
+* Run the installer (AnEraOfTheSeasSetup.exe) and follow the instructions
+* Follow the instructions of the installer:
+*  Choose your preferred language
+  * Accept the terms and conditions
+  * Select the installation directory (default: C:\Program Files\AnEraOfTheSeas)
+  * Choose whether to create a desktop shortcut or not by checking/unchecking the option
+  * Click Install
+* After installation:
+  * Optionally check ”Launch An Era Of The Seas”
+  * Click Finish to close the installer
 
-On Linux:
+You can launch the game in two ways:
+  * From the desktop (if shortcut was created):  
+    From the desktop (if shortcut was created):\\Double-click the An Era Of the Seas icon.
+  * From the Start Menu:  
+    Go to Start > An Era Of The Seas > Open
+
+### On Linux:
+* Download the tar file (AnEraOfTheSeas.tar):  
+  [Source](https://download1648.mediafire.com/ibn6vp5ja2sgDGpgB5HD_HmXPlW1ZruW5E57GJ3rv5Bv1-tBvMq_fPGTZnGtO2KW_LdCLfdhUDgeNN9r8DdUlPFRWEbufjB4PgW5-am_8mIW68nczco851fIek40dk8cOHmR64KHDnRNPXZ-ozjuLiF2OeA2McNqBWnfUIz3MtzlWQk/oor0adsw2i3e754/AnEraOfTheSeas.tar)
 ```bash
 tar -xvzf AnEraOfTheSeas.tar.gz
 cd AnEraOfTheSeas
 ```
-Make the main executable runnable:
+* Make the main executable runnable:
 ```bash
 chmod +x AnEraOfTheSeas.x86_64
 ./ AnEraOfTheSeas.x86_64
 ```
 
 ## Uninstallation
-On Windows:
+### On Windows:
 * Open Control Panel > Programs > Uninstall a program
 * Select AnEraOfTheSeas and click Uninstall
 Or:
 * Use the Uninstall AnEraOfTheSeas shortcut from the Start Menu
 
-On Linux:
+### On Linux:
 ```bash
 rm -rf ~/ AnEraOfTheSeas /
 rm -rf ~/.config/unity3d/DreamChasers/ AnEraOfTheSeas /
