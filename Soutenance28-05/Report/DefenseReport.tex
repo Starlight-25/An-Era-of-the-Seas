@@ -1169,22 +1169,49 @@ The final implementation successfully synchronized player movement, animations, 
 
 \newpage
 \subsection{Multiplayer}
+\paragraph{Objectives}\hfill
+
+The addition of multiplayer functionality aimed to expand the game experience by introducing new ways for players to engage with one another. Two mini-games were designed as optional multiplayer activities: a treasure hunt and a boat race. Both were inspired by pirate folklore and seafaring traditions, reinforcing the game's theme while offering exciting, social gameplay moments.\\
+
+The treasure hunt mode encourages exploration and competitive discovery, where players race to find a hidden chest. Meanwhile, the boat race reflects the naval prowess of pirates, challenging players to navigate a marked course in a test of speed and control. Together, these modes were conceived to add variety, replayability, and a sense of camaraderie or rivalry to the game.
+
+\paragraph{Implementation}\hfill
+
+Multiplayer integration was achieved using Unity's Netcode for GameObjects (NGO), which provided the tools necessary to manage networking, synchronization, and authority across players. All players begin their multiplayer experience inside a shared lobby space—visually represented by a plain white-box environment—where they await the host's decision on which mini-game to launch. Only the host is given the ability to select the mini-game mode, reinforcing their role as the session leader. The system was designed to wait until all players were connected before transitioning to gameplay, ensuring a fair and unified start for every participant.\\
 
 \begin{center}
     \includegraphics[width=4in]{Illustration/Multiplayer/MultiplayerChoiceModeMenu.png}
 \end{center}
 
+Transitioning players from the lobby to the mini-game locations presented an initial technical hurdle. Unity's network architecture restricts player object movement to the server, meaning that the host alone does not have permission to reposition all players. To resolve this, ServerRPCs were used to instruct the server to teleport each player to the appropriate location—whether to the center of the island for the treasure hunt or to the pier for the boat race.\\
+
+In the treasure hunt mini-game, one chest is spawned randomly among a set of carefully chosen locations to avoid placement issues. Players are free to explore the map, guided only by a user interface element displaying the real-time distance to the chest. Once a player reaches the chest, the system declares them the winner, displaying a victory screen. Other participants are simultaneously shown a message reflecting their loss, with both screens offering the option to disconnect from the session.\\
+
 \begin{center}
     \includegraphics[width=4in]{Illustration/Multiplayer/TreasureHunt.png}
 \end{center}
 
-\begin{center}
-    \includegraphics[width=4in]{Illustration/Multiplayer/MultiplayerResultMenu.png}
-\end{center}
+The boat race mini-game begins with each player being teleported to the pier, where their boats await. Once boarded, the objective is to sail across the map, guided by a series of buoys that mark the path to the final destination. Interaction with the final buoy determines the winner. Similar to the treasure hunt, an appropriate user interface screen is triggered at the conclusion of the race based on whether a player wins or loses.\\
 
 \begin{center}
     \includegraphics[width=4in]{Illustration/Multiplayer/BoatRace.png}
 \end{center}
+
+\begin{center}
+    \includegraphics[width=4in]{Illustration/Multiplayer/MultiplayerResultMenu.png}
+\end{center}    
+
+Robust session management was crucial to maintaining a stable multiplayer experience. A disconnect menu was made accessible at any time during gameplay, allowing players to leave a session manually. Special attention was given to the case of a host disconnecting; in such instances, the system was configured to automatically disconnect all clients to avoid unexpected behavior or lingering network objects.
+
+\paragraph{Results}\hfill
+
+The integration of multiplayer mini-games brought a dynamic new layer to the gameplay experience. These modes provided engaging activities that both complemented the main game and stood on their own as sources of enjoyment. The treasure hunt introduced a playful competition grounded in exploration, rewarding players for their awareness and mobility. The boat race, on the other hand, emphasized skillful navigation and route planning, offering a fast-paced challenge that felt authentic to the game's nautical theme.\\
+
+The technical implementation proved successful, with players able to connect, wait in a shared space, and transition into gameplay smoothly. The use of RPCs ensured that teleportation and object spawning occurred without authority errors, and the user interface effectively communicated progress and outcomes to all participants. Crucially, the system remained stable even under edge cases such as sudden host disconnection.\\
+
+Overall, the multiplayer component enriched the game world by adding meaningful social interaction and a fresh source of replayability. It maintained alignment with the game's aesthetic and lore, while providing players with exciting, interactive ways to connect and compete.
+
+
 
 
 
@@ -1417,6 +1444,131 @@ By adapting the music to different in-game environments and tying sound effects 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section*{Appendix}
+\subsection*{Menu and User Interface}
+\begin{center}
+    \includegraphics[width=5in]{Illustration/MenuUI/MainMenu.png}
+    \includegraphics[width=5in]{Illustration/MenuUI/PlayerUI.png}
+    \includegraphics[width=5in]{Illustration/MenuUI/EquipmentMenu.png}
+    \includegraphics[width=5in]{Illustration/MenuUI/EquipmentMenu2.png}
+    \includegraphics[width=5in]{Illustration/MenuUI/UpgradeMenu.png}
+    \includegraphics[width=5in]{Illustration/MenuUI/SettingsMenu.png}
+    \includegraphics[width=2in]{Illustration/MenuUI/Button300x100.png}
+    \includegraphics[width=2in]{Illustration/MenuUI/HomeButton.png}
+    \includegraphics[width=2in]{Illustration/MenuUI/ReturnButton.png}
+    \includegraphics[width=2in]{Illustration/MenuUI/QuitButton.png}
+    \includegraphics[width=2in]{Illustration/MenuUI/BackpackButton.png}
+    \includegraphics[width=2in]{Illustration/MenuUI/BoatButton.png}
+    \includegraphics[width=2in]{Illustration/MenuUI/MapButton.png}
+\end{center}
+
+\subsection*{Water Simulation}
+\begin{center}
+    \includegraphics[width=5in]{Illustration/WaterSim/System_Eau.png}
+    \includegraphics[width=5in]{Illustration/WaterSim/WaterSimulation.png}
+\end{center}
+
+\subsection*{Boat Simulation}
+\begin{center}
+    \includegraphics[width=5in]{Illustration/BoatMovement/EnterBoat.png}
+    \includegraphics[width=5in]{Illustration/BoatMovement/Anchor.png}
+    \includegraphics[width=5in]{Illustration/BoatMovement/Helm.png}
+\end{center}
+
+\subsection*{AI}
+\begin{center}
+    \includegraphics[width=5in]{Illustration/AI/NavMesh1.png}    
+    \includegraphics[width=5in]{Illustration/AI/NavMesh2.png}    
+    \includegraphics[width=5in]{Illustration/AI/Passiv.png}    
+    \includegraphics[width=5in]{Illustration/AI/Offensiv.png}    
+\end{center}
+
+\subsection*{Combat System}
+\begin{center}
+    \includegraphics[width=5in]{Illustration/Combat/TerestrialEnemy.png}
+    \includegraphics[width=5in]{Illustration/Combat/CombatTerestrial.png}
+    \includegraphics[width=5in]{Illustration/Combat/MaritimeEnemy.png}
+    \includegraphics[width=5in]{Illustration/Combat/CombatMaritim.png}
+\end{center}
+
+\subsection*{Map}
+\begin{center}
+    \includegraphics[width=5in]{Illustration/Map/2dMap.png}
+    \includegraphics[width=5in]{Illustration/Map/Full.png}
+    \includegraphics[width=5in]{Illustration/Map/Island.png}
+    \includegraphics[width=5in]{Illustration/Map/Village.png}
+    \includegraphics[width=5in]{Illustration/Map/Other.png}
+    \includegraphics[width=5in]{Illustration/Map/other2.png}
+\end{center}
+
+\subsection*{Localisation system}
+\begin{center}
+    \includegraphics[width=5in]{Illustration/Localization/Loc.png}
+\end{center}
+
+\subsection*{Shops}
+\begin{center}
+    \includegraphics[width=5in]{Illustration/Shops/Shop1.png}
+    \includegraphics[width=5in]{Illustration/Shops/Shop2.png}
+    \includegraphics[width=5in]{Illustration/Shops/Armorer.png}
+    \includegraphics[width=5in]{Illustration/Shops/Mage.png}
+    \includegraphics[width=5in]{Illustration/Shops/BoatSalesman.png}
+    \includegraphics[width=5in]{Illustration/Shops/CrewAgent.png}
+    \includegraphics[width=5in]{Illustration/Shops/MaterialsSeller.png}
+    \includegraphics[width=5in]{Illustration/Shops/Armorer.png}
+\end{center}
+
+\subsection*{Fishing}
+\begin{center}
+    \includegraphics[width=5in]{Illustration/Fishing/Pond.png}
+    \includegraphics[width=5in]{Illustration/Fishing/Fishing.png}
+\end{center}
+
+\subsection*{Network}
+\begin{center}
+    \includegraphics[width=5in]{Illustration/Network/MultiplayerHUD.png}
+    \includegraphics[width=5in]{Illustration/Network/NetworkPlayer.png}
+\end{center}
+
+\subsection*{Multiplayer}
+\begin{center}
+    \includegraphics[width=5in]{Illustration/Multiplayer/MultiplayerChoiceModeMenu.png}
+    \includegraphics[width=5in]{Illustration/Multiplayer/TreasureHunt.png}
+    \includegraphics[width=5in]{Illustration/Multiplayer/BoatRace.png}
+    \includegraphics[width=5in]{Illustration/Multiplayer/MultiplayerResultMenu.png}
+    \includegraphics[width=5in]{Illustration/Multiplayer/Settings.png}
+\end{center}
+
+\subsection*{Quest}
+\begin{center}
+    \includegraphics[width=5in]{Illustration/Quest/NPC.png}
+    \includegraphics[width=5in]{Illustration/Quest/Dialogs.png}
+\end{center}
+
+\subsection*{Design Entities}
+\begin{center}
+    \includegraphics[width=5in]{Illustration/3DModel/Pirate1.png}
+    \includegraphics[width=5in]{Illustration/3DModel/Pirat.png}
+    \includegraphics[width=5in]{Illustration/3DModel/NPC.png}
+    \includegraphics[width=5in]{Illustration/3DModel/TerestEnemies.png}
+    \includegraphics[width=5in]{Illustration/3DModel/MaritEnemies.png}
+\end{center}
 
 
 
