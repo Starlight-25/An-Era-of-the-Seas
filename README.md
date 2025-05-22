@@ -11,16 +11,18 @@ Sail between islands, build your network, upgrade your ship, make tough decision
 
 Get ready to set sail. The adventure begins now.
 
-## A propos des developpeurs
+## About the Developers
 Dream Chasers is an independent studio driven by one passion: turning dreams into interactive worlds. For them, a video game is more than entertainment — it's an adventure, a story to live.
 
 With An Era of the Seas, their ambition is clear: to deliver an immersive experience blending exploration, realistic navigation, and strategic progression. This project reflects their commitment to pushing the boundaries of narrative gaming and crafting rich, captivating universes for players seeking escape.
+
+[Learn More about Dream Chasers and An Era of the Seas](https://dream-chasers.odoo.com)
 
 
 ## Installation
 ### On Windows (7, 8, 10, 11):
 * Download the installer (AnEraOfTheSeasSetup.exe)  
-  [Source](https://download1580.mediafire.com/w859c3l555rgs6AS34c_fAWbsvOa0hHahoD-Xid3Z1FFKXJcXsgI6-2kNsW_TvjBAwYlpcOLRWB_dHmvekkTYSGAmfgejQ-Y2DppY2OfAZSliXNVbwguNUOn7dzBn56VFz5A3UJ35QdDZqZiY2jGHSP8JhG4ptmugeIhEC3IxfXGyhc/2ni5q6ldp0itobt/AnEraOfTheSeasSetup.exe)
+  [Source](https://download1509.mediafire.com/8snf8hve0msgwdhdZEtEx8ZWzSdcMdMUCYDG2bgIvlOG-x9er_HSzQnK4Hep_nI6bvlHJN7dz2Sd6p5nzuyzCa4MUgP4R1LJcemgU61_V5KFJPmyTtjY-clWWBvB5S60wMG3_JgLnaoPeaz8tUJGs_yfov4AGlbom80quzQE0A_qinY/2ni5q6ldp0itobt/AnEraOfTheSeasSetup.exe)
 * Run the installer (AnEraOfTheSeasSetup.exe) and follow the instructions
 * Follow the instructions of the installer:
 *  Choose your preferred language
@@ -54,7 +56,7 @@ chmod +x AnEraOfTheSeas.x86_64
 ## Uninstallation
 ### On Windows:
 * Open Control Panel > Programs > Uninstall a program
-* Select AnEraOfTheSeas and click Uninstall
+* Select AnEraOfTheSeas and click Uninstall  
 Or:
 * Use the Uninstall AnEraOfTheSeas shortcut from the Start Menu
 
