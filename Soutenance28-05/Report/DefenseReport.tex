@@ -929,10 +929,25 @@ Environmental decorations like trees, lanterns, and roads unify the world visual
 
 \newpage
 \subsection{Localisation system}
+\paragraph{Objective}\hfill
+
+The localization system, while essential for the player to navigate our open world, was relatively straightforward to implement. We wanted true immersion for our map, and compass. Regarding the compass, we initially planned to implement a separate object to indicate the direction the player is facing. However, we realized this would result in a heavy and slow user experience, as the map and compass could not be displayed simultaneously. We therefore decided to integrate the compass directly onto the map. \\
+
+We also chose a less realistic approach to the compass: instead of always pointing north, the compass needle moves in the direction the player is heading. This decision was made to reduce the likelihood of the player getting lost, allowing them to focus more on the story and quests, and less on navigation. Given that the game is set in a world full of monsters and magic, we felt this choice did not significantly affect immersion. 
+
+\paragraph{Implementation}\hfill
+
+The UI that displays the map is a simple layer shown to the player when the map button or the M key is pressed.\\
+
+The needle of the compass is a prefab object that tracks the player rotation along the X axis and transmits it to the compass to track which direction the player faces. 
 
 \begin{center}
     \includegraphics[width=5in]{Illustration/Localization/Loc.png}
 \end{center}
+
+\paragraph{Results}\hfill
+
+Both the map and the compass feel immersive, quick, easy to use while conserving the authenticity of real-world map (like not giving away the player's position) so the experience is still fun and focused on exploration.
 
 
 
@@ -1563,8 +1578,8 @@ By adapting the music to different in-game environments and tying sound effects 
 
 \subsection*{Design Entities}
 \begin{center}
-    \includegraphics[width=5in]{Illustration/3DModel/Pirate1.png}
-    \includegraphics[width=5in]{Illustration/3DModel/Pirat.png}
+    \includegraphics[width=3in]{Illustration/3DModel/Pirate1.png}
+    \includegraphics[width=3in]{Illustration/3DModel/Pirat.png}
     \includegraphics[width=5in]{Illustration/3DModel/NPC.png}
     \includegraphics[width=5in]{Illustration/3DModel/TerestEnemies.png}
     \includegraphics[width=5in]{Illustration/3DModel/MaritEnemies.png}
