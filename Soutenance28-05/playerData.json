@@ -1,0 +1,217 @@
+{
+  "Pseudo": "Test",
+  "Level": 9,
+  "Location": [
+    440,
+    6,
+    1425
+  ],
+  "Inventory": {
+    "Equipped": {
+      "Weapon": {
+        "Name": "Rusty Sword",
+        "Rarity": "Common",
+        "Level": 25
+      },
+      "Stigmata": [
+        {
+          "Name": "Glimmering Scar",
+          "Rarity": "Common",
+          "Level": 1
+        },
+        {
+          "Name": "Faint Mark",
+          "Rarity": "Common",
+          "Level": 1
+        }
+      ],
+      "Boat": {
+        "Name": "Little Boat",
+        "Rarity": "Common",
+        "Level": 20
+      },
+      "Crew": {
+        "Explorer": [],
+        "Navigator": [],
+        "Gunner": [],
+        "Boatswain": []
+      }
+    },
+    "Backpack": {
+      "Materials": {
+        "Coins": 1000000,
+        "PureWaterDrop": 200000,
+        "Wood": 10000,
+        "Steel": 10000,
+        "Fish": 55
+      },
+      "Weapons": [
+        {
+          "Name": "Water Edge",
+          "Rarity": "Rare",
+          "Level": 1
+        },
+        {
+          "Name": "Iron Blade",
+          "Rarity": "Common",
+          "Level": 1
+        },
+        {
+          "Name": "Eclipse",
+          "Rarity": "Legendary",
+          "Level": 1
+        },
+        {
+          "Name": "Emberstrike",
+          "Rarity": "Epic",
+          "Level": 1
+        },
+        {
+          "Name": "Cinder Blade",
+          "Rarity": "Rare",
+          "Level": 1
+        },
+        {
+          "Name": "Vortex Blade",
+          "Rarity": "Epic",
+          "Level": 1
+        },
+        {
+          "Name": "Vortex Blade",
+          "Rarity": "Epic",
+          "Level": 9
+        }
+      ],
+      "Stigmata": [
+        {
+          "Name": "Elysian Sigil",
+          "Rarity": "Epic",
+          "Level": 1
+        },
+        {
+          "Name": "Poenix Feather",
+          "Rarity": "Epic",
+          "Level": 1
+        },
+        {
+          "Name": "Signet of Infinity",
+          "Rarity": "Epic",
+          "Level": 1
+        },
+        {
+          "Name": "Ruler of Death",
+          "Rarity": "Legendary",
+          "Level": 1
+        },
+        {
+          "Name": "Licht des Himmels",
+          "Rarity": "Legendary",
+          "Level": 1
+        },
+        {
+          "Name": "Faint Mark",
+          "Rarity": "Common",
+          "Level": 1
+        },
+        {
+          "Name": "Ruler of Death",
+          "Rarity": "Legendary",
+          "Level": 1
+        },
+        {
+          "Name": "Knight Spirit",
+          "Rarity": "Rare",
+          "Level": 1
+        },
+        {
+          "Name": "Glimmering Scar",
+          "Rarity": "Common",
+          "Level": 1
+        }
+      ],
+      "Boats": [
+        {
+          "Name": "DunkelWind",
+          "Rarity": "Rare",
+          "Level": 1
+        },
+        {
+          "Name": "Sea Wanderer",
+          "Rarity": "Common",
+          "Level": 1
+        },
+        {
+          "Name": "StormBreaker",
+          "Rarity": "Epic",
+          "Level": 80
+        }
+      ],
+      "Crew": {
+        "Explorer": [
+          {
+            "Rarity": "Common",
+            "Level": 1
+          },
+          {
+            "Rarity": "Common",
+            "Level": 1
+          },
+          {
+            "Rarity": "Common",
+            "Level": 1
+          },
+          {
+            "Rarity": "Common",
+            "Level": 1
+          }
+        ],
+        "Navigator": [
+          {
+            "Rarity": "Common",
+            "Level": 1
+          },
+          {
+            "Rarity": "Common",
+            "Level": 1
+          },
+          {
+            "Rarity": "Common",
+            "Level": 21
+          },
+          {
+            "Rarity": "Legendary",
+            "Level": 89
+          },
+          {
+            "Rarity": "Legendary",
+            "Level": 99
+          }
+        ],
+        "Gunner": [
+          {
+            "Rarity": "Common",
+            "Level": 1
+          },
+          {
+            "Rarity": "Common",
+            "Level": 1
+          }
+        ],
+        "Boatswain": [
+          {
+            "Rarity": "Common",
+            "Level": 1
+          },
+          {
+            "Rarity": "Common",
+            "Level": 25
+          },
+          {
+            "Rarity": "Common",
+            "Level": 25
+          }
+        ]
+      }
+    }
+  }
+}
