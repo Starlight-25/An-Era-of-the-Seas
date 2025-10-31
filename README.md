@@ -22,7 +22,7 @@ With An Era of the Seas, their ambition is clear: to deliver an immersive experi
 ## Installation
 ### On Windows (7, 8, 10, 11):
 * Download the installer (AnEraOfTheSeasSetup.exe)  
-  [Source](https://www.mediafire.com/file/2ni5q6ldp0itobt/AnEraOfTheSeasSetup.exe/file)
+  [Source](https://github.com/Starlight-25/An-Era-of-the-Seas/releases/download/v1.0/AnEraOfTheSeasSetup.exe)
 * Run the installer (AnEraOfTheSeasSetup.exe) and follow the instructions
 * Follow the instructions of the installer:
 *  Choose your preferred language
