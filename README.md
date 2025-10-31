@@ -42,7 +42,7 @@ You can launch the game in two ways:
 
 ### On Linux:
 * Download the tar file (AnEraOfTheSeas.tar):  
-  [Source](https://www.mediafire.com/file/l0yk9sok3m1cj5l/AnEraOfTheSeas.tar/file)
+  [Source](https://github.com/Starlight-25/An-Era-of-the-Seas/releases/download/v1.0/AnEraOfTheSeas.tar)
 ```bash
 tar -xvzf AnEraOfTheSeas.tar.gz
 cd AnEraOfTheSeas
